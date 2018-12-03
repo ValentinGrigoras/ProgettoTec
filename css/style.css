@@ -573,6 +573,9 @@ input[type=submit]:hover {
 	border: 1px solid gray;
 	text-align: center;
 }
+#TimeTableContainer{
+	padding: 3% 0;
+}
 /*--------------------------------
 --- END PROGRAMMAZIONE CORSI -----
 ----------------------------------*/
