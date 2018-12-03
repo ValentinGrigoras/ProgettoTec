@@ -1,0 +1,28 @@
+#header{
+	font-size: 1.49em;
+}
+.logo #desktop{
+	display: none;
+}
+.logo #mobile{
+	display: block;
+	margin:0 auto;
+}
+.logo{
+    width: 100%;
+}
+.logo img{
+max-width: 40%;
+height: auto;
+}
+#nav{
+    width:100%;
+}
+.lingua{
+	width:40%;
+}
+.search{
+	width: 50%;
+	float: right;
+	margin-bottom: 1%;
+}

@@ -1,0 +1,664 @@
+
+*{
+    margin:0;
+    padding: 0;
+    font-size: 1em;
+    font-family: Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#wrapper{
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+h1,h2,h3,h4,h5{
+    padding: 2% 0;
+    text-align: center;
+    color:#8e2126;
+}
+h1{
+    font-size: 2em;
+}
+h2{
+    font-size: 1.5em;
+}
+h3{
+    font-size: 1.25em;
+}
+h4{
+    font-size: 1.10em;
+}
+.maxWidth{
+    max-width: 1200px;
+    margin:auto;
+}
+/*--------------------------------
+------------HEADER----------------
+----------------------------------*/
+#header{
+    width: 100%;
+    background-color: #f7f7f7;
+    z-index: 100;
+    overflow: hidden;
+-webkit-box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
+-moz-box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
+box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
+font-size: 0.95em;
+}
+/*---------------------------------
+-------NAVIGAZIONE PRINCIPALE------
+----------------------------------*/
+#main_nav{
+    width: 100%;
+    overflow: auto;
+
+}
+/*--------LOGO----------*/
+.logo{
+    width: 13%;
+    float: left;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+.logo img{
+
+max-width: 35%;
+height: auto;
+}
+.logo a{
+    display: block;
+}
+.logo #mobile{
+    display: none;
+}
+
+/*-----------------------*/
+/*LINK DI NAVIGAZIONE*/
+#nav{
+    width:50%;
+    text-align: center;
+    float: left;
+    font-size: 0.80em;
+    height: 100%;
+    font-weight: bold;
+}
+#nav ul{
+    overflow: hidden;
+}
+#nav ul li {
+    text-align: center;
+    list-style: none;
+    float: left;
+    border-left: 1px solid #e9e8e7;
+    border-right: 1px solid #e9e8e7;
+    width: 16.6667%; /* fallback for non-calc() browsers */
+    width: calc(100% / 6);
+    background-color: #f7f7f7;
+
+}
+#nav ul li#active_link{
+    background-color: #8e2126;
+    color: #fff;
+    padding: 3.1%;
+}
+#nav ul li.login_li{
+    background-color: #f7f7f7;
+}
+#nav ul li.registrati_li{
+    background-color: #f7f7f7;
+
+
+}
+#nav ul li.login_li a, #nav ul li.registrati_li a{
+     color: #8e2126;
+     font-weight: 600;
+}
+#nav ul li a{
+   display: block;
+   padding: 19% 0;
+    color: #8e2126;
+}
+#nav ul li a:hover {
+    text-decoration: none;
+    background-color: #fff;
+    border-color: #ccc;
+    color: #000;
+
+}
+.fa-user,.fa-pen{
+    padding-right: 5%;
+}
+/*SEZIONE LINGUA*/
+.lingua{
+    display: inline-block;
+    float: left;
+    margin-top: 1.4%;
+    width: 10%;
+    font-size: 0.70em;
+    color: #8e2126;
+    font-weight: 400;
+    margin-left: 1%;
+}
+
+/*--------------------------------
+-------BARRA DI RICERCA---- ------
+----------------------------------*/
+.search{
+    width: 26%;
+    float: left;
+    text-align: center;
+    margin-top: 1.2%;
+}
+.search form{
+    width: 100%;
+    margin: auto;
+}
+#header .search button {
+    background-color: #f7f7f7;
+    border:none;
+    cursor: pointer;
+    height: 100%;
+    color: #8e2126;
+}
+
+#header .search input[type=text]{
+    width: 50%;
+    color: #8e2126;
+   /* border: 2px solid #ccc;*/
+    border-radius: 0.2em;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    outline: none;
+    height: 50%;
+    font-size: smaller;
+}
+#header .search input[type=text]:focus {
+    width: 65%;
+}
+label#label_search{
+    color: #8e2126;
+    font-size: 0.7em;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: calc(100% / 7);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+#nav ul .dropdown-content a {
+    color: black;
+    padding: 5% 0;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+.dropdown-content a:hover {background-color: #f1f1f1;border: 1px solid #ccc;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/*---------------------------------------*/
+/*--------------------------------
+-------SEZIONE BREADCRUMBS ------
+----------------------------------*/
+#header #breadcrumbs_home{
+    width: 100%;
+}
+/*siccome uso i float negli elementi child di breadcrumbs_home,
+il contenitore padre ignora i floats. Aggiungo quindi del contenuto
+vuoto tramite la pseudo classe obbligando il contenitore padre ad assumere
+la dimensione totale dei div child.*/
+#header #breadcrumbs_home:after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+ul.breadcrumb {
+    display: inline;
+    width: 50%;
+    float: left;
+    padding: 0.2% 1% 0.4% 1%;
+    list-style: none;
+    background-color: #8e2126;
+
+}
+ul.breadcrumb #first {
+    padding: 0.2% 1% 0.4% 1%;
+    list-style: none;
+    background-color: #8e2126;
+}
+ul.breadcrumb #first:before{
+    content: "";
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: 0.8em;
+    color: #fff;
+}
+ul.breadcrumb li+li:before {
+    padding: 1.5%;
+    color: #fff;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {
+    color: #FFF;
+}
+ul.breadcrumb li a:hover {
+    color: #e0797e;
+    text-decoration: none;
+}
+#socials_bread{
+    display: inline;
+    width: 50%;
+    float: left;
+    background-color: #8e2126;
+    padding: 0.2% 1% 0.4% 1%;
+}
+#socials_bread li{
+    display: inline;
+    margin-right: 3.5%;
+    float: right;
+}
+#socials_bread .fab{
+color: #fff;
+font-size: 0.8em;
+}
+/*galleria*/
+#gallery{
+width: 100%;
+max-width: 100%;
+height: 80%;
+
+}
+#gallery img{
+    height: 100%;
+    width: auto;
+}
+#gallery .img-content{
+    width: 100%;
+    height: 100%;
+}
+#gallery .img-content img{
+    width: 100%;
+    height: auto;
+}
+/*--------------------------------
+------------- ABBONAMENTI -------------
+----------------------------------*/
+#prezzi_section{
+  background-color: #808080;
+}
+#prezzi_section #content_prezzi{
+  overflow: auto;
+  width: 80%;
+  margin: 0 auto;
+}
+#prezzi_section #content_prezzi dl{
+  width: 25%;
+  float:left;
+  margin :2% 4.166% 4.166% 4.166%;
+}
+#prezzi_section #content_prezzi dd{
+  overflow: auto;
+  background:none no-repeat left top;
+  background-size: contain;
+  border-top: hidden;
+  background-color: #e6e6e6;
+  font-size: 80%;
+  border: 1px solid #8e2126;
+
+}
+#content_prezzi h2{
+	color: white;
+}
+.Abbonamento dd img{
+  float: left;
+  width: 100%;
+  height: auto;
+}
+.desc_Abbonamento{
+  float: left;
+  text-align: center;
+}
+.Abbonamento dt{
+  text-align: center;
+  background-color: #8e2126;
+  color: #fff;
+}
+.Abbonamento p{
+  float: left;
+  width: 100%;
+  text-align: center;
+  padding: 3.5%;
+  border-bottom: 1px solid #ccc;
+}
+
+#content_prezzi a{
+    width: 25%;
+    margin: auto;
+    background-color: #8e2126;
+    color: #fff;
+    padding: 3.1%;
+    border-radius: 4px;
+}
+.Abbonamento  .prezzoAbbonamento{
+	font-size: 2em;
+}
+.Abbonamento .nrMese{
+	font-size: 0.5em;
+}
+#content_prezzi .buttonPrezzi{
+	margin: 3% 0;
+	border-bottom: none;
+}
+#content_prezzi a:hover{
+    color: #fff;
+  background-color: #d34249;
+    text-decoration: none;
+}
+/*--------------------------------
+------------- END ABBONAMENTI -------------
+----------------------------------*/
+
+/* allenatori*/
+#allenatori_section #allenatori_content{
+    width: 80%;
+    overflow: auto;
+    margin: 0 auto;
+}
+dl{
+    float:left;
+    background-color: #8e2126;
+    width: 40%;
+    margin:2% 5% 5% 5%;
+}
+dt{
+    background-color: #8e2126;
+    color:#fff;
+    padding: 1% 0 1% 2%;
+    font-weight: bold;
+}
+.allenatore dd{
+    background:none no-repeat left top;
+    background-size: contain;
+    border: 1px solid #8e2126;
+    overflow: hidden;
+    border-top: hidden;
+    padding:2% 1% 2% 1%;
+    background-color: #e6e6e6;
+    color: #000;
+    font-size: 80%;
+}
+#allenatori_section .allen1 .socials_links{
+    width: 72%;
+    float: right;
+    border-top: 1px solid #ccc;
+    padding-top: 2%
+}
+#allenatori_section .allen1 .socials_links li{
+    display: inline-block;
+    float: left;
+    margin-right: 2%;
+}
+#allenatori_section .allen1 .socials_links li:first-of-type{
+
+}
+#allenatori_section{
+    background-color:#e6e6e6;
+    overflow: auto;
+}
+#allenatori_section dd p{
+    text-align: justify;
+    font-size: 110%;
+    width: 70%;
+    float: left;
+    padding-top: 0;
+    padding-bottom: 2%
+}
+#allenatori_section a:link{
+    color: #999999;
+}
+#allenatori_section a:visited{
+    color: #999999 /#b3b3b3/;
+}
+#allenatori_section a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+.allenatore dd img{
+    float: left;
+    width: 25%;
+    height: auto;
+    margin: 0 2% 0 1%;
+}
+.fab{
+    color: #8e2126;
+}
+.fab:hover{
+    color:#fff;
+}
+.fa{
+    background-color: #f7f7f7;
+}
+
+
+/* fine allenatori */
+
+/*--------------------------------
+--- CORSI -----
+----------------------------------*/
+
+#corsi_section{
+  overflow: auto;
+}
+#content_corsi{
+  overflow: auto;
+  width: 80%;
+  margin: 0 auto;
+}
+#content_corsi .corso{
+  overflow: auto;
+  width: 30%;
+  float: left;
+  margin: 2% 1.66%;
+}
+.corso img {
+  display: block;
+  width: 40%;
+  margin:0 auto;
+}
+.corso p{
+  text-align: center;
+  width: 100%;
+}
+.corso h3{
+  color: #000;
+}
+.corso a{
+    width: 25%;
+    background-color: #8e2126;
+    color: #fff;
+    padding: 3.1%;
+    border-radius: 4px;
+  }
+.corso .buttonCorsi{
+  	margin: 10% 0;
+  	border-bottom: none;
+
+
+  }
+  .corso a:hover{
+    text-decoration: none;
+      background-color: #d34249;
+  }
+
+
+
+/*--------------------------------
+--- END CORSI -----
+----------------------------------*/
+
+
+/*--------------------------------
+--- FORM + MAP -----
+----------------------------------*/
+#cont-form-map {
+  overflow: auto;
+  width: 100%;
+  display: table;
+  background-color: #f2f2f2;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 2%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 1%;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #8e2126;
+    color: white;
+    text-decoration: underline;
+    padding: 3% 5%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+  text-decoration: none;
+    background-color: #d34249;
+}
+
+#container {
+  display: table-cell;
+  width: 50%;
+  padding: 5%;
+}
+#googleMap{
+  display: table-cell;
+}
+
+
+/*--------------------------------
+--- END FORM + MAP -----
+----------------------------------*/
+
+
+/*--------------------------------
+------------- FOOTER -------------
+----------------------------------*/
+#footer{
+    background-color: #d9d9d9;
+    width: 100%;
+    padding-top: 2.5%;
+    overflow: auto;
+    font-size: 0.7em;
+}
+#footer a:visited, #footer a:link{
+    color: black;
+}
+#footer h2,#footer h3{
+    text-align: left;
+}
+#footer h2{
+    padding-bottom: 2%;
+}
+#sections{
+    border-top: 1px solid silver;
+    padding: 2.5% 0 1% 0;
+    width: 80%;
+    margin:auto;
+}
+#columns{
+    overflow: auto;
+}
+#societa{
+    float: left;
+    padding: 0 1.5%;
+    width: 25%;
+}
+#orario{
+    float: left;
+    padding: 0 1.5%;
+    width: 21%;
+}
+#contattiFooter{
+    float: left;
+    padding: 0 1.5%;
+    width: 21%;
+}
+#links{
+    float: left;
+    padding: 0 1.5%;
+    width: 33%;
+}
+#socials{
+    list-style: none;
+    float: left;
+    margin: 4.5% 0 0% 1.5%;
+    width: 45%;
+    font-size: 1.5em;
+}
+#socials li{
+    display: inline;
+    margin-right: 1.5%;
+}
+#closure{
+    width:100%;
+    border-top: 1px solid silver;
+    padding-top: 1%;
+    overflow: auto;
+}
+#copyright{
+    float: left;
+    margin: 0.5% 0;
+}
+#WebSiteInfo{
+    float: right;
+}
+#linksPart1{
+    float: left;
+    margin-right: 9%;
+}
+#linksPart2{
+    float: left;
+}
+#closure h3{
+    font-size: 0.975em;
+    display: inline;
+}
+#validCode{
+    float: right;
+    width: 45%;
+    margin: 3% 1.5% 1% 0;
+    display: inline-block;
+}
+#validCode img{
+    float: right;
+}
+@media screen and (min-width:1400px), only screen and (min-width:1400px) {
+    #footer {
+        font-size: 0.9em;
+    }
+}
+/*--------------------------------
+----------END FOOTER -------------
+----------------------------------*/
