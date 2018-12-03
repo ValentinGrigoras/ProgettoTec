@@ -561,7 +561,6 @@ input[type=submit]:hover {
 --- END FORM + MAP -----
 ----------------------------------*/
 
-
 /*--------------------------------
 ------------- FOOTER -------------
 ----------------------------------*/
@@ -593,22 +592,22 @@ input[type=submit]:hover {
 #societa{
     float: left;
     padding: 0 1.5%;
-    width: 25%;
+    width: 26%;
 }
 #orario{
     float: left;
     padding: 0 1.5%;
-    width: 21%;
+    width: 26%;
 }
 #contattiFooter{
     float: left;
     padding: 0 1.5%;
-    width: 21%;
+    width: 19%;
 }
 #links{
     float: left;
     padding: 0 1.5%;
-    width: 33%;
+    width: 29%;
 }
 #socials{
     list-style: none;
@@ -619,7 +618,7 @@ input[type=submit]:hover {
 }
 #socials li{
     display: inline;
-    margin-right: 1.5%;
+    margin-right:3%;
 }
 #closure{
     width:100%;
@@ -633,6 +632,12 @@ input[type=submit]:hover {
 }
 #WebSiteInfo{
     float: right;
+}
+#sections p{
+    padding-bottom: 2%;
+}
+#links p{
+    padding-bottom: 3%;
 }
 #linksPart1{
     float: left;
@@ -657,6 +662,11 @@ input[type=submit]:hover {
 @media screen and (min-width:1400px), only screen and (min-width:1400px) {
     #footer {
         font-size: 0.9em;
+    }
+}
+@media screen and (min-width:1200px), only screen and (min-width:1200px) {
+    #footer {
+        font-size: 0.8em;
     }
 }
 /*--------------------------------
