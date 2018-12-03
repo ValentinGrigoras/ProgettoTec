@@ -561,6 +561,23 @@ input[type=submit]:hover {
 --- END FORM + MAP -----
 ----------------------------------*/
 
+
+/*--------------------------------
+-----PROGRAMMAZIONE CORSI --------
+----------------------------------*/
+#TimeTableItem{
+	width: 100%;
+	border-collapse: collapse;
+}
+#TimeTableItem tr td, #TimeTableItem th{
+	border: 1px solid gray;
+	text-align: center;
+}
+/*--------------------------------
+--- END PROGRAMMAZIONE CORSI -----
+----------------------------------*/
+
+
 /*--------------------------------
 ------------- FOOTER -------------
 ----------------------------------*/
