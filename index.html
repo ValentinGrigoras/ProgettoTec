@@ -258,28 +258,26 @@
   FORM + MAP
 -->
 <div id="cont-form-map">
+	<div id="container">
+		<h2>Contattaci</h2>
+		<form action="/action_page.php">
+			<label for="fname">First Name</label>
+			<input type="text" id="fname" name="firstname" placeholder="Il tuo nome..">
 
+			<label for="lname">Last Name</label>
+			<input type="text" id="lname" name="lastname" placeholder="Il tuo secondo nome..">
 
-<div id="container">
-  <h2>Contattaci</h2>
-  <form action="/action_page.php">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Il tuo nome..">
+			<label for="field_email">Your e-mail:</label>
+			<input type="text" id="field_email" name="sender_email" placeholder="Email.." >
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Il tuo secondo nome..">
+			<label for="subject">Subject</label>
+			<textarea type="text" id="subject" name="subject" placeholder="Scrivi qualcosa.." ></textarea>
 
-    <label for="field_email">Your e-mail:</label>
-<input type="text" id="field_email" name="sender_email" placeholder="Email.." >
+			<input type="submit" value="Submit">
+		</form>
+	</div>
 
-    <label for="subject">Subject</label>
-    <textarea type="text" id="subject" name="subject" placeholder="Scrivi qualcosa.." ></textarea>
-
-    <input type="submit" value="Submit">
-  </form>
-</div>
-
-<div id="googleMap"></div>
+	<div id="googleMap"></div>
 </div>
 
 
