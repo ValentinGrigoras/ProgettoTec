@@ -614,6 +614,9 @@ input[type=submit]:hover {
 	color: white;
 	font-weight: bold;
 }
+.TimeTableFitnessEntry a:visited{
+	color: #595959;
+}
 .TimeTableFitnessEntry p{
 	font-size: 0.9em;
 }
