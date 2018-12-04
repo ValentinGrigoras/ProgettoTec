@@ -613,6 +613,7 @@ input[type=submit]:hover {
 
 #TimeTableItem{
 	border-collapse: collapse;
+
 }
 
 #TimeTableItem thead{
@@ -633,6 +634,7 @@ input[type=submit]:hover {
 #TimeTableContainer{	
 	width: 88%;
 	margin: auto;
+    padding-bottom: 3%;
 }
 .TimeTableEntryTime div{
 	display: inline-block;
