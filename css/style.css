@@ -47,12 +47,111 @@ h4{
 #header{
     width: 100%;
     background-color: #f7f7f7;
-    z-index: 100;
     overflow: hidden;
--webkit-box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
--moz-box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
-box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
-font-size: 0.95em;
+    -webkit-box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
+    box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
+    font-size: 0.95em;
+    }
+
+/*--------------------------------
+-------SEZIONE BREADCRUMBS ------
+----------------------------------*/
+#first-section-header{
+    width: 100%;
+    background-color: #000;
+    overflow: auto;
+    text-align: center;
+}
+#header #breadcrumbs_home{  
+    display: inline-block;
+    width: 70%;
+    float: left;
+}
+/*siccome uso i float negli elementi child di breadcrumbs_home,
+il contenitore padre ignora i floats. Aggiungo quindi del contenuto
+vuoto tramite la pseudo classe obbligando il contenitore padre ad assumere
+la dimensione totale dei div child.*/
+#header #breadcrumbs_home:after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+ul.breadcrumb {
+    display: inline-block;
+    width: 60%;
+    float: left;
+    list-style: none;
+    background-color: #000;
+    text-align: center;
+    margin:auto;
+    padding: 0;
+}
+ul.breadcrumb #first {
+    list-style: none;
+    background-color: #000;
+}
+ul.breadcrumb #first:before{
+    content: "";
+}
+ul.breadcrumb li {
+    display: inline-block;
+    *display:inline; /*IE7*/
+        *zoom:1; /*IE7*/
+    font-size: 0.8em;
+    color: #fff;
+}
+ul.breadcrumb li+li:before {
+    color: #fff;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {
+    color: #FFF;
+}
+ul.breadcrumb li a:hover {
+    color: #e0797e;
+    text-decoration: none;
+}
+/*------link a social Header-----*/
+ul#socials_bread{
+    display: inline-block;
+    width: 40%;
+    background-color: #000;
+}
+#socials_bread li{
+    display: inline-block;
+    margin-right: 3.5%;
+}
+#socials_bread .fab{
+color: #fff;
+font-size: 0.8em;
+}
+/*---------------------------------------*/
+    /*SEZIONE LINGUA*/
+.lingua{
+    display: inline-block;
+    float: left;
+    width: 30%;
+    background-color: #000;
+    color: #fff;
+    font-weight: 400;
+    font-size: 0.8em;
+
+}
+.lingua ul{
+    display: table;
+}
+.lingua ul  li{
+        display:table-cell;
+        text-align:center;
+    }
+.lingua .label_lingua, .lingua #select_lingua {
+    display: inline-block;
+    padding-right: 10%;
+}
+.lingua select{
+    width: 100%;
+    padding: 0.1% 0;
 }
 /*---------------------------------
 -------NAVIGAZIONE PRINCIPALE------
@@ -80,6 +179,7 @@ height: auto;
 .logo #mobile{
     display: none;
 }
+
 
 /*-----------------------*/
 /*LINK DI NAVIGAZIONE*/
@@ -136,17 +236,6 @@ height: auto;
 }
 .fa-user,.fa-pen{
     padding-right: 5%;
-}
-/*SEZIONE LINGUA*/
-.lingua{
-    display: inline-block;
-    float: left;
-    margin-top: 0.7%;
-    width: 10%;
-    font-size: 0.70em;
-    color: #8e2126;
-    font-weight: 400;
-    margin-left: 1%;
 }
 
 /*--------------------------------
@@ -211,71 +300,7 @@ label#label_search{
     display: block;
 }
 /*---------------------------------------*/
-/*--------------------------------
--------SEZIONE BREADCRUMBS ------
-----------------------------------*/
-#header #breadcrumbs_home{
-    width: 100%;
-}
-/*siccome uso i float negli elementi child di breadcrumbs_home,
-il contenitore padre ignora i floats. Aggiungo quindi del contenuto
-vuoto tramite la pseudo classe obbligando il contenitore padre ad assumere
-la dimensione totale dei div child.*/
-#header #breadcrumbs_home:after{
-    content: " ";
-    display: block;
-    clear: both;
-}
-ul.breadcrumb {
-    display: inline;
-    width: 50%;
-    float: left;
-    padding: 0.2% 1% 0.4% 1%;
-    list-style: none;
-    background-color: #8e2126;
 
-}
-ul.breadcrumb #first {
-    padding: 0.2% 1% 0.4% 1%;
-    list-style: none;
-    background-color: #8e2126;
-}
-ul.breadcrumb #first:before{
-    content: "";
-}
-ul.breadcrumb li {
-    display: inline;
-    font-size: 0.8em;
-    color: #fff;
-}
-ul.breadcrumb li+li:before {
-    padding: 1.5%;
-    color: #fff;
-    content: "/\00a0";
-}
-ul.breadcrumb li a {
-    color: #FFF;
-}
-ul.breadcrumb li a:hover {
-    color: #e0797e;
-    text-decoration: none;
-}
-#socials_bread{
-    display: inline;
-    width: 50%;
-    float: left;
-    background-color: #8e2126;
-    padding: 0.2% 1% 0.4% 1%;
-}
-#socials_bread li{
-    display: inline;
-    margin-right: 3.5%;
-    float: right;
-}
-#socials_bread .fab{
-color: #fff;
-font-size: 0.8em;
-}
 /*galleria*/
 #gallery{
 width: 100%;
