@@ -47,12 +47,111 @@ h4{
 #header{
     width: 100%;
     background-color: #f7f7f7;
-    z-index: 100;
     overflow: hidden;
--webkit-box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
--moz-box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
-box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
-font-size: 0.95em;
+    -webkit-box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
+    box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
+    font-size: 0.95em;
+    }
+
+/*--------------------------------
+-------SEZIONE BREADCRUMBS ------
+----------------------------------*/
+#first-section-header{
+    width: 100%;
+    background-color: #000;
+    overflow: auto;
+    text-align: center;
+}
+#header #breadcrumbs_home{  
+    display: inline-block;
+    width: 70%;
+    float: left;
+}
+/*siccome uso i float negli elementi child di breadcrumbs_home,
+il contenitore padre ignora i floats. Aggiungo quindi del contenuto
+vuoto tramite la pseudo classe obbligando il contenitore padre ad assumere
+la dimensione totale dei div child.*/
+#header #breadcrumbs_home:after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+ul.breadcrumb {
+    display: inline-block;
+    width: 60%;
+    float: left;
+    list-style: none;
+    background-color: #000;
+    text-align: center;
+    margin:auto;
+    padding: 0;
+}
+ul.breadcrumb #first {
+    list-style: none;
+    background-color: #000;
+}
+ul.breadcrumb #first:before{
+    content: "";
+}
+ul.breadcrumb li {
+    display: inline-block;
+    *display:inline; /*IE7*/
+        *zoom:1; /*IE7*/
+    font-size: 0.8em;
+    color: #fff;
+}
+ul.breadcrumb li+li:before {
+    color: #fff;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {
+    color: #FFF;
+}
+ul.breadcrumb li a:hover {
+    color: #e0797e;
+    text-decoration: none;
+}
+/*------link a social Header-----*/
+ul#socials_bread{
+    display: inline-block;
+    width: 40%;
+    background-color: #000;
+}
+#socials_bread li{
+    display: inline-block;
+    margin-right: 3.5%;
+}
+#socials_bread .fab{
+color: #fff;
+font-size: 0.8em;
+}
+/*---------------------------------------*/
+    /*SEZIONE LINGUA*/
+.lingua{
+    display: inline-block;
+    float: left;
+    width: 30%;
+    background-color: #000;
+    color: #fff;
+    font-weight: 400;
+    font-size: 0.8em;
+
+}
+.lingua ul{
+    display: table;
+}
+.lingua ul  li{
+        display:table-cell;
+        text-align:center;
+    }
+.lingua .label_lingua, .lingua #select_lingua {
+    display: inline-block;
+    padding-right: 10%;
+}
+.lingua select{
+    width: 100%;
+    padding: 0.1% 0;
 }
 /*---------------------------------
 -------NAVIGAZIONE PRINCIPALE------
@@ -81,10 +180,11 @@ height: auto;
     display: none;
 }
 
+
 /*-----------------------*/
 /*LINK DI NAVIGAZIONE*/
 #nav{
-    width:50%;
+    width:40%;
     text-align: center;
     float: left;
     font-size: 0.80em;
@@ -137,17 +237,6 @@ height: auto;
 .fa-user,.fa-pen{
     padding-right: 5%;
 }
-/*SEZIONE LINGUA*/
-.lingua{
-    display: inline-block;
-    float: left;
-    margin-top: 1.4%;
-    width: 10%;
-    font-size: 0.70em;
-    color: #8e2126;
-    font-weight: 400;
-    margin-left: 1%;
-}
 
 /*--------------------------------
 -------BARRA DI RICERCA---- ------
@@ -156,7 +245,7 @@ height: auto;
     width: 26%;
     float: left;
     text-align: center;
-    margin-top: 1.2%;
+    margin-top: 0.9%;
 }
 .search form{
     width: 100%;
@@ -211,71 +300,7 @@ label#label_search{
     display: block;
 }
 /*---------------------------------------*/
-/*--------------------------------
--------SEZIONE BREADCRUMBS ------
-----------------------------------*/
-#header #breadcrumbs_home{
-    width: 100%;
-}
-/*siccome uso i float negli elementi child di breadcrumbs_home,
-il contenitore padre ignora i floats. Aggiungo quindi del contenuto
-vuoto tramite la pseudo classe obbligando il contenitore padre ad assumere
-la dimensione totale dei div child.*/
-#header #breadcrumbs_home:after{
-    content: " ";
-    display: block;
-    clear: both;
-}
-ul.breadcrumb {
-    display: inline;
-    width: 50%;
-    float: left;
-    padding: 0.2% 1% 0.4% 1%;
-    list-style: none;
-    background-color: #8e2126;
 
-}
-ul.breadcrumb #first {
-    padding: 0.2% 1% 0.4% 1%;
-    list-style: none;
-    background-color: #8e2126;
-}
-ul.breadcrumb #first:before{
-    content: "";
-}
-ul.breadcrumb li {
-    display: inline;
-    font-size: 0.8em;
-    color: #fff;
-}
-ul.breadcrumb li+li:before {
-    padding: 1.5%;
-    color: #fff;
-    content: "/\00a0";
-}
-ul.breadcrumb li a {
-    color: #FFF;
-}
-ul.breadcrumb li a:hover {
-    color: #e0797e;
-    text-decoration: none;
-}
-#socials_bread{
-    display: inline;
-    width: 50%;
-    float: left;
-    background-color: #8e2126;
-    padding: 0.2% 1% 0.4% 1%;
-}
-#socials_bread li{
-    display: inline;
-    margin-right: 3.5%;
-    float: right;
-}
-#socials_bread .fab{
-color: #fff;
-font-size: 0.8em;
-}
 /*galleria*/
 #gallery{
 width: 100%;
@@ -550,7 +575,11 @@ input[type=submit]:hover {
 #container {
   display: table-cell;
   width: 50%;
+  padding: 1%;
+}
+#container form{
   padding: 5%;
+
 }
 #googleMap{
   display: table-cell;
@@ -562,23 +591,70 @@ input[type=submit]:hover {
 ----------------------------------*/
 
 
-/*--------------------------------
+/*--------PAGINA------------
 -----PROGRAMMAZIONE CORSI --------
 ----------------------------------*/
+#custom_highlight{
+	width: 88%;
+	margin: auto;
+}
+#OrarioContent{
+	padding: 3% 0;
+}
 #TimeTableItem{
-	width: 100%;
+	width: 88%;
+	margin: auto;
 	border-collapse: collapse;
 }
-#TimeTableItem tr td, #TimeTableItem th{
-	border: 1px solid gray;
+#TimeTableItem thead{
+	border: 1px solid silver;
+	background-color: #f2f2f2;
+}
+#TimeTableItem td{
+	width: 12.5%;
+}
+#TimeTableItem th{
+	padding: 1.5% 0;
+}
+#TimeTableItem tr td{
+	border: 1px solid silver;
 	text-align: center;
 }
 #TimeTableContainer{
 	padding: 3% 0;
 }
+.TimeTableEntryTime div{
+	display: inline-block;
+}
+.TimeTableEntryTimePeriod div{
+	display: inline-block;
+	font-weight: bold;
+}
+.TimeTableFitnessEntry{
+	margin: 5%;
+	padding: 2% 0;
+	line-height: 1.5em;
+	border-radius: 5%;
+    background-color: #73AD21;
+    color: white;
+}
+.TimeTableFitnessEntry a:link{
+	color: white;
+	font-weight: bold;
+}
+.TimeTableFitnessEntry a:visited{
+	color: #595959;
+}
+.TimeTableFitnessEntry p{
+	font-size: 0.9em;
+}
+.TimeTableEntryTimeHolder, .TimeTableHead{
+	color: #595959;
+	font-weight: bold;
+}
 /*--------------------------------
 --- END PROGRAMMAZIONE CORSI -----
-----------------------------------*/
+------------PAGINA---------------*/
 
 
 /*--------------------------------
