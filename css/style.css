@@ -84,7 +84,7 @@ height: auto;
 /*-----------------------*/
 /*LINK DI NAVIGAZIONE*/
 #nav{
-    width:50%;
+    width:40%;
     text-align: center;
     float: left;
     font-size: 0.80em;
@@ -141,7 +141,7 @@ height: auto;
 .lingua{
     display: inline-block;
     float: left;
-    margin-top: 1.4%;
+    margin-top: 0.7%;
     width: 10%;
     font-size: 0.70em;
     color: #8e2126;
@@ -156,7 +156,7 @@ height: auto;
     width: 26%;
     float: left;
     text-align: center;
-    margin-top: 1.2%;
+    margin-top: 0.9%;
 }
 .search form{
     width: 100%;
