@@ -1,5 +1,8 @@
  *{
 	font-size: 1.0975em;}
+  h1,h2,h3,h4{
+    font-weight: bold;
+  }
 h1{
 	font-size: 1.30em;
 	margin: 2% 0;
@@ -179,7 +182,7 @@ select #seleziona_corso{
 /*--------------------------------
 -------PRAGRAMMAZIONE CORSI ------
 ----------------------------------*/
-#titoloOrario{ margin: 5% 0;}
+
 
 #mtt{ /*mobile time table*/
 	margin: 18%;
