@@ -1,0 +1,43 @@
+/*MIN WIDTH 481px - MAX WIDTH 600PX*/
+/*--------------------------------
+------------- FOOTER -------------
+----------------------------------*/
+#footer{
+    font-size: 1.1em;
+}
+#sections{
+    width: 90%;
+}
+
+#links{
+    padding: 0;
+    font-size: 1.22em;
+}
+#societa{
+    padding: 0;
+}
+#orario{
+    float: right;
+    padding: 0;
+}
+#contattiFooter{
+    padding: 0;
+}
+#closure{
+	font-size: 1em;
+	padding-top: 3%;
+}
+#WebSiteInfo{
+    float: left;
+}
+#validCode img{
+	width: 30%;
+}
+@media screen and (max-width:575px), only screen and (max-width:575px) {
+    #footer {
+        font-size: 0.9em;
+    }
+}
+/*--------------------------------
+----------END FOOTER -------------
+----------------------------------*/

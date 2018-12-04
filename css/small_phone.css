@@ -1,0 +1,54 @@
+/*MAX WIDTH 320PX*/
+/*--------------------------------
+------------- FOOTER -------------
+----------------------------------*/
+#sections{
+    text-align: center;
+}
+#links{
+    width: 100%;
+    /*font-size: 1.6em;*/
+    overflow: auto;
+}
+#linksPart1{
+    margin: 0;
+    width: 100%;
+}
+#linksPart2{
+    margin: 0;
+    width: 100%;
+}
+#footer h2{
+    text-align: center;
+}
+#societa{
+    width: 100%;
+    font-size: 1.1em;
+}
+#orario{
+    width: 100%;
+    font-size: 1.1em;
+}
+#contattiFooter{
+    width: 100%;
+    font-size: 1.1em;
+}
+#socials{
+    padding-top: 3%;
+    width: 100%;
+    margin: 0;
+}
+#socials li{
+    margin: 0 7.5%;
+}
+#validCode{
+    width: 100%;
+    padding-top: 3%;
+}
+#validCode img{
+    width: 30%;
+    margin: 0 8%;
+}
+/*--------------------------------
+----------END FOOTER -------------
+----------------------------------*/

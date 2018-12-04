@@ -195,50 +195,42 @@ margin: 0 auto;
 --- END PRAGRAMMAZIONE CORSI -----
 ----------------------------------*/
 
+/*MIN WIDTH 321PX - MAX WIDTH 480PX*/
 /*--------------------------------
 ------------- FOOTER -------------
 ----------------------------------*/
 #footer{
-	padding-top: 5%;
-	border-top: 1px solid silver;
-	overflow: auto;
-}
-#footer a:visited, #footer a:link{
-	color: black;
-}
-.FloatLeft{
-	float: left;
-}
-#socials{
-	list-style: none;
-	float: left;
-	margin-top: 5%;
-}
-#socials li{
-	display: inline-block;
-}
-#closure{
-	width:100%;
-	margin-top: 3%;
-	border-top: 1px solid silver;
-	padding-top: 2.5%;
-}
-#copyright{
-	margin: 1.5% 0;
+	font-size: 0.8em;
 }
 #links{
-	width: 100%;
+    width: 45%;
+    font-size: 1.25em;
 }
-#linksPart1{
-	float: left;
-	margin-right: 7%;
+#links p{
+    padding-bottom: 5%;
 }
-#linksPart2{
-	float: left;
+#socials{
+	font-size: 1.7em;
 }
-#closure h3{
-	font-size: 0.975em;
-	display: inline;
+#socials li{
+    margin-right:6%;
+}
+#societa{
+    width: 55%;
+    float: left;
+}
+#orario{
+    width: 55%;
+    float: left;
+}
+#contattiFooter{
+    width: 55%;
+}
+#validCode img{
+	width: 40%;
+}
+#closure{
+	font-size: 1em;
 }
 /*--------------------------------
 ----------END FOOTER -------------
