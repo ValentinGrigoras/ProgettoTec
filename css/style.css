@@ -598,13 +598,17 @@ input[type=submit]:hover {
 ----------------------------------*/
 #custom_select{
 	padding: 3% 0 1.5% 1.5%;
+    color: #003366;
 }
 #custom_select label{
 	padding-right: 0.5%;
 }
 #programma select {
-    background-color: #f2f2f2;
-    border: none;
+   border: 2px outset #003366;
+   color: inherit;
+   margin: 1%;
+   padding: 0.5%;
+   background-image: linear-gradient(to bottom right, #e6f2ff, white);
 }
 
 #selezione_corso{
@@ -631,10 +635,13 @@ input[type=submit]:hover {
 	border: 1px solid silver;
 	text-align: center;
 }
-#TimeTableContainer{	
+#OrarioContent{	
 	width: 88%;
 	margin: auto;
     padding-bottom: 3%;
+}
+#MobileTimeTable{
+    display: none;
 }
 .TimeTableEntryTime div{
 	display: inline-block;
