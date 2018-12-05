@@ -6,13 +6,13 @@
     font-family: Verdana, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
 html,body{
     width: 100%;
     height: 100%;
+    margin:0;
+    padding: 0;
 }
 
 #wrapper{
@@ -62,11 +62,13 @@ h4{
     background-color: #000;
     overflow: auto;
     text-align: center;
+
 }
 #header #breadcrumbs_home{  
     display: inline-block;
-    width: 70%;
+    width: 75%;
     float: left;
+
 }
 /*siccome uso i float negli elementi child di breadcrumbs_home,
 il contenitore padre ignora i floats. Aggiungo quindi del contenuto
@@ -79,14 +81,13 @@ la dimensione totale dei div child.*/
 }
 ul.breadcrumb {
     display: inline-block;
-    width: 60%;
+    width: 50%;
     float: left;
     list-style: none;
     background-color: #000;
     text-align: center;
     margin:auto;
-    padding: 0;
-}
+    }
 ul.breadcrumb #first {
     list-style: none;
     background-color: #000;
@@ -96,8 +97,6 @@ ul.breadcrumb #first:before{
 }
 ul.breadcrumb li {
     display: inline-block;
-    *display:inline; /*IE7*/
-        *zoom:1; /*IE7*/
     font-size: 0.8em;
     color: #fff;
 }
@@ -115,8 +114,10 @@ ul.breadcrumb li a:hover {
 /*------link a social Header-----*/
 ul#socials_bread{
     display: inline-block;
-    width: 40%;
+    width: 25%;
     background-color: #000;
+    text-align: left;
+    padding-top: 0.2%;
 }
 #socials_bread li{
     display: inline-block;
@@ -128,30 +129,23 @@ font-size: 0.8em;
 }
 /*---------------------------------------*/
     /*SEZIONE LINGUA*/
-.lingua{
-    display: inline-block;
+.lingua{    
     float: left;
-    width: 30%;
+    width: 25%;
     background-color: #000;
     color: #fff;
     font-weight: 400;
     font-size: 0.8em;
 
 }
-.lingua ul{
-    display: table;
-}
-.lingua ul  li{
-        display:table-cell;
-        text-align:center;
-    }
+
+
 .lingua .label_lingua, .lingua #select_lingua {
     display: inline-block;
-    padding-right: 10%;
 }
 .lingua select{
-    width: 100%;
-    padding: 0.1% 0;
+    width: 20%;
+    padding:0.5%;
 }
 /*---------------------------------
 -------NAVIGAZIONE PRINCIPALE------
@@ -188,8 +182,6 @@ height: auto;
     text-align: center;
     float: left;
     font-size: 0.80em;
-    height: 100%;
-    font-weight: bold;
 }
 #nav ul{
     overflow: hidden;
