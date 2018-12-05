@@ -53,7 +53,7 @@ a:active {color: red;}
 ----------------------------------*/
 #header{
     width: 100%;
-    background-color: #f7f7f7;
+   /* background-color: #f7f7f7;*/
     overflow: hidden;
     -webkit-box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
     -moz-box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
@@ -66,7 +66,7 @@ a:active {color: red;}
 ----------------------------------*/
 #first-section-header{
     width: 100%;
-    background-color: #d5d5d5;
+    /*background-color: #d5d5d5;*/
     overflow: auto;
     text-align: center;
 }
@@ -89,7 +89,7 @@ ul.breadcrumb {
     display: inline-block;
     width: 50%;
     float: left;
-    background-color: #d5d5d5;
+    /*background-color: #d5d5d5;*/
     text-align: center;
 }
 ul.breadcrumb #first:before{
@@ -109,7 +109,7 @@ ul.breadcrumb li a:hover {
 ul#socials_bread{
     display: inline-block;
     width: 25%;
-    background-color: #d5d5d5;
+    /*background-color: #d5d5d5;*/
     text-align: left;
     padding: 0.2%;
 }
@@ -129,7 +129,7 @@ ul#socials_bread{
 .lingua{
     float: left;
     width: 25%;
-    background-color: #d5d5d5;
+    /*background-color: #d5d5d5;*/
     color: #000;
     font-size: 0.8em;
     padding-top: 0.2%;
@@ -153,7 +153,7 @@ ul#socials_bread{
     width: 13%;
     float: left;
     text-align: center;
-    background-color: #f7f7f7;
+    /*background-color: #f7f7f7;*/
 }
 .logo img{
     max-width: 95%;
@@ -184,7 +184,7 @@ ul#socials_bread{
     border-right: 1px solid #e9e8e7;
     width: 16.6667%; /* fallback for non-calc() browsers */
     width: calc(100% / 6);
-    background-color: #f7f7f7;
+    /*background-color: #f7f7f7;*/
 }
 #nav_panel ul li{
     width: 35%;
@@ -193,7 +193,7 @@ ul#socials_bread{
     margin-left: 20%;
 }
 #nav ul li#active_link{
-    background-color: #f7f7f7;
+    /*background-color: #f7f7f7;*/
     padding: 3.9%;
 }
 #nav_panel ul li.login_li{
@@ -233,7 +233,7 @@ ul#socials_bread{
     margin-top: 1%;
 }
 #header .search button {
-    background-color: #f7f7f7;
+    background-color:none;
     border:none;
     cursor: pointer;
     color: #000;
@@ -296,6 +296,14 @@ height: 80%;
     width: 100%;
     height: auto;
 }
+#landing{
+    max-width: 100%;
+    height: 100%;
+    background-image: url(img/landing.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
 /*--------------------------------
 ------------- ABBONAMENTI -------------
 ----------------------------------*/
