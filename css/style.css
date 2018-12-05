@@ -150,13 +150,13 @@ ul#socials_bread{
 }
 /*--------LOGO----------*/
 .logo{
-    width: 10%;
+    width: 13%;
     float: left;
     text-align: center;
     background-color: #f7f7f7;
 }
 .logo img{
-    max-width: 90%;
+    max-width: 95%;
     height: auto;
 }
 .logo a{
@@ -168,8 +168,8 @@ ul#socials_bread{
 
 /*-----------------------*/
 /*LINK DI NAVIGAZIONE (Valentin)*/
-#nav, #nav_panel{
-    width:35%;
+#nav{
+    width:45%;
     text-align: center;
     float: left;
     font-size: 0.75em;
@@ -186,12 +186,15 @@ ul#socials_bread{
     width: calc(100% / 6);
     background-color: #f7f7f7;
 }
-#nav ul li:first-of-type ,#nav_panel ul li:first-of-type {
+#nav_panel ul li{
+    width: 35%;
+}
+#nav_panel ul li:first-of-type {
     margin-left: 20%;
 }
 #nav ul li#active_link{
     background-color: #f7f7f7;
-    padding: 3.1%;
+    padding: 3.9%;
 }
 #nav_panel ul li.login_li{
     background-color: #f7f7f7;
@@ -202,9 +205,14 @@ ul#socials_bread{
 #nav_panel ul li.login_li a, #nav_panel ul li.registrati_li a{
      font-weight: bold;
 }
-#nav ul li a, #nav_panel ul li a{
+#nav ul li a{
    display: block;
-   padding: 19% 0;
+   padding: 24% 0;
+}
+#nav_panel ul li a{
+    display: block;
+   padding: 22% 0;
+   font-size: 0.75em;
 }
 #nav ul li a:hover, #nav_panel ul li a:hover {
     text-decoration: none;
@@ -222,7 +230,7 @@ ul#socials_bread{
     width: 19%;
     float: left;
     text-align: center;
-    margin-top: 0.5%;
+    margin-top: 1%;
 }
 #header .search button {
     background-color: #f7f7f7;
@@ -231,7 +239,7 @@ ul#socials_bread{
     color: #000;
 }
 #header .search input[type=text]{
-    width: 40%;
+    width: 35%;
     color: #000;
    /* border: 2px solid #ccc;*/
     border-radius: 0.2em;
@@ -240,7 +248,7 @@ ul#socials_bread{
     outline: none;
 }
 #header .search input[type=text]:focus {
-    width: 50%;
+    width: 45%;
 }
 label#label_search{
     color: #000;
