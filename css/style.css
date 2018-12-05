@@ -390,7 +390,9 @@ height: 80%;
 ------------- END ABBONAMENTI -------------
 ----------------------------------*/
 
-/* allenatori*/
+/*--------------------------------
+------------ALLENATORI -----------
+----------------------------------*/
 #allenatori_section #allenatori_content{
     width: 80%;
     overflow: auto;
@@ -471,11 +473,13 @@ dt{
     background-color: #f7f7f7;
 }
 
+/*--------------------------------
+--------END ALLENATORI -----------
+----------------------------------*/
 
-/* fine allenatori */
 
 /*--------------------------------
---- CORSI -----
+------------ CORSI ---------------
 ----------------------------------*/
 
 #corsi_section{
@@ -517,20 +521,18 @@ dt{
 
 
   }
-  .corso a:hover{
+.corso a:hover{
     text-decoration: none;
       background-color: #d34249;
   }
 
-
-
 /*--------------------------------
---- END CORSI -----
+---------- END CORSI -------------
 ----------------------------------*/
 
 
 /*--------------------------------
---- FORM + MAP -----
+------------- FORM + MAP ---------
 ----------------------------------*/
 #cont-form-map {
   overflow: auto;
@@ -539,7 +541,7 @@ dt{
   background-color: #f2f2f2;
 }
 
-input[type=text], select, textarea {
+input[type=text], textarea {
     width: 100%;
     padding: 2%;
     border: 1px solid #ccc;
@@ -586,22 +588,35 @@ input[type=submit]:hover {
 /*--------PAGINA------------
 -----PROGRAMMAZIONE CORSI --------
 ----------------------------------*/
-#custom_highlight{
-	width: 88%;
-	margin: auto;
+#custom_select{
+	padding: 3% 0 1.5% 1.5%;
+    color: #003366;
 }
-#OrarioContent{
-	padding: 3% 0;
+#custom_select label{
+	padding-right: 0.5%;
 }
+#programma select {
+   border: 2px outset #003366;
+   color: inherit;
+   margin: 1%;
+   padding: 0.5%;
+   background-image: linear-gradient(to bottom right, #e6f2ff, white);
+}
+
+#selezione_corso{
+	background-color: #f2f2f2;
+}
+
 #TimeTableItem{
-	width: 88%;
-	margin: auto;
 	border-collapse: collapse;
+
 }
+
 #TimeTableItem thead{
 	border: 1px solid silver;
 	background-color: #f2f2f2;
 }
+
 #TimeTableItem td{
 	width: 12.5%;
 }
@@ -611,6 +626,14 @@ input[type=submit]:hover {
 #TimeTableItem tr td{
 	border: 1px solid silver;
 	text-align: center;
+}
+#OrarioContent{	
+	width: 88%;
+	margin: auto;
+    padding-bottom: 3%;
+}
+#MobileTimeTable{
+    display: none;
 }
 .TimeTableEntryTime div{
 	display: inline-block;
