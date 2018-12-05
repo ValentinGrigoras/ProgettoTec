@@ -37,33 +37,28 @@ label#label_search{
 }
 
 #links{
-    padding: 0;
-    font-size: 1.22em;
+    width: 30%;
 }
 #societa{
-    padding: 0;
+    width: 35%;
 }
 #orario{
-    float: right;
-    padding: 0;
+    width: 35%;
 }
 #contattiFooter{
-    padding: 0;
+    width: 35%;
 }
 #closure{
-	font-size: 1em;
-	padding-top: 3%;
 }
 #WebSiteInfo{
     float: left;
+    width: 100%;
 }
 #validCode img{
 	width: 30%;
 }
-@media screen and (max-width:575px), only screen and (max-width:575px) {
-    #footer {
-        font-size: 0.9em;
-    }
+#copyright{
+    float: left;
 }
 /*--------------------------------
 ----------END FOOTER -------------
