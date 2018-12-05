@@ -14,16 +14,16 @@ html,body{
     margin:0;
     padding: 0;
 }
-
-#wrapper{
-    min-height: 100%;
-    width: 100%;
-    height: 100%;
-}
 h1,h2,h3,h4,h5{
     padding: 2% 0;
     text-align: center;
     color:#8e2126;
+}
+ul{
+    list-style: none;
+}
+li{
+        list-style: none;
 }
 h1{
     font-size: 2em;
@@ -41,8 +41,15 @@ h4{
     max-width: 1200px;
     margin:auto;
 }
+/*colori generali link (Valentin)*/
+a{font-weight: bold;}
+a:link {color: blue;}
+a:visited {color: purple;}
+a:hover {color: magenta;}        
+a:active {color: red;}       
+      
 /*--------------------------------
-------------HEADER----------------
+------------HEADER(Valentin)----------------
 ----------------------------------*/
 #header{
     width: 100%;
@@ -51,24 +58,23 @@ h4{
     -webkit-box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
     -moz-box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
     box-shadow: 0px 0px 34px 0px rgba(255,255,255,1);
-    font-size: 0.95em;
+    font-size: 0.9em;
+    font-weight: bold;
     }
-
 /*--------------------------------
--------SEZIONE BREADCRUMBS ------
+-------SEZIONE BREADCRUMBS(Valentin)------
 ----------------------------------*/
 #first-section-header{
     width: 100%;
-    background-color: #000;
+    background-color: #d5d5d5;
     overflow: auto;
     text-align: center;
-
 }
 #header #breadcrumbs_home{  
     display: inline-block;
     width: 75%;
     float: left;
-
+    padding: 0.2%;
 }
 /*siccome uso i float negli elementi child di breadcrumbs_home,
 il contenitore padre ignora i floats. Aggiungo quindi del contenuto
@@ -83,14 +89,8 @@ ul.breadcrumb {
     display: inline-block;
     width: 50%;
     float: left;
-    list-style: none;
-    background-color: #000;
+    background-color: #d5d5d5;
     text-align: center;
-    margin:auto;
-    }
-ul.breadcrumb #first {
-    list-style: none;
-    background-color: #000;
 }
 ul.breadcrumb #first:before{
     content: "";
@@ -98,74 +98,66 @@ ul.breadcrumb #first:before{
 ul.breadcrumb li {
     display: inline-block;
     font-size: 0.8em;
-    color: #fff;
 }
 ul.breadcrumb li+li:before {
-    color: #fff;
     content: "/\00a0";
 }
-ul.breadcrumb li a {
-    color: #FFF;
-}
 ul.breadcrumb li a:hover {
-    color: #e0797e;
     text-decoration: none;
 }
-/*------link a social Header-----*/
+/*------link a social nel Header(Valentin)-----*/
 ul#socials_bread{
     display: inline-block;
     width: 25%;
-    background-color: #000;
+    background-color: #d5d5d5;
     text-align: left;
-    padding-top: 0.2%;
+    padding: 0.2%;
 }
 #socials_bread li{
     display: inline-block;
     margin-right: 3.5%;
 }
 #socials_bread .fab{
-color: #fff;
-font-size: 0.8em;
+    color: #000;
+    font-size: 0.8em;
+}
+#socials_bread .fab:hover{
+    color: #8e2126;
 }
 /*---------------------------------------*/
-    /*SEZIONE LINGUA*/
-.lingua{    
+    /*SEZIONE LINGUA(Valentin)*/
+.lingua{
     float: left;
     width: 25%;
-    background-color: #000;
-    color: #fff;
-    font-weight: 400;
+    background-color: #d5d5d5;
+    color: #000;
     font-size: 0.8em;
-
+    padding-top: 0.2%;
 }
-
-
 .lingua .label_lingua, .lingua #select_lingua {
     display: inline-block;
 }
 .lingua select{
-    width: 20%;
-    padding:0.5%;
+    width: 30%;
+    padding:0.7%;
 }
 /*---------------------------------
--------NAVIGAZIONE PRINCIPALE------
+-------NAVIGAZIONE PRINCIPALE (Valentin)------
 ----------------------------------*/
 #main_nav{
     width: 100%;
     overflow: auto;
-
 }
 /*--------LOGO----------*/
 .logo{
-    width: 13%;
+    width: 10%;
     float: left;
     text-align: center;
     background-color: #f7f7f7;
 }
 .logo img{
-
-max-width: 35%;
-height: auto;
+    max-width: 90%;
+    height: auto;
 }
 .logo a{
     display: block;
@@ -174,100 +166,85 @@ height: auto;
     display: none;
 }
 
-
 /*-----------------------*/
-/*LINK DI NAVIGAZIONE*/
-#nav{
-    width:40%;
+/*LINK DI NAVIGAZIONE (Valentin)*/
+#nav, #nav_panel{
+    width:35%;
     text-align: center;
     float: left;
-    font-size: 0.80em;
+    font-size: 0.75em;
 }
-#nav ul{
+#nav ul, #nav_panel ul {
     overflow: hidden;
 }
-#nav ul li {
+#nav ul li, #nav_panel ul li {
     text-align: center;
-    list-style: none;
     float: left;
     border-left: 1px solid #e9e8e7;
     border-right: 1px solid #e9e8e7;
     width: 16.6667%; /* fallback for non-calc() browsers */
     width: calc(100% / 6);
     background-color: #f7f7f7;
-
+}
+#nav ul li:first-of-type ,#nav_panel ul li:first-of-type {
+    margin-left: 20%;
 }
 #nav ul li#active_link{
-    background-color: #8e2126;
-    color: #fff;
+    background-color: #f7f7f7;
     padding: 3.1%;
 }
-#nav ul li.login_li{
+#nav_panel ul li.login_li{
     background-color: #f7f7f7;
 }
-#nav ul li.registrati_li{
+#nav_panel ul li.registrati_li{
     background-color: #f7f7f7;
-
-
 }
-#nav ul li.login_li a, #nav ul li.registrati_li a{
-     color: #8e2126;
-     font-weight: 600;
+#nav_panel ul li.login_li a, #nav_panel ul li.registrati_li a{
+     font-weight: bold;
 }
-#nav ul li a{
+#nav ul li a, #nav_panel ul li a{
    display: block;
    padding: 19% 0;
-    color: #8e2126;
 }
-#nav ul li a:hover {
+#nav ul li a:hover, #nav_panel ul li a:hover {
     text-decoration: none;
     background-color: #fff;
     border-color: #ccc;
-    color: #000;
-
 }
 .fa-user,.fa-pen{
     padding-right: 5%;
 }
 
 /*--------------------------------
--------BARRA DI RICERCA---- ------
+-------BARRA DI RICERCA (valentin)---- ------
 ----------------------------------*/
 .search{
-    width: 26%;
+    width: 19%;
     float: left;
     text-align: center;
-    margin-top: 0.9%;
-}
-.search form{
-    width: 100%;
-    margin: auto;
+    margin-top: 0.5%;
 }
 #header .search button {
     background-color: #f7f7f7;
     border:none;
     cursor: pointer;
-    height: 100%;
-    color: #8e2126;
+    color: #000;
 }
-
 #header .search input[type=text]{
-    width: 50%;
-    color: #8e2126;
+    width: 40%;
+    color: #000;
    /* border: 2px solid #ccc;*/
     border-radius: 0.2em;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
     outline: none;
-    height: 50%;
-    font-size: smaller;
 }
 #header .search input[type=text]:focus {
-    width: 65%;
+    width: 50%;
 }
 label#label_search{
-    color: #8e2126;
-    font-size: 0.7em;
+    color: #000;
+    font-size: 0.8em;
 }
 
 .dropdown-content {
@@ -279,7 +256,6 @@ label#label_search{
     z-index: 1;
 }
 #nav ul .dropdown-content a {
-    color: black;
     padding: 5% 0;
     text-decoration: none;
     display: block;
