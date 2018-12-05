@@ -1,8 +1,28 @@
+/*Header (Valentin)*/
+
+label#label_search{
+    display: block;
+    padding-bottom: 2%;
+}
+#header .search input[type="text"], #header .search input[type=text]:focus 
+{
+    width: 80%;
+}
+#nav ul li, #nav_panel ul li {
+    width: calc(100%/4);
+    width:25%;
+}
+#nav ul li:first-of-type{
+    margin: 0;
+}
 #nav ul li#active_link{
-	padding: 4.1% 0;
+	padding: 6.1% 0;
 }
 #nav ul li a {
 	padding: 25% 0;
+}
+.logo img{
+    margin-top: 12%;
 }
 
 /*MIN WIDTH 481px - MAX WIDTH 600PX*/
