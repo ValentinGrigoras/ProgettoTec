@@ -150,7 +150,7 @@ ul#socials_bread{
 }
 /*--------LOGO----------*/
 .logo{
-    width: 13%;
+    width: 11%;
     float: left;
     text-align: center;
     /*background-color: #f7f7f7;*/
@@ -158,6 +158,8 @@ ul#socials_bread{
 .logo img{
     max-width: 95%;
     height: auto;
+    margin-right: 2%;
+    margin-top:4%;
 }
 .logo a{
     display: block;
@@ -170,6 +172,12 @@ ul#socials_bread{
 /*LINK DI NAVIGAZIONE (Valentin)*/
 #nav{
     width:45%;
+    text-align: center;
+    float: left;
+    font-size: 0.75em;
+}
+#nav_panel{
+    width:16%;
     text-align: center;
     float: left;
     font-size: 0.75em;
@@ -187,11 +195,9 @@ ul#socials_bread{
     /*background-color: #f7f7f7;*/
 }
 #nav_panel ul li{
-    width: 35%;
+    width: 50%;
 }
-#nav_panel ul li:first-of-type {
-    margin-left: 20%;
-}
+
 #nav ul li#active_link{
     /*background-color: #f7f7f7;*/
     padding: 3.9%;
@@ -212,7 +218,7 @@ ul#socials_bread{
 #nav_panel ul li a{
     display: block;
    padding: 22% 0;
-   font-size: 0.75em;
+   font-size: 1.1em;
 }
 #nav ul li a:hover, #nav_panel ul li a:hover {
     text-decoration: none;
@@ -227,7 +233,7 @@ ul#socials_bread{
 -------BARRA DI RICERCA (valentin)---- ------
 ----------------------------------*/
 .search{
-    width: 19%;
+    width: 26%;
     float: left;
     text-align: center;
     margin-top: 1%;
@@ -237,10 +243,15 @@ ul#socials_bread{
     border:none;
     cursor: pointer;
     color: #000;
+    float: left;
+    margin-top: 2%;
 }
 #header .search input[type=text]{
-    width: 35%;
+    width: 45%;
     color: #000;
+    float: left;
+    padding-top: 2.5%;
+    margin-right: 0.4%;
    /* border: 2px solid #ccc;*/
     border-radius: 0.2em;
     -webkit-transition: width 0.4s ease-in-out;
@@ -248,11 +259,15 @@ ul#socials_bread{
     outline: none;
 }
 #header .search input[type=text]:focus {
-    width: 45%;
+    width: 55%;
 }
 label#label_search{
     color: #000;
     font-size: 0.8em;
+    float: left;
+    padding-top: 2.5%;
+    margin-right: 1%;
+    margin-left: 2.4%;
 }
 
 .dropdown-content {
