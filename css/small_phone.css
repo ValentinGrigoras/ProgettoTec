@@ -2,12 +2,15 @@
 /*--------------------------------
 ------------- FOOTER -------------
 ----------------------------------*/
+#footer{
+    font-size: 1.2em;
+}
 #sections{
     text-align: center;
 }
 #links{
     width: 100%;
-    /*font-size: 1.6em;*/
+    font-size: 1.3em;
     overflow: auto;
 }
 #linksPart1{
@@ -23,15 +26,12 @@
 }
 #societa{
     width: 100%;
-    font-size: 1.1em;
 }
 #orario{
     width: 100%;
-    font-size: 1.1em;
 }
 #contattiFooter{
     width: 100%;
-    font-size: 1.1em;
 }
 #socials{
     padding-top: 3%;
@@ -39,16 +39,17 @@
     margin: 0;
 }
 #socials li{
-    margin: 0 7.5%;
+    margin: 0 7%;
 }
 #validCode{
     width: 100%;
     padding-top: 3%;
 }
+
 #validCode img{
-    width: 30%;
-    margin: 0 8%;
+    width: 20%;
 }
+
 /*--------------------------------
 ----------END FOOTER -------------
 ----------------------------------*/

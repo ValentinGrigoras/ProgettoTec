@@ -246,17 +246,19 @@ select #seleziona_corso{
 ------------- FOOTER -------------
 ----------------------------------*/
 #footer{
-	font-size: 0.8em;
+  font-size: 0.8em;
+}
+#footer h2{
+  font-size: 2em;
 }
 #links{
     width: 45%;
-    font-size: 1.25em;
 }
 #links p{
     padding-bottom: 5%;
 }
 #socials{
-	font-size: 1.7em;
+ 
 }
 #socials li{
     margin-right:6%;
@@ -273,10 +275,10 @@ select #seleziona_corso{
     width: 55%;
 }
 #validCode img{
-	width: 40%;
+    width: 40%;
 }
 #closure{
-	font-size: 1em;
+  font-size: 1.5em;
 }
 /*--------------------------------
 ----------END FOOTER -------------
