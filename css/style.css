@@ -89,7 +89,7 @@ la dimensione totale dei div child.*/
 }
 ul.breadcrumb {
     display: inline-block;
-    width: 60%;
+    width: 55%;
     float: left;
     /*background-color: #d5d5d5;*/
     text-align: center;
@@ -139,7 +139,7 @@ ul.breadcrumb li a:hover {
 }
 /*--------LOGO----------*/
 .logo{
-    width: 15%;
+    width: 20%;
     float: left;
     text-align: center;
     /*background-color: #f7f7f7;*/
