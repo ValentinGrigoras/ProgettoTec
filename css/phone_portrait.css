@@ -24,7 +24,7 @@ h4{
 ----------------------------------*/
 
 #allenatori_section #allenatori_content{
-    width: 90%;
+    width: 85%;
 }
 #allenatori_section .allen1 .socials_links{
     width: 100%;
@@ -36,24 +36,19 @@ h4{
   text-align: center;
 }
 
-dl{
-    float:none;
+#allenatori_section #allenatori_content dl{
     width: 100%;
     margin: 3% 0 5% 0;
   }
-  #allenatori_section dd p{
-      font-size: 70%;
-      width: 100%;
-      padding-bottom: 2%
-  }
-  dt{
-  font-size: 70%;
-  }
+
   .allenatore dd img{
-    width: 70%;
-float: none;
+    max-width: 30%;
 display: block;
 margin: 0 auto;
+  }
+  #allenatori_section dd p{
+    width: 80%;
+    font-size: 0.9em;
   }
 
 /*--------------------------------
@@ -78,18 +73,20 @@ margin: 0 auto;
 
 .Abbonamento p{
   padding: 2%;
+  font-size: 1.2em;
 }
 #content_prezzi a{
     width: 25%;
     padding: 2%;
 }
 #content_prezzi .buttonPrezzi{
-	margin: 2% 0;
+	padding: 5% 0;
 }
 .Abbonamento dd img{
   width: 100%;
   height: auto;
 }
+
 
 /*--------------------------------
 -------ABBONAMENTI END ------
@@ -106,7 +103,7 @@ margin: 0 auto;
   margin:2% 0 7% 0;
 }
 .corso p{
-  font-size: 50%;
+  font-size: 0.8em;
 
 }
 /*--------------------------------1
@@ -139,9 +136,9 @@ margin: 0 auto;
   font-size: 1.5em;
 }
 select #seleziona_corso{
-  
+
 }
-#TimeTable{ 
+#TimeTable{
   display: none;
 }
 #OrarioContent{
@@ -258,7 +255,7 @@ select #seleziona_corso{
     padding-bottom: 5%;
 }
 #socials{
- 
+
 }
 #socials li{
     margin-right:6%;
