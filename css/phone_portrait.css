@@ -1,5 +1,4 @@
- *{
-	font-size: 1.0975em;}
+
   h1,h2,h3,h4{
     font-weight: bold;
   }
@@ -72,15 +71,15 @@ margin: 0 auto;
   font-size: 60%;
 }
 .Abbonamento dt{
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .Abbonamento p{
   padding: 2%;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .Abbonamento  .prezzoAbbonamento{
-  font-size: 4em;
+  font-size: 2.5em;
 }
 
 #content_prezzi a{
@@ -111,7 +110,7 @@ margin: 0 auto;
   margin:2% 0 7% 0;
 }
 .corso p{
-  font-size: 0.8em;
+  font-size: 1.1em;
 
 }
 /*--------------------------------1
