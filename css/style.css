@@ -76,7 +76,7 @@ a:active {color: red;}
     display: inline-block;
     width: 75%;
     float: left;
-    padding: 0.6%;
+    padding: 0.6 0%;
 }
 /*siccome uso i float negli elementi child di breadcrumbs_home,
 il contenitore padre ignora i floats. Aggiungo quindi del contenuto
@@ -99,11 +99,9 @@ ul.breadcrumb #first:before{
     content: "";
 }
 ul.breadcrumb li {
+    float: left;
     display: inline-block;
     font-size: 0.8em;
-}
-ul.breadcrumb li+li:before {
-    content: "/\00a0";
 }
 ul.breadcrumb li a:hover {
     text-decoration: none;
@@ -117,14 +115,14 @@ ul.breadcrumb li a:hover {
     /*background-color: #d5d5d5;*/
     color: #000;
     font-size: 0.8em;
-    margin-top: 3.2%;
+    margin-top: 2.3%;
+}
+.lingua > div{
+    float: right;
+    min-width: 49% ;
 }
 .lingua .label_lingua, .lingua #select_lingua {
     display: inline-block;
-}
-.lingua select{
-    width: 30%;
-    padding:0.7%;
 }
 /*---------------------------------
 -------NAVIGAZIONE PRINCIPALE (Valentin)------
