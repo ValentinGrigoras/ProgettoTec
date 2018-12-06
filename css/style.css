@@ -3,10 +3,11 @@
     margin:0;
     padding: 0;
     font-size: 1em;
-    font-family: Verdana, sans-serif;
+    font-family: 'Poppins',Verdana, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
             box-sizing: border-box;
+            font-weight: 200;
 }
 html,body{
     width: 100%;
@@ -67,7 +68,7 @@ a:active {color: red;}
 ----------------------------------*/
 #first-section-header{
     width: 100%;
-    /*background-color: #d5d5d5;*/
+    background-color: #fff;
     overflow: auto;
     text-align: center;
 }
@@ -75,7 +76,7 @@ a:active {color: red;}
     display: inline-block;
     width: 75%;
     float: left;
-    padding: 0.2%;
+    padding: 0.6%;
 }
 /*siccome uso i float negli elementi child di breadcrumbs_home,
 il contenitore padre ignora i floats. Aggiungo quindi del contenuto
@@ -88,10 +89,11 @@ la dimensione totale dei div child.*/
 }
 ul.breadcrumb {
     display: inline-block;
-    width: 50%;
+    width: 60%;
     float: left;
     /*background-color: #d5d5d5;*/
     text-align: center;
+    margin-top: 0.7%;
 }
 ul.breadcrumb #first:before{
     content: "";
@@ -106,25 +108,7 @@ ul.breadcrumb li+li:before {
 ul.breadcrumb li a:hover {
     text-decoration: none;
 }
-/*------link a social nel Header(Valentin)-----*/
-ul#socials_bread{
-    display: inline-block;
-    width: 25%;
-    /*background-color: #d5d5d5;*/
-    text-align: left;
-    padding: 0.2%;
-}
-#socials_bread li{
-    display: inline-block;
-    margin-right: 3.5%;
-}
-#socials_bread .fab{
-    color: #000;
-    font-size: 0.8em;
-}
-#socials_bread .fab:hover{
-    color: #8e2126;
-}
+
 /*---------------------------------------*/
     /*SEZIONE LINGUA(Valentin)*/
 .lingua{
@@ -133,7 +117,7 @@ ul#socials_bread{
     /*background-color: #d5d5d5;*/
     color: #000;
     font-size: 0.8em;
-    padding-top: 0.2%;
+    padding-top: 1.1%;
 }
 .lingua .label_lingua, .lingua #select_lingua {
     display: inline-block;
@@ -149,9 +133,13 @@ ul#socials_bread{
     width: 100%;
     overflow: auto;
 }
+#main_nav .maxWidth{
+    background-color: #f6214b;
+    overflow: auto;
+}
 /*--------LOGO----------*/
 .logo{
-    width: 11%;
+    width: 15%;
     float: left;
     text-align: center;
     /*background-color: #f7f7f7;*/
@@ -159,8 +147,7 @@ ul#socials_bread{
 .logo img{
     max-width: 95%;
     height: auto;
-    margin-right: 2%;
-    margin-top:4%;
+    float: left;
 }
 .logo a{
     display: block;
@@ -215,36 +202,30 @@ ul#socials_bread{
 /*-----------------------*/
 /*LINK DI NAVIGAZIONE (Valentin)*/
 #nav{
-    width:45%;
+    width:100%;
     text-align: center;
     float: left;
     font-size: 0.75em;
 }
-#nav_panel{
-    width:16%;
-    text-align: center;
-    float: left;
-    font-size: 0.75em;
-}
-#nav ul, #nav_panel ul {
-    overflow: hidden;
+
+#nav ul {
+    width: 70%;
+        overflow: hidden;
+    margin: 0 auto;
 }
 #nav ul li, #nav_panel ul li {
     text-align: center;
     float: left;
-    /*border-left: 1px solid #e9e8e7;*/
-    border-right: 1px solid #e9e8e7;
-    width: 16.6667%; /* fallback for non-calc() browsers */
-    width: calc(100% / 6);
-    /*background-color: #f7f7f7;*/
+    width: 12.5%; /* fallback for non-calc() browsers */
+    width: calc(100% / 8);
 }
 #nav_panel ul li{
     width: 50%;
 }
 
 #nav ul li#active_link{
-    /*background-color: #f7f7f7;*/
-    padding: 3.9%;
+    color: #fff;
+    padding: 1.2%;
 }
 #nav_panel ul li.login_li{
     background-color: #f7f7f7;
@@ -257,17 +238,13 @@ ul#socials_bread{
 }
 #nav ul li a{
    display: block;
-   padding: 24% 0;
-}
-#nav_panel ul li a{
-    display: block;
-   padding: 22% 0;
-   font-size: 1.1em;
+   padding: 10% 0;
+   color: #fff;
+   text-transform: uppercase;
+   font-size: 1em;
 }
 #nav ul li a:hover, #nav_panel ul li a:hover {
     text-decoration: none;
-    background-color: #fff;
-    border-color: #ccc;
 }
 .fa-user,.fa-pen{
     padding-right: 5%;
@@ -313,11 +290,13 @@ label#label_search{
     margin-right: 1%;
     margin-left: 2.4%;
 }
-
+.dropbtn i{
+    margin-left: 6%;
+}
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #f6214b;
     width: calc(100% / 7);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -329,10 +308,13 @@ label#label_search{
     text-align: center;
     border-bottom: 1px solid #ccc;
 }
-.dropdown-content a:hover {background-color: #f1f1f1;border: 1px solid #ccc;}
+.dropdown-content a:hover {background-color: #f73158;border: 1px solid #ccc;}
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+#mynav{
+    display: none;
 }
 /*---------------------------------------*/
 
@@ -361,6 +343,8 @@ height: 80%;
     background-image: url(img/landing.jpg);
     background-size: cover;
     background-position: center;
+    top: 0;
+    left: 0;
 }
 
 /*--------------------------------
@@ -404,7 +388,7 @@ height: 80%;
 }
 .Abbonamento dt{
   text-align: center;
-  background-color: #fff;
+  background-color: #f4f4f4;
   color: #000;
   padding: 8%;
 }
