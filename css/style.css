@@ -420,7 +420,7 @@ height: 80%;
 #content_prezzi a{
     width: 25%;
     margin: auto;
-    background-color: #8e2126;
+    background-color: #f6214b;
     color: #fff;
     padding: 3.1%;
     border-radius: 4px;
@@ -439,7 +439,7 @@ height: 80%;
 }
 #content_prezzi a:hover{
     color: #fff;
-  background-color: #d34249;
+  background-color: #8a0620;
     text-decoration: none;
 }
 /*--------------------------------
@@ -562,7 +562,7 @@ dt{
 }
 .corso a{
     width: 25%;
-    background-color: #8e2126;
+    background-color: #f6214b;
     color: #fff;
     padding: 3.1%;
     border-radius: 4px;
@@ -576,7 +576,7 @@ dt{
   }
 .corso a:hover{
     text-decoration: none;
-      background-color: #d34249;
+      background-color: #8a0620;
   }
 
 /*--------------------------------
@@ -605,7 +605,7 @@ input[type=text], textarea {
 }
 
 input[type=submit] {
-    background-color: #8e2126;
+    background-color: #f6214b;
     color: white;
     text-decoration: underline;
     padding: 3% 5%;
@@ -616,7 +616,7 @@ input[type=submit] {
 
 input[type=submit]:hover {
   text-decoration: none;
-    background-color: #d34249;
+    background-color:#8a0620;
 }
 
 #container {

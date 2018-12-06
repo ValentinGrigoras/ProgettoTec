@@ -48,7 +48,7 @@ margin: 0 auto;
   }
   #allenatori_section dd p{
     width: 80%;
-    font-size: 0.6em;
+    font-size: 0.9em;
   }
 
 /*--------------------------------
@@ -73,6 +73,7 @@ margin: 0 auto;
 
 .Abbonamento p{
   padding: 2%;
+  font-size: 1.2em;
 }
 #content_prezzi a{
     width: 25%;
@@ -102,7 +103,7 @@ margin: 0 auto;
   margin:2% 0 7% 0;
 }
 .corso p{
-  font-size: 0.5em;
+  font-size: 0.8em;
 
 }
 /*--------------------------------1
