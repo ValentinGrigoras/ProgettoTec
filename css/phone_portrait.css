@@ -1,23 +1,22 @@
  *{
 	font-size: 1.0975em;}
+  h1,h2,h3,h4{
+    font-weight: bold;
+  }
 h1{
 	font-size: 1.30em;
-	font-weight: 300;
 	margin: 2% 0;
 }
 h2{
 	font-size: 1.25em;
-	font-weight: 300;
 	margin: 2% 0;
 }
 h3{
 	font-size: 1.20em;
-	font-weight: 300;
 	margin: 2% 0;
 }
 h4{
 	font-size: 1.15em;
-	font-weight: 300;
 	margin: 2% 0;
 }
 /*--------------------------------
@@ -133,11 +132,57 @@ margin: 0 auto;
 -------END FORM+MAP ------
 ----------------------------------*/
 
+/*--------PAGINA------------
+-----PROGRAMMAZIONE CORSI --------
+----------------------------------*/
+#custom_select{
+  font-size: 1.5em;
+}
+select #seleziona_corso{
+  
+}
+#TimeTable{ 
+  display: none;
+}
+#OrarioContent{
+  width: 85%;
+  text-align: center;
+}
+#MobileTimeTable{
+  display: block;
+  border: 1px solid silver;
+  padding: 0 5%;
+}
+#MobileTimeTable ul{
+  list-style: none;
+}
+.MobileTimeTableHeadline{
+  padding-top: 4%;
+}
+.MobileTimeTableDaylyPlanTime{
+  border-top: 1px solid silver;
+  padding: 3% 0;
+  color: #262626;
+}
+.MobileTimeTableDaylyPlanTime a:link{
+  color: black;
+}
+.MobileTimeTableDaylyPlanTime a:visited{
+  color: black;
+}
+.MobileTimeTableClassTime{
+  padding-top: 3%;
+  font-size: 0.5em;
+}
+/*--------------------------------
+--- END PROGRAMMAZIONE CORSI -----
+------------PAGINA---------------*/
+
 
 /*--------------------------------
 -------PRAGRAMMAZIONE CORSI ------
 ----------------------------------*/
-#titoloOrario{ padding-left:10%; margin: 5% 0;}
+
 
 #mtt{ /*mobile time table*/
 	margin: 18%;
@@ -201,17 +246,19 @@ margin: 0 auto;
 ------------- FOOTER -------------
 ----------------------------------*/
 #footer{
-	font-size: 0.8em;
+  font-size: 0.8em;
+}
+#footer h2{
+  font-size: 2em;
 }
 #links{
     width: 45%;
-    font-size: 1.25em;
 }
 #links p{
     padding-bottom: 5%;
 }
 #socials{
-	font-size: 1.7em;
+ 
 }
 #socials li{
     margin-right:6%;
@@ -228,10 +275,10 @@ margin: 0 auto;
     width: 55%;
 }
 #validCode img{
-	width: 40%;
+    width: 40%;
 }
 #closure{
-	font-size: 1em;
+  font-size: 1.5em;
 }
 /*--------------------------------
 ----------END FOOTER -------------
