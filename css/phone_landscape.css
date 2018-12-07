@@ -1,3 +1,19 @@
+/*header*/
+#header #breadcrumbs_home {
+    width: 100%;
+}
+ul.breadcrumb{
+	float: none;
+width: 50%;
+	margin: 0 auto;
+}
+.lingua {
+    width: 75%;
+}
+#botton_menu {
+    width: 25%;
+
+}
 /*MIN WIDTH 481px - MAX WIDTH 600PX*/
 
 /*--------------------------------
