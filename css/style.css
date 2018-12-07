@@ -641,11 +641,8 @@ input[type=submit]:hover {
 	padding: 2% 0;
 	line-height: 1.5em;
 	border-radius: 5%;
-    color: black;
-    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .TimeTableFitnessEntry a:link{
-    color: black;
 	font-weight: bold;
 }
 .TimeTableFitnessEntry a:visited{
@@ -658,6 +655,48 @@ input[type=submit]:hover {
 	color: #595959;
 	font-weight: bold;
 }
+/*COLORI PER CATEGORIE CORSI*/
+.cat_corso1{ /*verde*/
+    box-shadow:0 4px 8px 0 rgba(35, 163, 10, 0.2), 0 6px 20px 0 rgba(35, 163, 10, 0.19);
+}
+.cat_corso1 div a:link{
+    color: rgb(35,163,10);
+}
+.cat_corso2{ /*azzurro*/
+    box-shadow:0 4px 8px 0 rgba(85,165,230, 0.2), 0 6px 20px 0 rgba(85,165,230, 0.19);
+}
+.cat_corso2 div a:link{
+    color: rgb(85,165,230);
+}
+.cat_corso3{/*rosso*/
+    box-shadow:0 4px 8px 0 rgba(235,76,76, 0.2), 0 6px 20px 0 rgba(235,76,76, 0.19);
+}
+.cat_corso3 div a:link{
+    color: rgb(235,76,76);
+}
+.cat_corso4{/*blu*/
+    
+    box-shadow:0 4px 8px 0 rgba(72,72,181, 0.2), 0 6px 20px 0 rgba(72,72,181, 0.19);
+}
+.cat_corso4 div a:link{
+    color: rgb(72,72,181);
+}
+.cat_corso5{/*viola*/
+    box-shadow:0 4px 8px 0 rgba(179,8,209, 0.2), 0 6px 20px 0 rgba(179,8,209, 0.19);
+}
+.cat_corso5 div a:link{
+    color: rgb(179,8,209);
+}
+.cat_corso6{/*fucsia*/
+    box-shadow:0 4px 8px 0 rgba(240,77,161, 0.2), 0 6px 20px 0 rgba(240,77,161, 0.19);
+}
+.cat_corso6 div a:link{
+    color: rgb(240,77,161);
+}
+
+
+
+/*END COLORI PER CATEGORIE CORSI*/
 /*--------------------------------
 --- END PROGRAMMAZIONE CORSI -----
 ------------PAGINA---------------*/
