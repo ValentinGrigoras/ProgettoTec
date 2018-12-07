@@ -15,7 +15,7 @@
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"/>
 <link rel="stylesheet" href="css/style.css" media="handheld, screen, only screen"  type="text/css"/>
-<link href="https://fonts.googleapis.com/css?family=Poppins:200,300" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Poppins:200,300" rel="stylesheet"/> 
  <link rel="stylesheet" href="css/tablet_landscape.css" media="handheld, screen and (max-width:1060px), only screen and (max-device-width:1060px)"  type="text/css"/>
  <link rel="stylesheet" href="css/tablet_portrait.css" media="handheld, screen and (max-width:768px), only screen and (max-device-width:768px)"  type="text/css"/>
  <link rel="stylesheet" href="css/phone_landscape.css" media="handheld, screen and (max-width:600px), only screen and (max-device-width:600px)"  type="text/css"/>
@@ -51,7 +51,7 @@
 
       <ul class="breadcrumb">
         <li><span>Ti trovi in: </span></li>
-        <li id="first"><a href="#">Home </a><i class="fas fa-angle-double-right"></i></li>
+        <li id="first"><a href="#"> Home </a><i class="fas fa-angle-double-right"></i></li>
         <li><a href="#">Pictures </a><i class="fas fa-angle-double-right"></i></li>
         <li><a href="#">Summer </a><i class="fas fa-angle-double-right"></i></li>
         <li>Italy</li>
@@ -63,8 +63,8 @@
 
   <div class="lingua">
 		<div>
-      	<label for="box_lingua" class="label_lingua">Lingua del sito</label>
-     	<select id="box_lingua" id="select_lingua">
+      	<label for="select_lingua" class="label_lingua">Lingua del sito</label>
+     	<select id="select_lingua">
         	<option value="1">Italiano</option>
         	<option value="2">English</option>
       	</select>
@@ -177,7 +177,7 @@
   <dl class="Abbonamento">
     <dt>Annuale</dt>
     <dd class="cont_abbonamento">
-		<img src="css/img/prezzi_mensile.jpg"/>
+		<img src="css/img/prezzi_mensile.jpg" alt="immagine prezzo abbonamento anuale"/>
 		<p class="prezzoAbbonamento">&euro;360<span class="nrMese"> / un anno</span></p>
 		<p>7 giorni a settimana</p>
 		<p>1 scheda mensile</p>
@@ -189,7 +189,7 @@
   <dl class="Abbonamento">
     <dt>Trimestrale</dt>
     <dd class="cont_abbonamento">
-		<img src="css/img/prezzi_trimestrale.jpg">
+		<img src="css/img/prezzi_trimestrale.jpg" alt="immagine prezzo abbonamento trimestrale" />
 		<p class="prezzoAbbonamento">&euro;120<span class="nrMese"> / tre mesi</span></p>
 		<p>7 giorni a settimana</p>
 		<p>1 scheda mensile</p>
@@ -201,7 +201,7 @@
   <dl class="Abbonamento">
     <dt>Mensile</dt>
     <dd class="cont_abbonamento">
-		<img src="css/img/prezzi_mensile1.jpg">
+		<img src="css/img/prezzi_mensile1.jpg" alt="immagine prezzo abbonamento mensile" />
 		<p class="prezzoAbbonamento">&euro;55<span class="nrMese"> / un mese</span></p>
 		<p>6 giorni a settimana</p>
 		<p>1 scheda mensile</p>
@@ -224,21 +224,21 @@
     <h2>I nostri CORSI</h2>
 
     <div class="corso">
-      <img src="css/img/barbell.png"/>
+      <img src="css/img/barbell.png" alt="icona corso pilates"/>
       <h3>Pilates</h3>
   		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   		<p class="buttonCorsi"><a href="#">Scopri</a></p>
     </div>
 
     <div class="corso">
-      <img src="css/img/cardiogram.png"/>
+      <img src="css/img/cardiogram.png" alt="icona corso pilates" />
       <h3>Pilates</h3>
   		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   		<p class="buttonCorsi"><a href="#">Scopri</a></p>
     </div>
 
     <div class="corso">
-      <img src="css/img/treadmill.png"/>
+      <img src="css/img/treadmill.png" alt="icona corso pilates" />
       <h3>Pilates</h3>
   		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   		<p class="buttonCorsi"><a href="#">Scopri</a></p>
@@ -262,16 +262,16 @@
 		<h2>Contattaci</h2>
 		<form action="/action_page.php">
 			<label for="fname">Nome</label>
-			<input type="text" id="fname" name="firstname" placeholder="Il tuo nome..">
+			<input type="text" id="fname" name="firstname" />
 
 			<label for="lname">Cognome</label>
-			<input type="text" id="lname" name="lastname" placeholder="Il tuo secondo nome..">
+			<input type="text" id="lname" name="lastname">
 
 			<label for="field_email">La tua e-mail:</label>
-			<input type="text" id="field_email" name="sender_email" placeholder="Email.." >
+			<input type="text" id="field_email" name="sender_email" >
 
 			<label for="subject">Soggetto</label>
-			<textarea type="text" id="subject" name="subject" placeholder="Scrivi qualcosa.." ></textarea>
+			<textarea type="text" id="subject" name="subject" ></textarea>
 
 			<input type="submit" value="Submit">
 		</form>
