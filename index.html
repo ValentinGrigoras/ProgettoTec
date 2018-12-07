@@ -26,6 +26,7 @@
 
 
 <body>
+	
   <!--MENU (Valentin)-->
 
    <div id="header">
@@ -390,5 +391,28 @@ function closeNav() {
   document.getElementById("myNav").style.height = "0%";
 }
 </script>
+
+
+
+
+<button onclick="topFunction()" id="tornasu" title="Go to top">Torna su</button>
+<script>
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+	
+	function scrollFunction() {
+			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+					document.getElementById("tornasu").style.display = "block";
+			} else {
+					document.getElementById("tornasu").style.display = "none";
+			}
+	}
+	
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+	}
+	</script>
 </body>
 </html>
