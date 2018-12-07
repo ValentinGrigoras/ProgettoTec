@@ -4,14 +4,18 @@
 }
 ul.breadcrumb{
 	float: none;
-width: 50%;
+width: 100%;
 	margin: 0 auto;
 }
+ul.breadcrumb li {
+	float: none;
+}
 .lingua {
-    width: 75%;
+    width: 60%;
+    margin-top: 2%;
 }
 #botton_menu {
-    width: 25%;
+    width: 40%;
 
 }
 /*MIN WIDTH 481px - MAX WIDTH 600PX*/
