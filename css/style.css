@@ -171,10 +171,10 @@ ul.breadcrumb li a:hover {
 
 .overlay-content {
     position: relative;
-    top: 25%;
+    top: 0;
     width: 100%;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 1%;
 }
 
 .overlay a {
@@ -280,6 +280,12 @@ ul.breadcrumb li a:hover {
 }
 #mynav{
     display: none;
+}
+.breadcrumb li#first{
+    padding: 0 2%;
+}
+.breadcrumb li.arrow_bread{
+    padding: 0 2%;
 }
 /*---------------------------------------*/
 
