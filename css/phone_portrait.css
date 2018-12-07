@@ -1,5 +1,4 @@
- *{
-	font-size: 1.0975em;}
+
   h1,h2,h3,h4{
     font-weight: bold;
   }
@@ -34,6 +33,7 @@ h4{
   width: 25%;
   margin: 0;
   text-align: center;
+  font-size: 2em;
 }
 
 #allenatori_section #allenatori_content dl{
@@ -48,7 +48,7 @@ margin: 0 auto;
   }
   #allenatori_section dd p{
     width: 80%;
-    font-size: 0.9em;
+    font-size: 1.3em;
   }
 
 /*--------------------------------
@@ -70,11 +70,18 @@ margin: 0 auto;
 
   font-size: 60%;
 }
+.Abbonamento dt{
+  font-size: 1.5em;
+}
 
 .Abbonamento p{
   padding: 2%;
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
+.Abbonamento  .prezzoAbbonamento{
+  font-size: 2.5em;
+}
+
 #content_prezzi a{
     width: 25%;
     padding: 2%;
@@ -103,7 +110,7 @@ margin: 0 auto;
   margin:2% 0 7% 0;
 }
 .corso p{
-  font-size: 0.8em;
+  font-size: 1.1em;
 
 }
 /*--------------------------------1
