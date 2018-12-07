@@ -238,7 +238,7 @@ ul.breadcrumb li a:hover {
     background-color: #f7f7f7;
 }
 #nav_panel ul li.login_li a, #nav_panel ul li.registrati_li a{
-     font-weight: bold;
+     font-weight: bold;	 
 }
 #nav ul li a{
    display: block;
@@ -595,6 +595,9 @@ input[type=submit]:hover {
 /*--------PAGINA------------
 -----PROGRAMMAZIONE CORSI --------
 ----------------------------------*/
+#programmazioneCorsiContent{
+	background-color: white;
+}	
 #custom_select{
 	padding: 3% 0 1.5% 1.5%;
     color: #003366;
@@ -616,7 +619,9 @@ input[type=submit]:hover {
 
 #TimeTableItem{
 	border-collapse: collapse;
-
+	
+}
+#TimeTableItem tbody{
 }
 
 #TimeTableItem thead{
@@ -637,6 +642,7 @@ input[type=submit]:hover {
 #OrarioContent{
 	width: 88%;
 	margin: auto;
+	
     padding-bottom: 3%;
 }
 #MobileTimeTable{
