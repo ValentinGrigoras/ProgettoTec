@@ -8,18 +8,12 @@ label#label_search{
 {
     width: 80%;
 }*/
-#nav ul li{ 
-    width: calc(100%/6);
-    width:16.6666%;
-}
-#nav_panel ul li {
-    width: 50%;
-}
+
 #nav ul li:first-of-type{
     margin: 0;
 }
 #nav ul li#active_link{
-	padding: 4.1% 0;
+	padding: 2.8% 0;
 }
 #nav ul li a {
 	padding: 25% 0;

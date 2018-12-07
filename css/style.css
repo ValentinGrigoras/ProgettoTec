@@ -42,6 +42,8 @@ h4{
 .maxWidth{
     max-width: 1200px;
     margin:auto;
+    overflow: auto;
+    
 }
 /*colori generali link (Valentin)*/
 a{font-weight: bold;}
@@ -93,7 +95,7 @@ ul.breadcrumb {
     float: left;
     /*background-color: #d5d5d5;*/
     text-align: center;
-    margin-top: 3.7%;
+    margin-top: 3.5%;
 }
 ul.breadcrumb #first:before{
     content: "";
@@ -150,11 +152,8 @@ ul.breadcrumb li a:hover {
 .logo a{
     display: block;
 }
-.logo #mobile{
+.logo_mobile{
     display: none;
-}
-#botton_menu{
-    float: right;
 }
 .overlay {
     height: 0%;
@@ -197,6 +196,9 @@ ul.breadcrumb li a:hover {
     font-size: 60px;
 }
 
+#botton_menu{
+    display: none;
+}
 /*-----------------------*/
 /*LINK DI NAVIGAZIONE (Valentin)*/
 #nav{
