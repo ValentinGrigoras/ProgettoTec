@@ -3,11 +3,11 @@
     margin:0;
     padding: 0;
     font-size: 1em;
-    font-family: 'Poppins',Verdana, sans-serif;
+    font-family: Verdana, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
             box-sizing: border-box;
-            font-weight: 300;
+            
 }
 html,body{
     width: 100%;
@@ -43,7 +43,6 @@ h4{
     max-width: 1200px;
     margin:auto;
     overflow: auto;
-    
 }
 /*colori generali link (Valentin)*/
 a{font-weight: bold;}
@@ -53,7 +52,7 @@ a:hover {color: magenta;}
 a:active {color: red;}
 
 /*--------------------------------
-------------HEADER(Valentin)----------------
+------------HEADER(Valentin)------
 ----------------------------------*/
 #header{
     width: 100%;
@@ -129,9 +128,11 @@ ul.breadcrumb li a:hover {
 /*---------------------------------
 -------NAVIGAZIONE PRINCIPALE (Valentin)------
 ----------------------------------*/
+
 #main_nav{
     width: 100%;
     overflow: auto;
+    
 }
 #main_nav .maxWidth{
     background-color: #f6214b;
@@ -206,6 +207,7 @@ ul.breadcrumb li a:hover {
     text-align: center;
     float: left;
     font-size: 0.75em;
+    
 }
 
 #nav ul {
@@ -226,6 +228,7 @@ ul.breadcrumb li a:hover {
 #nav ul li#active_link{
     color: #fff;
     padding: 1.2%;
+    font-weight: 1000;
 }
 #nav_panel ul li.login_li{
     background-color: #f7f7f7;
@@ -241,7 +244,8 @@ ul.breadcrumb li a:hover {
    padding: 10% 0;
    color: #fff;
    text-transform: uppercase;
-   font-size: 0.9em;
+   font-size: 1em;
+   font-weight: bold;
 }
 #nav ul li a:hover, #nav_panel ul li a:hover {
     text-decoration: none;
@@ -649,12 +653,14 @@ input[type=submit]:hover {
 	padding: 2% 0;
 	line-height: 1.5em;
 	border-radius: 5%;
+    color: white;
 }
 .TimeTableFitnessEntry a:link{
 	font-weight: bold;
+    color: white;
 }
 .TimeTableFitnessEntry a:visited{
-	color: #595959;
+	
 }
 .TimeTableFitnessEntry p{
 	font-size: 0.9em;
@@ -665,38 +671,38 @@ input[type=submit]:hover {
 }
 /*COLORI PER CATEGORIE CORSI*/
 .cat_corso1{ /*verde*/
-    box-shadow:0 4px 8px 0 rgba(35, 163, 10, 0.2), 0 6px 20px 0 rgba(35, 163, 10, 0.19);
+    background-color:rgba(35, 163, 10, 1);
 }
 .cat_corso1 div a:link{
-    color: rgb(35,163,10);
+    color: rgba(35,163,10);
 }
 .cat_corso2{ /*azzurro*/
-    box-shadow:0 4px 8px 0 rgba(85,165,230, 0.2), 0 6px 20px 0 rgba(85,165,230, 0.19);
+    background-color:rgba(85,165,230, 1);
 }
 .cat_corso2 div a:link{
     color: rgb(85,165,230);
 }
 .cat_corso3{/*rosso*/
-    box-shadow:0 4px 8px 0 rgba(235,76,76, 0.2), 0 6px 20px 0 rgba(235,76,76, 0.19);
+    background-color:rgba(235,76,76, 1);
 }
 .cat_corso3 div a:link{
     color: rgb(235,76,76);
 }
 .cat_corso4{/*blu*/
     
-    box-shadow:0 4px 8px 0 rgba(72,72,181, 0.2), 0 6px 20px 0 rgba(72,72,181, 0.19);
+    background-color:rgba(72,72,181, 1);
 }
 .cat_corso4 div a:link{
     color: rgb(72,72,181);
 }
 .cat_corso5{/*viola*/
-    box-shadow:0 4px 8px 0 rgba(179,8,209, 0.2), 0 6px 20px 0 rgba(179,8,209, 0.19);
+    background-color:rgba(179,8,209, 1);
 }
 .cat_corso5 div a:link{
     color: rgb(179,8,209);
 }
 .cat_corso6{/*fucsia*/
-    box-shadow:0 4px 8px 0 rgba(240,77,161, 0.2), 0 6px 20px 0 rgba(240,77,161, 0.19);
+    background-color:rgba(240,77,161, 1);
 }
 .cat_corso6 div a:link{
     color: rgb(240,77,161);
