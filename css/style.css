@@ -25,7 +25,7 @@ ul{
     list-style: none;
 }
 li{
-        list-style: none;
+    list-style: none;
 }
 h1{
     font-size: 2em;
@@ -399,7 +399,6 @@ height: 80%;
 }
 #allenatori_section #allenatori_content dl{
     float:left;
-    background-color: #26de81;;
     width: 40%;
     margin:2% 5% 5% 5%;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -638,15 +637,15 @@ input[type=submit]:hover {
 	font-weight: bold;
 }
 .TimeTableFitnessEntry{
-	margin: 5%;
+	margin: 8%;
 	padding: 2% 0;
 	line-height: 1.5em;
 	border-radius: 5%;
-    background-color: #73AD21;
-    color: white;
+    color: black;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .TimeTableFitnessEntry a:link{
-	color: white;
+    color: black;
 	font-weight: bold;
 }
 .TimeTableFitnessEntry a:visited{
