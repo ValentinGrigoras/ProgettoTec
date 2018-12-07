@@ -842,13 +842,15 @@ input[type=submit]:hover {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: red;
-    color: white;
+    background-color: #fff;
+    color: grey;
     cursor: pointer;
     padding: 15px;
+    border: 1px solid #f6214b;
     border-radius: 4px;
 }
 
 #tornasu:hover {
-    background-color: #555;
+    background-color: #f6214b;
+    color: #fff;
 }
