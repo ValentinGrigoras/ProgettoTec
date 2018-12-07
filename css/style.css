@@ -229,6 +229,7 @@ ul.breadcrumb li a:hover {
     color: #fff;
     padding: 1.2%;
     font-weight: 1000;
+    background-color: #f73b61;
 }
 #nav_panel ul li.login_li{
     background-color: #f7f7f7;
