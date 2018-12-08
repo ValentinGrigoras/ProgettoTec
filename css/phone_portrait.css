@@ -178,10 +178,6 @@ select #seleziona_corso{
 .MobileTimeTableDaylyPlanTime:last-child{
 	border-bottom: 1px solid silver; 
 }
-.MobileTimeTableDaylyPlanTime a:link{
-  color: black;
-  font-weight: normal;
-}
 .MobileTimeTableDaylyPlanTime a:visited{
   color: black;
 }

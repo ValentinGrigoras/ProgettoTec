@@ -677,38 +677,38 @@ input[type=submit]:hover {
 .cat_corso1{ /*verde*/
     background-color:rgba(35, 163, 10, 1);
 }
-.cat_corso1 div a:link{
+#MobileTimeTable .linkcat_corso1 {
     color: rgba(35,163,10);
 }
 .cat_corso2{ /*azzurro*/
     background-color:rgba(85,165,230, 1);
 }
-.cat_corso2 div a:link{
+#MobileTimeTable .linkcat_corso2{
     color: rgb(85,165,230);
 }
 .cat_corso3{/*rosso*/
     background-color:rgba(235,76,76, 1);
 }
-.cat_corso3 div a:link{
+#MobileTimeTable .linkcat_corso3{
     color: rgb(235,76,76);
 }
 .cat_corso4{/*blu*/
     
     background-color:rgba(72,72,181, 1);
 }
-.cat_corso4 div a:link{
+#MobileTimeTable .linkcat_corso4{
     color: rgb(72,72,181);
 }
 .cat_corso5{/*viola*/
     background-color:rgba(179,8,209, 1);
 }
-.cat_corso5 div a:link{
+#MobileTimeTable .linkcat_corso5{
     color: rgb(179,8,209);
 }
 .cat_corso6{/*fucsia*/
     background-color:rgba(240,77,161, 1);
 }
-.cat_corso6 div a:link{
+#MobileTimeTable .linkcat_corso6{
     color: rgb(240,77,161);
 }
 
