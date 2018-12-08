@@ -7,7 +7,7 @@ h1{
 	margin: 2% 0;
 }
 h2{
-	font-size: 1.25em;
+	font-size: 2.5em;
 	margin: 2% 0;
 }
 h3{
@@ -155,6 +155,10 @@ select #seleziona_corso{
   display: block;
   border: 1px solid silver;
   padding: 0 5%;
+  font-size: 2em;
+}
+#MobileTimeTable h3{
+  text-align: left;
 }
 #MobileTimeTable ul{
   list-style: none;
@@ -168,87 +172,29 @@ select #seleziona_corso{
   color: #262626;
 }
 .MobileTimeTableDaylyPlanTime div{
-	
+	display: inline-block;
+  
 }
 .MobileTimeTableDaylyPlanTime:last-child{
 	border-bottom: 1px solid silver; 
 }
 .MobileTimeTableDaylyPlanTime a:link{
   color: black;
+  font-weight: normal;
 }
 .MobileTimeTableDaylyPlanTime a:visited{
   color: black;
 }
+.MobileTimeTableClassName{
+  width: 60%;
+  padding-left: 7%;
+}
 .MobileTimeTableClassTime{
   padding-top: 3%;
-  font-size: 0.5em;
 }
 /*--------------------------------
 --- END PROGRAMMAZIONE CORSI -----
 ------------PAGINA---------------*/
-
-
-/*--------------------------------
--------PRAGRAMMAZIONE CORSI ------
-----------------------------------*/
-
-
-#mtt{ /*mobile time table*/
-	margin: 18%;
-	border: 1px solid silver;
-}
-#mtt ul {
-	list-style: none;
-}
-#mttList{
-	margin: 8%;
-}
-.mttIHeadline{
-	margin: 8% 0;
-}
-.mttDaylyPlan{
-	margin: 10% 0;
-
-}
-.mttDaylyPlan li{
-	border-bottom: 1px solid silver;
-}
-.mttDaylyPlan li:first-child{
-	border-top: 1px solid silver;
-}
-.mttDaylyPlanTime .mttClassName, .mttDaylyPlanTime .mttClassTime{
-	margin: 2.5% 0;
-
-
-}
-.mttDaylyPlanTime{
-	display: inline-block;
-	width: 100%;
-
-}
-.mttClassName {
-	text-decoration: none;
-	float: left;
-}
-.mttClassName a{
-	text-decoration: none;
-}
-.mttClassName a:link{
-	color: black;
-}
-.mttClassName a:visited{
-	color: black;
-}
-.mttClassTime{
-	font-size: 0.75em;
-	padding-left: 5%;
-	padding-top: 1%;
-	float: left;
-
-}
-/*--------------------------------
---- END PRAGRAMMAZIONE CORSI -----
-----------------------------------*/
 
 /*MIN WIDTH 321PX - MAX WIDTH 480PX*/
 /*--------------------------------

@@ -645,15 +645,12 @@ input[type=submit]:hover {
 	
     padding-bottom: 3%;
 }
-#MobileTimeTable{
-    display: none;
-}
+
 .TimeTableEntryTime div{
 	display: inline-block;
 }
 .TimeTableEntryTimePeriod div{
 	display: inline-block;
-	font-weight: bold;
 }
 .TimeTableFitnessEntry{
 	margin: 8%;
@@ -715,7 +712,9 @@ input[type=submit]:hover {
     color: rgb(240,77,161);
 }
 
-
+#MobileTimeTable{
+    display: none;
+}
 
 /*END COLORI PER CATEGORIE CORSI*/
 /*--------------------------------
