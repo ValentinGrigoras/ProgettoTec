@@ -64,6 +64,17 @@ label#label_search{
 /*--------------------------------
 ------------- ALLENATORI -------------
 ----------------------------------*/
+#allenatori_section #allenatori_content{
+  width: 97%;
+}
+#allenatori_section #allenatori_content dl{
+  width: 47%;
+  margin:2% 1.5% 4% 1.5%;
+}
+#allenatori_section .allen1 .socials_links li{
+  font-size: 1.4em;
+}
+
 #allenatori_section dd p{
   width: 90%;
 }
@@ -78,6 +89,15 @@ label#label_search{
 .Abbonamento .prezzoAbbonamento {
     font-size: 1.5em;
   }
+  #prezzi_section #content_prezzi{
+    width: 95%;
+  }
+  #prezzi_section #content_prezzi dl {
+    width: 30%;
+    float: left;
+    margin: 2% 1.66% 4.166% 1.66%;
+}
+
 /*--------------------------------
 ------------- END ABBONAMENTI -------------
 ----------------------------------*/
@@ -85,12 +105,24 @@ label#label_search{
 /*--------------------------------
 -------CORSI ------
 ----------------------------------*/
+#content_corsi{
+  width: 85%;
+}
+.corso .buttonCorsi {
+    margin: 5% 5%;
+  }
 #content_corsi .corso{
   width: 100%;
   float: left;
   margin: 0;
-  border-bottom: 3px solid #eee;
   margin:2% 0 7% 0;
+}
+.corso img {
+    margin:2% auto;
+}
+#content_corsi .corso{
+  width: 90%;
+  margin: 2% 5% 7% 5%;
 }
 .corso p{
   font-size: 1.1em;

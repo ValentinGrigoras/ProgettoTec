@@ -66,10 +66,7 @@ margin: 0 auto;
   width: 100%;
   margin :2% 0 3% 0;
 }
-#prezzi_section #content_prezzi dd{
 
-  font-size: 60%;
-}
 .Abbonamento dt{
   font-size: 1.5em;
 }
@@ -106,7 +103,6 @@ margin: 0 auto;
   width: 100%;
   float: left;
   margin: 0;
-  border-bottom: 3px solid #eee;
   margin:2% 0 7% 0;
 }
 .corso p{
@@ -173,10 +169,10 @@ select #seleziona_corso{
 }
 .MobileTimeTableDaylyPlanTime div{
 	display: inline-block;
-  
+
 }
 .MobileTimeTableDaylyPlanTime:last-child{
-	border-bottom: 1px solid silver; 
+	border-bottom: 1px solid silver;
 }
 .MobileTimeTableDaylyPlanTime a:visited{
   color: black;

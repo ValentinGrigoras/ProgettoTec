@@ -7,7 +7,7 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
             box-sizing: border-box;
-            
+
 }
 html,body{
     width: 100%;
@@ -132,7 +132,7 @@ ul.breadcrumb li a:hover {
 #main_nav{
     width: 100%;
     overflow: auto;
-    
+
 }
 #main_nav .maxWidth{
     background-color: #f6214b;
@@ -207,7 +207,7 @@ ul.breadcrumb li a:hover {
     text-align: center;
     float: left;
     font-size: 0.75em;
-    
+
 }
 
 #nav ul {
@@ -238,7 +238,7 @@ ul.breadcrumb li a:hover {
     background-color: #f7f7f7;
 }
 #nav_panel ul li.login_li a, #nav_panel ul li.registrati_li a{
-     font-weight: bold;	 
+     font-weight: bold;
 }
 #nav ul li a{
    display: block;
@@ -325,6 +325,7 @@ LANDING PAGE
   background-color: #8a0620;
     text-decoration: none;
 }
+
 /*---------------------------------------*/
 
 /*galleria*/
@@ -626,7 +627,7 @@ input[type=submit]:hover {
 ----------------------------------*/
 #programmazioneCorsiContent{
 	background-color: white;
-}	
+}
 #custom_select{
 	padding: 3% 0 1.5% 1.5%;
     color: #003366;
@@ -648,7 +649,7 @@ input[type=submit]:hover {
 
 #TimeTableItem{
 	border-collapse: collapse;
-	
+
 }
 #TimeTableItem tbody{
 }
@@ -671,7 +672,7 @@ input[type=submit]:hover {
 #OrarioContent{
 	width: 88%;
 	margin: auto;
-	
+
     padding-bottom: 3%;
 }
 
@@ -693,7 +694,7 @@ input[type=submit]:hover {
     color: white;
 }
 .TimeTableFitnessEntry a:visited{
-	
+
 }
 .TimeTableFitnessEntry p{
 	font-size: 0.9em;
@@ -722,7 +723,7 @@ input[type=submit]:hover {
     color: rgb(235,76,76);
 }
 .cat_corso4{/*blu*/
-    
+
     background-color:rgba(72,72,181, 1);
 }
 #MobileTimeTable .linkcat_corso4{
