@@ -287,6 +287,44 @@ ul.breadcrumb li a:hover {
 .breadcrumb li.arrow_bread{
     padding: 0 2%;
 }
+/*
+LANDING PAGE
+*/
+#landing{
+    max-width: 100%;
+    height: 100%;
+    background-image: url(img/landing2.jpg);
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+}
+
+#main_message{
+  font-size: 3.5em;
+  font-weight: 1000;
+  color: #fff;
+  margin-top: 12%;
+  width: 40%;
+  margin-left: 9%;
+}
+#second_message{
+  font-size: 1em;
+  font-weight: 500;
+  color: #fff;
+  width: 50%;
+   margin-left: 9%;
+}
+#landing .buttonPrezzi {
+  border-top: 1px solid #ccc;
+  padding: 7% 0;
+  border-bottom: none;
+}
+#landing a:hover{
+    color: #fff;
+  background-color: #8a0620;
+    text-decoration: none;
+}
 /*---------------------------------------*/
 
 /*galleria*/
@@ -307,15 +345,6 @@ height: 80%;
 #gallery .img-content img{
     width: 100%;
     height: auto;
-}
-#landing{
-    max-width: 100%;
-    height: 100%;
-    background-image: url(img/landing.jpg);
-    background-size: cover;
-    background-position: center;
-    top: 0;
-    left: 0;
 }
 
 /*--------------------------------
