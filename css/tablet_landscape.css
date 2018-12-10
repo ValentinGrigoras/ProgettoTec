@@ -4,7 +4,7 @@ label#label_search{
     display: block;
     padding-bottom: 2%;
 }
-#header .search input[type="text"], #header .search input[type=text]:focus 
+#header .search input[type="text"], #header .search input[type=text]:focus
 {
     width: 80%;
 }*/
@@ -59,4 +59,43 @@ label#label_search{
 }
 /*--------------------------------
 ----------END FOOTER -------------
+----------------------------------*/
+
+/*--------------------------------
+------------- ALLENATORI -------------
+----------------------------------*/
+#allenatori_section dd p{
+  width: 90%;
+}
+
+/*--------------------------------
+------------- END ALLENATORI -------------
+----------------------------------*/
+
+/*--------------------------------
+------------- ABBONAMENTI -------------
+----------------------------------*/
+.Abbonamento .prezzoAbbonamento {
+    font-size: 1.5em;
+  }
+/*--------------------------------
+------------- END ABBONAMENTI -------------
+----------------------------------*/
+
+/*--------------------------------
+-------CORSI ------
+----------------------------------*/
+#content_corsi .corso{
+  width: 100%;
+  float: left;
+  margin: 0;
+  border-bottom: 3px solid #eee;
+  margin:2% 0 7% 0;
+}
+.corso p{
+  font-size: 1.1em;
+
+}
+/*--------------------------------1
+-------END CORSI ------
 ----------------------------------*/
