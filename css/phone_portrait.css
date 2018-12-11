@@ -7,7 +7,7 @@ h1{
 	margin: 2% 0;
 }
 h2{
-	font-size: 2.5em;
+	font-size: 2em;
 	margin: 2% 0;
 }
 h3{
@@ -23,7 +23,7 @@ h4{
 ----------------------------------*/
 
 #allenatori_section #allenatori_content{
-    width: 85%;
+    width: 95%;
 }
 #allenatori_section .allen1 .socials_links{
     width: 100%;
@@ -37,8 +37,8 @@ h4{
 }
 
 #allenatori_section #allenatori_content dl{
-    width: 100%;
-    margin: 3% 0 5% 0;
+    width: 94%;
+    margin: 3% 3% 6% 3%;
   }
 
   .allenatore dd img{
@@ -60,11 +60,11 @@ margin: 0 auto;
 ----------------------------------*/
 
 #prezzi_section #content_prezzi{
-  width: 70%;
+  width: 80%;
 }
 #prezzi_section #content_prezzi dl{
-  width: 100%;
-  margin :2% 0 3% 0;
+  width: 90%;
+  margin :2% 5% 6% 5%;
 }
 
 .Abbonamento dt{
@@ -99,11 +99,16 @@ margin: 0 auto;
 /*--------------------------------
 -------CORSI ------
 ----------------------------------*/
+#content_corsi{
+  width: 95%
+}
+
+
 #content_corsi .corso{
-  width: 100%;
+  width: 94%;
   float: left;
   margin: 0;
-  margin:2% 0 7% 0;
+  margin:2% 3% 7% 3%;
 }
 .corso p{
   font-size: 1.1em;

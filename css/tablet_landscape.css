@@ -86,9 +86,7 @@ label#label_search{
 /*--------------------------------
 ------------- ABBONAMENTI -------------
 ----------------------------------*/
-.Abbonamento .prezzoAbbonamento {
-    font-size: 1.5em;
-  }
+
   #prezzi_section #content_prezzi{
     width: 95%;
   }
@@ -96,6 +94,12 @@ label#label_search{
     width: 30%;
     float: left;
     margin: 2% 1.66% 4.166% 1.66%;
+}
+#content_prezzi  p{
+  font-size: 0.9em;
+}
+#content_prezzi .prezzoAbbonamento{
+  font-size: 1.9em;
 }
 
 /*--------------------------------
