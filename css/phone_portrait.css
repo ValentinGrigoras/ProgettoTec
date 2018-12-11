@@ -60,7 +60,7 @@ margin: 0 auto;
 ----------------------------------*/
 
 #prezzi_section #content_prezzi{
-  width: 80%;
+  width: 90%;
 }
 #prezzi_section #content_prezzi dl{
   width: 90%;
@@ -71,13 +71,15 @@ margin: 0 auto;
   font-size: 1.5em;
 }
 
-.Abbonamento p{
-  padding: 2%;
-  font-size: 1.5em;
+#content_prezzi p{
+  font-size: 1.2em;
+  padding: 2%
 }
-.Abbonamento  .prezzoAbbonamento{
-  font-size: 2.5em;
+#content_prezzi .prezzoAbbonamento{
+  font-size: 2.3em;
 }
+
+
 
 #content_prezzi a{
     width: 25%;
@@ -85,6 +87,7 @@ margin: 0 auto;
 }
 #content_prezzi .buttonPrezzi{
 	padding: 5% 0;
+  font-size: 1.2em;
 }
 .Abbonamento dd img{
   width: 100%;
