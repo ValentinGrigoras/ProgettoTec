@@ -4,7 +4,7 @@ label#label_search{
     display: block;
     padding-bottom: 2%;
 }
-#header .search input[type="text"], #header .search input[type=text]:focus 
+#header .search input[type="text"], #header .search input[type=text]:focus
 {
     width: 80%;
 }*/
@@ -59,4 +59,80 @@ label#label_search{
 }
 /*--------------------------------
 ----------END FOOTER -------------
+----------------------------------*/
+
+/*--------------------------------
+------------- ALLENATORI -------------
+----------------------------------*/
+#allenatori_section #allenatori_content{
+  width: 97%;
+}
+#allenatori_section #allenatori_content dl{
+  width: 47%;
+  margin:2% 1.5% 4% 1.5%;
+}
+#allenatori_section .allen1 .socials_links li{
+  font-size: 1.4em;
+}
+
+#allenatori_section dd p{
+  width: 90%;
+}
+
+/*--------------------------------
+------------- END ALLENATORI -------------
+----------------------------------*/
+
+/*--------------------------------
+------------- ABBONAMENTI -------------
+----------------------------------*/
+
+  #prezzi_section #content_prezzi{
+    width: 95%;
+  }
+  #prezzi_section #content_prezzi dl {
+    width: 30%;
+    float: left;
+    margin: 2% 1.66% 4.166% 1.66%;
+}
+#content_prezzi  p{
+  font-size: 0.9em;
+}
+#content_prezzi .prezzoAbbonamento{
+  font-size: 1.9em;
+}
+
+
+/*--------------------------------
+------------- END ABBONAMENTI -------------
+----------------------------------*/
+
+/*--------------------------------
+-------CORSI ------
+----------------------------------*/
+#content_corsi{
+  width: 85%;
+}
+.corso .buttonCorsi {
+    margin: 5% 5%;
+  }
+#content_corsi .corso{
+  width: 100%;
+  float: left;
+  margin: 0;
+  margin:2% 0 7% 0;
+}
+.corso img {
+    margin:2% auto;
+}
+#content_corsi .corso{
+  width: 90%;
+  margin: 2% 5% 7% 5%;
+}
+.corso p{
+  font-size: 1.1em;
+
+}
+/*--------------------------------1
+-------END CORSI ------
 ----------------------------------*/

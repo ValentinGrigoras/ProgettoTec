@@ -22,10 +22,12 @@
  <link rel="stylesheet" href="css/phone_portrait.css" media="handheld, screen and (max-width:480px), only screen and (max-device-width:480px)"  type="text/css"/>
  <link rel="stylesheet" href="css/small_phone.css" media="handheld, screen and (max-width:320px), only screen and (max-device-width:320px)"  type="text/css"/>
  <link type="text/css" rel="stylesheet" href="style/print_style.css" media="print"/>
+ <script src="js/gototop.js"></script>
 </head>
 
 
 <body>
+	
   <!--MENU (Valentin)-->
 
    <div id="header">
@@ -101,7 +103,7 @@
               </div>
           </li>
           <li><a href="">Corsi</a></li>
-        <li><a href="programmazione_corsi.html">Programma</a></li>
+        <li><a href="pages/programmazione_corsi.html">Programma</a></li>
         <li><a href="">Prezzi</a></li>
         <li><a href="">Contattaci</a></li>
         <li><a href="">Registrati</a></li>
@@ -111,7 +113,10 @@
       </div>
 
   </div> <!--end main_nav--> 
-
+<p id="main_message">SHAPE YOUR 
+PERFECT BODY</p>
+<p id="second_message">Tremblant is based in Canada and has over 90 runs servicing millions of skiers each year. With 13 state-of-the-art ski lifts and a selection of choices for both snowboarders and skiers</p>
+<p class="buttonPrezzi"><a href="#">Iscriviti</a></p>
 
   </div>
 <div id="allenatori_section">
@@ -397,5 +402,11 @@ function closeNav() {
   document.getElementById("myNav").style.height = "0%";
 }
 </script>
+
+
+
+<!--torna su (hoss)-->
+<button onclick="topFunction()" id="tornasu" title="Torna su">Torna su</button>
+
 </body>
 </html>

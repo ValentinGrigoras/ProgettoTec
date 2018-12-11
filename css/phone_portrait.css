@@ -7,7 +7,7 @@ h1{
 	margin: 2% 0;
 }
 h2{
-	font-size: 1.25em;
+	font-size: 2em;
 	margin: 2% 0;
 }
 h3{
@@ -23,7 +23,7 @@ h4{
 ----------------------------------*/
 
 #allenatori_section #allenatori_content{
-    width: 85%;
+    width: 95%;
 }
 #allenatori_section .allen1 .socials_links{
     width: 100%;
@@ -37,8 +37,8 @@ h4{
 }
 
 #allenatori_section #allenatori_content dl{
-    width: 100%;
-    margin: 3% 0 5% 0;
+    width: 94%;
+    margin: 3% 3% 6% 3%;
   }
 
   .allenatore dd img{
@@ -60,16 +60,13 @@ margin: 0 auto;
 ----------------------------------*/
 
 #prezzi_section #content_prezzi{
-  width: 70%;
+  width: 80%;
 }
 #prezzi_section #content_prezzi dl{
-  width: 100%;
-  margin :2% 0 3% 0;
+  width: 90%;
+  margin :2% 5% 9% 5%;
 }
-#prezzi_section #content_prezzi dd{
 
-  font-size: 60%;
-}
 .Abbonamento dt{
   font-size: 1.5em;
 }
@@ -102,12 +99,16 @@ margin: 0 auto;
 /*--------------------------------
 -------CORSI ------
 ----------------------------------*/
+#content_corsi{
+  width: 95%
+}
+
+
 #content_corsi .corso{
-  width: 100%;
+  width: 94%;
   float: left;
   margin: 0;
-  border-bottom: 3px solid #eee;
-  margin:2% 0 7% 0;
+  margin:2% 3% 7% 3%;
 }
 .corso p{
   font-size: 1.1em;
@@ -155,6 +156,10 @@ select #seleziona_corso{
   display: block;
   border: 1px solid silver;
   padding: 0 5%;
+  font-size: 2em;
+}
+#MobileTimeTable h3{
+  text-align: left;
 }
 #MobileTimeTable ul{
   list-style: none;
@@ -168,87 +173,25 @@ select #seleziona_corso{
   color: #262626;
 }
 .MobileTimeTableDaylyPlanTime div{
-	
+	display: inline-block;
+
 }
 .MobileTimeTableDaylyPlanTime:last-child{
-	border-bottom: 1px solid silver; 
-}
-.MobileTimeTableDaylyPlanTime a:link{
-  color: black;
+	border-bottom: 1px solid silver;
 }
 .MobileTimeTableDaylyPlanTime a:visited{
   color: black;
 }
+.MobileTimeTableClassName{
+  width: 60%;
+  padding-left: 7%;
+}
 .MobileTimeTableClassTime{
   padding-top: 3%;
-  font-size: 0.5em;
 }
 /*--------------------------------
 --- END PROGRAMMAZIONE CORSI -----
 ------------PAGINA---------------*/
-
-
-/*--------------------------------
--------PRAGRAMMAZIONE CORSI ------
-----------------------------------*/
-
-
-#mtt{ /*mobile time table*/
-	margin: 18%;
-	border: 1px solid silver;
-}
-#mtt ul {
-	list-style: none;
-}
-#mttList{
-	margin: 8%;
-}
-.mttIHeadline{
-	margin: 8% 0;
-}
-.mttDaylyPlan{
-	margin: 10% 0;
-
-}
-.mttDaylyPlan li{
-	border-bottom: 1px solid silver;
-}
-.mttDaylyPlan li:first-child{
-	border-top: 1px solid silver;
-}
-.mttDaylyPlanTime .mttClassName, .mttDaylyPlanTime .mttClassTime{
-	margin: 2.5% 0;
-
-
-}
-.mttDaylyPlanTime{
-	display: inline-block;
-	width: 100%;
-
-}
-.mttClassName {
-	text-decoration: none;
-	float: left;
-}
-.mttClassName a{
-	text-decoration: none;
-}
-.mttClassName a:link{
-	color: black;
-}
-.mttClassName a:visited{
-	color: black;
-}
-.mttClassTime{
-	font-size: 0.75em;
-	padding-left: 5%;
-	padding-top: 1%;
-	float: left;
-
-}
-/*--------------------------------
---- END PRAGRAMMAZIONE CORSI -----
-----------------------------------*/
 
 /*MIN WIDTH 321PX - MAX WIDTH 480PX*/
 /*--------------------------------
