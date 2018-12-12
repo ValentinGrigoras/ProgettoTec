@@ -26,6 +26,7 @@
 
 
 <body>
+	<?php include_once "../templates/header.php"; ?>
 <div id="programma">
 	<div id="programmazioneCorsiContent" class="maxWidth">
 		<h2 id="titoloOrario"> Programmazione dei corsi </h2>
@@ -1059,7 +1060,7 @@
 		</div> <!--end content-->
 	</div> <!--end programmazioneCorsiContent-->
 </div> <!--end programma-->
-   
+   <?php include_once "../templates/footer.php"; ?>
 <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
 
 </body>
