@@ -39,8 +39,8 @@ echo '
       		<div id="orario">
         		<h2> Orario </h2>
         		<div class="sectionText">
-          			<p>Luned&igrave;-Venerd&igrave; dalle 7:00 alle 21:00</p>
-          			<p>Sabato dalle 8:00 alle 20:00</p>
+          			<p>Luned&igrave;-Venerd&igrave; dalle 7:00 alle 22:00</p>
+          			<p>Sabato dalle 8:00 alle 13:00</p>
           			<p>Domenica chiuso!</p>
         		</div>
       		</div>
@@ -48,7 +48,7 @@ echo '
         		<h2> Contatti </h2>
         		<div class="sectionText">
           			<p> Tel/Fax: +39 049 661227 </p>
-          			<p> Email: info@justfit.com </p>
+          			<p> Email: info@aimfit.com </p>
         		</div>
       		</div>
         </div>
