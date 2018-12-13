@@ -124,7 +124,9 @@ ul.breadcrumb li a:hover {
 }
 .lingua .label_lingua, .lingua #select_lingua {
     display: inline-block;
+    float: left;
 }
+
 /*---------------------------------
 -------NAVIGAZIONE PRINCIPALE (Valentin)------
 ----------------------------------*/
@@ -166,35 +168,56 @@ ul.breadcrumb li a:hover {
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0, 0.9);
     overflow-y: hidden;
-    transition: 0.5s;
+    transition: 1s;
 }
-
-.overlay-content {
-    position: relative;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    margin-top: 1%;
-}
-
-.overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-}
-
 .overlay .closebtn {
     position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+    top: 1%;
+    right: 4%;
+    font-size: 3em;
+    color: #fff;
+    text-decoration: none;
+}
+.cd-accordion-menu {
+  width: 100%;
+  background: #4d5158;
+  margin: 12% auto 0 auto;
+}
+.cd-accordion-menu ul {
+  /* by default hide all sub menus */
+  display: none;
+}
+.cd-accordion-menu li {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.cd-accordion-menu input[type=checkbox] {
+  /* hide native checkbox */
+  position: absolute;
+  opacity: 0;
+}
+.cd-accordion-menu label, .cd-accordion-menu a {
+  position: relative;
+  display: block;
+  padding: 2% 2% 2% 4%;
+  background: #4d5158;
+  box-shadow: inset 0 -1px #555960; /*ombra li principali*/
+  color: #ffffff;
+  font-size: 1.6em;
+}
+
+.cd-accordion-menu input[type=checkbox]:checked + label + ul,
+.cd-accordion-menu input[type=checkbox]:checked + label:nth-of-type(n) + ul {
+  /* use label:nth-of-type(n) to fix a bug on safari (<= 8.0.8) with multiple adjacent-sibling selectors*/
+  /* show children when item is checked */
+  display: block;
+}
+.cd-accordion-menu ul label,
+.cd-accordion-menu ul a {
+  background: #35383d;
+  box-shadow: inset 0 -1px #41444a; /* ombra tag li sotto menu*/
 }
 
 #botton_menu{
@@ -316,9 +339,10 @@ LANDING PAGE
    margin-left: 9%;
 }
 #landing .buttonPrezzi {
-  border-top: 1px solid #ccc;
-  padding: 7% 0;
+  display: inline-block;
+  padding: 1% 0;
   border-bottom: none;
+  margin-left: 9%;
 }
 #landing a:hover{
     color: #fff;
