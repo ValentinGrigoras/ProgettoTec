@@ -22,7 +22,10 @@
  <link rel="stylesheet" href="css/phone_portrait.css" media="handheld, screen and (max-width:480px), only screen and (max-device-width:480px)"  type="text/css"/>
  <link rel="stylesheet" href="css/small_phone.css" media="handheld, screen and (max-width:320px), only screen and (max-device-width:320px)"  type="text/css"/>
  <link type="text/css" rel="stylesheet" href="style/print_style.css" media="print"/>
- <script src="js/gototop.js"></script>
+ <script src="js/gototop.js" type="text/javascript"></script>
+ <script src="js/show_menu.js" type="text/javascript"></script>
+  <script src="js/map_show.js" type="text/javascript"></script>
+
 </head>
 
 <body>	
@@ -34,9 +37,6 @@
   
   <div id="first-section-header">
     <div class="maxWidth">
-      
-    
-      
       <div id="breadcrumbs_home">
         <ul class="breadcrumb">
           <li><span>Ti trovi in: </span></li>
@@ -61,7 +61,7 @@
         </select>
         </div>
       </div>
-      <span onclick="openNav()" id="botton_menu">&#9776;</span>
+      <span onclick="openNav()" id="botton_menu">&#9776;Menu</span>
     </div>
   </div>
 <!-- The overlay -->
@@ -72,9 +72,9 @@
   <div class="overlay-content">
     <ul class="cd-accordion-menu animated">
       <li class="has-children"><a href="index.html">Home</a></li>
-      <li class="has-children">
+      <li class="has-children" id="acordion_group">
       <input type="checkbox" name ="group-1" id="group-1" checked>
-      <label for="group-1">Su di noi</label>
+      <label for="group-1" >Su di noi  &#8600;</label>
       <ul>
         <li><a href="#0">Chi Siamo</a></li>
         <li><a href="#0">FAQ</a></li>
@@ -394,29 +394,8 @@
 <!--
 END FOOTER (Irina)
 -->
-<script>
-function myMap() {
-var mapProp= {
-    center:new google.maps.LatLng(51.508742,-0.120850),
-    zoom:5,
-};
-var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
-</script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0rh7lb9IlH8E4nMs1nffxwW8SL05LaHo&callback=myMap"></script>
-<script>
-  function openNav() {
-  document.getElementById("myNav").style.height = "100%";
-}
-
-function closeNav() {
-  document.getElementById("myNav").style.height = "0%";
-}
-</script>
-
-
-
 <!--torna su (hoss)-->
 <button onclick="topFunction()" id="tornasu" title="Torna su">Torna su</button>
 

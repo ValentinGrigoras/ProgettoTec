@@ -1,6 +1,6 @@
 /*header*/
 #header #breadcrumbs_home {
-    width: 70%;
+    width: 100%;
 }
 ul.breadcrumb{
 	float: none;
@@ -8,22 +8,42 @@ width: 100%;
 	margin: 0 auto;
 }
 ul.breadcrumb li {
-	float: left;
+	float: none;
 }
 .lingua {
     width: 70%;
     margin-top: 2%;
+    margin-left: 2%;
 
 }
 #botton_menu {
-    width: 30%;
-    font-size: 2.5em;
+    width: 25%;
+    font-size: 1.6em;
     font-weight: 1000;
 
 }
+ul.breadcrumb{
+  float: none;
+}
+#header #breadcrumbs_home{
+  margin: 0 auto;
+}
 
-/*menu mobile*/
 
+/*mobile menu*/
+.cd-accordion-menu {
+
+  margin: 20% auto 0 auto;
+  text-align: left;
+}
+#acordion_group ul{
+text-align: center;
+
+background-color: #35383d;
+}
+#acordion_group ul li{
+  padding-right: 30%;
+}
 /*MIN WIDTH 481px - MAX WIDTH 600PX*/
 
 /*--------------------------------

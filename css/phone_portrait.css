@@ -22,6 +22,15 @@ h4{
 .cd-accordion-menu {
 
   margin: 20% auto 0 auto;
+  text-align: left;
+}
+#acordion_group ul{
+text-align: center;
+
+background-color: #35383d;
+}
+#acordion_group ul li{
+  padding-right: 30%;
 }
 /*--------------------------------
 -------ALLENATORI ------
