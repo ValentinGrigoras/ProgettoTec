@@ -4,6 +4,8 @@
 }
 .maxWidth{
 	background-color: #f7f7f7;
+  overflow-x: hidden;
+  font-size: 0.9em;
 }
 .logo #desktop{
 	display: none;
@@ -30,7 +32,7 @@ padding-bottom: 2%;
 
   .overlay a {font-size: 0.8em}
   .overlay .closebtn {
-    font-size: 2em;
+    font-size: 3em;
     top: 2%;
     right: 4%;
     color: #fff;
@@ -42,7 +44,7 @@ padding-bottom: 2%;
 
 }
 #header #breadcrumbs_home {
-    width: 56%;
+    width: 53%;
     margin-top: 0.7%;
 }
 ul.breadcrumb {
@@ -54,8 +56,8 @@ ul.breadcrumb {
     margin-top:3%;
 }
 .lingua{
-	width: 27%;
-	margin-top: 2.4s%;
+	width: 30%;
+	margin-top: 2.4s;
 }
 .lingua>div{
 	float: left;
@@ -65,7 +67,7 @@ ul.breadcrumb {
     display: inline-block;
     width: 17%;
     float: right;
-    font-size: 2.5em;
+    font-size: 2em;
     cursor:pointer;
     font-weight: 300;
 }
@@ -73,6 +75,7 @@ ul.breadcrumb {
     padding: 2.4% 3%;
     font-size: 0.8em;
 }
+
 /*MIN WIDTH 601PX - MAX WIDTH 768PX*/
 
 /*--------------------------------
