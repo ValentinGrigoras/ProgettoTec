@@ -8,18 +8,28 @@ label#label_search{
 {
     width: 80%;
 }*/
-
+#nav ul{
+  width: 100%;
+}
 #nav ul li:first-of-type{
     margin: 0;
 }
 #nav ul li#active_link{
-	padding: 2.8% 0;
+	padding: 3.1% 0;
 }
 #nav ul li a {
 	padding: 25% 0;
 }
 .logo img{
     margin-top: 12%;
+}
+.overlay-content {
+    position: relative;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 1%;
+
 }
 
 /*MIN WIDTH 481px - MAX WIDTH 600PX*/

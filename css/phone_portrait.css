@@ -18,6 +18,11 @@ h4{
 	font-size: 1.15em;
 	margin: 2% 0;
 }
+/*mobile menu*/
+.cd-accordion-menu {
+
+  margin: 20% auto 0 auto;
+}
 /*--------------------------------
 -------ALLENATORI ------
 ----------------------------------*/
