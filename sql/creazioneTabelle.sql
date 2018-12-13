@@ -55,6 +55,10 @@ CREATE TABLE Corsi (
   idCorso int(11) AUTO_INCREMENT PRIMARY KEY,
   nome varchar(10) NOT NULL,
   obiettivo varchar(30) NOT NULL,
+  descrizione text,
+  categoria varchar(100),
+  durata int(3),
+  livello enum('facile','normale','difficile'),
   costo decimal(4,2) NOT NULL
 ) ENGINE=InnoDB;
 --
