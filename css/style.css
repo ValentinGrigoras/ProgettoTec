@@ -887,7 +887,7 @@ input[type=submit]:hover {
 #tornasu {
     display: none;
     position: fixed;
-    bottom: 10%;
+    bottom: 3%;
     right: 1%;
     z-index: 99;
     font-size: 1em;
