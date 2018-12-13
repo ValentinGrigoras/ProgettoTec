@@ -11,12 +11,38 @@ ul.breadcrumb li {
 	float: none;
 }
 .lingua {
-    width: 60%;
+    width: 70%;
     margin-top: 2%;
+    margin-left: 2%;
+
 }
 #botton_menu {
-    width: 40%;
+    width: 25%;
+    font-size: 1.6em;
+    font-weight: 1000;
 
+}
+ul.breadcrumb{
+  float: none;
+}
+#header #breadcrumbs_home{
+  margin: 0 auto;
+}
+
+
+/*mobile menu*/
+.cd-accordion-menu {
+
+  margin: 20% auto 0 auto;
+  text-align: left;
+}
+#acordion_group ul{
+text-align: center;
+
+background-color: #35383d;
+}
+#acordion_group ul li{
+  padding-right: 30%;
 }
 /*MIN WIDTH 481px - MAX WIDTH 600PX*/
 

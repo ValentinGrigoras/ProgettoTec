@@ -124,7 +124,9 @@ ul.breadcrumb li a:hover {
 }
 .lingua .label_lingua, .lingua #select_lingua {
     display: inline-block;
+    float: left;
 }
+
 /*---------------------------------
 -------NAVIGAZIONE PRINCIPALE (Valentin)------
 ----------------------------------*/
@@ -163,39 +165,59 @@ ul.breadcrumb li a:hover {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
+    background-color: #dc0933;
+    background-color: #dc0933;
     overflow-y: hidden;
-    transition: 0.5s;
+    transition: 1s;
 }
-
-.overlay-content {
-    position: relative;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    margin-top: 1%;
-}
-
-.overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-
-.overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-}
-
 .overlay .closebtn {
     position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+    top: 1%;
+    right: 4%;
+    font-size: 3em;
+    color: #fff;
+    text-decoration: none;
 }
+.cd-accordion-menu {
+  width: 100%;
+  background: #4d5158;
+  margin: 12% auto 0 auto;
+}
+.cd-accordion-menu ul {
+  /* by default hide all sub menus */
+  display: none;
+}
+.cd-accordion-menu li {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.cd-accordion-menu input[type=checkbox] {
+  /* hide native checkbox */
+  position: absolute;
+  opacity: 0;
+}
+.cd-accordion-menu label, .cd-accordion-menu a {
+  position: relative;
+  display: block;
+  padding: 2% 2% 2% 4%;
+  background: #8E0621;
+  color: #ffffff;
+  font-size: 1.6em;
+}
+
+.cd-accordion-menu input[type=checkbox]:checked + label + ul,
+.cd-accordion-menu input[type=checkbox]:checked + label:nth-of-type(n) + ul {
+  /* use label:nth-of-type(n) to fix a bug on safari (<= 8.0.8) with multiple adjacent-sibling selectors*/
+  /* show children when item is checked */
+  display: block;
+}
+.cd-accordion-menu ul label,
+.cd-accordion-menu ul a {
+  background: #35383d;
+}
+
 
 #botton_menu{
     display: none;
@@ -285,7 +307,46 @@ ul.breadcrumb li a:hover {
     padding: 0 2%;
 }
 .breadcrumb li.arrow_bread{
-    padding: 0 2%;
+    padding: 0 1%;
+}
+/*
+LANDING PAGE
+*/
+#landing{
+    max-width: 100%;
+    height: 100%;
+    background-image: url(img/landing2.jpg);
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+}
+
+#main_message{
+  font-size: 3.5em;
+  font-weight: 1000;
+  color: #fff;
+  margin-top: 12%;
+  width: 40%;
+  margin-left: 9%;
+}
+#second_message{
+  font-size: 1em;
+  font-weight: 500;
+  color: #fff;
+  width: 50%;
+   margin-left: 9%;
+}
+#landing .buttonPrezzi {
+  display: inline-block;
+  padding: 1% 0;
+  border-bottom: none;
+  margin-left: 9%;
+}
+#landing a:hover{
+    color: #fff;
+  background-color: #8a0620;
+    text-decoration: none;
 }
 /*---------------------------------------*/
 
@@ -307,15 +368,6 @@ height: 80%;
 #gallery .img-content img{
     width: 100%;
     height: auto;
-}
-#landing{
-    max-width: 100%;
-    height: 100%;
-    background-image: url(img/landing.jpg);
-    background-size: cover;
-    background-position: center;
-    top: 0;
-    left: 0;
 }
 
 /*--------------------------------

@@ -4,6 +4,8 @@
 }
 .maxWidth{
 	background-color: #f7f7f7;
+  overflow-x: hidden;
+  font-size: 0.9em;
 }
 .logo #desktop{
 	display: none;
@@ -11,6 +13,7 @@
 .logo_mobile{
 	display: block;
 	float: none;
+border-bottom: 1px solid #c6c6c6;
 }
 .logo_mobile img{
   display: block;
@@ -27,19 +30,22 @@ padding-bottom: 2%;
     display: none;
 }
 
-  .overlay {overflow-y: auto;}
-  .overlay a {font-size: 20px}
+  .overlay a {font-size: 0.8em}
   .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
+    font-size: 3em;
+    top: 2%;
+    right: 4%;
+    color: #fff;
+    text-decoration: none;
   }
 
 .lingua{
 	width:40%;
+
 }
 #header #breadcrumbs_home {
-    width: 48%;
+    width: 53%;
+    margin-top: 0.7%;
 }
 ul.breadcrumb {
     display: inline-block;
@@ -50,8 +56,8 @@ ul.breadcrumb {
     margin-top:3%;
 }
 .lingua{
-	width: 35%;
-	margin-top: 1.1%;
+	width: 30%;
+	margin-top: 2.4s;
 }
 .lingua>div{
 	float: left;
@@ -61,10 +67,15 @@ ul.breadcrumb {
     display: inline-block;
     width: 17%;
     float: right;
-    font-size: 1.5em;
+    font-size: 2em;
     cursor:pointer;
     font-weight: 300;
 }
+.cd-accordion-menu label, .cd-accordion-menu a {
+    padding: 2.4% 3%;
+    font-size: 0.8em;
+}
+
 /*MIN WIDTH 601PX - MAX WIDTH 768PX*/
 
 /*--------------------------------
