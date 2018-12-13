@@ -835,16 +835,16 @@ input[type=submit]:hover {
 #tornasu {
     display: none;
     position: fixed;
-    bottom: 20px;
-    right: 30px;
+    bottom: 10%;
+    right: 1%;
     z-index: 99;
-    font-size: 14px;
+    font-size: 1em;
     border: none;
     outline: none;
     background-color: #fff;
-    color: grey;
+    color: #f6214b;
     cursor: pointer;
-    padding: 10px;
+    padding: 0.8%;
     border: 1px solid #f6214b;
     border-radius: 4px;
 }
