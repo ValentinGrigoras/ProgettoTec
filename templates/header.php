@@ -1,8 +1,9 @@
   <!--MENU (Valentin)-->
 <?php
+echo '
    <div id="header">
     <div class="logo_mobile">
-          <img src="css/img/logo4.png" alt="Logo JustFit"/>
+          <img src="../css/img/logo_text.png" alt="Logo JustFit"/>
       </div>
     <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -36,7 +37,7 @@
         <li>Italy</li>
     </ul>
 <div class="logo">
-          <img id="desktop" src="css/img/logo_text.png" alt="Logo JustFit"/>
+          <img id="desktop" src="../css/img/logo_text.png" alt="Logo JustFit"/>
       </div>
   </div>
 
@@ -54,15 +55,16 @@
 
   </div>
   </div> <!-- END HEADER -->
-  <div id="landing">
+ ';/*if (index.php) echo' <div id="landing"'*/
+echo'
     <div id="main_nav">
       <div class="maxWidth">
 
 
       <div id="nav">
-      <ul>
-        <li id="active_link">Home</li>
-        <li class="dropdown">
+        <ul>
+          <li id="active_link">Home</li>
+            <li class="dropdown">
             <a href="javascript:void(0)" class="dropbtn">Su di noi<i class="fas fa-sort-down"></i> </a>
               <div class="dropdown-content">
                   <a href="#">Chi siamo</a>
@@ -73,14 +75,16 @@
               </div>
           </li>
           <li><a href="">Corsi</a></li>
-        <li><a href="pages/programmazione_corsi.html">Programma</a></li>
-        <li><a href="">Prezzi</a></li>
-        <li><a href="">Contattaci</a></li>
-        <li><a href="">Registrati</a></li>
-        <li><a href="">Login</a></li>
-      </ul>
+          <li><a href="pages/programmazione_corsi.html">Programma</a></li>
+          <li><a href="">Prezzi</a></li>
+          <li><a href="">Contattaci</a></li>
+          <li><a href="">Registrati</a></li>
+          <li><a href="">Login</a></li>
+        </ul>
       </div>
-      </div>
+    </div>
 
   </div> <!--end main_nav--> 
+  ';
+  /*if (home) echo' </div>'*/
 ?>
