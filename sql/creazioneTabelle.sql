@@ -90,16 +90,7 @@ CREATE TABLE Allenatore (
   citta text NOT NULL,
   prov varchar(2) NOT NULL,
   stato varchar(2) NOT NULL DEFAULT 'IT',
-  salaPesi boolean NOT NULL,
-  corso1 int(11),
-  corso2 int(11),
-  corso3 int(11),
-  FOREIGN KEY (corso1) REFERENCES Corsi(idCorso)
-  		ON DELETE SET NULL ON UPDATE CASCADE,
-  FOREIGN KEY (corso2) REFERENCES Corsi(idCorso)
-  		ON DELETE SET NULL ON UPDATE CASCADE,
-  FOREIGN KEY (corso3) REFERENCES Corsi(idCorso)
-  		ON DELETE SET NULL ON UPDATE CASCADE
+  salaPesi boolean NOT NULL
 ) ENGINE=InnoDb;
 --
 -- Creazione tabella 'Orario'
@@ -110,8 +101,11 @@ CREATE TABLE Orario (
   idCorso int(11),
   oraI time NOT NULL,
   oraF time NOT NULL,
+  idAllenatore int(11),
   PRIMARY KEY (stanza, giorno, oraI),
-  FOREIGN KEY (idCorso) REFERENCES Corsi(idCorso)
+  FOREIGN KEY (idCorso) REFERENCES Corsi(idCorso),
+  		ON DELETE NO ACTION ON UPDATE CASCADE
+  FOREIGN KEY (idAllenatore) REFERENCES Allenatore(idAllenatore)
   		ON DELETE NO ACTION ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 --
