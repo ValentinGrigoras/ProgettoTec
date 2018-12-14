@@ -96,15 +96,15 @@ CREATE TABLE Allenatore (
 -- Creazione tabella 'Orario'
 --
 CREATE TABLE Orario (
-  stanza enum('Sala corsi', 'Sala pesi', 'Functional zone', 'Piscina') DEFAULT 'Sala corsi',
-  giorno enum('Lun','Mar','Mer','Gio','Ven','Sab') NOT NULL,
   idCorso int(11),
+  giorno enum('Lun','Mar','Mer','Gio','Ven','Sab') NOT NULL,
+  stanza enum('Sala corsi', 'Sala pesi', 'Functional zone', 'Piscina') DEFAULT 'Sala corsi',
   oraI time NOT NULL,
   oraF time NOT NULL,
   idAllenatore int(11),
   PRIMARY KEY (stanza, giorno, oraI),
-  FOREIGN KEY (idCorso) REFERENCES Corsi(idCorso),
-  		ON DELETE NO ACTION ON UPDATE CASCADE
+  FOREIGN KEY (idCorso) REFERENCES Corsi(idCorso)
+  		ON DELETE NO ACTION ON UPDATE CASCADE,
   FOREIGN KEY (idAllenatore) REFERENCES Allenatore(idAllenatore)
   		ON DELETE NO ACTION ON UPDATE CASCADE
 ) ENGINE=InnoDB;
