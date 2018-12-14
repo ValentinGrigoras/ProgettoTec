@@ -896,9 +896,10 @@ input[type=submit]:hover {
     background-color: #fff;
     color: #f6214b;
     cursor: pointer;
-    padding: 0.8%;
     border: 1px solid #f6214b;
-    border-radius: 4px;
+    width:3.1%;
+    padding:0.8%;
+    border-radius:50%;
 }
 
 #tornasu:hover {

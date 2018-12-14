@@ -252,3 +252,27 @@ select #seleziona_corso{
 /*--------------------------------
 ----------END FOOTER -------------
 ----------------------------------*/
+
+
+/*+++++++++++++ Torna su  +++++++++++*/
+#tornasu {
+  display: none;
+  position: fixed;
+  bottom: 3%;
+  right: 3.5%;
+  z-index: 99;
+  font-size: 1.1em;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: #f6214b;
+  cursor: pointer;
+  padding: 1.4%;
+  border: 1px solid #f6214b;
+  border-radius: 4px;
+}
+
+#tornasu:hover {
+  background-color: #f6214b;
+  color: #fff;
+}
