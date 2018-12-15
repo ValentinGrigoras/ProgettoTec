@@ -18,7 +18,7 @@ CREATE TABLE Utente (
   cognome varchar(15) NOT NULL,
   dataDiNascita date NOT NULL,
   CF varchar(16) NOT NULL,
-  tel varchar(10),
+  tel varchar(16),
   indirizzo text NOT NULL,
   citta text NOT NULL,
   prov varchar(2) NOT NULL,
@@ -53,8 +53,8 @@ CREATE TABLE Contratto (
 --
 CREATE TABLE Corsi (
   idCorso int(11) AUTO_INCREMENT PRIMARY KEY,
-  nome varchar(10) NOT NULL,
-  obiettivo varchar(30) NOT NULL,
+  nome varchar(30) NOT NULL,
+  obiettivo text NOT NULL,
   descrizione text,
   categoria varchar(100),
   durata int(3),
@@ -84,7 +84,7 @@ CREATE TABLE Allenatore (
   nome varchar(20) NOT NULL,
   cognome varchar(15) NOT NULL,
   email varchar(255),
-  tel varchar(10) NOT NULL,
+  tel varchar(16) NOT NULL,
   dataDiNascita date NOT NULL,
   indirizzo text NOT NULL,
   citta text NOT NULL,
