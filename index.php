@@ -76,7 +76,7 @@
       <input type="checkbox" name ="group-1" id="group-1" checked>
       <label for="group-1" >Su di noi  &#8600;</label>
       <ul>
-        <li><a href="#0">Chi Siamo</a></li>
+        <li><a href="pages/su_di_noi.php">Chi Siamo</a></li>
         <li><a href="#0">FAQ</a></li>
         <li><a href="#0">Lavora con noi</a></li>
         <li><a href="#0">Galleria Foto</a></li>
