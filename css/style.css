@@ -888,13 +888,20 @@ input[type=submit]:hover {
 #content_about_us{
   width: 80%;
   margin: auto;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  overflow: auto;
 }
 #content_about_us #paragrafi{
   width: 50%;
   float: left;
 }
+#content_about_us #paragrafi p{
+  margin-bottom: 3%;
+  text-align: justify;
+}
 #content_about_us .slideshow-container {
-  width: 40%;
+  width: 45%;
   float:right;
   position: relative;
   float: right;

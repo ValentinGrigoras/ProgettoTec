@@ -107,7 +107,7 @@
           <li class="dropdown">
             <a href="javascript:void(0)" class="dropbtn">Su di noi<i class="fas fa-sort-down"></i> </a>
               <div class="dropdown-content">
-                  <a href="#">Chi siamo</a>
+                  <a href="pages/su_di_noi.php">Chi siamo</a>
                   <a href="#">FAQ</a>
                   <a href="#">Lavora con noi</a>
                   <a href="#">Galleria foto</a>
