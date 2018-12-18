@@ -84,7 +84,7 @@
       </ul>
     </li>
     <li class="has-children"><a href="index.html">Corsi</a></li>
-    <li class="has-children"><a href="index.html">Programma</a></li>
+    <li class="has-children"><a href="pages/programmazione_corsi.php">Programma</a></li>
     <li class="has-children"><a href="index.html">Prezzi</a></li>
     <li class="has-children"><a href="index.html">Contattaci</a></li>
     <li class="has-children"><a href="index.html">Registrati</a></li>
