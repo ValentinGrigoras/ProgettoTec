@@ -96,7 +96,7 @@ ul.breadcrumb {
     text-align: center;
     margin-top: 3.5%;
 }
-ul.breadcrumb #first:before{
+ul.breadcrumb .first:before{
     content: "";
 }
 ul.breadcrumb li {
@@ -303,7 +303,7 @@ ul.breadcrumb li a:hover {
 #mynav{
     display: none;
 }
-.breadcrumb li#first{
+.breadcrumb li.first{
     padding: 0 2%;
 }
 .breadcrumb li.arrow_bread{
