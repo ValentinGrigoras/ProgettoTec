@@ -76,7 +76,7 @@
       <input type="checkbox" name ="group-1" id="group-1" checked>
       <label for="group-1" >Su di noi  &#8600;</label>
       <ul>
-        <li><a href="#0">Chi Siamo</a></li>
+        <li><a href="pages/su_di_noi.php">Chi Siamo</a></li>
         <li><a href="#0">FAQ</a></li>
         <li><a href="#0">Lavora con noi</a></li>
         <li><a href="#0">Galleria Foto</a></li>
@@ -107,7 +107,7 @@
           <li class="dropdown">
             <a href="javascript:void(0)" class="dropbtn">Su di noi<i class="fas fa-sort-down"></i> </a>
               <div class="dropdown-content">
-                  <a href="#">Chi siamo</a>
+                  <a href="pages/su_di_noi.php">Chi siamo</a>
                   <a href="#">FAQ</a>
                   <a href="#">Lavora con noi</a>
                   <a href="#">Galleria foto</a>
