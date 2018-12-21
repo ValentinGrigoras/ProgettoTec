@@ -26,7 +26,6 @@
 
 <body>
 	<?php include_once "../templates/header.php"; ?>
-	<?php include_once "../sql/connessione_db.sql"; ?>
 <div id="programma">
 	<div id="programmazioneCorsiContent" class="maxWidth">
 		<h2 id="titoloOrario"> Programmazione dei corsi </h2>

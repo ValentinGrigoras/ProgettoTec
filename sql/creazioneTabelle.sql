@@ -53,7 +53,7 @@ CREATE TABLE Contratto (
 --
 CREATE TABLE Corsi (
   idCorso int(11) AUTO_INCREMENT PRIMARY KEY,
-  nome varchar(30) NOT NULL,
+  nome varchar(255) NOT NULL,
   obiettivo text NOT NULL,
   descrizione text,
   categoria varchar(100),
