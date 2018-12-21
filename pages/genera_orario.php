@@ -1,53 +1,58 @@
-<?php  //----FUNCTIONS-----
-
+<?php  
+//******************
+//****FUNCTIONS*****
+//******************
 //PRE=($conn connessione valida)
-function CorsoGiornoOra($conn, $oraInizio, $oraFine, $giorno){
-   	$sql= "SELECT Corsi.nome AS Corso, oraI, oraF, Allenatore.nome AS Allenatore, stanza, giorno
+function CorsoGiornoOra($conn, $giorno, $oraInizio){
+   	$sql= "SELECT Corsi.nome AS Corso, TIME_FORMAT(oraI, '%H:%i') AS oraI, TIME_FORMAT(oraF, '%H:%i') AS oraF, Allenatore.nome AS Allenatore, stanza, giorno
         		FROM Orario, Corsi, Allenatore
         		WHERE Orario.idCorso=Corsi.idCorso AND Orario.idAllenatore=Allenatore.idAllenatore
-              	AND oraI>='".$oraInizio.":00' AND oraF<='".$oraFine.":00' AND giorno='".$giorno."';";
+              	AND oraI LIKE '".$oraInizio.":%%:%%' AND giorno='".$giorno."';";
     $result=mysqli_query($conn, $sql);
     if (!$result) return 0;
-    $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+    $row=mysqli_fetch_all($result,MYSQLI_ASSOC);
     return $row;
 }
 //POST=(Restituisci un array contente nome, orario, allenatore e sala del corso del giorno $giorno tra le ore $oraInizio-$oraFine)
 
 //PRE=($conn connessione valida)
-function corsiFasciaOraria($conn, $oraInizio, $oraFine){
-	$sql= "SELECT Corsi.nome as Corso
-        		FROM Orario, Corsi
-        		WHERE Orario.idCorso=Corsi.idCorso
-              	AND oraI>='".$oraInizio.":00' AND oraF<='".$oraFine.":00';";
+function corsiFasciaOraria($conn, $oraInizio){
+	$sql= "SELECT idCorso
+        		FROM Orario
+        		WHERE oraI LIKE '".$oraInizio.":%%:%%';";
     $result=mysqli_query($conn, $sql);
     if (!$result) return 0;
     $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
-    return isset($row["Corso"]);
+    return isset($row["idCorso"]);
 }
 //POST=(restituisce TRUE se ci sono corsi nella fascia orario $oraInizio-$oraFine, FALSE altrimenti)
 
-//----END FUNCTIONS----?> 
+//PRE=($conn connessione valida)
+function corsiGiornata($conn, $giorno){
+	$sql= "SELECT idCorso
+        		FROM Orario
+        		WHERE giorno='".$giorno."';";
+    $result=mysqli_query($conn, $sql);
+    if (!$result) return 0;
+    $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+    return isset($row["idCorso"]);
+}
+//POST=(restituisce TRUE se ci sono corsi nel girono $giorno, FALSE altrimenti)
+
+//*********************
+//****END FUNCTIONS****
+//*********************
+?> 
 
 
 
 <?php 
 include_once("../templates/head.php");
 include_once("../templates/header.php");
+include_once("connessioneDB.php");
 ?>
 
-<?php
-	$servername="localhost"; 
-	$username="phpmyadmin";
-	$password="gennaio11";
-	$db="Palestra";
 
-	//create connection
-	$conn =mysqli_connect($servername,$username,$password,$db);
-
-	//check connection
-	if (!$conn)
-	{ die("Connection failed: ".mysqli_connect_error());}
-	echo "Connected successfully"; ?>
 <div id="programma">
 	<div id="programmazioneCorsiContent" class="maxWidth">
 		<h2 id="titoloOrario"> Programmazione dei corsi </h2>
@@ -96,7 +101,7 @@ include_once("../templates/header.php");
 	$giorno=array("1"=>"Lun", "2"=>"Mar", "3"=>"Mer", "4"=>"Gio", "5"=>"Ven", "6"=>"Sab");
 	$tr=7;
 	while( $tr<=21){
-	  if (corsiFasciaOraria($conn,$tr,$tr+1)){ 
+	  if (corsiFasciaOraria($conn,$tr<10 ? "0".$tr : $tr)){ 
 		echo "<tr>";
 		echo "<td class=\"TimeTableEntryTimeHolder\">
 				<div class=\"TimeTableEntryTime\">
@@ -109,21 +114,25 @@ include_once("../templates/header.php");
 		$td_giorni=1;
 		while($td_giorni<=6){
 
-			$data=CorsoGiornoOra($conn,$tr,$tr+1,$giorno[$td_giorni]);
+			$dati=CorsoGiornoOra($conn,$giorno[$td_giorni],$tr<10 ? "0".$tr : $tr );
 
     		echo "<td>";
-    		if (isset($data["Corso"])){
-				echo "<div class=\"TimeTableFitnessEntry TimeTableFitnessEntryClass cat_corso1\">
+    		if (isset($dati[0])){
+    			$i=0;
+    			while ($i<count($dati)){
+					echo "<div class=\"TimeTableFitnessEntry TimeTableFitnessEntryClass cat_corso1\">
 						<div class=\"TimeTableEntryColor\"></div>
-						<a href=\"http://solarisfitness.it/classes-item/pilates/\" class=\"TimeTableEntryName AltFontCharacter\">".$data["Corso"]."</a>
+						<a href=\"http://solarisfitness.it/classes-item/pilates/\" class=\"TimeTableEntryName AltFontCharacter\">".$dati[$i]["Corso"]."</a>
 						<div class=\"TimeTableEntryTimePeriod\">
-							<div class=\"TimeTableFrom\"><span>".$data["oraI"]."</span></div>
+							<div class=\"TimeTableFrom\"><span>".$dati[$i]["oraI"]."</span></div>
 							<div class=\"TimeTableSeparator\"><span> - </span></div>
-							<div class=\"TimeTableTo\"><span>".$data["oraF"]."</span></div>
+							<div class=\"TimeTableTo\"><span>".$dati[$i]["oraF"]."</span></div>
 						</div>
-						<a href=\"http://solarisfitness.it/trainer-item/sabrina/\" class=\"TimeTableEntryTrainer\">".$data["Allenatore"]."</a>
-						<p class=\"TimeTableEntryRoom\">".$data["stanza"]."</p>
+						<a href=\"http://solarisfitness.it/trainer-item/sabrina/\" class=\"TimeTableEntryTrainer\">".$dati["Allenatore"]."</a>
+						<p class=\"TimeTableEntryRoom\">".$dati[$i]["stanza"]."</p>
 					  </div>";
+					$i++;
+				}
 			}
 			echo "</td>";
 
@@ -139,12 +148,51 @@ include_once("../templates/header.php");
 </tbody>
 </table>
 </div>
+<div id="MobileTimeTable">
+	<ul>
+<?php 
+	$li_giorno=1;
+	$giorno_stringaIntera=array("1"=>"Luned&igrave", "2"=>"Marted&igrave", "3"=>"Mercoled&igrave", "4"=>"Gioved&igrave", "5"=>"Venerd&igrave", "6"=>"Sabato");
+	while ($li_giorno<=6){
+		if (corsiGiornata($conn, $giorno[$li_giorno])){
+			echo "<li class=\"MobileTimeTableItem\">"; //corsi del giorno
+			echo "<div class=\"MobileTimeTableHeadline\">
+					<h3>".$giorno_stringaIntera[$li_giorno]."</h3>
+			  	  </div>";
+			echo "<ul class=\"MobileTimeTableDaylyPlan\">";
+			//inizio stampa corsi per fascia oraria
+			$li_ora=7;
+			while ($li_ora<=21){
+				$dati=CorsoGiornoOra($conn, $giorno[$li_giorno], $li_ora<10 ? "0".$li_ora : $li_ora);
+				if (isset($dati[0])){
+    				$i=0;
+    				while ($i<count($dati)){
+						echo "<li class=\"MobileTimeTableDaylyPlanTime\">
+							<div class=\"MobileTimeTableClassName\">
+								<a href=\"http://solarisfitness.it/classes-item/pilates/\" class=\"linkcat_corso1\" >".$dati[$i]["Corso"]."</a>
+							</div>
+							<div class=\"MobileTimeTableClassTime\">".$dati[$i]["oraI"]." - ".$dati[$i]["oraF"]."</div>
+				  		  </li>";
+				  		$i++;
+					}
+				}
+				$li_ora++;
+			}
+			echo "</ul>";
+			echo "</li>";
+		}
+		$li_giorno++;
+	}
+?>
+	</ul>
+</div>
+</div> <!--end content-->
+</div> <!--end programmazioneCorsiContent-->
+</div> <!--end programma-->
 
 
 
-
-
+<?php mysqli_close($conn);?>
 
 <?php include_once("../templates/footer.php");?>
 
-<?php mysqli_close($conn);?>
