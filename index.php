@@ -84,7 +84,7 @@
       </ul>
     </li>
     <li class="has-children"><a href="index.html">Corsi</a></li>
-    <li class="has-children"><a href="pages/programmazione_corsi.php">Programma</a></li>
+    <li class="has-children"><a href="pages/genera_orario.php">Programma</a></li>
     <li class="has-children"><a href="index.html">Prezzi</a></li>
     <li class="has-children"><a href="index.html">Contattaci</a></li>
     <li class="has-children"><a href="index.html">Registrati</a></li>
@@ -115,7 +115,7 @@
               </div>
           </li>
           <li><a href="">Corsi</a></li>
-          <li><a href="pages/programmazione_corsi.php">Programma</a></li>
+          <li><a href="pages/genera_orario.php">Programma</a></li>
           <li><a href="">Prezzi</a></li>
           <li><a href="">Contattaci</a></li>
           <li><a href="">Registrati</a></li>

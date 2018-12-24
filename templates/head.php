@@ -1,3 +1,6 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="it" xml:lang="it" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <!--specifica il charset-->
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
@@ -16,5 +19,4 @@
  <link rel="stylesheet" href="../css/phone_landscape.css" media="handheld, screen and (max-width:600px), only screen and (max-device-width:600px)"  type="text/css"/>
  <link rel="stylesheet" href="../css/phone_portrait.css" media="handheld, screen and (max-width:480px), only screen and (max-device-width:480px)"  type="text/css"/>
  <link rel="stylesheet" href="../css/small_phone.css" media="handheld, screen and (max-width:320px), only screen and (max-device-width:320px)"  type="text/css"/>
- <link type="text/css" rel="stylesheet" href="style/print_style.css" media="print"/>
 </head>

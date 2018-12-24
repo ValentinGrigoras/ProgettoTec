@@ -128,7 +128,7 @@ include_once("connessioneDB.php");
 							<div class=\"TimeTableSeparator\"><span> - </span></div>
 							<div class=\"TimeTableTo\"><span>".$dati[$i]["oraF"]."</span></div>
 						</div>
-						<a href=\"http://solarisfitness.it/trainer-item/sabrina/\" class=\"TimeTableEntryTrainer\">".$dati["Allenatore"]."</a>
+						<a href=\"http://solarisfitness.it/trainer-item/sabrina/\" class=\"TimeTableEntryTrainer\">".$dati[$i]["Allenatore"]."</a>
 						<p class=\"TimeTableEntryRoom\">".$dati[$i]["stanza"]."</p>
 					  </div>";
 					$i++;

@@ -671,7 +671,7 @@ input[type=submit]:hover {
 
 #TimeTableItem{
 	border-collapse: collapse;
-	
+	width:100%;
 }
 #TimeTableItem tbody{
 }
