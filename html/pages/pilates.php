@@ -28,13 +28,10 @@
 <body>
  <?php include_once "../templates/header.php"; ?>
 <div id="content_about_us">
- <div id="paragrafi">
-     <p>Solaris Fitness offre soluzioni d’allenamento in grado di rispondere ad ogni esigenza. </p>
-     <p>Propone numerosi corsi di gruppo, dalle classi dedicate ai giovani alle attività rivolte a persone di terza età. </p>
-     <p>Per l’allenamento individuale dispone di una sala fitness di oltre 350 mq. con attrezzature  cardiovascolari e isotoniche di ultima generazione, oltre ad una zona adibita ad allenamento a  corpo libero. </p>
-     <p>Se desideri allenarti al fianco di un personal trainer, un nostro specialista del fitness ti seguirà, consigliandoti esercizi specifici in relazione al tuo stato di forma, per raggiungere l’obiettivo. </p>
-     <p>Gli ambienti ampi e luminosi sono progettati per trasmettere  energia positiva durante l’allenamento. </p>
- </div>
+    <div id="paragrafi">
+    <h2>PILATES</h2>
+    <p>Il pilates è un tipo di ginnastica rieducativo e riabilitativo focalizzato sul controllo della postura. L'obiettivo del pilates è di rendere le persone più consapevoli di sé stesse, del proprio corpo e della propria mente per unirli in una singola, dinamica e funzionale entità.</p>    
+    </div>
 <?php
 // Directory
 $directory = "../../img/pilates";
