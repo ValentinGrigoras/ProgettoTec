@@ -4,12 +4,17 @@
 <head>
 <!--specifica il charset-->
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-<!--specifica il titolo-->
-<title>JustFit</title>
-<!--specifica il titolo per esteso-->
-<meta name="title" content="JustFit - Sempre in forma"/>
-<!--breve descrizione del sito-->
 
+		<!--specifica il titolo-->
+		<title>*title*</title>
+		<!--specifica il titolo per esteso-->
+        <meta name="title" content="*title*" />
+        <!--breve descrizione del sito-->
+        <meta name="description" content="*description*" />
+        <meta name="keywords" content="*keywords*" />
+        <meta name="language" content="italian it" />
+        <meta name="author" content="Valentin Grigoras, Irina Hornoiu, Hossain Saftdari, Eduard Serban" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"/>
 <link rel="stylesheet" href="../css/style.css" media="handheld, screen, only screen"  type="text/css"/>
