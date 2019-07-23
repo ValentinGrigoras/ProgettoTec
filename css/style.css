@@ -1021,3 +1021,91 @@ input[type=submit]:hover {
     background-color: #f6214b;
     color: #fff;
 }
+
+/*style Corsi.php*/
+#corsi_section #content_corsi{
+    overflow: auto;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+  
+  }
+  #corsi_section #content_corsi dl{
+    width: 25%;
+    float:left;
+    margin :2% 4.166% 4.166% 4.166%;
+  }
+  #corsi_section #content_corsi dd{
+    overflow: auto;
+    background:none no-repeat left top;
+    background-size: contain;
+    border-top: hidden;
+    background-color: #fff;
+    font-size: 80%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+  }
+  #content_corsi h2{
+      color: #8e2126;
+  }
+  .Corso dd img{
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2%;
+  }
+  .desc_Abbonamento{
+    float: left;
+    text-align: center;
+  }
+  .Corso dt{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    padding: 4%;
+  }
+  .Corso .livello_corso{
+
+    text-align: center;
+    padding: 3.5%;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  #content_corsi a{
+      width: 42%;
+      margin: auto;
+      background-color: #f6214b;
+      color: #fff;
+      padding: 3.1%;
+      border-radius: 4px;
+  }
+  .Corso  .prezzoAbbonamento{
+      font-size: 2em;
+    border-bottom: 1px solid #ccc;
+  }
+  .Corso .nrMese{
+      font-size: 0.5em;
+  }
+  #content_corsi .buttonPrezzi {
+    border-top: 1px solid #ccc;
+      padding: 7% 0;
+      width: 100%;
+      border-bottom: none;
+  }
+  #content_corsi .buttonPrezzi a {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+
+
+  #content_corsi a:hover{
+      color: #fff;
+    background-color: #8a0620;
+      text-decoration: none;
+  }
+.Corso .cont_corso .desc_corso{
+      text-align: justify;
+      padding: 2% 3%;
+  }

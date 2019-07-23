@@ -3,7 +3,7 @@
 echo '
    <div id="header">
     <div class="logo_mobile">
-          <img src="../css/img/logo_text.png" alt="Logo JustFit"/>
+          <img src="../../css/img/logo_text.png" alt="Logo JustFit"/>
       </div>
     <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -37,7 +37,7 @@ echo '
         <li>Italy</li>
     </ul>
 <div class="logo">
-          <img id="desktop" src="../css/img/logo_text.png" alt="Logo JustFit"/>
+          <img id="desktop" src="../../css/img/logo_text.png" alt="Logo JustFit"/>
       </div>
   </div>
 
