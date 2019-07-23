@@ -20,7 +20,7 @@ CREATE TABLE Utente (
   CF varchar(16) NOT NULL,
   tel varchar(16),
   indirizzo text NOT NULL,
-  citta text NOT NULL,
+  comune text NOT NULL,
   prov varchar(2) NOT NULL,
   stato varchar(2) NOT NULL DEFAULT 'IT',
   UNIQUE (username)
@@ -87,7 +87,7 @@ CREATE TABLE Allenatore (
   tel varchar(16) NOT NULL,
   dataDiNascita date NOT NULL,
   indirizzo text NOT NULL,
-  citta text NOT NULL,
+  comune text NOT NULL,
   prov varchar(2) NOT NULL,
   stato varchar(2) NOT NULL DEFAULT 'IT',
   salaPesi boolean NOT NULL
