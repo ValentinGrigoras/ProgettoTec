@@ -29,8 +29,18 @@
  <?php include_once "../templates/header.php"; ?>
 <div id="content_about_us">
     <div id="paragrafi">
-    <h2>PILATES</h2>
-    <p>Il pilates è un tipo di ginnastica rieducativo e riabilitativo focalizzato sul controllo della postura. L'obiettivo del pilates è di rendere le persone più consapevoli di sé stesse, del proprio corpo e della propria mente per unirli in una singola, dinamica e funzionale entità.</p>    
+        <h2>PILATES</h2>
+        <p class="desc_pilates">Il pilates è un tipo di ginnastica rieducativo e riabilitativo focalizzato sul controllo della postura. L'obiettivo del pilates è di rendere le persone più consapevoli di sé stesse, del proprio corpo e della propria mente per unirli in una singola, dinamica e funzionale entità.</p>    
+        <div>
+            <h3>OBIETTIVO</h3>
+            <i class="fas fa-crosshairs"></i>
+            <p class="text_course">L'obiettivo del pilates è di rendere le persone più consapevoli di sé stesse, del proprio corpo e della propria mente per unirli in una singola, dinamica e funzionale entità.</p>
+        </div>
+        
+<div>
+<span class="livello_span"> Facile </span> 
+<span class="costo_span">&euro;120</span>
+</div>
     </div>
 <?php
 // Directory

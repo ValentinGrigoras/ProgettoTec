@@ -896,7 +896,7 @@ input[type=submit]:hover {
   width: 50%;
   float: left;
 }
-#content_about_us #paragrafi p{
+#content_about_us #paragrafi .desc_about_us{
   margin-bottom: 3%;
   text-align: justify;
 }
@@ -1111,24 +1111,43 @@ input[type=submit]:hover {
   }
 
   /*pilates in dettaglio*/
-  #content_pilates{
-    width: 80%;
-    margin: auto;
-    padding-bottom: 5%;
-    padding-top: 5%;
-    overflow: auto;
-  }
-  #content_pilates #paragrafi{
-    width: 50%;
-    float: left;
-  }
-  #content_pilates #paragrafi p{
+
+  #content_about_us #paragrafi .desc_pilates{
     margin-bottom: 3%;
-color: #343839;
+    color: #676969;
     text-align: justify;
   }
-
-
+  .fa-crosshairs, .fa-hand-holding-usd{
+      font-size: 3.2em;
+      color: #8a0620;
+      display: inline-block;
+     float: left;
+  }
+  #content_about_us p .obiettivo{
+    font-size: 1.2em;
+      color: #000;
+      font-weight: bold;
+      margin: 5% 3%;
+      
+  }
+  #content_about_us #paragrafi h3{
+      text-align: left;
+      margin-left: 15%;
+  }
+  #content_about_us #paragrafi .text_course{
+      float: left;
+      width: 80%;
+      margin-left: 6%;
+  }
+  #content_about_us #paragrafi div{
+      margin-bottom: 10%;
+      float: left;
+  }
+  #content_about_us span.livello_span{
+      background-color: #8E0621;
+      color: #ccc;
+      padding: 2%;
+  }
   /*----------------------------
 -----------REGISTRAZIONE------
 -----------------------------*/
