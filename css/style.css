@@ -324,15 +324,12 @@ LANDING PAGE
     background-image: url(img/landing2.jpg);
     background-size: cover;
     background-position: center;
-    top: 0;
-    left: 0;
 }
 
 #main_message{
   font-size: 3.5em;
   font-weight: 1000;
   color: #fff;
-  margin-top: 12%;
   width: 40%;
   margin-left: 9%;
 }
@@ -527,6 +524,7 @@ dt{
 }
 .fab{
     color: #f6214b;
+    font-size: 1.7em;
 }
 .fab:hover{
     color:#8a0620;
@@ -894,7 +892,6 @@ input[type=submit]:hover {
 ---------------------------------*/
 /* Slideshow container */
 #content_about_us{
-  width: 80%;
   margin: auto;
   padding-bottom: 5%;
   padding-top: 5%;
@@ -1160,11 +1157,14 @@ input[type=submit]:hover {
 -----------REGISTRAZIONE------
 -----------------------------*/
 #contenuto{
-  width: 80%;
+  width: 100%;
   margin: 2% auto;
 }
+#content{
+  overflow: hidden;
+}
 #intestazione h1{
-text-align: left;
+text-align: center;
 padding-bottom: 0;
 }
 #intestazione{
