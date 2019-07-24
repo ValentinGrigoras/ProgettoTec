@@ -9,13 +9,13 @@ echo '
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
       <div class="overlay-content">
-        <a href="#">Home</a>
-        <a href="#">Su di noi</a>
-        <li><a href="">Corsi</a></li>
-        <li><a href="programmazione_corsi.html">Programma</a></li>
+        <a href="./../../index.php">Home</a>
+        <a href="./../pagine/su_di_noi.php">Su di noi</a>
+        <li><a href="./../pagine/corsi.php">Corsi</a></li>
+        <li><a href="./../pagine/genera_orario.php">Programma</a></li>
         <li><a href="">Prezzi</a></li>
         <li><a href="">Contattaci</a></li>
-        <li><a href="">Registrati</a></li>
+        <li><a href="./../pagine/registrazione.php">Registrati</a></li>
         <li><a href="">Login</a></li>
       </div>
       
@@ -67,7 +67,7 @@ echo'
             <li class="dropdown">
             <a href="javascript:void(0)" class="dropbtn">Su di noi<i class="fas fa-sort-down"></i> </a>
               <div class="dropdown-content">
-                  <a href="#">Chi siamo</a>
+                  <a href="./../pagine/su_di_noi.php">Chi siamo</a>
                   <a href="#">FAQ</a>
                   <a href="#">Lavora con noi</a>
                   <a href="#">Galleria foto</a>
@@ -75,10 +75,10 @@ echo'
               </div>
           </li>
           <li><a href="">Corsi</a></li>
-          <li><a href="pages/programmazione_corsi.html">Programma</a></li>
+          <li><a href="./../pagine/programmazione_corsi.php">Programma</a></li>
           <li><a href="">Prezzi</a></li>
           <li><a href="">Contattaci</a></li>
-          <li><a href="">Registrati</a></li>
+          <li><a href="./../pagine/registrazione.php">Registrati</a></li>
           <li><a href="">Login</a></li>
         </ul>
       </div>
