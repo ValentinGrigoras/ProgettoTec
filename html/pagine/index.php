@@ -9,7 +9,7 @@
 
 
 <body>
-	
+<div class="container">
 	<?php include_once "../templates/header.php"; ?>
 	<div id="landing">
 	
@@ -18,7 +18,7 @@
   <p id="second_message">Tremblant is based in Canada and has over 90 runs servicing millions of skiers each year. With 13 state-of-the-art ski lifts and a selection of choices for both snowboarders and skiers</p>
   <p class="buttonPrezzi"><a href="#">Iscriviti</a></p>
 </div>
-</div>
+
 <div id="allenatori_section">
 	<div id="allenatori_content">
   		<h2>I nostri allenatori</h2>
