@@ -127,7 +127,7 @@ include_once("connessioneDB.php");
     		if (isset($dati[0])){
     			$i=0;
     			while ($i<count($dati)){
-					echo "<div class=\"TimeTableFitnessEntry TimeTableFitnessEntryClass cat_corso1\">
+					echo "<div class=\"TimeTableFitnessEntry TimeTableFitnessEntryClass\">
 						<div class=\"TimeTableEntryColor\"></div>
 						<a href=\"http://solarisfitness.it/classes-item/pilates/\" class=\"TimeTableEntryName AltFontCharacter\">".$dati[$i]["Corso"]."</a>
 						<div class=\"TimeTableEntryTimePeriod\">
@@ -176,7 +176,7 @@ include_once("connessioneDB.php");
     				while ($i<count($dati)){
 						echo "<li class=\"MobileTimeTableDaylyPlanTime\">
 							<div class=\"MobileTimeTableClassName\">
-								<a href=\"http://solarisfitness.it/classes-item/pilates/\" class=\"linkcat_corso1\" >".$dati[$i]["Corso"]."</a>
+								<a href=\"http://solarisfitness.it/classes-item/pilates/>".$dati[$i]["Corso"]."</a>
 							</div>
 							<div class=\"MobileTimeTableClassTime\">".$dati[$i]["oraI"]." - ".$dati[$i]["oraF"]."</div>
 				  		  </li>";

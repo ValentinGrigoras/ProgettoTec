@@ -690,15 +690,13 @@ input[type=submit]:hover {
 	margin: 8%;
 	padding: 2% 0;
 	line-height: 1.5em;
+  color: #0c1f34;
 	border-radius: 5%;
-    color: white;
-}
-.TimeTableFitnessEntry a:link{
-	font-weight: bold;
-    color: white;
-}
-.TimeTableFitnessEntry a:visited{
-	
+  overflow: auto;
+  background-color: #eaf2fa;
+  font-size: 80%;
+  border: 1px solid #eaf2fa;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .TimeTableFitnessEntry p{
 	font-size: 0.9em;
@@ -706,44 +704,6 @@ input[type=submit]:hover {
 .TimeTableEntryTimeHolder, .TimeTableHead{
 	color: #595959;
 	font-weight: bold;
-}
-/*COLORI PER CATEGORIE CORSI*/
-.cat_corso1{ /*verde*/
-    background-color:rgba(35, 163, 10, 1);
-}
-#MobileTimeTable .linkcat_corso1 {
-    color: rgba(35,163,10);
-}
-.cat_corso2{ /*azzurro*/
-    background-color:rgba(85,165,230, 1);
-}
-#MobileTimeTable .linkcat_corso2{
-    color: rgb(85,165,230);
-}
-.cat_corso3{/*rosso*/
-    background-color:rgba(235,76,76, 1);
-}
-#MobileTimeTable .linkcat_corso3{
-    color: rgb(235,76,76);
-}
-.cat_corso4{/*blu*/
-    
-    background-color:rgba(72,72,181, 1);
-}
-#MobileTimeTable .linkcat_corso4{
-    color: rgb(72,72,181);
-}
-.cat_corso5{/*viola*/
-    background-color:rgba(179,8,209, 1);
-}
-#MobileTimeTable .linkcat_corso5{
-    color: rgb(179,8,209);
-}
-.cat_corso6{/*fucsia*/
-    background-color:rgba(240,77,161, 1);
-}
-#MobileTimeTable .linkcat_corso6{
-    color: rgb(240,77,161);
 }
 
 #MobileTimeTable{
