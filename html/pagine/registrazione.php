@@ -11,12 +11,12 @@
 	<?php include_once "../templates/header.php"; ?>
 <!-- ------------------------------------------------------ -->
 <div>
-	<div id="contenuto">
+	<div >
 		<div id="intestazione">
 			<h1> Unisciti a AIMFit </h1>
 			<p> Offre soluzioni d’allenamento in grado di rispondere ad ogni esigenza! </p>
 		</div>
-		<div id="content">
+		<div id="contenuto">
 			<div id="dati">
 				<form id="signup_form">
 					<h2> Crea il tuo account personale </h2>
@@ -37,14 +37,13 @@
                                 <input tabindex="*tabindexpassword*" type="password" name="password" id="password"  maxlength="20" *disabled*/>
                             </div>
                             <p class="form_note">Inserire la password scelta.</p>
-                            
                             <p hidden="true">*errorpassword*</p>
+
                             <div class="required">
                                 <label for="confermapassword" class="input_label ">Conferma password</label>
                                 <input tabindex="*tabindexconfermapassword*" type="password" name="confermapassword" id="confermapassword"  maxlength="20" *disabled*/>
                             </div>
                             <p class="form_note">Inserire nuovamente la password scelta.</p>
-                            
                             <p hidden="true">*errorconfermapassword*</p>
                         </div>
                     </fieldset>
@@ -69,32 +68,11 @@
                             <p hidden="true">*errorcognome*</p>
                         </div>
                         <div>
-                            <div>
-                                <div>
-                                    <label for="giornonascita " class="input_label ">Giorno</label>
-                                    <select tabindex="*tabindexgiornonascita*" name="giornonascita" id="giornonascita" *disabled*>
-                                        
-                                        <p hidden="true">*giornonascita*</p>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label for="mesenascita" class="input_label ">Mese</label>
-                                    <select tabindex="*tabindexmesenascita*" name="mesenascita" id="mesenascita" *disabled*>
-                                        
-                                        <p hidden="true">*mesenascita*</p>
-                                    </select>
-
-                                </div>
-                                <div >
-                                    <label for="annonascita" class="input_label ">Anno</label>
-                                    <select tabindex="*tabindexannonascita*" name="annonascita" id="annonascita" *disabled*>
-                                        
-                                        <p hidden="true">*annonascita*</p>
-                                    </select>
-
-                                </div>
+                            <div class="required">
+                                <label for="datanascita" class="input_label ">Data di nascita</label>
+                                <input tabindex="*tabindexdatanascita*" type="text" name="datanascita" id="datanascita" maxlength="50" *disabled*/>
                             </div>
-                            
+                            <p class="form_note">Inserire la data di nascita rispettando il formato gg/mm/aaaa.</p>
                             <p hidden="true">*errordatanascita*</p>
                         </div>
                         <div>
