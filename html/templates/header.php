@@ -83,7 +83,7 @@ echo '
               </div>
           </li>
           <li><a href="./../pagine/corsi.php">Corsi</a></li>
-          <li><a href="./../pagine/su_di_noi">Programma</a></li>
+          <li><a href="./../pagine/genera_orario.php">Programma</a></li>
           <li><a href="">Prezzi</a></li>
           <li><a href="">Contattaci</a></li>
           <li><a href="./../pagine/registrazione.php">Registrati</a></li>
