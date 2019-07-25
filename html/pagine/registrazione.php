@@ -8,6 +8,7 @@
 </head>
 
 <body>
+	<div id="container">
 	<?php include_once "../templates/header.php"; ?>
 <!-- ------------------------------------------------------ -->
 <div>
@@ -148,6 +149,6 @@
    <?php include_once "../templates/footer.php"; ?>
 <script src="../js/jquery-1.11.0.min.js" type="text/javascript"></script>
 <script src="../js/slideshow.js" type="text/javascript"></script>
-
+</div>
 </body>
 </html>
