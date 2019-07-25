@@ -1,7 +1,7 @@
 <?php
 	$servername="localhost"; 
-	$username="phpmyadmin";
-	$password="gennaio11";
+	$username="irina";
+	$password="Passwd.Math";
 	$db="Palestra";
 
 	//create connection

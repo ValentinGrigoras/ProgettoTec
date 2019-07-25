@@ -82,6 +82,7 @@ echo '
           </li>
           <li><a href="./../pagine/corsi.php">Corsi</a></li>
           <li><a href="./../pagine/programmazione_corsi.php">Programma</a></li>
+
           <li><a href="">Prezzi</a></li>
           <li><a href="./../pagine/registrazione.php">Registrati</a></li>
           <li><a href="">Login</a></li>

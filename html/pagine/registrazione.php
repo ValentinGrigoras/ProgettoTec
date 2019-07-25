@@ -152,6 +152,6 @@
    </div>
 <script src="../js/jquery-1.11.0.min.js" type="text/javascript"></script>
 <script src="../js/slideshow.js" type="text/javascript"></script>
-
+</div>
 </body>
 </html>
