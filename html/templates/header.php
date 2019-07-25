@@ -9,8 +9,6 @@ echo '
     </div>
   
   <div id="first-section-header">
-    <div class="maxWidth">
-      <div id="breadcrumbs_home">
         <ul class="breadcrumb">
           <li><span>Ti trovi in: </span></li>
           <li id="first"><a href="./../pagine/index.php"> Home </a></li>
@@ -24,15 +22,14 @@ echo '
       <div class="logo">
         <img id="desktop" src="./../../css/img/logo_text.png" alt="Logo AimFit"/>
       </div>
-  </div>
-  <div class="lingua">
+  
+    <div class="lingua">
       <div>
         <label for="select_lingua" class="label_lingua">Lingua del sito</label>
         <select id="select_lingua">
           <option value="1">Italiano</option>
           <option value="2">English</option>
         </select>
-        </div>
       </div>
       <span onclick="openNav()" id="botton_menu">&#9776;Menu</span>
     </div>
