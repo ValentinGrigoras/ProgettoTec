@@ -14,15 +14,15 @@ CREATE TABLE Utente (
   idUtente int(11) AUTO_INCREMENT PRIMARY KEY,
   username varchar(30) NOT NULL,
   password varchar(30) NOT NULL,
-  nome varchar(20) NOT NULL,
-  cognome varchar(15) NOT NULL,
-  dataDiNascita date NOT NULL,
-  CF varchar(16) NOT NULL,
+  nome varchar(20) ,
+  cognome varchar(15),
+  dataDiNascita date,
+  CF varchar(16) ,
   tel varchar(16),
-  indirizzo text NOT NULL,
-  comune text NOT NULL,
-  prov varchar(2) NOT NULL,
-  stato varchar(2) NOT NULL DEFAULT 'IT',
+  indirizzo text,
+  comune text,
+  prov varchar(2),
+  stato varchar(2) DEFAULT 'IT',
   UNIQUE (username)
 ) ENGINE=InnoDB;
 --
@@ -84,12 +84,12 @@ CREATE TABLE Allenatore (
   nome varchar(20) NOT NULL,
   cognome varchar(15) NOT NULL,
   email varchar(255),
-  tel varchar(16) NOT NULL,
-  dataDiNascita date NOT NULL,
-  indirizzo text NOT NULL,
-  comune text NOT NULL,
-  prov varchar(2) NOT NULL,
-  stato varchar(2) NOT NULL DEFAULT 'IT',
+  tel varchar(16),
+  dataDiNascita date,
+  indirizzo text,
+  comune text,
+  prov varchar(2),
+  stato varchar(2) DEFAULT 'IT',
   salaPesi boolean NOT NULL
 ) ENGINE=InnoDb;
 --
@@ -115,7 +115,8 @@ CREATE TABLE Galleria (
   nome varchar(50) PRIMARY KEY,
   dimensione varchar(25) NOT NULL,
   estensioneFile varchar(25) NOT NULl,
-  percorso varchar(255) NOT NULL
+  percorso varchar(255) NOT NULL,
+    riferimento varchar(255)
 ) ENGINE=InnoDB;
 --
 -- Creazione tabella 'Admin'
