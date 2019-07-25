@@ -69,7 +69,6 @@ echo '
 
   </div> <!-- END HEADER --> 
     <div id="main_nav">
-      <div class="maxWidth">
       <div id="nav">
         <ul>
           <li><a href="./../pagine/index.php"> Home </a></li>
@@ -91,7 +90,5 @@ echo '
           <li><a href="">Login</a></li>
         </ul>
       </div>
-      </div>
-
   </div> <!--end main_nav--> '
 ?>

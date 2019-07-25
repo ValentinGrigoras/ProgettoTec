@@ -16,7 +16,7 @@
   <p id="main_message">SHAPE YOUR 
     PERFECT BODY</p>
   <p id="second_message">Tremblant is based in Canada and has over 90 runs servicing millions of skiers each year. With 13 state-of-the-art ski lifts and a selection of choices for both snowboarders and skiers</p>
-  <p class="buttonPrezzi"><a href="#">Iscriviti</a></p>
+  <p class="buttonPrezzi"><a href="#" class="btnCommon">Iscriviti</a></p>
 </div>
 
 <div id="allenatori_section">
@@ -94,7 +94,7 @@
 		<p>7 giorni a settimana</p>
 		<p>1 scheda mensile</p>
 		<p>Piscina inclusa</p>
-		<p class="buttonPrezzi"><a href="#">Iscriviti</a></p>
+		<p class="buttonPrezzi"><a href="#" class="btnCommon">Iscriviti</a></p>
     </dd>
   </dl>
 
