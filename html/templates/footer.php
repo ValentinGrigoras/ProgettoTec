@@ -4,7 +4,7 @@
 <?php 
 echo '
 <div id="footer">
-	<div id="sections" class="maxWidth">
+	<div id="sections">
     	<div id="columns">
       		<div id="links">
         		<h2> Links </h2>

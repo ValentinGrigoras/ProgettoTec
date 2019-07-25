@@ -1,7 +1,7 @@
   
 <?php
 echo '  
-  <div class="container">
+  
   <!--MENU (Valentin)-->
   <div id="header">
     <div class="logo_mobile">

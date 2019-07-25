@@ -16,7 +16,7 @@
   <div id="content_corsi">
   <h2>Corsi disponibili</h2>
 
-  <dl class="Corso">
+  <dl class="twoColumnsCardDetails">
     <dt>Pillates</dt>
     <dd class="cont_corso">
 		<img src="../../css/img/pilates.jpg" alt="immagine prezzo abbonamento anuale"/>
@@ -26,7 +26,7 @@
     </dd>
   </dl>
 
-  <dl class="Corso">
+  <dl class="twoColumnsCardDetails">
     <dt>Pillates</dt>
     <dd class="cont_corso">
 		<img src="../../css/img/pilates.jpg" alt="immagine prezzo abbonamento anuale"/>
@@ -36,7 +36,7 @@
     </dd>
   </dl>
 
-  <dl class="Corso">
+  <dl class="twoColumnsCardDetails">
     <dt>Pilates</dt>
     <dd class="cont_corso">
 		<img src="../../css/img/pilates.jpg" alt="immagine prezzo abbonamento anuale"/>
@@ -46,7 +46,7 @@
     </dd>
   </dl>
 
-  <dl class="Corso">
+  <dl class="twoColumnsCardDetails">
     <dt>Pilates</dt>
     <dd class="cont_corso">
 		<img src="../../css/img/pilates.jpg" alt="immagine prezzo abbonamento anuale"/>
@@ -56,7 +56,7 @@
     </dd>
   </dl>
 
-  <dl class="Corso">
+  <dl class="twoColumnsCardDetails">
     <dt>Pilates</dt>
     <dd class="cont_corso">
 		<img src="../../css/img/pilates.jpg" alt="immagine prezzo abbonamento anuale"/>
@@ -66,7 +66,7 @@
     </dd>
   </dl>
 
-  <dl class="Corso">
+  <dl class="twoColumnsCardDetails">
     <dt>Pilates</dt>
     <dd class="cont_corso">
 		<img src="../../css/img/pilates.jpg" alt="immagine prezzo abbonamento anuale"/>

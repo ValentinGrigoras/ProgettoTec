@@ -324,15 +324,12 @@ LANDING PAGE
     background-image: url(img/landing2.jpg);
     background-size: cover;
     background-position: center;
-    top: 0;
-    left: 0;
 }
 
 #main_message{
   font-size: 3.5em;
   font-weight: 1000;
   color: #fff;
-  margin-top: 12%;
   width: 40%;
   margin-left: 9%;
 }
@@ -384,15 +381,14 @@ height: 80%;
 }
 #prezzi_section #content_prezzi{
   overflow: auto;
-  width: 80%;
   margin: 0 auto;
   background-color: #f4f4f4;
 
 }
 #prezzi_section #content_prezzi dl{
-  width: 25%;
-  float:left;
-  margin :2% 4.166% 4.166% 4.166%;
+  width: 31%;
+  float: left;
+  margin: 2% 1.166% 4.166% 1.166%;
 }
 #prezzi_section #content_prezzi dd{
   overflow: auto;
@@ -465,15 +461,14 @@ height: 80%;
 ------------ALLENATORI -----------
 ----------------------------------*/
 #allenatori_section #allenatori_content{
-    width: 80%;
     overflow: auto;
     margin: 0 auto;
     background-color: #f4f4f4;
 }
 #allenatori_section #allenatori_content dl{
     float:left;
-    width: 40%;
-    margin:2% 5% 5% 5%;
+    width: 48%;
+    margin:2% 1% 5% 1%;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 dt{
@@ -513,8 +508,8 @@ dt{
 }
 #allenatori_section dd p{
     display: block;
-    text-align: center;
-    width: 70%;
+    text-align: justify;
+    width: 95%;
     margin: 2% auto;
     font-size: 1em;
 }
@@ -523,10 +518,10 @@ dt{
   max-width: 30%;
   margin:0 auto;
     height: auto;
-    border-radius: 50%;
 }
 .fab{
     color: #f6214b;
+    font-size: 1.2em;
 }
 .fab:hover{
     color:#8a0620;
@@ -548,7 +543,6 @@ dt{
 }
 #content_corsi{
   overflow: auto;
-  width: 80%;
   margin: 0 auto;
 }
 #content_corsi .twoColumnsCardDetails{
@@ -566,7 +560,7 @@ dt{
 
 }
 .twoColumnsCardDetails p{
-  text-align: center;
+  text-align: justify;
   width: 90%;
   font-size: 0.8em;
   margin: 0 auto;
@@ -585,7 +579,7 @@ dt{
 
   	margin: 10% 5%;
   	border-bottom: none;
-
+text-align: center;
 
   }
 .twoColumnsCardDetails a:hover{
@@ -602,6 +596,7 @@ dt{
 ------------- FORM + MAP ---------
 ----------------------------------*/
 #cont-form-map {
+  padding: 2%;
   overflow: auto;
   width: 100%;
   display: table;
@@ -636,10 +631,9 @@ input[type=submit]:hover {
 #container {
   display: table-cell;
   width: 50%;
-  padding: 1%;
 }
 #container form{
-  padding: 5%;
+  padding-right: 5%;
 
 }
 #googleMap{
@@ -786,7 +780,6 @@ input[type=submit]:hover {
 ------------- FOOTER -------------
 ----------------------------------*/
 #footer{
-    background-color: #d9d9d9;
     width: 100%;
     padding-top: 2.5%;
     overflow: auto;
@@ -804,7 +797,7 @@ input[type=submit]:hover {
 #sections{
     border-top: 1px solid silver;
     padding: 2.5% 0 1% 0;
-    width: 80%;
+    width: 95%;
     margin:auto;
 }
 #columns{
@@ -894,7 +887,6 @@ input[type=submit]:hover {
 ---------------------------------*/
 /* Slideshow container */
 #content_about_us{
-  width: 80%;
   margin: auto;
   padding-bottom: 5%;
   padding-top: 5%;
@@ -1033,9 +1025,9 @@ input[type=submit]:hover {
 /*style Corsi.php*/
 #corsi_section #content_corsi{
     overflow: auto;
-    width: 80%;
     margin: 0 auto;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4;  
+    padding-bottom: 6%;
   
   }
   #corsi_section #content_corsi dl{
@@ -1163,6 +1155,13 @@ input[type=submit]:hover {
   width: 80%;
   margin: 5% auto;
   overflow: auto;
+}
+#content{
+  overflow: hidden;
+}
+#intestazione h1{
+text-align: center;
+padding-bottom: 0;
 }
 #intestazione{
   margin-bottom: 3%;
