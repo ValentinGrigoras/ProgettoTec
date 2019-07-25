@@ -4,6 +4,7 @@
 <html lang="it" xml:lang="it" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+<div id="main_container">
 	<?php include_once "../templates/head.php"; ?>
 </head>
 
@@ -19,6 +20,7 @@
 	</dl>
 </div>
    <?php include_once "../templates/footer.php"; ?>
+   </div>
 <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
 
 </body>

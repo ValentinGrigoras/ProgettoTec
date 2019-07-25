@@ -9,6 +9,7 @@
 
 
 <body>
+<div id="main_container">
 	<?php include_once "../templates/header.php"; ?>
 <div id="content_about_us">
 	<div id="paragrafi">
@@ -53,6 +54,7 @@ $num_files = count($files);
 		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 		<a class="next" onclick="plusSlides(1)">&#10095;</a>
 	</div>
+	<div>
 </div>
    <?php include_once "../templates/footer.php"; ?>
 <script src="../../js/jquery-1.11.0.min.js" type="text/javascript"></script>

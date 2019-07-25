@@ -9,14 +9,12 @@
 
 
 <body>
-<div class="container">
+<div id="main_container">
 	<?php include_once "../templates/header.php"; ?>
 	<div id="landing">
 	
   <p id="main_message">SHAPE YOUR 
     PERFECT BODY</p>
-  <p id="second_message">Tremblant is based in Canada and has over 90 runs servicing millions of skiers each year. With 13 state-of-the-art ski lifts and a selection of choices for both snowboarders and skiers</p>
-  <p class="buttonPrezzi"><a href="#" class="btnCommon">Iscriviti</a></p>
 </div>
 
 <div id="allenatori_section">

@@ -8,6 +8,8 @@
 </head>
 
 <body>
+
+<div id="main_container">
 	<?php include_once "../templates/header.php"; ?>
 <!-- ------------------------------------------------------ -->
 <div>
@@ -144,8 +146,10 @@
 		</div>
 	</div>
 </div>
+
 <!-- ------------------------------------------------------ -->
    <?php include_once "../templates/footer.php"; ?>
+   </div>
 <script src="../js/jquery-1.11.0.min.js" type="text/javascript"></script>
 <script src="../js/slideshow.js" type="text/javascript"></script>
 

@@ -19,7 +19,7 @@ html,body{
 h1,h2,h3,h4,h5{
     padding: 2% 0;
     text-align: center;
-    color:#8e2126;
+    color:#0c1f34;
 }
 ul{
     list-style: none;
@@ -29,6 +29,7 @@ li{
 }
 h1{
     font-size: 200%;
+    color: #0c1f34;
 }
 h2{
     font-size: 150%;
@@ -40,13 +41,20 @@ h4{
     font-size: 110%;
 }
 
+.fab{
+  color: #0c1f34;
+  font-size: 1.2em;
+}
+.fab:hover{
+  color:#1f5087;
+}
 
 .maxWidth{
     max-width: 1200px;
     margin:auto;
     overflow: auto;
 }
-.container{
+#main_container{
   max-width: 1200px;
   margin:auto;
   /*overflow: auto;*/
@@ -62,7 +70,7 @@ a:active {color: red;}
 .btnCommon{
   width: 25%;
   /* margin: auto; */
-  background-color: #f6214b;
+  background-color: #0c1f34;
   color: #fff;
   padding: 3.1%;
   border-radius: 4px;
@@ -140,7 +148,7 @@ ul.breadcrumb li a:hover {
 #main_nav{
     width: 100%;
     overflow: auto;
-    background-color: #f6214b;
+    background-color: #0c1f34;
 }
 /*--------LOGO----------*/
 .logo{
@@ -202,7 +210,7 @@ ul.breadcrumb li a:hover {
   position: relative;
   display: block;
   padding: 2% 2% 2% 4%;
-  background: #8E0621;
+  background: #0c1f34;
   color: #ffffff;
   font-size: 1.6em;
 }
@@ -282,7 +290,7 @@ ul.breadcrumb li a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f6214b;
+    background-color: #0c1f34;
     width: calc(100% / 7);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -294,7 +302,7 @@ ul.breadcrumb li a:hover {
     text-align: center;
     border-bottom: 1px solid #ccc;
 }
-.dropdown-content a:hover {background-color: #f73158;border: 1px solid #ccc;}
+.dropdown-content a:hover {background-color: #2561a2;border: 1px solid #ccc;}
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -313,18 +321,21 @@ LANDING PAGE
 */
 #landing{
     max-width: 100%;
-    background-image: url(img/landing2.jpg);
+    background-image: url(img/landing5.jpg);
     background-size: cover;
     background-position: center;
+    left: 0;
+    top:0;
 }
 
 #main_message{
-  font-size: 300%;
+  font-size: 180%;
   font-weight: 1000;
   color: #fff;
-  padding: 3%;
-  width: 40%;
-  margin-left: 9%;
+  padding: 4% 2% 30% 2%;
+    width: 74%;
+  margin-left: 27%;
+  font-family: 'Rubik Mono One', sans-serif;
 }
 #second_message{
   color: #fff;
@@ -393,9 +404,7 @@ height: 80%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
-#content_prezzi h2{
-	color: #8e2126;
-}
+
 .threeColumnsCard dd img{
   float: left;
   width: 100%;
@@ -499,13 +508,6 @@ dt{
   margin:0 auto;
     height: auto;
 }
-.fab{
-    color: #f6214b;
-    font-size: 1.2em;
-}
-.fab:hover{
-    color:#8a0620;
-}
 
 
 /*--------------------------------
@@ -550,7 +552,7 @@ dt{
 }
 .twoColumnsCardDetails a{
     width: 25%;
-    background-color: #f6214b;
+    background-color: #0c1f34;
     color: #fff;
     padding: 3.1%;
     border-radius: 4px;
@@ -629,9 +631,7 @@ input[type=submit]:hover {
 /*--------PAGINA------------
 -----PROGRAMMAZIONE CORSI --------
 ----------------------------------*/
-#programmazioneCorsiContent{
-	background-color: white;
-}	
+
 #custom_select{
 	padding: 3% 0 1.5% 1.5%;
     color: #003366;
@@ -989,16 +989,16 @@ input[type=submit]:hover {
     border: none;
     outline: none;
     background-color: #fff;
-    color: #f6214b;
+    color: #0c1f34;
     cursor: pointer;
-    border: 1px solid #f6214b;
+    border: 1px solid #0c1f34;
     width:3.1%;
     padding:0.8%;
     border-radius:50%;
 }
 
 #tornasu:hover {
-    background-color: #f6214b;
+    background-color: #0c1f34;
     color: #fff;
 }
 
@@ -1025,9 +1025,7 @@ input[type=submit]:hover {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   
   }
-  #content_corsi h2{
-      color: #8e2126;
-  }
+ 
   .twoColumnsCardDetails dd img{
     float: left;
     width: 100%;
@@ -1055,7 +1053,7 @@ input[type=submit]:hover {
   #content_corsi a{
       width: 42%;
       margin: auto;
-      background-color: #f6214b;
+      background-color: #0c1f34;
       color: #fff;
       padding: 3.1%;
       border-radius: 4px;

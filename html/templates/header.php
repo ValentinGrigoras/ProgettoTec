@@ -54,7 +54,7 @@ echo '
       </ul>
     </li>
     <li class="has-children"><a href="./../pagine/corsi.php">Corsi</a></li>
-    <li class="has-children"><a href="./../pagine/genera_orario.php">Programma</a></li>
+    <li class="has-children"><a href="./../pagine/programmazione_corsi.php">Programma</a></li>
     <li class="has-children"><a href="#">Prezzi</a></li>
     <li class="has-children"><a href="#">Contattaci</a></li>
     <li class="has-children"><a href="./../pagine/registrazione.php">Registrati</a></li>
@@ -76,16 +76,13 @@ echo '
             <a href="javascript:void(0)" class="dropbtn">Su di noi<i class="fas fa-sort-down"></i> </a>
               <div class="dropdown-content">
                   <a href="./../pagine/su_di_noi.php">Chi siamo</a>
-                  <a href="#">FAQ</a>
-                  <a href="#">Lavora con noi</a>
-                  <a href="#">Galleria foto</a>
                   <a href="#">Allenatori</a>
+                  <a href="#">Contattaci</a>
               </div>
           </li>
           <li><a href="./../pagine/corsi.php">Corsi</a></li>
-          <li><a href="./../pagine/su_di_noi">Programma</a></li>
+          <li><a href="./../pagine/programmazione_corsi.php">Programma</a></li>
           <li><a href="">Prezzi</a></li>
-          <li><a href="">Contattaci</a></li>
           <li><a href="./../pagine/registrazione.php">Registrati</a></li>
           <li><a href="">Login</a></li>
         </ul>
