@@ -1201,3 +1201,61 @@ label{
 /*----------------------------
 -----------END REGISTRAZIONE------
 -----------------------------*/
+
+/*admin*/
+.sidenav {
+  height: 100%;
+  width: 16%;
+  position: fixed;
+  z-index: 1;
+  float: left;
+  background-color: #0c1f34;
+  overflow-x: hidden;  
+  }
+  .topnav {
+    float: right;
+    color: #fff;
+    text-align: center;
+    width: 84%;
+    background-color: #0c1f34;
+    overflow: auto;
+}
+.main{
+  float:left;
+  width: 84%;
+  margin-left: 16%;
+  height: 100%;
+  background-color: red;
+}
+#admin_ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#admin_ul li {
+  float: right;
+}
+#admin_ul li a{
+  display: block;
+  padding: 8px;
+  background-color: white;
+}
+.vertical_menu{
+  list-style-type: none;
+  margin: 0;
+  padding-top: 15%;
+  width: 200px;
+  background-color: #0c1f34;
+
+}
+
+.vertical_menu li {
+  display: block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.vertical_menu li a{
+color: white;
+}
