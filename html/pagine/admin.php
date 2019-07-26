@@ -3,35 +3,48 @@
 <head>
 	<?php include_once "../templates/head.php"; ?>
 </head>
+<style>
+    @media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: brown;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+</style>
 
 
 <body>
-        <div class="sidenav" >
-        <ul class ="vertical_menu">
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+    
+<div class="sidebar">
+<ul class="admin-ul">
+    <li><a class="active">Nome admin</a></li>
+
+    <li><a>Abbonamenti</a></li>
+
+    <li><a>Lista prodotti</a></li>
+            
+    <li id="admin-logout"><a>Esci</a></li>
 </ul>
-        </div>
-        <div class="topnav">  
-                    <ul id="admin_ul">
-                    <li><a href="#login">Login</a></li>
-                    <li><a href="#about">Esci</a></li>
-                   </ul>
-        </div>
+</div>
 
+<!--
+<div class="topnavbar">
+        <ul class="admin-ul">
+               
+            </ul>
 
-
-
-    <div class="main">
-        <h2>Responsive Admin page</h2>
-        <p>Resize the browser window to see how it works.</p>   
-         <h4>Hello i'm admin</h4>
-        <h4>Hello i'm admin</h4>
-        <h4>Hello i'm admin</h4>
-    </div>
-
+-->
 </body>
 
 </html>

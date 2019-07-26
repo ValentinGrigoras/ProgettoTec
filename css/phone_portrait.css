@@ -276,3 +276,11 @@ select #seleziona_corso{
   background-color: #f6214b;
   color: #fff;
 }
+
+
+/*Adimin css*/
+.sidebar a {
+  text-align: center;
+  float: none;
+  background-color: yellow;
+}

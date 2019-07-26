@@ -1167,69 +1167,6 @@ label{
   font-size: 0.8em;
   margin-bottom: 2%;
 }
-/*----------------------------
------------END REGISTRAZIONE------
------------------------------*/
-
-
-/*admin*/
-.sidenav {
-  height: 100%;
-  width: 16%;
-  position: fixed;
-  z-index: 1;
-  float: left;
-  background-color: #0c1f34;
-  overflow-x: hidden;  
-  }
-  .topnav {
-    float: right;
-    color: #fff;
-    text-align: center;
-    width: 84%;
-    background-color: #0c1f34;
-    overflow: auto;
-}
-.main{
-  float:left;
-  width: 84%;
-  margin-left: 16%;
-  height: 100%;
-  background-color: red;
-}
-#admin_ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-#admin_ul li {
-  float: right;
-}
-#admin_ul li a{
-  display: block;
-  padding: 8px;
-  background-color: white;
-}
-.vertical_menu{
-  list-style-type: none;
-  margin: 0;
-  padding-top: 15%;
-  width: 200px;
-  background-color: #0c1f34;
-
-}
-
-.vertical_menu li {
-  display: block;
-  color: white;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-.vertical_menu li a{
-color: white;
-}
-
 .confirm {
   padding: 3%;
   background-color: #4CAF50;
@@ -1245,5 +1182,71 @@ color: white;
 }
 .confirmclosebtn:hover {
   color: black;
+}
+
+
+/*----------------------------
+-----------END REGISTRAZIONE------
+-----------------------------*/
+
+
+/*admin*/
+.sidebar{
+  background-color: #0c1f34;
+  width: 22%;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: auto;
+}
+
+.admin-ul{
+  padding: 0%;
+  list-style-type: none;
+  background-color: #0c1f34;
+  margin-top: 30%;
+}
+.sidebar li a{
+  padding-top: 2%;
+  display: block;
+  text-align: center;
+  padding: 4%;
+  text-decoration: underline;
+  color: #fff;
+  
+}
+
+.topnavbar{
+  width: 82%;
+  float: right;
+}
+
+
+/*topnavbar*/
+.topnavbar li a{
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 4%;
+  text-decoration: underline;
+}
+
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #f1f1f1;
+  color: #111;
+}
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+  text-decoration: none;
+}
+/*logout*/
+
+#admin-logout {
+  margin-top: 60%;
 }
 

@@ -171,3 +171,16 @@ label#label_search{
     background-color: #f6214b;
     color: #fff;
   }
+
+
+
+  /*Admin*/
+.sidebar {
+  width: 100%;
+  height: auto;
+  background-color: yellow;
+
+}
+.sidebar a {
+  float: left;
+}
