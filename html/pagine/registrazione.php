@@ -131,7 +131,7 @@
                             <p hidden="true">*errorprovincia*</p>
                         </div>
                     </fieldset>
-                    <p>Facendo clic su "Crea account" di seguito, accetti i nostri Termini di servizio e l'Informativa sulla privacy. Occasionalmente ti invieremo e-mail relative all'account.</p>
+                    <p class="form_note">Facendo clic su "Crea account" di seguito, accetti i nostri Termini di servizio e l'Informativa sulla privacy. Occasionalmente ti invieremo e-mail relative all'account.</p>
                     <button id="signup_button" type="submit" *disabled*>Crea account</button>
 				</form>
 			</div>
