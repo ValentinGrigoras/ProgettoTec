@@ -3,24 +3,41 @@
 <head>
 	<?php include_once "../templates/head.php"; ?>
 </head>
+<style>
+    @media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: brown;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+</style>
 
 
 <body>
+    
 <div class="sidebar">
 <ul class="admin-ul">
-    <li><a>sidebar</a></li>
+    <li><a class="active">Nome admin</a></li>
 
-    <li><a>sidebar</a></li>
+    <li><a>Abbonamenti</a></li>
 
-    <li><a>topbar</a></li>
+    <li><a>Lista prodotti</a></li>
             
-    <li><a>topbar</a></li>
+    <li id="admin-logout"><a>Esci</a></li>
 </ul>
 </div>
-<div class="topnavbar">
-        <ul class="admin-ul">
-               
-        </ul>
+
 </body>
 
 </html>

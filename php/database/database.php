@@ -57,19 +57,16 @@ class Database {
         return null;
     }
 
-    public static function registerUser($email, $password, $nome, $cognome, $datanascita, $cf, $telefono, $stato, $indirizzo, $comune, $prov) {
+    public static function registerUser($email, $password, $nome, $cognome, $datanascita, $cf, $telefono) {
         $email = self::$connection->real_escape_string($email);
         $password = self::$connection->real_escape_string($password);
         $nome = self::$connection->real_escape_string($nome);
         $cognome = self::$connection->real_escape_string($cognome);
         $datanascita = self::$connection->real_escape_string($datanascita);
         $cf = self::$connection->real_escape_string($cf);
-        if(!is_numeric($telefono)) return null;
-        $stato = self::$connection->real_escape_string($stato);
-        $indirizzo = self::$connection->real_escape_string($indirizzo);
-        $comune = self::$connection->real_escape_string($comune);
-        $prov = self::$connection->real_escape_string($prov);
-        $query = "INSERT INTO Utente (username, password, nome, cognome, dataDiNascita, CF, tel, indirizzo, comune, prov, stato) VALUES (\"$email\", \"$password\", \"$nome\", \"$cognome\", \"$datanascita\", \"$cf\", \"$telefono\", \"$indirizzo\", \"$comune\", \"$prov\",\"stato\");";
+        $telefono = self::$connection->real_escape_string($telefono);
+        
+        $query = "INSERT INTO Utente (username, password, nome, cognome, dataDiNascita, CF, tel) VALUES (\"$email\", \"$password\", \"$nome\", \"$cognome\", \"$datanascita\", \"$cf\", \"$telefono\");";
         return self::insertUpdateDelete($query);
     }
 

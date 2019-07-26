@@ -4,7 +4,10 @@
 <html lang="it" xml:lang="it" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<?php include_once "../templates/head.php"; ?>
+<?php include_once "../templates/head.php"; 
+	require_once "./../../php/database/database.php";
+	require_once "./../../php/tools/validator.php";
+?>
 </head>
 
 <body>
@@ -23,6 +26,7 @@
 				<form id="signup_form" action="" method="POST">
 					<h2> Crea il tuo account personale </h2>
 					<p>I campi con (*) sono obbligatori.</p>
+
 					<fieldset>
                         <legend>Account</legend>
                         <div>
@@ -31,7 +35,7 @@
                                 <input tabindex="*tabindexemail*" type="text" name="email" id="email" *disabled* />
                             </div>
                             <p class="form_note">Inserire l'<span xml:lang="en">email</span> nel formato casella@dominio.</p>
-                            <p hidden="true">*erroremail*</p>
+                            <p >*erroremail*</p>
                         </div>
                         <div>
                             <div class="required">
@@ -39,14 +43,14 @@
                                 <input tabindex="*tabindexpassword*" type="password" name="password" id="password"  *disabled*/>
                             </div>
                             <p class="form_note">Inserire la password scelta.</p>
-                            <p hidden="true">*errorpassword*</p>
+                            <p >*errorpassword*</p>
 
                             <div class="required">
                                 <label for="confermapassword" class="input_label ">Conferma password</label>
                                 <input tabindex="*tabindexconfermapassword*" type="password" name="confermapassword" id="confermapassword"   *disabled*/>
                             </div>
                             <p class="form_note">Inserire nuovamente la password scelta.</p>
-                            <p hidden="true">*errorconfermapassword*</p>
+                            <p >*errorconfermapassword*</p>
                         </div>
                     </fieldset>
                     <fieldset>
@@ -58,7 +62,7 @@
                             </div>
                             <p class="form_note">Inserire il nome senza spazi e con sole lettere alfabetiche.</p>
                             
-                            <p hidden="true">*errorenome*</p>
+                            <p >*errorenome*</p>
                         </div>
                         <div>
                             <div class="required">
@@ -67,7 +71,7 @@
                             </div>
                             <p class="form_note">Inserire il cognome senza spazi e con sole lettere alfabetiche.</p>
                             
-                            <p hidden="true">*errorcognome*</p>
+                            <p >*errorcognome*</p>
                         </div>
                         <div>
                             <div class="required">
@@ -75,7 +79,7 @@
                                 <input tabindex="*tabindexdatanascita*" type="text" name="datanascita" id="datanascita"  *disabled*/>
                             </div>
                             <p class="form_note">Inserire la data di nascita rispettando il formato gg/mm/aaaa.</p>
-                            <p hidden="true">*errordatanascita*</p>
+                            <p >*errordatanascita*</p>
                         </div>
                         <div>
                             <div class="required">
@@ -83,7 +87,7 @@
                                 <input tabindex="*tabindexcodicf*" type="text" name="cf" id="cf"   *disabled*/>
                             </div>
 							<p class="form_note">Inserire il codice fiscale.</p>
-                            <p hidden="true">*errorecf*</p>
+                            <p >*errorecf*</p>
                         </div>
                         <div>
                             <div>
@@ -91,13 +95,13 @@
                                 <input tabindex="*tabindextelefono*" type="text" name="telefono" id="telefono"  *disabled*/>
                             </div>
                             <p class="form_note">Inserire il numero di telefono con sole cifre, senza spazi.</p>
-                            <p hidden="true">*errortelefono*</p>
+                            <p >*errortelefono*</p>
                         </div>
                         
                     </fieldset>
                     <p class="form_note">Facendo clic su "Crea account" di seguito, accetti i nostri Termini di servizio e l'Informativa sulla privacy. Occasionalmente ti invieremo e-mail relative all'account.</p>
                     <button id="signup" type="submit" name="signup" value="signup">Crea account</button>
-                    *confirm message*
+                    *confirmmessage*
 				</form>
 			</div>
 			<div id="descrizione">
@@ -112,36 +116,68 @@
 		</div>
 	</div>
 </div>
-</div>
-<?php /*
-use Database/database;
-$database = new Database();
-echo 'mm';
-if ($database) {
-	echo 'pm0';
-	$page = file_get_contents(dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "pagine" . DIRECTORY_SEPARATOR . "registrazione.php");
-	if (isset($_POST['signup'])) {
 
-            $user = Database::selectUser($_POST['email']);
-            echo 'pm1';
-            if (empty($user)) {
-                $registeruser = Database::registerUser($_POST['email'], $_POST['password'], $_POST['nome'], $_POST['cognome'], $_POST['datanascita'], $_POST['cf'], $_POST['telefono'], $_POST['indirizzo'], $_POST['comune'], $_POST['prov'], $_POST['stato'], $_POST['newsletter']);
-                echo 'pm2';
-            }
-            if (isset($registeruser) && $registeruser){
-                $user = Database::selectUser($_POST['email']);
-            	if (isset($user)) {
-                $m = "<div class=\"confirm\"> <span class=\"closebtn\" onclick=\"this.parentElement.style.display='none';\">OK</span> <p> L\'account &egrave; stato creato. <p> </div>";
-				str_replace('*confirm message*', $m, $page);
-    			}
-    			echo 'pm3';
+<?php 
+use Database\Database;
+use Validator\Validator;
+
+$database = new Database();
+
+if ($database) {
+	$page = file_get_contents(dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "pages" . DIRECTORY_SEPARATOR . "biglietti.html");
+	if (isset($_POST['signup'])) {
+		$error=false;
+		if (!Validator::emailValidator($_POST['email'])){
+			$error=true;
+			str_replace('*erroremail*', 'Il campo <span xml:lang=\"en\">Email</span> inserito non è corretto. Rispettare il formato indicato.', $_SERVER['REQUEST_URI']);
+		}
+		$user = Database::selectUser($_POST['email']);
+		if (empty($user)) {
+			if (!Validator::passwordValidator($_POST['password'])){
+				$error=true;
+				str_replace('*errorepassword*', "La password non rispetta le indicazioni. Rispettare il formato indicato.", $_SERVER['REQUEST_URI']);
 			}
+			if (!Validator::nameValidator($_POST['nome'])){
+				$error=true;
+				str_replace('*errorenome*', "Il nome inserito non &egrave; valido. Rispettare il formato indicato.", $_SERVER['REQUEST_URI']);
+			}
+			if (!Validator::nameValidator($_POST['cognome'])){
+				$error=true;
+				str_replace('*errorecognome*', "Il cognome inserito non &egrave; valido. Rispettare il formato indicato.", $_SERVER['REQUEST_URI']);
+			}
+			if (!Validator::cfValidator($_POST['cf'])){
+				$error=true;
+				str_replace('*errorecf*', "Il codice fiscale inserito non &egrave; valido. Rispettare il formato indicato.", $_SERVER['REQUEST_URI']);
+			}
+			if (!Validator::mobileValidator($_POST['telefono'])){
+				$error=true;
+				str_replace('*erroretelefono*', "Il numero di telefono inserito non &egrave; valido. Rispettare il formato indicato.", $_SERVER['REQUEST_URI']);
+			}
+			$data= date('Y-m-d',strtotime($_POST['datanascita']));
+			if (!Validator::dateValidator($data)){
+				$error=true;
+				str_replace('*erroredatanascita*', "La data di nascita inserita non &egrave; valido. Rispettare il formato indicato.", $_SERVER['REQUEST_URI']);
+			}
+            if (!$errore){
+            	$registeruser = Database::registerUser($_POST['email'], $_POST['password'], $_POST['nome'], $_POST['cognome'], $data, $_POST['cf'], $_POST['telefono']);
+                var_dump($registeruser);
+            	if (isset($registeruser) && $registeruser){
+                	$user = Database::selectUser($_POST['email']);
+            		if (isset($user)) {
+                	$m = "<div class=\"confirm\"> <span class=\"closebtn\" onclick=\"this.parentElement.style.display='none';\">OK</span> <p> L\'account &egrave; stato creato. <p> </div>";
+					str_replace('*confirmmessage*', $m, $_SERVER['REQUEST_URI']);
+    				}
+				}
+            }
+                
+        }
+            
 	}
-}*/
+}
 ?>
 <!-- ------------------------------------------------------ -->
    <?php include_once "../templates/footer.php"; ?>
-   
+</div>
 <script src="../js/jquery-1.11.0.min.js" type="text/javascript"></script>
 <script src="../js/slideshow.js" type="text/javascript"></script>
 </div>

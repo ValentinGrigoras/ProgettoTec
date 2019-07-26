@@ -19,10 +19,6 @@ CREATE TABLE Utente (
   dataDiNascita date,
   CF varchar(16) ,
   tel varchar(16),
-  indirizzo text,
-  comune text,
-  prov varchar(2),
-  stato varchar(2) DEFAULT 'IT',
   UNIQUE (username)
 ) ENGINE=InnoDB;
 --
@@ -86,10 +82,6 @@ CREATE TABLE Allenatore (
   email varchar(255),
   tel varchar(16),
   dataDiNascita date,
-  indirizzo text,
-  comune text,
-  prov varchar(2),
-  stato varchar(2) DEFAULT 'IT',
   salaPesi boolean NOT NULL
 ) ENGINE=InnoDb;
 --

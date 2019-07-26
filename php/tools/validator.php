@@ -25,18 +25,18 @@ class Validator{
         );
 
     public static function emailValidator($email){
-        filter_var($value, FILTER_VALIDATE_EMAIL) ? return true : return false; //  Filters a variable with a specified filter (FILTER_VALIDATE_EMAIL)
+        return filter_var($value, FILTER_VALIDATE_EMAIL);//  Filters a variable with a specified filter (FILTER_VALIDATE_EMAIL)
     }
-    public static function passwordValidation($password){
+    public static function passwordValidator($password){
         $number    = preg_match('@[0-9]@', $password); // must contain at least one number
-        if(!$number  || strlen($password) < 8 || strlen($password) > 16) ? return false: return true; // password lenght must be: 8 <= password.lenght <= 16
+        return !$number  || strlen($password) < 8 || strlen($password) > 16; // password lenght must be: 8 <= password.lenght <= 16
     }
     public static function nameValidator($name){
         return preg_match("/^([a-zA-Z' ]+)$/",$name);
     }
-    function validateDate($date, $format = 'd/m/Y') // change the format parameters if you want to check others date format
+    function dateValidator($date, $format = 'Y/m/d') // change the format parameters if you want to check others date format
     {
-        $d = DateTime::createFromFormat($format, $date);
+        //$d = DateTime::createFromFormat($format, $date);
         return $d && $d->format($format) == $date;
     }
     public static function cfValidator($cf)
@@ -106,14 +106,10 @@ class Validator{
        
            return true;
        }
-    }
-    public static function validateMobile($mobile)
+    
+    public static function mobileValidator($mobile)
     {
         return preg_match('/^[0-9]{10}+$/', $mobile);
-    }
-    public static function UserValidation()
-    {
-
     }
 
 }
