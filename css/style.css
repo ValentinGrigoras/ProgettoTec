@@ -1183,8 +1183,8 @@ label{
 
 /*admin*/
 .sidebar{
-  background-color: #f1f1f1;
-  width: 18%;
+  background-color: #0c1f34;
+  width: 22%;
   position: fixed;
   margin: 0;
   padding: 0;
@@ -1195,14 +1195,16 @@ label{
 .admin-ul{
   padding: 0%;
   list-style-type: none;
-  background-color: orange;
+  background-color: #0c1f34;
+  margin-top: 30%;
 }
 .sidebar li a{
-  
+  padding-top: 2%;
   display: block;
   text-align: center;
   padding: 4%;
-  text-decoration: none;
+  text-decoration: underline;
+  color: #fff;
   
 }
 
@@ -1218,6 +1220,24 @@ label{
   display: block;
   text-align: center;
   padding: 4%;
+  text-decoration: underline;
+}
+
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #f1f1f1;
+  color: #111;
+}
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
   text-decoration: none;
+}
+/*logout*/
+
+#admin-logout {
+  margin-top: 60%;
 }
 
