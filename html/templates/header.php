@@ -24,13 +24,7 @@ echo '
       </div>
   
     <div class="lingua">
-      <div>
-        <label for="select_lingua" class="label_lingua">Lingua del sito</label>
-        <select id="select_lingua">
-          <option value="1">Italiano</option>
-          <option value="2">English</option>
-        </select>
-      </div>
+      
       <span onclick="openNav()" id="botton_menu">&#9776;Menu</span>
     </div>
   </div>
