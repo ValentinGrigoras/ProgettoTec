@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"/>
 <link rel="stylesheet" href="../../css/style.css" media="handheld, screen, only screen"  type="text/css"/>
 <link href="https://fonts.googleapis.com/css?family=Arima+Madurai:300,400,700" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="../../css/tablet_landscape.css" media="handheld, screen and (max-width:1060px), only screen and (max-device-width:1060px)"  type="text/css"/>
  <link rel="stylesheet" href="../../css/tablet_portrait.css" media="handheld, screen and (max-width:768px), only screen and (max-device-width:768px)"  type="text/css"/>
  <link rel="stylesheet" href="../../css/phone_landscape.css" media="handheld, screen and (max-width:600px), only screen and (max-device-width:600px)"  type="text/css"/>
