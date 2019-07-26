@@ -1119,11 +1119,12 @@ padding-bottom: 0;
 #descrizione{
   width: 30%;
   float: left;
-  border: 1px solid #ccc;
+  background-color: #fff2e6;
   border-radius: 0.2em;
-  box-shadow: 0 1px 3px rgba(0,0,0,.075);
+  box-shadow: 0 6px 6px rgba(0,0,0,.075);
   margin: 15% 3% 0 3%;
   text-align: center;
+  padding: 3% 0;
 }
 input{
   border: 0.1em solid #999999;
@@ -1150,14 +1151,29 @@ label{
 .required label::after {
     color: #cb2431;
     content: "*";
-    padding-left: 5%;
+    padding: 0 1% 0 1%;
 }
 .form_note{
   color: #586069;
   font-size: 0.8em;
-  line-height: 2;
   margin-bottom: 2%;
 }
 /*----------------------------
 -----------END REGISTRAZIONE------
 -----------------------------*/
+.confirm {
+  padding: 3%;
+  background-color: #4CAF50;
+  color: white;
+}
+.confirmclosebtn {
+  margin-left: 3%;
+  color: white;
+  font-weight: bold;
+  line-height: 2;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.confirmclosebtn:hover {
+  color: black;
+}
