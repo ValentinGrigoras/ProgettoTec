@@ -4,16 +4,14 @@
 <html lang="it" xml:lang="it" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<?php include_once "../templates/head.php"; 
-	require_once "./../../php/database/database.php";
-	require_once "./../../php/tools/validator.php";
+<?php include_once "ProgettoTec/html/templates/head.php";
 ?>
 </head>
 
 <body>
 
 <div id="main_container">
-	<?php include_once "../templates/header.php"; ?>
+	<?php include_once "ProgettoTec/html/templates/header.php"; ?>
 <!-- ------------------------------------------------------ -->
 <div>
 	<div >
@@ -23,7 +21,7 @@
 		</div>
 		<div id="contenuto">
 			<div id="dati">
-				<form id="signup_form" action="" method="POST">
+				<form id="signup_form" action="./../../php/pagine/registrazione.php" method="POST">
 					<h2> Crea il tuo account personale </h2>
 					<p>I campi con (*) sono obbligatori.</p>
 
@@ -117,66 +115,8 @@
 	</div>
 </div>
 
-<?php 
-use Database\Database;
-use Validator\Validator;
-
-$database = new Database();
-
-if ($database) {
-	$page = file_get_contents(dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "pages" . DIRECTORY_SEPARATOR . "biglietti.html");
-	if (isset($_POST['signup'])) {
-		$error=false;
-		if (!Validator::emailValidator($_POST['email'])){
-			$error=true;
-			str_replace('*erroremail*', 'Il campo <span xml:lang=\"en\">Email</span> inserito non è corretto. Rispettare il formato indicato.', $_SERVER['REQUEST_URI']);
-		}
-		$user = Database::selectUser($_POST['email']);
-		if (empty($user)) {
-			if (!Validator::passwordValidator($_POST['password'])){
-				$error=true;
-				str_replace('*errorepassword*', "La password non rispetta le indicazioni. Rispettare il formato indicato.", $_SERVER['REQUEST_URI']);
-			}
-			if (!Validator::nameValidator($_POST['nome'])){
-				$error=true;
-				str_replace('*errorenome*', "Il nome inserito non &egrave; valido. Rispettare il formato indicato.", $_SERVER['REQUEST_URI']);
-			}
-			if (!Validator::nameValidator($_POST['cognome'])){
-				$error=true;
-				str_replace('*errorecognome*', "Il cognome inserito non &egrave; valido. Rispettare il formato indicato.", $_SERVER['REQUEST_URI']);
-			}
-			if (!Validator::cfValidator($_POST['cf'])){
-				$error=true;
-				str_replace('*errorecf*', "Il codice fiscale inserito non &egrave; valido. Rispettare il formato indicato.", $_SERVER['REQUEST_URI']);
-			}
-			if (!Validator::mobileValidator($_POST['telefono'])){
-				$error=true;
-				str_replace('*erroretelefono*', "Il numero di telefono inserito non &egrave; valido. Rispettare il formato indicato.", $_SERVER['REQUEST_URI']);
-			}
-			$data= date('Y-m-d',strtotime($_POST['datanascita']));
-			if (!Validator::dateValidator($data)){
-				$error=true;
-				str_replace('*erroredatanascita*', "La data di nascita inserita non &egrave; valido. Rispettare il formato indicato.", $_SERVER['REQUEST_URI']);
-			}
-            if (!$errore){
-            	$registeruser = Database::registerUser($_POST['email'], $_POST['password'], $_POST['nome'], $_POST['cognome'], $data, $_POST['cf'], $_POST['telefono']);
-                var_dump($registeruser);
-            	if (isset($registeruser) && $registeruser){
-                	$user = Database::selectUser($_POST['email']);
-            		if (isset($user)) {
-                	$m = "<div class=\"confirm\"> <span class=\"closebtn\" onclick=\"this.parentElement.style.display='none';\">OK</span> <p> L\'account &egrave; stato creato. <p> </div>";
-					str_replace('*confirmmessage*', $m, $_SERVER['REQUEST_URI']);
-    				}
-				}
-            }
-                
-        }
-            
-	}
-}
-?>
 <!-- ------------------------------------------------------ -->
-   <?php include_once "../templates/footer.php"; ?>
+   <?php include_once "ProgettoTec/html/templates/footer.php";?>
 </div>
 <script src="../js/jquery-1.11.0.min.js" type="text/javascript"></script>
 <script src="../js/slideshow.js" type="text/javascript"></script>
