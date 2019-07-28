@@ -9,6 +9,13 @@
 
 
 <body>
+  <?php
+  require_once dirname(__DIR__) . DIRECTORY_SEPARATOR ."database" . "database.php";
+  $database = new Database();
+
+
+  ?>
+
 <div id="main_container">
 	<?php include_once "../templates/header.php"; ?>
 

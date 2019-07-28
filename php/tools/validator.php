@@ -60,7 +60,7 @@ class Validator{
             }
        
             for($i=0; $i<=14; $i+=2){
-           $c=$cf[$i];
+                $c=$cf[$i];
             switch($c){
                     case '0':  $s += 1;  break;
                     case '1':  $s += 0;  break;
