@@ -10,7 +10,7 @@ use Validator\Validator;
 $database = new Database();
 
 if ($database) {
-	$page = file_get_contents(dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "pagine" . DIRECTORY_SEPARATOR . "registrazione.php");
+	$page = file_get_contents(dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "pagine" . DIRECTORY_SEPARATOR . "registrazione.html");
 	
 	if (isset($_POST['signup'])) {
 		$error=false;

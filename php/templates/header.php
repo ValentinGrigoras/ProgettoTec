@@ -1,42 +1,25 @@
 <?php
-require_once "utilities.php";
-use Utilities\Utilities;
 
-$header = file_get_contents(dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."html".DIRECTORY_SEPARATOR."templates".DIRECTORY_SEPARATOR."head.html");
-$last_uri_parts = explode('?', $_SERVER['REQUEST_URI'], 2);
-$last_uri_parts[0] = substr($last_uri_parts[0], strrpos($last_uri_parts[0], '/')+1);
+$head = file_get_contents(dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."html".DIRECTORY_SEPARATOR."templates".DIRECTORY_SEPARATOR."head.html");
+$header = file_get_contents(dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."html".DIRECTORY_SEPARATOR."templates".DIRECTORY_SEPARATOR."header.html");
 
-switch ($last_uri_parts[0]){
-    case "":
-        $header = str_replace("*title*","Homepage | AIMFit",$header);
-        $header = str_replace("*description*","Homepage della palestra AIMFit di Padova.",$header);
-        $header = str_replace("*keywords*","AIMFit, palestra, fitness, pesi, allenatori,corsi",$header);
+$uri_case = explode("/", $_SERVER['REQUEST_URI'], 5);
+print_r($uri_case);
+//$uri_case[0] = substr($uri_case[0], strrpos($uri_case[0], '/')+1);
+
+switch ($uri_case[4]){
+    case "home.php":
+        $head = str_replace("*title*","Homepage | AIMFit",$head);
+        $head = str_replace("*description*","Homepage della palestra AIMFit di Padova.",$head);
+        $head = str_replace("*keywords*","AIMFit, palestra, fitness, pesi, allenatori,corsi",$head);
         $page = dirname(__DIR__).DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."home.php";
         break;
-    case "mostre":
-        $header = str_replace("*title*","Mostre | Museo Ferrari",$header);
-        $header = str_replace("*description*","Nella pagina delle mostre è presente una descrizione della mostra Il cavallino degli anni '50 e l'elenco delle prossime mostre che si terranno al museo",$header);
-        $header = str_replace("*keywords*","cavallino,mostre,museo",$header);
-        $page = dirname(__DIR__).DIRECTORY_SEPARATOR."pages".DIRECTORY_SEPARATOR."mostre.php";
+    case "registrazione.php":
+        $head = str_replace("*title*","Mostre | Museo Ferrari",$head);
+        $head = str_replace("*description*","Nella pagina delle mostre è presente una descrizione della mostra Il cavallino degli anni '50 e l'elenco delle prossime mostre che si terranno al museo",$header);
+        $head = str_replace("*keywords*","cavallino,mostre,museo",$head);
+        $page = dirname(__DIR__).DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."registrazione.php";
         break;
-    case "modelli-esposti":
-        $header = str_replace("*title*","Modelli Esposti | Museo Ferrari",$header);
-        $header = str_replace("*description*","Tutti i modelli Ferrari esposti della collezione del museo, con i dettagli relativi a motore, cilindrata, potenza ed esposizione nella mostra in corso.",$header);
-        $header = str_replace("*keywords*","Ferrari,motore,cilindrata",$header);
-        $page = dirname(__DIR__).DIRECTORY_SEPARATOR."pages".DIRECTORY_SEPARATOR."modelli-esposti.php";
-        break;
-    case "biglietti":
-        $header = str_replace("*title*","Biglietti | Museo Ferrari",$header);
-        $header = str_replace("*description*","In questa pagina è possibile prenotare i biglietti per partecipare alle mostre  del museo. Il prezzo è di soli 15.00 € e i minori entrano gratis.",$header);
-        $header = str_replace("*keywords*","biglietti,museo,mostre,gratis",$header);
-        $page = dirname(__DIR__).DIRECTORY_SEPARATOR."pages".DIRECTORY_SEPARATOR."biglietti.php";
-        break;
-    case "info-e-contatti":
-        $header = str_replace("*title*","Info e Contatti | Museo Ferrari",$header);
-        $header = str_replace("*description*","Qui vi sono le informazioni relative a come raggiungere il museo, i modi per contattarci e una mappa con la posizione del museo.",$header);
-        $header = str_replace("*keywords*","informazioni,contatti,mappa,posizione",$header);
-        $page = dirname(__DIR__).DIRECTORY_SEPARATOR."pages".DIRECTORY_SEPARATOR."info-e-contatti.php";
-        break;  
     default:
         $page = dirname(__DIR__).DIRECTORY_SEPARATOR."pages".DIRECTORY_SEPARATOR."not-found.php";
         break;
