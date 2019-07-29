@@ -110,18 +110,18 @@ la dimensione totale dei div child.*/
     display: block;
     clear: both;
 }
-ul.breadcrumb {
+ul#breadcrumb {
     width: 40%;
     float: left;
     margin-top: 3.5%;
 }
-ul.breadcrumb .first:before{
+ul#breadcrumb .first:before{
     content: "";
 }
-ul.breadcrumb li {
+ul#breadcrumb li {
     display: inline-block;
 }
-ul.breadcrumb li a:hover {
+ul#breadcrumb li a:hover {
     text-decoration: none;
 }
 
@@ -312,10 +312,10 @@ ul.breadcrumb li a:hover {
 #mynav{
     display: none;
 }
-.breadcrumb li.first{
+#breadcrumb li.first{
     padding: 0 2%;
 }
-.breadcrumb li.arrow_bread{
+#breadcrumb li.arrow_bread{
     padding: 0 1%;
 }
 /*

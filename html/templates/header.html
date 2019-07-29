@@ -8,18 +8,19 @@
     </div>
   
   <div id="first-section-header">
-        <ul class="breadcrumb">
+        <!--<ul id="breadcrumb">
           <li><span>Ti trovi in: </span></li>
-          <li id="first"><a href="./../pagine/index.php"> Home </a></li>
+          <li id="first"><a href="*linkhome*"> Home </a></li>
           <li class="arrow_bread"><i class="fas fa-angle-double-right"></i></li>
-          <li id="first"><a href="./../pagine/index.php"> Home </a></li>
+          <li id="first"><a href="*linkhome*"> Home </a></li>
           <li class="arrow_bread"><i class="fas fa-angle-double-right"></i></li>
-          <li id="first"><a href="./../pagine/index.php"> Home </a></li>
+          <li id="first"><a href="*linkhome*"> Home </a></li>
           <li class="arrow_bread"><i class="fas fa-angle-double-right"></i></li>
           <li>Italy</li>
-        </ul>
+        </ul> -->
+        <div id="breadcrumb">*breadcrumbs*</div>
       <div class="logo">
-        <img id="desktop" src="./../../css/img/logo_text.png" alt="Logo AimFit"/>
+        <img id="desktop" src="./css/img/logo_text.png" alt="Logo AimFit"/>
       </div>
   
     <div class="lingua">
@@ -34,24 +35,21 @@
   <!-- Overlay content -->
   <div class="overlay-content">
     <ul class="cd-accordion-menu animated">
-      <li class="has-children"><a href="./../pagine/index.php">Home</a></li>
-      <li class="has-children" id="acordion_group">
+      *linkhome*/li>
+      <li id="acordion_group">
       <input type="checkbox" name ="group-1" id="group-1" checked>
       <label for="group-1" >Su di noi  &#8600;</label>
       <ul>
-        <li><a href="./../pagine/su_di_noi.php">Chi Siamo</a></li>
-        <li><a href="#0">FAQ</a></li>
-        <li><a href="#0">Lavora con noi</a></li>
-        <li><a href="#0">Galleria Foto</a></li>
-        <li><a href="#0">Allenatori</a></li>
+        *linkchisiamo*
+        *linkallenatori*
+        *linkcontattaci*
       </ul>
     </li>
-    <li class="has-children"><a href="./../pagine/corsi.php">Corsi</a></li>
-    <li class="has-children"><a href="./../pagine/programmazione_corsi.php">Programma</a></li>
-    <li class="has-children"><a href="#">Prezzi</a></li>
-    <li class="has-children"><a href="#">Contattaci</a></li>
-    <li class="has-children"><a href="./../pagine/registrazione.php">Registrati</a></li>
-    <li class="has-children"><a href="#">Login</a></li>
+    *linkcorsi*
+    *linkprogramma*
+    *linkprezzi*
+    *linkregistrazione*
+    *linklogin*
 
     </ul> <!-- cd-accordion-menu -->
   </div>
@@ -64,21 +62,20 @@
     <div id="main_nav">
       <div id="nav">
         <ul>
-          <li><a href="./../pagine/index.php"> Home </a></li>
+          *linkhome*
           <li class="dropdown">
             <a href="javascript:void(0)" class="dropbtn">Su di noi<i class="fas fa-sort-down"></i> </a>
-              <div class="dropdown-content">
-                  <a href="./../pagine/su_di_noi.php">Chi siamo</a>
-                  <a href="#">Allenatori</a>
-                  <a href="#">Contattaci</a>
-              </div>
+              <ul class="dropdown-content">
+                  *linkchisiamo*
+                  *linkallenatori*
+                  *linkcontattaci*
+              </ul>
           </li>
-          <li><a href="./../pagine/corsi.php">Corsi</a></li>
-          <li><a href="./../pagine/programmazione_corsi.php">Programma</a></li>
-
-          <li><a href="">Prezzi</a></li>
-          <li><a href="./../pagine/registrazione.php">Registrati</a></li>
-          <li><a href="">Login</a></li>
+          *linkcorsi*
+          *linkprogramma*
+          *linkprezzi*
+          *linkregistrazione*
+          *linklogin*
         </ul>
       </div>
   </div> <!--end main_nav--> '
