@@ -205,8 +205,7 @@ END FOOTER (Irina)
 -->
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0rh7lb9IlH8E4nMs1nffxwW8SL05LaHo&callback=myMap"></script>
-<!--torna su (hoss)-->
-<button onclick="topFunction()" id="tornasu" title="Torna su"><i class="fas fa-angle-double-up"></i></button>
+
 </div>
 </body>
 </html>
