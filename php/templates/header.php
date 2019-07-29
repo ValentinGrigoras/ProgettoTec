@@ -3,23 +3,23 @@
 $head = file_get_contents(dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."html".DIRECTORY_SEPARATOR."templates".DIRECTORY_SEPARATOR."head.html");
 $header = file_get_contents(dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."html".DIRECTORY_SEPARATOR."templates".DIRECTORY_SEPARATOR."header.html");
 
-//print_r(dirname(dirname(__DIR__))); ///var/www/html/ProgettoTec
+print_r(dirname(dirname(__DIR__))); ///var/www/html/ProgettoTec
 
-$uri_case = explode(DIRECTORY_SEPARATOR, $_SERVER['REQUEST_URI'], 5);
-print_r($uri_case[4]);
+$uri_case = explode(DIRECTORY_SEPARATOR, $_SERVER['REQUEST_URI'], 3);
+print_r($uri_case);
 //$uri_case[0] = substr($uri_case[0], strrpos($uri_case[0], '/')+1);
-switch ($uri_case[4]){
+switch ($uri_case[2]){
     case "":
         $head = str_replace("*title*","Homepage | AIMFit",$head);
         $head = str_replace("*description*","Homepage della palestra AIMFit di Padova.",$head);
         $head = str_replace("*keywords*","AIMFit, palestra, fitness, pesi, allenatori,corsi",$head);
-        $page = dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."html".DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."index.php";
+        $page = dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."php".DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."home.php";
         break;
     case "registrazione":
         $head = str_replace("*title*","Registrati | AIMFit",$head);
         $head = str_replace("*description*","Registrati a AIMFit",$header);
         $head = str_replace("*keywords*","registrazione, palestra, AIMFit, fitness",$head);
-        $page = dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."html".DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."regustrazione.php";
+        $page = dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."php".DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."registrazione.php";
         break;
     default:
         $page = dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."php".DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."not_found.php";
