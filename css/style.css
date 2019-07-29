@@ -280,9 +280,11 @@ ul.breadcrumb li a:hover {
 #nav ul li a:hover, #nav_panel ul li a:hover {
     text-decoration: none;
 }
+/*
 .fa-user,.fa-pen{
     padding-right: 5%;
 }
+*/
 
 .dropbtn i{
     margin-left: 6%;
@@ -1244,18 +1246,36 @@ div.content {
   padding: 1.5em;
   max-width: 600px;
   margin: .5em 0;
-  background-color: #4CAF50;
+  background-color: #f1f1f1;
 }
 
+.form-row .groupLabel, .form-row label {
+  width: 30%;
+  font-size: 110%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+label {
+  color: #24292e;
+  line-height: 2;
+  font-weight: 600;
+  font-size: 1em;
+}
 
 .form-content .btn{
   font-size: 110%;
   margin: .5em .5em .5em 0;
 }
 .btn.btn-primary{
-  border: 3px solid #073d65;
+  border: 1px solid #073d65;
     color: #064479;
     background-color: transparent;
+}
+
+a.btn.btn-reverse, button.btn.btn-reverse {
+  border-color: #790615;
+  color: #790615;
 }
 div.form-row {
   padding: 1em;
@@ -1274,10 +1294,7 @@ a.btn, button.btn {
 }
 
 
-a.btn.btn-reverse, button.btn.btn-reverse {
-  border-color: #790615;
-  color: #790615;
-}
+
 
 
   .form-row input {
