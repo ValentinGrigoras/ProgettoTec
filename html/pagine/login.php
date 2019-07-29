@@ -1,17 +1,36 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html lang="it" xml:lang="it" xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
-<?php include_once "../templates/head.php"; ?>
-</head>
+
+<?php include_once "../templates/head.html"; ?>
+
 
 <body>
 	<div id="container">
 	<?php include_once "../templates/header.php"; ?>
 <!-- ------------------------------------------------------ -->
-	
+<p>Inserisci i dati nel form per eseguire il nel sito.</p>
+
+<form action="user_area.php?s=login&a=1" method="POST" class="form-content">
+  <div class="form-row">
+    <label for="username" lang="en" xml:lang="en"><span class="fa fa-user"></span> Username</label>
+    <input class="form-input" type="text" name="username" id="username" placeholder="Inserisci lo username" required="required" />
+  </div>
+
+  <div class="form-row">
+    <label for="password" lang="en" xml:lang="en"><span class="fa fa-lock"></span> Password</label>
+    <input class="form-input" type="password" name="password" id="password" placeholder="Inserisci la password"  required="required" />
+  </div>
+
+  <div class="form-row">
+    <button class="btn btn-primary" type="submit"><span class="fa fa-sign-in-alt"></span> Accedi</button>
+    <button class="btn btn-reverse" type="reset"><span class="fa fa-redo-alt"></span> Resetta campi</button>
+    <p><a href="registrazione.php?s=signup">Registrare al sito!</a></p>
+  </div>
+</form>
+
+
+
+
 <!-- ------------------------------------------------------ -->
    <?php include_once "../templates/footer.php"; ?>
 <script src="../js/jquery-1.11.0.min.js" type="text/javascript"></script>
