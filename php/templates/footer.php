@@ -1,4 +1,4 @@
-
+*bottonetotop*
 <div id="footer">
 	<div id="sections">
     	<div id="columns">
@@ -75,7 +75,7 @@
 	</div>
 </div> 
 </div> //end main_content
-      *bottonetotop*
+      
       <script src="./../../js/gototop.js" type="text/javascript"></script>
       <script src="./../../js/show_menu.js" type="text/javascript"></script>
       <script src="./../../js/map_show.js" type="text/javascript"></script>
