@@ -96,12 +96,11 @@ ul.breadcrumb {
 .sidebar {
   width: 100%;
   height: auto;
-  background-color: yellow;
+  position: relative;
+  
+}
+.sidebar  li {float: left;}
+div.content {margin-left: 0;}
 
-}
-.sidebar a {
-  float: left;
-}
-div.content {
-  margin-left: 0;
-}
+
+/*Hossain*/
