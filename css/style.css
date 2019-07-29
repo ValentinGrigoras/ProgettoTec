@@ -1226,5 +1226,13 @@ label{
 .admin-ul li a:hover:not(.active) {
   background-color: #555;
   color: white;
-}  /**+++Hossain+++***/
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/**+++Hossain+++***/
 

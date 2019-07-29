@@ -179,4 +179,5 @@ label#label_search{
 .sidebar li {
   float: left;
 }
+div.content {margin-left: 0;}
 /*Hossain*/
