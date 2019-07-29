@@ -1302,7 +1302,7 @@ a.btn, button.btn {
     width: 70%;
     max-width: 300px;
     font-size: 110%;
-
+    border-radius: 5px;
   }
   .form-input {
     border: 1px solid #CCC;
