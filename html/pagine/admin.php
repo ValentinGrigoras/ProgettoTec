@@ -4,23 +4,7 @@
 	<?php include_once "../templates/head.php"; ?>
 </head>
 <style>
-    @media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-    background-color: brown;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
-}
 
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
-}
 </style>
 
 

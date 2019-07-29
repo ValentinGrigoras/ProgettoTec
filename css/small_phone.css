@@ -60,13 +60,11 @@
 ----------------------------------*/
 
 
-/********Adminb*****/
-.sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-    background-color: brown;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
+/********Admin*****/
 
+
+.admin-ul li {
+    text-align: center;
+    float: none;
+  }
+  /********Hossaain*****/
