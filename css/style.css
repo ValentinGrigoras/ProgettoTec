@@ -1268,14 +1268,15 @@ label {
   margin: .5em .5em .5em 0;
 }
 .btn.btn-primary{
-  border: 1px solid #073d65;
-    color: #064479;
+  border: 1px solid #0c1f34;
+    color:  #0c1f34;
     background-color: transparent;
 }
 
 a.btn.btn-reverse, button.btn.btn-reverse {
-  border-color: #790615;
-  color: #790615;
+  border: 1px solid #0c1f34;
+ 
+  color: #0c1f34;
 }
 div.form-row {
   padding: 1em;
