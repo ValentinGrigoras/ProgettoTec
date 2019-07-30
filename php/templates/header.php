@@ -29,7 +29,7 @@ $header = str_replace("*linkhome*","<li><a href='./' xml:lang='en' tabindex=\"$t
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $header = str_replace("*linkchisiamo*","<li><a href='./su_di_noi' tabindex=\"$tabIndex\">Chi siamo</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-$header = str_replace("*linkallenatori*","<li><a href='./allenatori' tabindex=\"$tabIndex\">Allenatori esposti</a></li>",$header);
+$header = str_replace("*linkallenatori*","<li><a href='./allenatori' tabindex=\"$tabIndex\">Allenatori</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $header = str_replace("*linkcontattaci","<li><a href='./contattaci' tabindex=\"$tabIndex\">Contattaci</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
