@@ -240,23 +240,24 @@ ul#breadcrumb li a:hover {
     
 }
 
-#nav ul {
+#nav ul:first-child {
     width: 80%;
     margin: 0 auto;
 }
-#nav ul li, #nav_panel ul li {
+#nav ul:first-child  li, #nav_panel ul li {
     text-align: center;
     float: left;
     width: 12.5%; /* fallback for non-calc() browsers */
-    width: calc(100% / 8);
+    width: calc(100% / 7);
+    padding: 2.2%;
 }
 #nav_panel ul li{
     width: 50%;
 }
 
-#nav ul li#active_link{
+#nav ul:first-child  li#active_link{
     color: #fff;
-    padding: 1.2%;
+    padding: 2.2%;
     font-weight: 1000;
     background-color: #b30000;
 }
@@ -269,15 +270,14 @@ ul#breadcrumb li a:hover {
 #nav_panel ul li.login_li a, #nav_panel ul li.registrati_li a{
      font-weight: bold;	 
 }
-#nav ul li a{
+#nav ul:first-child  li a{
    display: block;
-   padding: 10% 0;
    color: #fff;
    text-transform: uppercase;
    font-size: 1em;
    font-weight: bold;
 }
-#nav ul li a:hover, #nav_panel ul li a:hover {
+#nav ul:first-child  li a:hover, #nav_panel ul li a:hover {
     text-decoration: none;
 }
 /*
@@ -286,7 +286,7 @@ ul#breadcrumb li a:hover {
 }
 */
 
-.dropbtn i{
+.dropbtn{
     margin-left: 6%;
 }
 #dropdown-content {
@@ -297,20 +297,31 @@ ul#breadcrumb li a:hover {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-#nav ul #dropdown-content a {
-    padding: 5% 0;
+
+#nav ul#dropdown-content li a {
     text-decoration: none;
     display: block;
     text-align: center;
     border-bottom: 1px solid #ccc;
 }
 #dropdown-content a:hover {
-  background-color: #1c4b7d;
+  background-color: #3A527B;
   border: 1px solid #ccc;
 }
 
 #dropdown:hover #dropdown-content {
     display: block;
+
+}
+#nav #dropdown-content{
+  width: 30%;
+}
+#nav #dropdown-content li {
+  display: block;
+  padding: 2.2%;
+}
+#nav #dropdown-content li a{
+  display: block;
 }
 #mynav{
     display: none;
@@ -1315,4 +1326,31 @@ a.btn, button.btn {
 }
 input, textarea {
   font-family: RobotoSlab,Arial,sans-serif;
+}
+
+/*not_found page*/
+
+#message_notfound{
+font-size: 130%;
+  padding-bottom: 5%;
+}
+#div_error{
+  font-weight: bold;
+  color: #0c1f34;
+  text-align: center;
+
+}
+#error_notfound{
+  font-size: 600%;
+  color:#3A527B;
+
+}
+#error_divLeft{
+  float: left;
+  width: 50%;
+}
+#error_divRight{
+  float: left;
+  width: 40%;
+  padding: 5%;
 }
