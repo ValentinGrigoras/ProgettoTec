@@ -258,7 +258,7 @@ ul#breadcrumb li a:hover {
     color: #fff;
     padding: 1.2%;
     font-weight: 1000;
-    background-color: #dc0933;
+    background-color: #b30000;
 }
 #nav_panel ul li.login_li{
     background-color: #f7f7f7;
@@ -304,7 +304,10 @@ ul#breadcrumb li a:hover {
     text-align: center;
     border-bottom: 1px solid #ccc;
 }
-.dropdown-content a:hover {background-color: #2561a2;border: 1px solid #ccc;}
+.dropdown-content a:hover {
+  background-color: #1c4b7d;
+  border: 1px solid #ccc;
+}
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -915,7 +918,7 @@ input[type=submit]:hover {
   transition: background-color 0.6s ease;
 }
 
-#.active, .dot:hover {
+.active, .dot:hover {
   background-color: #717171;
 }
 
