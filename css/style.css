@@ -304,7 +304,10 @@ ul#breadcrumb li a:hover {
     text-align: center;
     border-bottom: 1px solid #ccc;
 }
-.dropdown-content a:hover {background-color: #2561a2;border: 1px solid #ccc;}
+.dropdown-content a:hover {
+  background-color: #2561a2;
+  border: 1px solid #ccc;
+}
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -1312,4 +1315,31 @@ a.btn, button.btn {
 }
 input, textarea {
   font-family: RobotoSlab,Arial,sans-serif;
+}
+
+/*not_found page*/
+
+#message_notfound{
+font-size: 130%;
+  padding-bottom: 5%;
+}
+#div_error{
+  font-weight: bold;
+  color: #0c1f34;
+  text-align: center;
+
+}
+#error_notfound{
+  font-size: 600%;
+  color:#3A527B;
+
+}
+#error_divLeft{
+  float: left;
+  width: 50%;
+}
+#error_divRight{
+  float: left;
+  width: 40%;
+  padding: 5%;
 }
