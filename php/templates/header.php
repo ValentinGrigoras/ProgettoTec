@@ -19,6 +19,11 @@ switch ($uri_case[2]){
         $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Registrazione",$header);
         $page = dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."php".DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."registrazione.php";
         break;
+    case "corsi":
+        $header = str_replace("*linkcorsi*","<li id='active_link'>Corsi</li>",$header);
+        $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Corsi",$header);
+        $page = dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."php".DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."corsi.php";
+        break;
     default:
         $page = dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."php".DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."not_found.php";
         break;
