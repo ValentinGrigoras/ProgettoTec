@@ -205,7 +205,6 @@ ul#breadcrumb li a:hover {
     top: 0;
     left: 0;
     background-color: #dc0933;
-    background-color: #dc0933;
     overflow-y: hidden;
     transition: 1s;
 }
@@ -523,6 +522,9 @@ dt{
 
 #corsi_section{
   background-color: #f4f4f4;
+}
+#corsi_section h2{
+  margin-top: 5%;
 }
 #content_corsi{
   overflow: auto;
