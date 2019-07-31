@@ -71,7 +71,7 @@ class Database {
     }
 
     public static function selectCourses() {
-        $query = "SELECT name, descrizione, nomeImg FROM Corsi";
+        $query = "SELECT nome, descrizione, durata, livello, costo, nomeImg FROM Corsi";
         return self::selectRows($query);
     }
     

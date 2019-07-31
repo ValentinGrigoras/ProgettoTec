@@ -80,6 +80,53 @@ a:active {color: red;}
   background-color: #8a0620;
     text-decoration: none;
 }
+.threeColumnsCard{
+  width: 31.333%;
+  margin: 1%;
+  display: inline-block;
+ box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.threeColumnsCard dd img{
+    max-width: 100%;
+    height: auto;
+    min-height: 19em;
+    width: auto\9; *//* ie8 */
+}
+.threeColumnsCard dd{
+  background: none no-repeat left top;
+    background-size: contain;
+    overflow: hidden;
+    border-top: hidden;
+    padding: 2% 1% 2% 1%;
+    background-color: #fff;
+    color: #000;
+    font-size: 80%;
+}
+.threeColumnsCard dt{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  padding: 4%;
+}
+.threeColumnsCard p{
+  float: left;
+  width: 100%;
+  text-align: center;
+  padding: 3.5%;
+  background-color: #fff;
+  font-weight: bold;
+}
+.threeColumnsCard p{
+  float: left;
+  width: 100%;
+  text-align: center;
+  padding: 1.5%;
+  background-color: #fff;
+}
+  
+
 /*--------------------------------
 ------------HEADER(Valentin&Irina)------
 ----------------------------------*/
@@ -410,30 +457,7 @@ height: 80%;
 
 }
 
-.threeColumnsCard dd img{
-  float: left;
-  width: 100%;
-  height: auto;
-}
-.desc_Abbonamento{
-  float: left;
-  text-align: center;
-}
-.threeColumnsCard dt{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
-  background-color: #fff;
-  color: #000;
-  padding: 4%;
-}
-.threeColumnsCard p{
-  float: left;
-  width: 100%;
-  text-align: center;
-  padding: 3.5%;
-
-}
-
+/*
 .threeColumnsCard  .prezzoAbbonamento{
 	font-size: 2em;
   border-bottom: 1px solid #ccc;
@@ -446,7 +470,7 @@ height: 80%;
 	padding: 7% 0;
 	border-bottom: none;
 }
-
+*/
 /*--------------------------------
 ------------- END ABBONAMENTI -------------
 ----------------------------------*/
@@ -968,39 +992,12 @@ input[type=submit]:hover {
 }
 
 /*style Corsi.php*/
-#corsi_section #content_corsi{
-    overflow: auto;
-    margin: 0 auto;
-    background-color: #f4f4f4;  
-    padding-bottom: 6%;
-  
-  }
-  #corsi_section #content_corsi dl{
-    width: 25%;
-    float:left;
-    margin :2% 4.166% 4.166% 4.166%;
-  }
-  #corsi_section #content_corsi dd{
-    overflow: auto;
-    background:none no-repeat left top;
-    background-size: contain;
-    border-top: hidden;
-    background-color: #fff;
-    font-size: 80%;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  
-  }
- 
-  .twoColumnsCardDetails dd img{
-    float: left;
-    width: 100%;
-    height: auto;
-    margin-bottom: 2%;
-  }
-  .desc_Abbonamento{
-    float: left;
-    text-align: center;
-  }
+
+.threeColumnsCard .desc_corso{
+min-height: 13em;
+text-align: left;
+font-weight: normal;
+}
   .twoColumnsCardDetails dt{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
