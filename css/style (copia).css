@@ -81,7 +81,7 @@ a:active {color: red;}
     text-decoration: none;
 }
 /*--------------------------------
-------------HEADER(Valentin&Irina)------
+------------HEADER(Valentin)------
 ----------------------------------*/
 #header{
     width: 100%;
@@ -89,12 +89,22 @@ a:active {color: red;}
     font-size: 85%;
     font-weight: bold;
     }
+/*--------------------------------
+-------SEZIONE BREADCRUMBS(Valentin)------
+----------------------------------*/
 
-    #header #breadcrumbs_home{
+#first-section-header{
+    overflow: auto;
+}
+#header #breadcrumbs_home{
     display: inline-block;
     width: 100%;
     float: left;
 }
+/*siccome uso i float negli elementi child di breadcrumbs_home,
+il contenitore padre ignora i floats. Aggiungo quindi del contenuto
+vuoto tramite la pseudo classe obbligando il contenitore padre ad assumere
+la dimensione totale dei div child.*/
 #header #breadcrumbs_home:after{
     content: " ";
     display: block;
@@ -114,21 +124,22 @@ ul#breadcrumb li {
 ul#breadcrumb li a:hover {
     text-decoration: none;
 }
-/*--------------------------------
--------SEZIONE BREADCRUMBS(Valentin)------
-----------------------------------*/
 
-#first-section-header{
-    overflow: auto;
+/*---------------------------------------*/
+    /*SEZIONE LINGUA(Valentin)*/
+.lingua{
+    float: right;
+    width: 25%;
+    margin-top: 3.5%;
 }
-
-/*siccome uso i float negli elementi child di breadcrumbs_home,
-il contenitore padre ignora i floats. Aggiungo quindi del contenuto
-vuoto tramite la pseudo classe obbligando il contenitore padre ad assumere
-la dimensione totale dei div child.*/
-
-
-
+.lingua > div{
+    float: right;
+    min-width: 49% ;
+}
+.lingua .label_lingua, .lingua #select_lingua {
+    display: inline-block;
+    float: left;
+}
 
 /*---------------------------------
 -------NAVIGAZIONE PRINCIPALE (Valentin)------
