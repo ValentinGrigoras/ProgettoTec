@@ -42,7 +42,7 @@ $header = str_replace("*linkcorsi*","<li><a href='./corsi' tabindex=\"$tabIndex\
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $header = str_replace("*linkprogramma*","<li><a href='./programma' tabindex=\"$tabIndex\">Programma</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-$header = str_replace("*linkprezzi*","<li><a href='./prezzi' tabindex=\"$tabIndex\">Prezzi</a></li>",$header);
+$header = str_replace("*linkprezzi*","<li><a href='./#prezzi_section' tabindex=\"$tabIndex\">Prezzi</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $header = str_replace("*linkregistrazione*","<li><a href='./registrazione' tabindex=\"$tabIndex\">Registrati</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
