@@ -1320,9 +1320,10 @@ font-size: 130%;
 }
 /*abbonamenti page*/
 #abbonamenti_section{
-  width: 100%;
+  width: 98%;
   padding: 0 0 3% 0;
 background-color: #0c1f34;
+margin: 0 auto;
 }
 #abbonamenti_section #prezzi_main_message{
   padding: 5% 0 1% 0;
