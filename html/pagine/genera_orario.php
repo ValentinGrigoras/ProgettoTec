@@ -46,17 +46,6 @@ function corsiGiornata($conn, $giorno){
 //*********************
 ?> 
 
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html lang="it" xml:lang="it" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<?php include_once "../templates/head.php"; ?>
-</head>
-<body>
-	<?php
-include_once("../templates/header.php");
-include_once("connessioneDB.php");
 ?>
 
 
