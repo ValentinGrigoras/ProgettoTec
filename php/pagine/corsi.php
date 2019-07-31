@@ -13,7 +13,7 @@ if ($database) {
   $page = file_get_contents(dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "pagine" . DIRECTORY_SEPARATOR . "corsi.html");
 $courses = Database::selectCourses();
 if(isset($courses))
-$allCourses = "";
+
 $course = "";
   for($indice = 0;$indice<count($courses); $indice++){
 
@@ -27,8 +27,7 @@ $course = "";
     $course .= '<p class="desc_corso">' . $courses[$indice]['descrizione'] . '</p>';
     $course .=  '</dd>';
     $course .= '</dl>';
-    //$allCourses .= $course;
-    echo $indice;
+
 
   }
   //var_dump(allCourses);
