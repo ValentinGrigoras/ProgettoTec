@@ -56,7 +56,9 @@ h4{
 }
 #main_container{
   max-width: 1200px;
-  margin:auto;
+  margin:1% auto 0 auto;
+  
+   box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /*overflow: auto;*/
 }
 
