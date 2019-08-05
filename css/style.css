@@ -184,18 +184,8 @@ ul#breadcrumb li a:hover {
 ----------------------------------*/
 
 /*--------LOGO----------*/
-#logo{
-    width: 20%;
-    float: left;
-}
-#logo img{
-    max-width: 95%;
-    height: auto;
-    float: left;
-}
-#logo a{
-    display: block;
-}
+
+
 #logo_mobile{
     display: none;
 }
@@ -264,7 +254,11 @@ ul#breadcrumb li a:hover {
 }
 /*-----------------------*/
 /*LINK DI NAVIGAZIONE (Valentin)*/
-
+#logo{width: 30%}
+#logo img{
+    max-width: 65%;
+    float: left;
+}
 #nav_desktop{
     width:100%;
     text-align: center;
@@ -274,32 +268,34 @@ ul#breadcrumb li a:hover {
     background-color: #0c1f34;
 }
 
-#nav_desktop ul {
-    width: 70%;
-    float: right;
+#nav_desktop ul{
+  float:right;
+  width: 60%;
 }
 
 #nav_desktop li{
   text-align: center;
-  float: left; 
   display: block;
-  width: calc(100% / 5);
+  float: left;
+  width: 20%;
   position: relative;
   text-decoration: none;
   transition-duration: 0.5s;
 }
 
-#nav_desktop li #active_link{
+#nav_desktop li#active_link{
   color: #fff;
-  padding: 1.9% 2%;
   font-weight: 1000;
   background-color: #b30000;
+  padding: 3.3% 0 3.3% 0;
 }
 
 #nav_desktop li a{
    color: #fff;
    font-size: 1em;
    font-weight: bold;
+   width: 100%;
+   padding: 16% 0 16% 0;
 }
 
 #nav_desktop li a:hover {
@@ -330,7 +326,6 @@ ul#breadcrumb li a:hover {
 
 #nav_desktop li a, #nav_desktop ul li ul li a{
   display: block;
-  padding: 9% 8%;
 }
 
 #mynav{
