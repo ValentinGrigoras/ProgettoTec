@@ -1,9 +1,7 @@
 
-	<?php include_once "../templates/head.html"; ?>
+  <?php include_once "../templates/head.html"; ?>
+  
 
-<style>
-
-</style>
 
 
 <body>

@@ -1265,7 +1265,6 @@ a.btn, button.btn {
   cursor: pointer;
   box-shadow: none;
 }
-<<<<<<< HEAD
 
 .form-row{
   width: auto;
@@ -1278,9 +1277,7 @@ span.register a{
 
 
 
-
-=======
->>>>>>> ef5932ff3d53f9ee82f7bffe4a1508a491bbbbee
+/*
   .form-row input {
     width: 100%;
    
@@ -1296,6 +1293,8 @@ span.register a{
 input, textarea {
   font-family: RobotoSlab,Arial,sans-serif;
 }
+
+*/
 
 /*not_found page*/
 
