@@ -1241,17 +1241,18 @@ div.content {
 
 /*****++login form++**/
 .form-content{
+  margin-left: 19%;
   border: 2px solid #CCC;
   border-radius: 3px;
   padding: 1.5em;
-  max-width: 600px;
-  margin: .5em 0;
+  width: 50%;
+
   background-color: #f1f1f1;
 }
 
 .form-row .groupLabel, .form-row label {
   width: 30%;
-  font-size: 110%;
+  font-size: 100%;
   display: inline-block;
   vertical-align: middle;
 }
@@ -1263,8 +1264,8 @@ label {
   font-size: 1em;
 }
 
-.form-content .btn{
-  font-size: 110%;
+.form-content.btn{
+  font-size: 80%;
   margin: .5em .5em .5em 0;
 }
 .btn.btn-primary{
@@ -1294,13 +1295,21 @@ a.btn, button.btn {
   box-shadow: none;
 }
 
+.form-row{
+  width: auto;
+}
+span.register a{
+  
+  float: right;
+  padding: 3.7%;
+}
 
 
 
 
   .form-row input {
-    width: 70%;
-    max-width: 300px;
+    width: 100%;
+   
     font-size: 110%;
     border-radius: 5px;
   }

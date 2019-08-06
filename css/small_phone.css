@@ -68,3 +68,16 @@
     float: none;
   }
   /********Hossaain*****/
+  /********Admin*****/
+.span.register {
+    
+    display: block;
+    float: none;
+ }
+
+ .form-content{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+  }

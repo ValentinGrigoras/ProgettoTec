@@ -5,7 +5,7 @@
 
 
 <body>
-	<div id="container">
+	<div id="containe">
 	<?php include_once "../templates/header.php"; ?>
 <!-- ------------------------------------------------------ -->
 <p>Inserisci i dati nel form per eseguire il nel sito.</p>
@@ -23,8 +23,8 @@
 
   <div class="form-row">
     <button class="btn btn-primary" type="submit"><span class="fa fa-sign-in-alt"></span> Accedi</button>
-    <button class="btn btn-reverse" type="reset"><span class="fa fa-redo-alt"></span> Resetta campi</button>
-    <p><a href="registrazione.php?s=signup">Registrare al sito!</a></p>
+    <button class="btn btn-reverse" type="reset"><span class="fa fa-redo-alt"></span> Resetta</button>
+    <span class="register"><a href="registrazione.php?s=signup">Registrati!</a></span>
   </div>
 </form>
 
