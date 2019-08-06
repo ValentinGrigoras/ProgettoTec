@@ -1,42 +1,56 @@
 <?php
 
-$head = file_get_contents(dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."html".DIRECTORY_SEPARATOR."templates".DIRECTORY_SEPARATOR."head.html");
 $header = file_get_contents(dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."html".DIRECTORY_SEPARATOR."templates".DIRECTORY_SEPARATOR."header.html");
 
-$uri_case = explode("/", $_SERVER['REQUEST_URI'], 5);
-print_r($uri_case);
+//print_r(dirname(dirname(__DIR__))); ///var/www/html/ProgettoTec
+
+$uri_case = explode(DIRECTORY_SEPARATOR, $_SERVER['REQUEST_URI'], 3);
+//print_r($uri_case);
 //$uri_case[0] = substr($uri_case[0], strrpos($uri_case[0], '/')+1);
 
-switch ($uri_case[4]){
-    case "home.php":
-        $head = str_replace("*title*","Homepage | AIMFit",$head);
-        $head = str_replace("*description*","Homepage della palestra AIMFit di Padova.",$head);
-        $head = str_replace("*keywords*","AIMFit, palestra, fitness, pesi, allenatori,corsi",$head);
-        $page = dirname(__DIR__).DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."home.php";
+switch ($uri_case[2]){
+    case "":
+        $header = str_replace("*linkhome*","<li id='active_link'><span xml:lang='en'>Home</span></li>",$header);
+        $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span>",$header);
+        $page = dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."php".DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."home.php";
         break;
-    case "registrazione.php":
-        $head = str_replace("*title*","Mostre | Museo Ferrari",$head);
-        $head = str_replace("*description*","Nella pagina delle mostre è presente una descrizione della mostra Il cavallino degli anni '50 e l'elenco delle prossime mostre che si terranno al museo",$header);
-        $head = str_replace("*keywords*","cavallino,mostre,museo",$head);
-        $page = dirname(__DIR__).DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."registrazione.php";
+    case "registrazione":
+        $header = str_replace("*linkregistrazione*","<li id='active_link'>Registrazione</li>",$header);
+        $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Registrazione",$header);
+        $page = dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."php".DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."registrazione.php";
+        break;
+    case "corsi":
+        $header = str_replace("*linkcorsi*","<li id='active_link'>Corsi</li>",$header);
+        $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Corsi",$header);
+        $page = dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."php".DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."corsi.php";
         break;
     default:
-        $page = dirname(__DIR__).DIRECTORY_SEPARATOR."pages".DIRECTORY_SEPARATOR."not-found.php";
+        $page = dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."php".DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."not_found.php";
         break;
 }
 
-$tabIndex = 2;
-$header = str_replace("*title*","Pagina non trovata",$header);
-$header = str_replace("*breadcrumbs*","Pagina non trovata",$header);
-$header = str_replace("*linkhome*","<li><a href='./' xml:lang='en' tabindex=\"$tabIndex\">Home</a></li>",$header,$counter);
-if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-$header = str_replace("*linkmostre*","<li><a href='./mostre' tabindex=\"$tabIndex\">Mostre</a></li>",$header,$counter);
-if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-$header = str_replace("*linkmodelli*","<li><a href='./modelli-esposti' tabindex=\"$tabIndex\">Modelli esposti</a></li>",$header,$counter);
-if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-$header = str_replace("*linkbiglietti*","<li><a href='./biglietti' tabindex=\"$tabIndex\">Biglietti</a></li>",$header,$counter);
-if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-$header = str_replace("*linkinfo*","<li><a href='./info-e-contatti' tabindex=\"$tabIndex\">Info e Contatti</a></li>",$header,$counter);
+//$tabIndex = 2;
+$header = str_replace("*linkhome*","<li><a href='./' xml:lang='en' tabindex=\"$tabIndex\">Home</a></li>",$header);
+//if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+$header = str_replace("*linkchisiamo*","<li><a href='./su_di_noi' tabindex=\"$tabIndex\">Chi siamo</a></li>",$header);
+//if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+$header = str_replace("*linkallenatori*","<li><a href='./allenatori' tabindex=\"$tabIndex\">Allenatori</a></li>",$header);
+//if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+$header = str_replace("*linkcontattaci*","<li><a href='./contattaci' tabindex=\"$tabIndex\">Contattaci</a></li>",$header);
+//if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+$header = str_replace("*linkcorsi*","<li><a href='./corsi' tabindex=\"$tabIndex\">Corsi</a></li>",$header);
+//if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+$header = str_replace("*linkprogramma*","<li><a href='./programma' tabindex=\"$tabIndex\">Programma</a></li>",$header);
+//if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+$header = str_replace("*linkprezzi*","<li><a href='./#prezzi_section' tabindex=\"$tabIndex\">Prezzi</a></li>",$header);
+//if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+$header = str_replace("*linkregistrazione*","<li><a href='./registrazione' tabindex=\"$tabIndex\">Registrati</a></li>",$header);
+//if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+$header = str_replace("*linklogin*","<li><a href='./login' tabindex=\"$tabIndex\">Login</a></li>",$header);
+//if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+
+
+require_once 'head.php';
 echo $header;
 require_once $page;
 require_once 'footer.php';

@@ -39,6 +39,7 @@ CREATE TABLE Contratto (
   idAbbonamento int(11) NOT NULL,
   data date NOT NULL,
   dataScadenza date NOT NULL,
+  prezzoTotale int(4) NOT NULL,
   FOREIGN KEY (idUtente) REFERENCES Utente(idUtente)
                 ON DELETE NO ACTION ON UPDATE CASCADE,
   FOREIGN KEY (idAbbonamento) REFERENCES Abbonamento(idAbbonamento)
@@ -55,7 +56,8 @@ CREATE TABLE Corsi (
   categoria varchar(100),
   durata int(3),
   livello enum('facile','normale','difficile'),
-  costo decimal(4,2) NOT NULL
+  costo decimal(4,2) NOT NULL,
+  nomeImg varchar(255) NOT NULL   
 ) ENGINE=InnoDB;
 --
 -- Creazione tabella 'CorsiScelti'
@@ -63,7 +65,6 @@ CREATE TABLE Corsi (
 CREATE TABLE CorsiScelti (
   idContratto int(11),
   idCorso int(11) NOT NULL,
-  dataScadenza date DEFAULT NULL,
   PRIMARY KEY (idContratto, idCorso),
   FOREIGN KEY (idContratto) REFERENCES Contratto(idContratto)
                 ON DELETE NO ACTION ON UPDATE CASCADE,
@@ -99,16 +100,6 @@ CREATE TABLE Orario (
   		ON DELETE NO ACTION ON UPDATE CASCADE,
   FOREIGN KEY (idAllenatore) REFERENCES Allenatore(idAllenatore)
   		ON DELETE NO ACTION ON UPDATE CASCADE
-) ENGINE=InnoDB;
---
--- Creazione tabella 'Galleria'
---
-CREATE TABLE Galleria (
-  nome varchar(50) PRIMARY KEY,
-  dimensione varchar(25) NOT NULL,
-  estensioneFile varchar(25) NOT NULl,
-  percorso varchar(255) NOT NULL,
-    riferimento varchar(255)
 ) ENGINE=InnoDB;
 --
 -- Creazione tabella 'Admin'

@@ -70,5 +70,9 @@ class Database {
         return self::insertUpdateDelete($query);
     }
 
+    public static function selectCourses() {
+        $query = "SELECT nome, descrizione, durata, livello, costo, nomeImg FROM Corsi";
+        return self::selectRows($query);
+    }
     
 }
