@@ -69,7 +69,7 @@
 <div id="abbonamenti_section">
 <p id="prezzi_main_message">I NOSTRI ABBONAMENTI</p>
 <p id="prezzi_second_message">Iscriviti subito e partecipa a tutti i nostri corsi</p>
-<a id="btn" href="abbonamenti">Scopri</a>
+<a class="btn" href="*linkabbonamenti*">Scopri</a>
 </div>
 <!--
   CORSI
@@ -82,21 +82,21 @@
       <img src="./css/img/barbell.png" alt="icona corso pilates"/>
       <h3>Pilates</h3>
   		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  		<p class="buttonCorsi"><a href="#">Scopri</a></p>
+  		<a class="btn" href="#">Scopri</a>
     </div>
 
     <div class="twoColumnsCardDetails">
       <img src="./css/img/cardiogram.png" alt="icona corso pilates" />
       <h3>Pilates</h3>
   		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  		<p class="buttonCorsi"><a href="#">Scopri</a></p>
+  		<a class="btn" href="#">Scopri</a>
     </div>
 
     <div class="twoColumnsCardDetails">
       <img src="./css/img/treadmill.png" alt="icona corso pilates" />
       <h3>Pilates</h3>
   		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  		<p class="buttonCorsi"><a href="#">Scopri</a></p>
+  		<a class="btn" href="#">Scopri</a>
     </div>
 
   </div>
@@ -113,22 +113,29 @@
   FORM + MAP
 -->
 <div id="cont-form-map">
-	<div id="container">
+	<div id="contact_form">
 		<h2>Contattaci</h2>
 		<form action="/action_page.php">
-			<label for="fname">Nome</label>
-			<input type="text" id="fname" name="firstname" />
-
-			<label for="lname">Cognome</label>
-			<input type="text" id="lname" name="lastname">
-
-			<label for="field_email">La tua e-mail:</label>
-			<input type="text" id="field_email" name="sender_email" >
-
-			<label for="subject">Soggetto</label>
-			<textarea type="text" id="subject" name="subject" ></textarea>
-
-			<input type="submit" value="Submit">
+      <fieldset>
+        <p>I campi con (*) sono obbligatori.</p>
+        <div class="required form_entry">
+			   <label for="fname" class="input_label ">Nome</label>
+			   <input tabindex="*tabindexfname*" type="text" id="fname" name="firstname" />
+       </div>
+       <div class="required form_entry">
+			   <label for="lname" class="input_label">Cognome</label>
+			   <input tabindex="*tabindexlname*" type="text" id="lname" name="lastname">
+        </div>
+        <div class="required form_entry">
+			   <label for="field_email" class="input_label">La tua e-mail:</label>
+			   <input tabindex="*tabindexfieldemail*" type="text" id="field_email" name="sender_email" >
+       </div>
+       <div class="required form_entry">
+			   <label for="subject" class="input_label">Soggetto</label>
+			   <textarea tabindex="*tabindexsubject*" type="text" id="subject" name="subject" ></textarea>
+       </div>
+			   <button name="Invia" type="submit" value="Invia">Invia</button>
+      </fieldset>
 		</form>
 	</div>
 

@@ -15,7 +15,7 @@
 
 					<fieldset>
                         <legend>Account</legend>
-                        <div>
+                        <div class="form_entry">
                             <div class="required">
                                 <label for="email" class="input_label ">Email</label>
                                 <input tabindex="*tabindexemail*" type="text" name="email" id="email" *disabled* />
@@ -23,7 +23,7 @@
                             <p class="form_note">Inserire l'<span xml:lang="en">email</span> nel formato casella@dominio.</p>
                             <p >*erroremail*</p>
                         </div>
-                        <div>
+                        <div class="form_entry">
                             <div class="required">
                                 <label for="password" class="input_label ">Password</label>
                                 <input tabindex="*tabindexpassword*" type="password" name="password" id="password"  *disabled*/>
@@ -41,7 +41,7 @@
                     </fieldset>
                     <fieldset>
                         <legend>Dati personali</legend>
-                        <div>
+                        <div class="form_entry">
                             <div class="required">
                                 <label for="nome" class="input_label ">Nome</label>
                                 <input tabindex="*tabindexnome*" type="text" name="nome" id="nome" *disabled* />
@@ -50,16 +50,16 @@
                             
                             <p >*errorenome*</p>
                         </div>
-                        <div>
+                        <div class="form_entry">
                             <div class="required">
-                                <label for="cognome" class="input_label required ">Cognome</label>
+                                <label for="cognome" class="input_label ">Cognome</label>
                                 <input tabindex="*tabindexcognome*" type="text" name="cognome" id="cognome" *disabled*/>
                             </div>
                             <p class="form_note">Inserire il cognome senza spazi e con sole lettere alfabetiche.</p>
                             
                             <p >*errorcognome*</p>
                         </div>
-                        <div>
+                        <div class="form_entry">
                             <div class="required">
                                 <label for="datanascita" class="input_label ">Data di nascita</label>
                                 <input tabindex="*tabindexdatanascita*" type="text" name="datanascita" id="datanascita"  *disabled*/>
@@ -67,7 +67,7 @@
                             <p class="form_note">Inserire la data di nascita rispettando il formato gg/mm/aaaa.</p>
                             <p >*errordatanascita*</p>
                         </div>
-                        <div>
+                        <div class="form_entry">
                             <div class="required">
                                 <label for="cf" class="input_label ">Codice fiscale</label>
                                 <input tabindex="*tabindexcodicf*" type="text" name="cf" id="cf"   *disabled*/>
@@ -75,7 +75,7 @@
 							<p class="form_note">Inserire il codice fiscale.</p>
                             <p >*errorecf*</p>
                         </div>
-                        <div>
+                        <div class="form_entry">
                             <div>
                                 <label for="telefono" class="input_label">Telefono</label>
                                 <input tabindex="*tabindextelefono*" type="text" name="telefono" id="telefono"  *disabled*/>

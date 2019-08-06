@@ -29,7 +29,7 @@ switch ($uri_case[2]){
         break;
 }
 
-//$tabIndex = 2;
+$tabIndex = 2;
 $header = str_replace("*linkhome*","<li><a href='./' xml:lang='en' tabindex=\"$tabIndex\">Home</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $header = str_replace("*linkchisiamo*","<li><a href='./su_di_noi' tabindex=\"$tabIndex\">Chi siamo</a></li>",$header);
