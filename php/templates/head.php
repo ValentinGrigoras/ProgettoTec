@@ -39,3 +39,4 @@ if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $header = str_replace("*linkinfo*","<li><a href='./info-e-contatti' tabindex=\"$tabIndex\">Info e Contatti</a></li>",$header,$counter);*/
 
 echo $head;
+echo 25%6;
