@@ -25,6 +25,11 @@ switch ($uri_case[2]){
         $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Login",$header);
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."login.php";
         break;
+        case "admin":
+        $header = str_replace("*linklogin*","<li id='active_link'>Admin</li>",$header);
+        $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Admin",$header);
+        $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."admin_login.php";
+        break;
     case "corsi":
         $header = str_replace("*linkcorsi*","<li id='active_link'>Corsi</li>",$header);
         $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Corsi",$header);
