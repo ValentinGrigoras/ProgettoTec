@@ -1,8 +1,8 @@
 <?php
 
-$head = file_get_contents(dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."html".DIRECTORY_SEPARATOR."templates".DIRECTORY_SEPARATOR."head.html");
+$head = file_get_contents(dirname(dirname(__DIR__)).'/'."html".'/'."templates".'/'."head.html");
 
-$uri_case = explode(DIRECTORY_SEPARATOR, $_SERVER['REQUEST_URI'], 3);
+$uri_case = explode('/', $_SERVER['REQUEST_URI'], 3);
 //print_r($uri_case);
 //$uri_case[0] = substr($uri_case[0], strrpos($uri_case[0], '/')+1);
 switch ($uri_case[2]){

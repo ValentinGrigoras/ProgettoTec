@@ -1,10 +1,10 @@
 <?php
 
-$header = file_get_contents(dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."html".DIRECTORY_SEPARATOR."templates".DIRECTORY_SEPARATOR."header.html");
+$header = file_get_contents(dirname(dirname(__DIR__)).'/'."html".'/'."templates".'/'."header.html");
 
 //print_r(dirname(dirname(__DIR__))); ///var/www/html/ProgettoTec
 
-$uri_case = explode(DIRECTORY_SEPARATOR, $_SERVER['REQUEST_URI'], 3);
+$uri_case = explode('/', $_SERVER['REQUEST_URI'], 3);
 //print_r($uri_case);
 //$uri_case[0] = substr($uri_case[0], strrpos($uri_case[0], '/')+1);
 
@@ -12,24 +12,24 @@ switch ($uri_case[2]){
     case "":
         $header = str_replace("*linkhome*","<li id='active_link'><span xml:lang='en'>Home</span></li>",$header);
         $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span>",$header);
-        $page = dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."php".DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."home.php";
+        $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."home.php";
         break;
     case "registrazione":
         $header = str_replace("*linkregistrazione*","<li id='active_link'>Registrazione</li>",$header);
         $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Registrazione",$header);
-        $page = dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."php".DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."registrazione.php";
+        $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."registrazione.php";
         break;
     case "corsi":
         $header = str_replace("*linkcorsi*","<li id='active_link'>Corsi</li>",$header);
         $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Corsi",$header);
-        $page = dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."php".DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."corsi.php";
+        $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."corsi.php";
         break;
     default:
-        $page = dirname(dirname(__DIR__)).DIRECTORY_SEPARATOR."php".DIRECTORY_SEPARATOR."pagine".DIRECTORY_SEPARATOR."not_found.php";
+        $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."not_found.php";
         break;
 }
 
-//$tabIndex = 2;
+$tabIndex = 2;
 $header = str_replace("*linkhome*","<li><a href='./' xml:lang='en' tabindex=\"$tabIndex\">Home</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $header = str_replace("*linkchisiamo*","<li><a href='./su_di_noi' tabindex=\"$tabIndex\">Chi siamo</a></li>",$header);
