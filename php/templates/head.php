@@ -16,6 +16,11 @@ switch ($uri_case[2]){
         $head = str_replace("*description*","Registrati a AIMFit",$head);
         $head = str_replace("*keywords*","registrazione, palestra, AIMFit, fitness",$head);
         break;
+        case "login":
+        $head = str_replace("*title*","Login | AIMFit",$head);
+        $head = str_replace("*description*","Login a AIMFit",$head);
+        $head = str_replace("*keywords*","login, palestra, AIMFit, fitness",$head);
+        break;
     case "corsi":
         $head = str_replace("*title*","Corsi | AIMFit",$head);
         $head = str_replace("*description*","Corsi AIMFit",$head);
