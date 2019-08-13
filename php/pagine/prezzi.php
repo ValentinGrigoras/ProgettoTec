@@ -6,11 +6,10 @@ use Database\Database;
 use Validator\Validator;
 
 $database = new Database();
-echo($database);
 if ($database) {
   $page = file_get_contents(dirname(dirname(__DIR__)) . '/' . "html" . '/' . "pagine" . '/' . "prezzi.html");
 $prices = Database::selectPrices();
-echo($prices);
+
 if(isset($prices))
 
 $price = "";
@@ -20,7 +19,7 @@ $price = "";
     $price .= '<dt>'.$prices[$indice]['tipoAbbonamento'].'</dt>';
     $price .= '<dd>';
     $price .= '<img src="i./css/img/abbonamneti/"'.$prices[$indice]['nomeImg']. '"' . ' alt="immagine abbonamento ' . $prices[$indice]['tipoAbbonamento'] . '"/>';
-    $price .= '<p class="prezzoAbbonamento">&euro;' . $prices[$indice]['prezzo']'</p>';
+    $price .= '<p class="prezzoAbbonamento">&euro;' . $prices[$indice]['prezzo'].'</p>';
     $price .= '<p>' .$prices[$indice]['descrizione'] .'</p>';
     $price .= '<p class="buttonPrezzi"><a href="registrazione.php">Iscriviti</a></p>';
     $price .=  '</dd>';
@@ -32,5 +31,5 @@ $price = "";
   $page = str_replace("*abbonamenti*", $price, $page);
 }
 
-echo $page;*/
+echo $page;
 ?>

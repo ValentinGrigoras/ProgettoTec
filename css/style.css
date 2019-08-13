@@ -40,9 +40,6 @@ h3{
 h4{
     font-size: 110%;
 }
-dl:hover{
-      box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 
 .fab{
   color: #0c1f34;
@@ -453,11 +450,10 @@ height: 80%;
 }
 #allenatori_section #allenatori_content dl{
     float:left;
-    width: 36%;
-    margin:2% 7% 5% 7%;
-   /* box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    width: 48%;
+    margin:2% 1% 5% 1%;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 dt{
   text-align: center;
     background-color: #fff;
@@ -533,10 +529,7 @@ dt{
   float: left;
   margin: 2% 1.66%;
   background-color: #fff;
-
-}
-#content_corsi .twoColumnsCardDetails:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .twoColumnsCardDetails img {
   display: block;
@@ -1160,7 +1153,7 @@ label{
   background-color: #4CAF50;
   color: white;
 }
-.confirmclosebtn {
+.closebtn {
   margin-left: 3%;
   color: white;
   font-weight: bold;

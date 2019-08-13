@@ -77,7 +77,6 @@ class Database {
     }
     public static function selectPrices() {
     $query = "SELECT  tipoAbbonamento, prezzo, descrizione, nomeImg FROM Abbonamento";
-    echo "sono in prices";
     return self::selectRows($query);
     }
     
