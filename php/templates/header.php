@@ -19,13 +19,12 @@ switch ($uri_case[2]){
         $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Registrazione",$header);
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."registrazione.php";
         break;
-
-        case "login":
+    case "login":
         $header = str_replace("*linklogin*","<li id='active_link'>Login</li>",$header);
         $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Login",$header);
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."login.php";
         break;
-        case "admin":
+    case "admin":
         $header = str_replace("*linklogin*","<li id='active_link'>Admin</li>",$header);
         $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Admin",$header);
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."admin_login.php";
@@ -34,6 +33,11 @@ switch ($uri_case[2]){
         $header = str_replace("*linkcorsi*","<li id='active_link'>Corsi</li>",$header);
         $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Corsi",$header);
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."corsi.php";
+        break;
+    case "prezzi":
+        $header = str_replace("*linkprezzi*","<li id='active_link'>Prezzi</li>",$header);
+        $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Prezzi",$header);
+        $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."prezzi.php";
         break;
     default:
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."not_found.php";
@@ -53,7 +57,7 @@ $header = str_replace("*linkcorsi*","<li><a href='./corsi' tabindex=\"$tabIndex\
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $header = str_replace("*linkprogramma*","<li><a href='./programma' tabindex=\"$tabIndex\">Programma</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-$header = str_replace("*linkprezzi*","<li><a href='./#prezzi_section' tabindex=\"$tabIndex\">Prezzi</a></li>",$header);
+$header = str_replace("*linkprezzi*","<li><a href='./prezzi' tabindex=\"$tabIndex\">Prezzi</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $header = str_replace("*linkregistrazione*","<li><a href='./registrazione' tabindex=\"$tabIndex\">Registrati</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
