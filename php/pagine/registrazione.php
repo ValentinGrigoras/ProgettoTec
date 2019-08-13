@@ -50,8 +50,9 @@ if ($database) {
             	if (isset($registeruser) && $registeruser){
                 	$user = Database::selectUser($_POST['email']);
             		if (isset($user)) {
-                	/*$m = "<div class=\"confirm\"> <span class=\"closebtn\" onclick=\"this.parentElement.style.display='none';\">OK</span> <p> L\'account &egrave; stato creato. <p> </div>";
-					$page=str_replace('*confirmmessage*', $m, $page);*/
+                	$m = "<div class=\"confirm\"> <p> L'account &egrave; stato creato. <p> 
+                	<span class=\"closebtn\" onclick=\"this.parentElement.style.display='none';\">OK</span> </div>";
+					$page=str_replace('*confirmmessage*', $m, $page);
     				}
 				}
             }

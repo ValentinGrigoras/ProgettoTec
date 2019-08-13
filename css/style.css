@@ -1160,6 +1160,7 @@ label{
   line-height: 2;
   cursor: pointer;
   transition: 0.3s;
+  border: 3px solid #0c1f34;
 }
 .confirmclosebtn:hover {
   color: black;
