@@ -256,7 +256,7 @@ ul#breadcrumb li a:hover {
 #logo img{
     max-width: 65%;
     float: left;
-margin: 1% 1% 1% 1.5%;
+    margin: 1% 1% 0% 1.5%;
 }
 #nav_desktop{
     width:100%;
@@ -294,7 +294,7 @@ margin: 1% 1% 1% 1.5%;
    font-size: 1em;
    font-weight: bold;
    width: 100%;
-   padding: 16% 0 16% 0;
+   padding: 16.5% 0 16.5% 0;
 }
 
 #nav_desktop li a:hover {
@@ -618,14 +618,14 @@ button:hover {
   margin: 1%;
 }
 .form_entry label{
-  width: 35%;
-  float: left;
+  
 }
 .form_entry input, .form_entry textarea{
   width: 63%;
 }
 .form_entry textarea{
   height: 10em;
+  resize: none;
 }
 
 /*--------------------------------
@@ -1055,7 +1055,7 @@ font-weight: normal;
   }
   #content_about_us #paragrafi div{
       margin-bottom: 10%;
-      float: left;
+      float:   left;
   }
   #content_about_us span.livello_span{
       background-color: #8E0621;
@@ -1093,7 +1093,16 @@ font-weight: normal;
   margin: 5%;
 }
 #signup_form label{
-  height: 4em;
+  height: 3em;
+  width: 35%;
+  float: left;
+}
+.error{
+  color: red;
+  font-size: 0.8em;
+}
+.hidden{
+  display: none;
 }
 #descrizione{
   width: 30%;
@@ -1234,12 +1243,6 @@ div.content {
   vertical-align: middle;
 }
 
-label {
-  color: #24292e;
-  line-height: 2;
-  font-weight: 600;
-  font-size: 1em;
-}
 
 .form-content.btn{
   font-size: 80%;
