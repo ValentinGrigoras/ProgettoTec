@@ -611,14 +611,14 @@ button:hover {
   margin: 1%;
 }
 .form_entry label{
-  width: 35%;
-  float: left;
+  
 }
 .form_entry input, .form_entry textarea{
   width: 63%;
 }
 .form_entry textarea{
   height: 10em;
+  resize: none;
 }
 
 /*--------------------------------
@@ -1086,7 +1086,16 @@ font-weight: normal;
   margin: 5%;
 }
 #signup_form label{
-  height: 4em;
+  height: 3em;
+  width: 35%;
+  float: left;
+}
+.error{
+  color: red;
+  font-size: 0.8em;
+}
+.hidden{
+  display: none;
 }
 #descrizione{
   width: 30%;
@@ -1227,12 +1236,6 @@ div.content {
   vertical-align: middle;
 }
 
-label {
-  color: #24292e;
-  line-height: 2;
-  font-weight: 600;
-  font-size: 1em;
-}
 
 .form-content.btn{
   font-size: 80%;
