@@ -15,6 +15,7 @@ class Database {
         if (!self::isConnected()) {
             self::$connection = new \mysqli(static::HOST_DB, static::USERNAME, static::PASSWORD, static::DB_NAME);
             self::$connection->set_charset('utf8');
+            
         }
         return self::isConnected();
     }
@@ -74,5 +75,11 @@ class Database {
         $query = "SELECT nome, descrizione, durata, livello, costo, nomeImg FROM Corsi";
         return self::selectRows($query);
     }
+    public static function selectPrices() {
+    $query = "SELECT  tipoAbbonamento, prezzo, descrizione, nomeImg FROM Abbonamento";
+    echo "sono in prices";
+    return self::selectRows($query);
+    }
+    
     
 }

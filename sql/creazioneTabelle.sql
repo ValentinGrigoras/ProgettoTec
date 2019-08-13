@@ -27,8 +27,9 @@ CREATE TABLE Utente (
 CREATE TABLE Abbonamento (
   idAbbonamento int(11) AUTO_INCREMENT PRIMARY KEY,
   tipoAbbonamento enum('Annuale', 'Semestrale', 'Trimestrale', 'Mensile'),
-  prezzo decimal(4,2) NOT NULL,
-  descrizione text
+  prezzo decimal(5,2) NOT NULL,
+  descrizione text,
+  nomeImg varchar(255) NOT NULL 
 ) ENGINE=InnoDB;
 --
 -- Creazione tabella 'Contratto'
