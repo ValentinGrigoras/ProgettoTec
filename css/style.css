@@ -40,7 +40,43 @@ h3{
 h4{
     font-size: 110%;
 }
-
+form{
+  width: 85%;
+  float: right;
+  margin: 5%;
+}
+label{
+  width: 35%;
+  float: left;
+  color: #24292e;
+  font-weight: 600;
+  font-size: 1em;
+  margin-top: 1%;
+  margin-bottom: 5%;
+}
+.form_entry{
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+.form_entry input, .form_entry textarea{
+  width: 63%;
+}
+.form_entry textarea{
+  height: 10em;
+  resize: none;
+}
+.form_note{
+  color: #586069;
+  font-size: 0.8em;
+}
+input[type="text"], input[type="password"]{
+  border: 0.1em solid #999999;
+  border-radius: 0.2em;
+  color: #24292e;
+  height: 1.7em;
+  background-color: white;
+}
 .fab{
   color: #0c1f34;
   font-size: 1.2em;
@@ -599,6 +635,7 @@ button:hover {
 #contact_form {
   width: 50%;
 }
+#contact_form label{margin-bottom: 2%;}
 
 #contact_form form{
   margin: 5%;
@@ -606,20 +643,7 @@ button:hover {
 #googleMap{
   display: table-cell;
 }
-.form_entry{
-  width: 100%;
-  margin: 1%;
-}
-.form_entry label{
-  
-}
-.form_entry input, .form_entry textarea{
-  width: 63%;
-}
-.form_entry textarea{
-  height: 10em;
-  resize: none;
-}
+
 
 /*--------------------------------
 --- END FORM + MAP -----
@@ -1077,19 +1101,10 @@ font-weight: normal;
   padding-bottom: 0;
 }
 #dati{
-  width: 60%;
+  width: 65%;
   float: left;
 }
-#signup_form{
-  width: 85%;
-  float: right;
-  margin: 5%;
-}
-#signup_form label{
-  height: 3em;
-  width: 35%;
-  float: left;
-}
+
 .error{
   color: red;
   font-size: 0.8em;
@@ -1098,7 +1113,7 @@ font-weight: normal;
   display: none;
 }
 #descrizione{
-  width: 30%;
+  width: 25%;
   float: left;
   background-color: #fff2e6;
   border-radius: 0.2em;
@@ -1107,13 +1122,7 @@ font-weight: normal;
   text-align: center;
   padding: 3% 0;
 }
-input[type="text"]{
-  border: 0.1em solid #999999;
-  border-radius: 0.2em;
-  color: #24292e;
-  height: 1.7em;
-  background-color: white;
-}
+
 
  fieldset{
   padding: 2.5%;
@@ -1129,25 +1138,12 @@ fieldset legend{
   padding-bottom: 2%;
 }
 
-label{
-  color: #24292e;
-  line-height: 2;
-  font-weight: 600;
-  font-size: 1em;
-}
-#input_data_nascita{
-  display: inline;
-}
 .required label::after {
   color: #cb2431;
   content: "*";
   padding: 0 1% 0 1%;
 }
-.form_note{
-  color: #586069;
-  font-size: 0.8em;
-  margin-bottom: 2%;
-}
+
 .confirm {
   padding: 3%;
   background-color: #4CAF50;
