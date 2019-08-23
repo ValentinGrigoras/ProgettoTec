@@ -346,10 +346,10 @@ LANDING PAGE
 }
 
 #main_message{
-  font-size: 180%;
-  font-weight: 1000;
+  font-size: 230%;
+  
   color: #fff;
-  padding: 4% 2% 30% 2%;
+  padding: 6% 2% 32% 2%;
     width: 74%;
   margin-left: 27%;
   font-family: 'Rubik Mono One', sans-serif;
@@ -396,8 +396,9 @@ height: 80%;
 /*--------------------------------
 ------------- ABBONAMENTI -------------
 ----------------------------------*/
-#prezzi_section{
 
+#abbonamenti_section a.btn{
+  width: 13%;
 }
 #prezzi_section #content_prezzi{
   overflow: auto;
@@ -450,9 +451,9 @@ height: 80%;
 }
 #allenatori_section #allenatori_content dl{
     float:left;
-    width: 48%;
-    margin:2% 1% 5% 1%;
-    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 40%;
+    margin:2% 5% 5% 5%;
+  
 }
 dt{
   text-align: center;
@@ -461,7 +462,7 @@ dt{
     padding: 2% 0 1% 2%;
     font-weight: bold;
 }
-.twoColumnsCard dd{
+#allenatori_section #allenatori_content dl{
     background:none no-repeat left top;
     background-size: contain;;
     overflow: hidden;
@@ -471,6 +472,10 @@ dt{
     color: #000;
     font-size: 80%;
 }
+.twoColumnsCard:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
 #allenatori_section .twoColumnsCardInner .socials_links{
     width: 100%;
     float: right;
@@ -529,6 +534,9 @@ dt{
   float: left;
   margin: 2% 1.66%;
   background-color: #fff;
+
+}
+#content_corsi .twoColumnsCardDetails:hover{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .twoColumnsCardDetails img {
@@ -1329,6 +1337,7 @@ font-size: 130%;
   width: 40%;
   background-color: #3A527B;
 }
+
 /*abbonamenti page*/
 #abbonamenti_section{
   width: 98%;
