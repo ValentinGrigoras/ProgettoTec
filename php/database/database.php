@@ -45,9 +45,9 @@ class Database {
     private static function insertUpdateDelete($query) {
         if (self::isConnected()) {
             self::$connection->query($query);
-            if (self::$connection->affected_rows > 0)
+            if (self::$connection->affected_rows > 0){
                 return true;
-            return false;
+            }
         }
         return false;
     }
@@ -69,9 +69,10 @@ class Database {
         $datanascita = self::$connection->real_escape_string($datanascita);
         $cf = self::$connection->real_escape_string($cf);
         $telefono = self::$connection->real_escape_string($telefono);
-        
         $query = "INSERT INTO Utente (username, password, nome, cognome, dataDiNascita, CF, tel) VALUES (\"$email\", \"$password\", \"$nome\", \"$cognome\", \"$datanascita\", \"$cf\", \"$telefono\");";
+
         return self::insertUpdateDelete($query);
+
     }
 
     public static function selectCourses() {

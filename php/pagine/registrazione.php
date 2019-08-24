@@ -40,7 +40,7 @@ if ($database) {
 		}else{
 			if (!Validator::passwordValidator($_POST['password'])){
 				$error=true;
-				$page=str_replace('<p class="hidden">*errorepassword*</p>', '<p class="error">La <span xml:lang=\"en\">password</span> non rispetta le indicazioni. Rispettare il formato indicato.</p>', $page);
+				$page=str_replace('<p class="hidden">*errorpassword*</p>', '<p class="error">La <span xml:lang=\"en\">password</span> non rispetta le indicazioni. Rispettare il formato indicato.</p>', $page);
 			}
 		}
 		if ($_POST['password']!=$_POST['confermapassword']){
@@ -54,7 +54,7 @@ if ($database) {
 		}else{
 			if (!Validator::nameValidator($_POST['nome'])){
 				$error=true;
-				$page=str_replace('<p class="hidden">*errorenome*</p>', '<p class="error">Il nome inserito non &egrave; valido. Rispettare il formato indicato.</p>', $page);
+				$page=str_replace('<p class="hidden">*errornome*</p>', '<p class="error">Il nome inserito non &egrave; valido. Rispettare il formato indicato.</p>', $page);
 			}
 		}
 		//controllo cognome
@@ -83,29 +83,51 @@ if ($database) {
 			$page=str_replace('<p class="hidden">*errortelefono*</p>', '<p class="error">Il numero di telefono inserito non &egrave; valido. Rispettare il formato indicato.</p>', $page);
 		}
 		//controllo data di nascita
-		if ($_POST['datanascita']==""){
+		if ($_POST['anno']=="" || $_POST['mese']=="" || $_POST['giorno']==""){
 			$error=true;
 			$page=str_replace('<p class="hidden">*errordatanascita*</p>', '<p class="error">Inserisci la data di nascita.</p>', $page);
 		}else{
-			$data= date('d-m-Y',strtotime($_POST['datanascita']));
-			list($day, $month, $year)=explode('-',$data);
-			if (!checkdate($month, $day, $year)){
+			if (!checkdate((int)$_POST['mese'], (int)$_POST['giorno'], (int)$_POST['anno'])){
 				$error=true;
 				$page=str_replace('<p class="hidden">*errordatanascita*</p>', '<p class="error">La data di nascita inserita non &egrave; valido. Rispettare il formato indicato.</p>', $page);
 			}
 		}
         if (!$errore){
-            $registeruser = Database::registerUser($_POST['email'], $_POST['password'], $_POST['nome'], $_POST['cognome'], date("Y-m-d", strtotime($data)), $_POST['cf'], $_POST['telefono']);
+        	$date=$_POST['anno'].$_POST['mese'].$_POST['giorno'];
+            $registeruser = Database::registerUser($_POST['email'], $_POST['password'], $_POST['nome'], $_POST['cognome'], Date($date), $_POST['cf'], $_POST['telefono']);
             if (isset($registeruser) && $registeruser){
                 $user = Database::selectUser($_POST['email']);
             	if (isset($user)) {
-                    /*$m = "<div class=\"confirm\"> <span class=\"closebtn\" onclick=\"this.parentElement.style.display='none';\">OK</span> <p> L\'account &egrave; stato creato. <p> </div>";
-					$page=str_replace('*confirmmessage*', $m, $page);*/
+                    $page="<h1> Fantastico! </h1> <p>Il tuo acount &egrave; stato creato! </p> <a href='./user_panel' tabindex='2'>Vai alla tua area personale.</a>";
     			}
+			}else{
+				$page=str_replace('<h1> Unisciti a AIMFit </h1>
+			<p> Offre soluzioni d’allenamento in grado di rispondere ad ogni esigenza! </p>', '<h1 class="red_error"> C\'&egrave; stato un errore!', $page);
+				$page=str_replace('*email*', $_POST['email'] , $page);
+				$page=str_replace('*password*', $_POST['password'] , $page);
+				$page=str_replace('*confermapassword*', $_POST['confermapassword'] , $page);
+				$page=str_replace('*nome*', $_POST['nome'] , $page);
+				$page=str_replace('*cognome*', $_POST['cognome'] , $page);
+				$page=str_replace('*giorno*', $_POST['giorno'] , $page);
+				$page=str_replace('*mese*', $_POST['mese'] , $page);
+				$page=str_replace('*anno*', $_POST['anno'] , $page);
+				$page=str_replace('*cf*', $_POST['cf'] , $page);
+				$page=str_replace('*telefono*', $_POST['telefono'] , $page);
 			}
         }
           
+
 	}
+	$page=str_replace('*email*', "" , $page);
+	$page=str_replace('*password*', "" , $page);
+	$page=str_replace('*confermapassword*', "" , $page);
+	$page=str_replace('*nome*', "" , $page);
+	$page=str_replace('*cognome*', "" , $page);
+	$page=str_replace('*giorno*', "" , $page);
+	$page=str_replace('*mese*', "" , $page);
+	$page=str_replace('*anno*', "" , $page);
+	$page=str_replace('*cf*', "" , $page);
+	$page=str_replace('*telefono*', "" , $page);
 	echo $page;
 }
 ?>

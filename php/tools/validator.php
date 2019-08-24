@@ -29,15 +29,10 @@ class Validator{
     }
     public static function passwordValidator($password){
         $number    = preg_match('@[0-9]@', $password); // must contain at least one number
-        return !$number  || strlen($password) < 8 || strlen($password) > 16; // password lenght must be: 8 <= password.lenght <= 16
+        return ($number  && strlen($password) >= 8 && strlen($password) <= 16); // password lenght must be: 8 <= password.lenght <= 16
     }
     public static function nameValidator($name){
         return preg_match("/^([a-zA-Z' ]+)$/",$name);
-    }
-    function dateValidator($date, $format = 'Y/m/d') // change the format parameters if you want to check others date format
-    {
-        //$d = DateTime::createFromFormat($format, $date);
-        return $d && $d->format($format) == $date;
     }
     public static function cfValidator($cf)
     {

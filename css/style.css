@@ -18,7 +18,8 @@ html,body{
 }
 body{
 background-color: #f5f5f5;
-}
+}}
+
 h1,h2,h3,h4,h5{
     padding: 2% 0;
     text-align: center;
@@ -108,7 +109,9 @@ input[type="text"], input[type="password"], textarea{
 .fab:hover{
   color:#3A527B;
 }
-
+.red_error{
+  color: red;
+}
 #main_container{
   max-width: 1200px;
   margin:0 auto 0 auto;
@@ -1129,20 +1132,18 @@ font-weight: normal;
 #contenuto{
   width: 80%;
   margin: 2.5% auto;
+  margin-top: 0;
   overflow: auto;
 }
 #content{
   overflow: hidden;
 }
-#intestazione h1{
-  text-align: center;
-  padding-bottom: 0;
-}
 #intestazione{
   text-align: center;
 }
 #intestazione h1{
-  padding-bottom: 0;
+  margin-top: 7%;
+  margin-bottom: 0.25%;
 }
 #dati{
   width: 65%;
@@ -1208,7 +1209,15 @@ fieldset legend{
 .confirmclosebtn:hover {
   color: black;
 }
-
+#input_date input, #input_date p{
+  display: inline-block;
+}
+#input_date input{
+  width: 2em;
+}
+#input_date #anno{
+  width: 4em;
+}
 
 /*----------------------------
 -----------END REGISTRAZIONE------
