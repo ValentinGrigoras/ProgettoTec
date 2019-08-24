@@ -25,7 +25,7 @@ class Validator{
         );
 
     public static function emailValidator($email){
-        return filter_var($value, FILTER_VALIDATE_EMAIL);//  Filters a variable with a specified filter (FILTER_VALIDATE_EMAIL)
+        return filter_var($email, FILTER_VALIDATE_EMAIL);//  Filters a variable with a specified filter (FILTER_VALIDATE_EMAIL)
     }
     public static function passwordValidator($password){
         $number    = preg_match('@[0-9]@', $password); // must contain at least one number

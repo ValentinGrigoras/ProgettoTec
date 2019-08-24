@@ -40,6 +40,23 @@ h3{
 h4{
     font-size: 110%;
 }
+
+button {
+    background-color: #0c1f34;
+    color: white;
+    text-decoration: underline;
+    margin: 3% 0% 3% 42%;
+    padding: 3%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 16%;
+}
+
+button:hover {
+  text-decoration: none;
+    background-color:#3A527B;
+}
 form{
   width: 85%;
   float: right;
@@ -70,7 +87,7 @@ label{
   color: #586069;
   font-size: 0.8em;
 }
-input[type="text"], input[type="password"]{
+input[type="text"], input[type="password"], textarea{
   border: 0.1em solid #999999;
   border-radius: 0.2em;
   color: #24292e;
@@ -616,21 +633,6 @@ text-align: center;
   background-color: #f2f2f2;
 }
 
-button {
-    background-color: #0c1f34;
-    color: white;
-    text-decoration: underline;
-    margin: 3% auto;
-    padding: 3%;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-  text-decoration: none;
-    background-color:#3A527B;
-}
 
 #contact_form {
   width: 50%;
@@ -1104,7 +1106,10 @@ font-weight: normal;
   width: 65%;
   float: left;
 }
-
+#dati button{
+  width:28%;
+  margin-left: 36%;
+}
 .error{
   color: red;
   font-size: 0.8em;
