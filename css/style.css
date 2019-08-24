@@ -141,12 +141,9 @@ text-decoration: none;
   width: 31.333%;
   margin: 1%;
   display: inline-block;
-
-
-}
-.threeColumnsCard:hover{
    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .threeColumnsCard dd img{
     max-width: 100%;
     height: auto;
@@ -565,10 +562,8 @@ dt{
     background-color: #fff;
     color: #000;
     font-size: 80%;
-}
-.twoColumnsCard:hover{
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+}
 
 #allenatori_section .twoColumnsCardInner .socials_links{
     width: 100%;
@@ -628,11 +623,9 @@ dt{
   float: left;
   margin: 2% 1.66%;
   background-color: #fff;
-
-}
-#content_corsi .twoColumnsCardDetails:hover{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .twoColumnsCardDetails img {
   display: block;
   width: 30%;
@@ -1341,20 +1334,20 @@ font-size: 130%;
 
 /*abbonamenti page*/
 #abbonamenti_section{
-  width: 98%;
+  width: 100%;
   padding: 0 0 3% 0;
 background-color: #0c1f34;
 margin: 0 auto;
 }
 #abbonamenti_section #prezzi_main_message{
-  padding: 5% 0 1% 0;
+  padding: 3% 0 1% 0;
   font-size: 200%;
   text-align: center;
   color: white;
   font-weight: bold;
 } 
 #abbonamenti_section #prezzi_second_message{
-  padding: 1% 0 5% 0;
+  padding: 1% 0 3% 0;
   font-size: 120%;
   text-align: center;
   color: white;
