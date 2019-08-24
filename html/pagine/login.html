@@ -9,40 +9,47 @@
             </div>
             <div id="contenuto">
                 <div id="dati">
-                    <form id="signup_form" action="./login" method="POST">
+                    <form id="signin_form" action="./login" method="POST">
                         <h2> Entra nel tuo account </h2>
                         <p>I campi con (*) sono obbligatori.</p>
     
                         <fieldset>
                             <legend>Account</legend>
-                            <div>
-                                <div class="form_entry">
-                                <div class="required">
-                                    <label for="email" >Email</label>
-                                    <input tabindex="*tabindexemail*" type="text" name="email" id="email" *disabled* />
-                                </div>
+
+                        <div class="form_entry">
+                            <div class="required">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input_feedb">
+                                <input tabindex="*tabindexemail*" type="text" name="email" id="email" *disabled* />
                                 <p class="form_note">Inserire l'<span xml:lang="en">email</span> nel formato casella@dominio.</p>
                                 <p class="hidden">*erroremail*</p>
-                                </div>
                             </div>
-                            <div>
-                                <div class="form_entry">
-                                <div class="required">
-                                    <label for="password" >Password</label>
-                                    <input tabindex="*tabindexpassword*" type="password" name="password" id="password"  *disabled*/>
-                                </div>
+                        </div>
+                        <div class="form_entry">
+                            <div class="required">
+                                <label for="password" >Password</label>
+                            </div>
+                            <div class="input_feedb">
+                                <input tabindex="*tabindexpassword*" type="password" name="password" id="password"  *disabled*/>
                                 <p class="form_note">Inserire la password scelta.</p>
-
                                 <p class="hidden">*errorpassword*</p>
-                                </div>
-                            </div>
-                     
-                            
-                        </fieldset>
-                        <input type="checkbox" name="admin" value="no">Admin<br>
-                        <p class="form_note">Facendo clic su "Crea account" di seguito, accetti i nostri Termini di servizio e l'Informativa sulla privacy. Occasionalmente ti invieremo e-mail relative all'account.</p>
 
-                        <button id="signup" type="submit" name="signup" value="signup">Login</button>
+                            </div>
+                            
+                        </div>
+                        <div class="form_entry">
+                            <label for="admin" >Admin</label>
+                            <div class="input_feedb">
+                                <input type="checkbox" name="admin" value="no"> 
+                            </div>
+                            
+                        </div>
+                        </fieldset>
+                        
+                        
+
+                        <button id="signin" type="submit" name="signin" value="signup">Login</button>
                         *confirmmessage*
                         
                     </form>

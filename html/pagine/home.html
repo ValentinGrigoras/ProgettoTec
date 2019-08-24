@@ -123,19 +123,27 @@
         <p>I campi con (*) sono obbligatori.</p>
         <div class="required form_entry">
 			   <label for="fname" class="input_label ">Nome</label>
-			   <input tabindex="*tabindexfname*" type="text" id="fname" name="firstname" />
+         <div class="input_feedb">
+			     <input tabindex="*tabindexfname*" type="text" id="fname" name="firstname" />
+         </div>
        </div>
        <div class="required form_entry">
 			   <label for="lname" class="input_label">Cognome</label>
-			   <input tabindex="*tabindexlname*" type="text" id="lname" name="lastname">
+         <div class="input_feedb">
+			     <input tabindex="*tabindexlname*" type="text" id="lname" name="lastname">
+         </div>
         </div>
         <div class="required form_entry">
 			   <label for="field_email" class="input_label">La tua e-mail:</label>
-			   <input tabindex="*tabindexfieldemail*" type="text" id="field_email" name="sender_email" >
+         <div class="input_feedb">
+			     <input tabindex="*tabindexfieldemail*" type="text" id="field_email" name="sender_email" >
+         </div>
        </div>
        <div class="required form_entry">
 			   <label for="subject" class="input_label">Soggetto</label>
-			   <textarea tabindex="*tabindexsubject*" type="text" id="subject" name="subject" ></textarea>
+         <div class="input_feedb">
+			     <textarea tabindex="*tabindexsubject*" type="text" id="subject" name="subject" ></textarea>
+         </div>
        </div>
 			   <button name="Invia" type="submit" value="Invia">Invia</button>
       </fieldset>
