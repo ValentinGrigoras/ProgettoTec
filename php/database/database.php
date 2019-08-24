@@ -19,6 +19,9 @@ class Database {
         }
         return self::isConnected();
     }
+    public static function getConnection() {
+        return $connection;
+    }
 
     public static function disconnect() {
         if (self::isConnected())
@@ -81,6 +84,8 @@ class Database {
     }
 
     public static function getAdmin($email, $password) {
+         $email = self::$connection->real_escape_string($email);
+        $password = self::$connection->real_escape_string($password);
     $query = "SELECT  email, password FROM Admin WHERE email=\"$email\" AND password=\"$password\"";
     return self::selectRows($query);
     }
