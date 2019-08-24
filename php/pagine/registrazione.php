@@ -26,7 +26,7 @@ if ($database) {
 		}
 		//controllo se mail è già registrata
 		
-		if (!error) {
+		if (!$error) {
 			$user = Database::selectUser($_POST['email']);
 			if (!empty($user)) {
 				$error=true;
