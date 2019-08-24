@@ -79,6 +79,11 @@ class Database {
     $query = "SELECT  tipoAbbonamento, prezzo, descrizione, nomeImg FROM Abbonamento";
     return self::selectRows($query);
     }
+
+    public static function getAdmin($email, $password) {
+    $query = "SELECT  email, password FROM Admin WHERE email=\"$email\" AND password=\"$password\"";
+    return self::selectRows($query);
+    }
     
     
 }
