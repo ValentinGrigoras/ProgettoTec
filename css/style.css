@@ -66,21 +66,24 @@ form{
   margin: 5%;
 }
 label{
-  width: 35%;
+  width: 33%;
   float: left;
   color: #24292e;
   font-weight: 600;
   font-size: 1em;
   margin-top: 1%;
-  margin-bottom: 5%;
+  margin-bottom:1%;
+}
+.input_feedb{
+  width: 67%;
+  overflow: auto;
+  float: right;
 }
 .form_entry{
   width: 100%;
   margin-top: 1%;
   margin-bottom: 3%;
-}
-.form_entry input, .form_entry textarea{
-  width: 63%;
+  overflow: auto;
 }
 .form_entry textarea{
   height: 10em;
@@ -96,6 +99,7 @@ input[type="text"], input[type="password"], textarea{
   color: #24292e;
   height: 1.7em;
   background-color: white;
+  width: 85%;
 }
 .fab{
   color: #0c1f34;
