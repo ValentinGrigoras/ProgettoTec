@@ -18,16 +18,16 @@ $price = "";
     $price .= '<dl class="threeColumnsCard">';
     $price .= '<dt>'.$prices[$indice]['tipoAbbonamento'].'</dt>';
     $price .= '<dd>';
-    $price .= '<img src="i./css/img/abbonamneti/"'.$prices[$indice]['nomeImg']. '"' . ' alt="immagine abbonamento ' . $prices[$indice]['tipoAbbonamento'] . '"/>';
+    $price .= '<img src="css/img/abbonamenti/'.$prices[$indice]['nomeImg']. '"' . ' alt="immagine ' . $prices[$indice]['tipoAbbonamento'] . '"/>';
     $price .= '<p class="prezzoAbbonamento">&euro;' . $prices[$indice]['prezzo'].'</p>';
     $price .= '<p>' .$prices[$indice]['descrizione'] .'</p>';
-    $price .= '<p class="buttonPrezzi"><a href="registrazione.php">Iscriviti</a></p>';
     $price .=  '</dd>';
     $price .= '</dl>';
 
 
   }
-  //var_dump(allCourses);
+
+  $page = str_replace("*linkregistrati*","<a class='btn' href='./registrazione'>Registrati</a>",$page);
   $page = str_replace("*abbonamenti*", $price, $page);
 }
 
