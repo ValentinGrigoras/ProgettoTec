@@ -21,7 +21,6 @@ $price = "";
     $price .= '<img src="css/img/abbonamenti/'.$prices[$indice]['nomeImg']. '"' . ' alt="immagine ' . $prices[$indice]['tipoAbbonamento'] . '"/>';
     $price .= '<p class="prezzoAbbonamento">&euro;' . $prices[$indice]['prezzo'].'</p>';
     $price .= '<p>' .$prices[$indice]['descrizione'] .'</p>';
-    $price .= '<a class="btn" href="registrazione">Iscriviti</a>';
     $price .=  '</dd>';
     $price .= '</dl>';
 

@@ -16,6 +16,9 @@ html,body{
     padding: 0;
     background-color: #f4f4f4;
 }
+body{
+background-color: #f5f5f5;
+}
 h1,h2,h3,h4,h5{
     padding: 2% 0;
     text-align: center;
@@ -87,7 +90,7 @@ input[type="text"], input[type="password"]{
 
 #main_container{
   max-width: 1200px;
-  margin:1% auto 0 auto;
+  margin:0 auto 0 auto;
   
    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /*overflow: auto;*/
@@ -117,8 +120,11 @@ text-decoration: none;
   width: 31.333%;
   margin: 1%;
   display: inline-block;
- box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+
+}
+.threeColumnsCard:hover{
+   box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .threeColumnsCard dd img{
     max-width: 100%;
@@ -149,7 +155,6 @@ text-decoration: none;
   text-align: center;
   padding: 3.5%;
   background-color: #fff;
-  font-weight: bold;
 }
 .threeColumnsCard p{
   float: left;
@@ -176,10 +181,38 @@ text-decoration: none;
   width: 40%;
   display: inline-block;
   float: left;
-  margin-top: 3%;
+  margin:1% 0 0 1%;
+  color: white;
 }
+#first-section-header li{
+  display: inline-block;
+  float: right;
+  padding-left: 2%; 
+  padding: 1%;
+
+}
+#first-section-header li#active_link{
+  background-color: #b30000;
+  color: white;
+  font-weight: bold;
+}
+#first-section-header li:hover{
+  background-color: #3A527B;
+}
+#first-section-header li a{
+  color: white;
+
+  }
+  #first-section-header li a:hover{
+  text-decoration:none;
+     
+
+  }
 #first-section-header{
     overflow: auto;
+background-color: #0f2742;
+
+
 }
 #header #breadcrumbs_home{
     display: inline-block;
@@ -359,6 +392,9 @@ ul#breadcrumb li a:hover {
 #nav_desktop li a, #nav_desktop ul li ul li a{
   display: block;
 }
+#nav_desktop li a:hover, #nav_desktop ul li ul li a:hover{
+  text-decoration: none;
+}
 
 #mynav{
     display: none;
@@ -459,11 +495,12 @@ height: 80%;
 
 }
 
-/*
+
 .threeColumnsCard  .prezzoAbbonamento{
 	font-size: 2em;
   border-bottom: 1px solid #ccc;
 }
+*/
 .threeColumnsCard .nrMese{
 	font-size: 0.5em;
 }
@@ -509,7 +546,7 @@ dt{
     font-size: 80%;
 }
 .twoColumnsCard:hover{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
 #allenatori_section .twoColumnsCardInner .socials_links{
@@ -1175,52 +1212,11 @@ fieldset legend{
 -----------END REGISTRAZIONE------
 -----------------------------*/
 
-/*admin*/
-.sidebar {
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  background-color: #0c1f34;
-  position: fixed;
+#sidenav{
+  width: 10%;
   height: 100%;
-  overflow: auto;
+  background-color: #0c1f34;
 }
-
-.admin-ul  {
-  
-  list-style-type: none;
-}
-.admin-ul{
-  margin: 0;
-  padding: 0;
-}
-
-
-.admin-ul li a{
-  display: block;
-  color: #ffff;
-  padding: 16px;
-  text-align: center;
-  text-decoration: none;
-}
- 
-.admin-ul li a.active {
-  background-color: #555;
-  color: #f1f1f1;
-}
-
-.admin-ul li a:hover:not(.active) {
-  background-color: #555;
-  color: white;
-}
-
-div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
-}
-
-/**+++Hossain+++***/
 
 
 /*****++login form++**/
