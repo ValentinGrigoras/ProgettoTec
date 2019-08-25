@@ -118,35 +118,41 @@
 <div id="cont-form-map">
 	<div id="contact_form">
 		<h2>Contattaci</h2>
-		<form action="/action_page.php">
-      <fieldset>
-        <p>I campi con (*) sono obbligatori.</p>
-        <div class="required form_entry">
-			   <label for="fname" class="input_label ">Nome</label>
-         <div class="input_feedb">
-			     <input tabindex="*tabindexfname*" type="text" id="fname" name="firstname" />
-         </div>
-       </div>
-       <div class="required form_entry">
-			   <label for="lname" class="input_label">Cognome</label>
-         <div class="input_feedb">
-			     <input tabindex="*tabindexlname*" type="text" id="lname" name="lastname">
-         </div>
-        </div>
-        <div class="required form_entry">
-			   <label for="field_email" class="input_label">La tua e-mail:</label>
-         <div class="input_feedb">
-			     <input tabindex="*tabindexfieldemail*" type="text" id="field_email" name="sender_email" >
-         </div>
-       </div>
-       <div class="required form_entry">
-			   <label for="subject" class="input_label">Soggetto</label>
-         <div class="input_feedb">
-			     <textarea tabindex="*tabindexsubject*" type="text" id="subject" name="subject" ></textarea>
-         </div>
-       </div>
-			   <button name="Invia" type="submit" value="Invia">Invia</button>
-      </fieldset>
+		<form id="contact_us_form" action="./#contact_us_form" method="POST">
+      	<fieldset>
+      		<p class="hidden">*confirm_messagge*</p>
+        	<p>I campi con (*) sono obbligatori.</p>
+        	<div class="required form_entry">
+				<label for="nome">Nome</label>
+        		<div class="input_feedb">
+					<input tabindex="*tabindexnome*" type="text" id="nome" name="nome" value="*nome*"/>
+					<p class="hidden">*errornome*</p>
+        		</div>
+       		</div>
+       		<div class="required form_entry">
+				<label for="cognome">Cognome</label>
+         		<div class="input_feedb">
+					<input tabindex="*tabindexcognome*" type="text" id="cognome" name="cognome" value="*cognome*">
+					<p class="hidden">*errorcognome*</p>
+         		</div>
+        	</div>
+        	<div class="required form_entry">
+			   	<label for="field_email">La tua e-mail:</label>
+         		<div class="input_feedb">
+			     	<input tabindex="*tabindexfieldemail*" type="text" id="email" name="email" value="*email*">
+			     	<p class="hidden">*erroremail*</p>
+         		</div>
+       		</div>
+       		<div class="required form_entry">
+			   	<label for="messaggio">Messaggio</label>
+         		<div class="input_feedb">
+			     	<textarea tabindex="*tabindexsubject*" type="text" id="messaggio" name="messaggio">*messaggio*</textarea>
+
+			     	<p class="hidden">*errormessaggio*</p>
+         		</div>
+       		</div>
+			   	<button id="contact_us" name="contact_us" type="submit" value="contact_us">Invia</button>
+      	</fieldset>
 		</form>
 	</div>
 
