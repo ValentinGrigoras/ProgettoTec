@@ -90,6 +90,26 @@ class Database {
     $query = "SELECT  email, password FROM Admin WHERE email=\"$email\" AND password=\"$password\"";
     return self::selectRows($query);
     }
-    
+    //genera orario
+    public static function CorsoGiornoOra($giorno, $oraInizio){
+        $query= "SELECT Corsi.nome AS Corso, TIME_FORMAT(oraI, '%H:%i') AS oraI, TIME_FORMAT(oraF, '%H:%i') AS oraF, Allenatore.nome AS Allenatore, stanza, giorno
+                FROM Orario, Corsi, Allenatore
+                WHERE Orario.idCorso=Corsi.idCorso AND Orario.idAllenatore=Allenatore.idAllenatore
+                AND oraI LIKE '".$oraInizio.":%%:%%' AND giorno='".$giorno."';";
+        return self::selectRows($query);
+    }
+    public static function corsiFasciaOraria($oraInizio){
+        $query= "SELECT idCorso
+                FROM Orario
+                WHERE oraI LIKE '".$oraInizio.":%%:%%';";
+        return self::selectRows($query);
+    }
+    public static function corsiGiornata($giorno){
+        $query= "SELECT idCorso
+                FROM Orario
+                WHERE giorno='".$giorno."';";
+        return self::selectRows($query);
+    }
+
     
 }

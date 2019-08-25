@@ -16,7 +16,7 @@ switch ($uri_case[2]){
         $head = str_replace("*description*","Registrati a AIMFit",$head);
         $head = str_replace("*keywords*","registrazione, palestra, AIMFit, fitness",$head);
         break;
-        case "login":
+    case "login":
         $head = str_replace("*title*","Login | AIMFit",$head);
         $head = str_replace("*description*","Login a AIMFit",$head);
         $head = str_replace("*keywords*","login, palestra, AIMFit, fitness",$head);
@@ -26,10 +26,15 @@ switch ($uri_case[2]){
         $head = str_replace("*description*","Corsi AIMFit",$head);
         $head = str_replace("*keywords*","corsi, palestra, AIMFit, fitness",$head);
         break;
-        case "admin":
+    case "admin":
         $head = str_replace("*title*","Admin | AIMFit",$head);
         $head = str_replace("*description*","Admin AIMFit",$head);
         $head = str_replace("*keywords*","admin, palestra, AIMFit, fitness",$head);
+        break;
+    case "programma":
+        $head = str_replace("*title*","Programma | AIMFit",$head);
+        $head = str_replace("*description*","Programma settimanale della palestra AIMFit",$head);
+        $head = str_replace("*keywords*","programma, orario, palestra, AIMFit, fitness",$head);
         break;
     default:
         $head = str_replace("*title*","Pagina non trovata",$head);

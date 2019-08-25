@@ -39,6 +39,11 @@ switch ($uri_case[2]){
         $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Prezzi",$header);
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."prezzi.php";
         break;
+    case "programma":
+        $header = str_replace("*linkprogramma*","<li id='active_link'>Programma</li>",$header);
+        $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Programma",$header);
+        $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."programma.php";
+        break;
     default:
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."not_found.php";
         break;
