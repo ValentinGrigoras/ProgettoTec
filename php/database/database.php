@@ -111,5 +111,15 @@ class Database {
         return self::selectRows($query);
     }
 
-    
+     public static function listaCorsi(){
+        $query= "SELECT idCorso,nome
+                FROM Corsi";
+        return self::selectRows($query);
+    }
+    public static function getIdCorso($nomeCorso){
+        $query= "SELECT idCorso
+                FROM Corsi
+                WHERE nome='".$nomeCorso."';";
+        return self::selectRows($query);
+    }
 }

@@ -707,6 +707,8 @@ text-align: center;
 }
 #custom_select label{
 	padding-right: 0.5%;
+  width: 15%;
+  line-height: 2.25;
 }
 #programma select {
    border: 2px outset #3A527B;

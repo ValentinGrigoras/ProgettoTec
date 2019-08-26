@@ -3,6 +3,22 @@ require_once "./../../php/database/database.php";
 use Database\Database;
 $database = new Database();
 $page = file_get_contents(dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "pagine" . DIRECTORY_SEPARATOR . "programma.html");
+
+//
+//
+// genera lista corsi
+	$options="<option onclick=\"filterSelection(0)\"> Tutti </option>";
+	$lista=Database::listaCorsi();
+	$i=0;
+	while ($i<count($lista)){
+		$options.="<option onclick=\"filterSelection(".$lista[$i]['idCorso'].")\"> ".$lista[$i]['nome']." </option>";
+		$i+=1;
+	}
+
+$page=str_replace('*generalistacorsi*', $options , $page);
+	
+
+
 //
 //
 //genera orario desktop
@@ -31,7 +47,9 @@ $page = file_get_contents(dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "htm
     				while ($i<count($dati)){
 						$tabella.= "<div class=\"TimeTableFitnessEntry TimeTableFitnessEntryClass\">
 						<div class=\"TimeTableEntryColor\"></div>
-						<a href=\"http://solarisfitness.it/classes-item/pilates/\" class=\"TimeTableEntryName AltFontCharacter\">".$dati[$i]["Corso"]."</a>
+						<a href=\"http://solarisfitness.it/classes-item/pilates/\" class=\"TimeTableEntryName\">
+						<div class=\"filterDiv ".Database::getIdCorso($dati[$i]['Corso'])[0]['idCorso']."\">".$dati[$i]['Corso']."</div>
+						</a>
 						<div class=\"TimeTableEntryTimePeriod\">
 							<div class=\"TimeTableFrom\"><span>".$dati[$i]["oraI"]."</span></div>
 							<div class=\"TimeTableSeparator\"><span> - </span></div>
