@@ -1215,10 +1215,10 @@ fieldset legend{
   display: inline-block;
 }
 #input_date input{
-  width: 2em;
+  width: 15%;
 }
 #input_date #anno{
-  width: 4em;
+  width: 27%;
 }
 
 /*----------------------------
