@@ -7,7 +7,7 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
             box-sizing: border-box;
-            
+      
 }
 html,body{
     width: 100%;
@@ -707,7 +707,7 @@ text-align: center;
 }
 #custom_select label{
 	padding-right: 0.5%;
-  width: 15%;
+  width: 18%;
   line-height: 2.25;
 }
 #programma select {

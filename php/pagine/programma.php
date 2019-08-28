@@ -45,7 +45,7 @@ $page=str_replace('*generalistacorsi*', $options , $page);
     			if (isset($dati[0])){
     				$i=0;
     				while ($i<count($dati)){
-						$tabella.= "<div class=\"TimeTableFitnessEntry TimeTableFitnessEntryClass filterDiv ".Database::getIdCorso($dati[$i]['Corso'])[0]['idCorso']."\">
+						$tabella.= "<div class=\"TimeTableFitnessEntry filterDiv ".Database::getIdCorso($dati[$i]['Corso'])[0]['idCorso']."\">
 						<div class=\"TimeTableEntryColor\"></div>
 						<a href=\"http://solarisfitness.it/classes-item/pilates/\" class=\"TimeTableEntryName\">
 						<div>".$dati[$i]['Corso']."</div>
