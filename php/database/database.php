@@ -13,7 +13,7 @@ class Database {
 
     public function __construct() {
         if (!self::isConnected()) {
-            self::$connection = new \mysqli(static::HOST_DB, static::USERNAME, static::PASSWORD, static::DB_NAME);
+            self::$connection = new \mysqli(static::HOST_DB, static::email, static::PASSWORD, static::DB_NAME);
             self::$connection->set_charset('utf8');
             
         }
@@ -36,7 +36,7 @@ class Database {
 
     public static function selectUser($email) {
         $email = self::$connection->real_escape_string($email);
-        $query = "SELECT username FROM Utente WHERE username = \"$email\";";
+        $query = "SELECT email FROM Utente WHERE email = \"$email\";";
         $users = self::selectRows($query);
         if (isset($users))
             return $users[0];
@@ -69,7 +69,7 @@ class Database {
         $datanascita = self::$connection->real_escape_string($datanascita);
         $cf = self::$connection->real_escape_string($cf);
         $telefono = self::$connection->real_escape_string($telefono);
-        $query = "INSERT INTO Utente (username, password, nome, cognome, dataDiNascita, CF, tel) VALUES (\"$email\", \"$password\", \"$nome\", \"$cognome\", \"$datanascita\", \"$cf\", \"$telefono\");";
+        $query = "INSERT INTO Utente (email, password, nome, cognome, dataDiNascita, CF, tel) VALUES (\"$email\", \"$password\", \"$nome\", \"$cognome\", \"$datanascita\", \"$cf\", \"$telefono\");";
 
         return self::insertUpdateDelete($query);
 

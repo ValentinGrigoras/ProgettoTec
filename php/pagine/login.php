@@ -12,30 +12,46 @@ $database = new Database();
 if ($database) {
 	$page = file_get_contents(dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "pagine" . DIRECTORY_SEPARATOR . "login.html");
 	
-	if (isset($_POST['signup'])) {
+	if (isset($_POST['signin'])) {
 		$error=false;
+
 		if (!Validator::emailValidator($_POST['email'])){
 			$error=true;
 			$page=str_replace('<p class="hidden">*erroremail*</p>', '<p class="error">Il campo <span xml:lang=\"en\">Email</span> inserito non è corretto. Rispettare il formato indicato.</p>', $page);
 		}
-		$user = Database::selectUser($_POST['email']);
-		if (empty($user)) {
-			if (!Validator::passwordValidator($_POST['password'])){
-				$error=true;
-				$page=str_replace('<p class="hidden">*errorepassword*</p>', '<p class="error">La <span xml:lang=\"en\">password</span> non rispetta le indicazioni. Rispettare il formato indicato.</p>', $page);
+		
+        if(!$error){
+         	if(isset($checkAdmin)){
+				$checkAdmin = $_POST['admin'];
+				echo "sono dentro";
+
+				$ris = Database::getAdmin($_POST['email'],$_POST['password']);
+				var_dump($ris);
+				/*Prelevo l'identificativo dell'utente */
+				$cod=$ris['email'];
+				if ($cod == NULL) $trovato = 0 ;
+					else $trovato = 1;  
+					/* Username e password corrette */
+			
+			if($trovato === 1) {
+
+			 /*Registro la sessione*/
+			  session_register('autorizzato');
+
+			  $_SESSION["autorizzato"] = 1;
+
+			  /*Registro il codice dell'utente*/
+			  $_SESSION['cod'] = $cod;
 			}
-            if (!$errore){
-            	$registeruser = Database::registerUser($_POST['email'], $_POST['password'], $_POST['nome'], $_POST['cognome'], $data, $_POST['cf'], $_POST['telefono']);
-            	if (isset($registeruser) && $registeruser){
-                	$user = Database::selectUser($_POST['email']);
-            		if (isset($user)) {
-                	/*$m = "<div class=\"confirm\"> <span class=\"closebtn\" onclick=\"this.parentElement.style.display='none';\">OK</span> <p> L\'account &egrave; stato creato. <p> </div>";
-					$page=str_replace('*confirmmessage*', $m, $page);*/
-    				}
-				}
-            }
-        }  
+        }
+        else{
+        	echo "controlla utente"; 
+        } 
+        
 	}
-	echo $page;
 }
+	echo $page;
+
+}
+
 ?>
