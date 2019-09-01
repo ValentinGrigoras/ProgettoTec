@@ -14,15 +14,15 @@ html,body{
     height: 100%;
     margin:0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ebebeb;
 }
 body{
-background-color: #f5f5f5;
-}}
+}
 
 h1, h2, h3, h4, h5{
     padding: 2% 0;
     text-align: center;
+    margin: 0 auto;
     color:#0c1f34;
 }
 ul{
@@ -588,7 +588,7 @@ dt{
 }
 
 #allenatori_section{
-    background-color: #f4f4f4;
+    background-color: #fcfcfc;
     overflow: auto;
 }
 #allenatori_section dd p{
@@ -624,6 +624,7 @@ dt{
 #content_corsi{
   overflow: auto;
   margin: 0 auto;
+
 }
 #content_corsi .twoColumnsCardDetails{
   overflow: auto;
@@ -680,7 +681,7 @@ text-align: center;
   padding: 2%;
   overflow: auto;
   width: 100%;
-  background-color: #f2f2f2;
+  background-color: #fcfcfc;
 }
 
 

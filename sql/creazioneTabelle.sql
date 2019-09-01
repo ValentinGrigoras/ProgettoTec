@@ -12,7 +12,7 @@ DROP TABLE IF EXISTS Corsi;
 --
 CREATE TABLE Utente (
   idUtente int(11) AUTO_INCREMENT PRIMARY KEY,
-  username varchar(30) NOT NULL,
+  email varchar(30) NOT NULL,
   password varchar(30) NOT NULL,
   nome varchar(20) ,
   cognome varchar(15),
@@ -106,6 +106,6 @@ CREATE TABLE Orario (
 -- Creazione tabella 'Admin'
 --
 CREATE TABLE Admin (
-  username varchar(30) PRIMARY KEY,
+  email varchar(30) PRIMARY KEY,
   password varchar(30) NOT NULL
 ) ENGINE=InnoDB;
