@@ -13,7 +13,7 @@ class Database {
 
     public function __construct() {
         if (!self::isConnected()) {
-            self::$connection = new \mysqli(static::HOST_DB, static::email, static::PASSWORD, static::DB_NAME);
+            self::$connection = new \mysqli(static::HOST_DB, static::USERNAME, static::PASSWORD, static::DB_NAME);
             self::$connection->set_charset('utf8');
             
         }

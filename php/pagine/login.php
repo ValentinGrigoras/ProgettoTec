@@ -1,6 +1,6 @@
 
 <?php 
-
+session_start();
 require_once "./../../php/database/database.php";
 require_once "./../../php/tools/validator.php";
 
@@ -9,8 +9,9 @@ use Validator\Validator;
 
 $database = new Database();
 
+$page = file_get_contents(dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "pagine" . DIRECTORY_SEPARATOR . "login.html");
+	
 if ($database) {
-	$page = file_get_contents(dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "pagine" . DIRECTORY_SEPARATOR . "login.html");
 	
 	if (isset($_POST['signin'])) {
 		$error=false;
@@ -21,37 +22,43 @@ if ($database) {
 		}
 		
         if(!$error){
+        	$checkAdmin = $_POST['admin'];
          	if(isset($checkAdmin)){
-				$checkAdmin = $_POST['admin'];
+				
 				echo "sono dentro";
-
+				var_dump($_POST['email']);
 				$ris = Database::getAdmin($_POST['email'],$_POST['password']);
 				var_dump($ris);
 				/*Prelevo l'identificativo dell'utente */
-				$cod=$ris['email'];
+				$cod=$ris[0]['email'];
+				var_dump($cod);
 				if ($cod == NULL) $trovato = 0 ;
 					else $trovato = 1;  
 					/* Username e password corrette */
 			
-			if($trovato === 1) {
+				if($trovato === 1) {
 
-			 /*Registro la sessione*/
-			  session_register('autorizzato');
+			 
+			  		$_SESSION["autorizzato"] = 1;
 
-			  $_SESSION["autorizzato"] = 1;
+			  		/*Registro il codice dell'utente*/
+			  		$_SESSION['cod'] = $cod;
+			  		echo"setttato!!";
 
-			  /*Registro il codice dell'utente*/
-			  $_SESSION['cod'] = $cod;
-			}
-        }
-        else{
-        	echo "controlla utente"; 
-        } 
+				}
+        	}
+        	else{
+        		echo "controlla utente"; 
+        	}
+
         
+		}
 	}
-}
 	echo $page;
 
 }
+header("Location: ");
+die();
+
 
 ?>
