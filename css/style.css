@@ -112,6 +112,11 @@ input[type="text"], input[type="password"], textarea{
 .red_error{
   color: red;
 }
+noscript{
+  margin: 1% auto;
+  text-align: center;
+  color: red;
+}
 #main_container{
   max-width: 1200px;
   margin:0 auto 0 auto;
