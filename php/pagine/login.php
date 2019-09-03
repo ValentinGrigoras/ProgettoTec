@@ -14,7 +14,7 @@ $page = file_get_contents(dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "htm
 if ($database) {
 	
 	if (isset($_POST['signin'])) {
-		$error=false;
+		$error=true;
 
 		if (!Validator::emailValidator($_POST['email'])){
 			$error=true;

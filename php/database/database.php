@@ -3,10 +3,15 @@
 namespace Database;
 
 class Database {
-
+/*
     const HOST_DB = "localhost";
     const USERNAME = "tecweb";
     const PASSWORD = "TecWeb";
+    const DB_NAME = "Palestra";
+    */
+    const HOST_DB = "localhost";
+    const USERNAME = "root";
+    const PASSWORD = "Chemer9.";
     const DB_NAME = "Palestra";
 
     private static $connection;
@@ -36,7 +41,7 @@ class Database {
 
     public static function selectUser($email) {
         $email = self::$connection->real_escape_string($email);
-        $query = "SELECT email FROM Utente WHERE email = \"$email\";";
+        $query = "SELECT username FROM Utente WHERE username = \"$email\";";
         $users = self::selectRows($query);
         if (isset($users))
             return $users[0];
@@ -69,7 +74,7 @@ class Database {
         $datanascita = self::$connection->real_escape_string($datanascita);
         $cf = self::$connection->real_escape_string($cf);
         $telefono = self::$connection->real_escape_string($telefono);
-        $query = "INSERT INTO Utente (email, password, nome, cognome, dataDiNascita, CF, tel) VALUES (\"$email\", \"$password\", \"$nome\", \"$cognome\", \"$datanascita\", \"$cf\", \"$telefono\");";
+        $query = "INSERT INTO Utente (username, password, nome, cognome, dataDiNascita, CF, tel) VALUES (\"$email\", \"$password\", \"$nome\", \"$cognome\", \"$datanascita\", \"$cf\", \"$telefono\");";
 
         return self::insertUpdateDelete($query);
 
