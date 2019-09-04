@@ -1,6 +1,9 @@
 
 <?php 
-session_start();
+ if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
 require_once "./../../php/database/database.php";
 require_once "./../../php/tools/validator.php";
 

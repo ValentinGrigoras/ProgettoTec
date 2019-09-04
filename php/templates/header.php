@@ -1,19 +1,22 @@
 <?php
-session_start();
+ if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
 $header = file_get_contents(dirname(dirname(__DIR__)).'/'."html".'/'."templates".'/'."header.html");
 
 //print_r(dirname(dirname(__DIR__))); ///var/www/html/ProgettoTec
-echo "Sessione :". $_SESSION["autorizzato"]  ;
+$page="";
 $user_menu="";
 
 if(isset($_SESSION["autorizzato"]) && $_SESSION["autorizzato"] == 1){
-    $header = str_replace("*linkregistrazione*","<li><a href='./user_panel' tabindex=\"$tabIndex\"></a>Area Personale</li>",$header);
-    $header = str_replace("*linklogin*","<li><a href='./logout' tabindex=\"$tabIndex\">Disconnetti</a></li>",$header);
+    $header = str_replace("*linkregistrazione*","<li><a href='./user_panel' ></a>Area Personale</li>",$header);
+    $header = str_replace("*linklogin*","<li><a href='./logout' >Disconnetti</a></li>",$header);
     $header = str_replace("*welcomeMessage*", '<p>Benvenuto'. $_SESSION['cod']. '</p>', $header);
 }else{
-    $header = str_replace("*linkregistrazione*","<li><a href='./registrazione' tabindex=\"$tabIndex\">Registrati</a></li>",$header);
+    $header = str_replace("*linkregistrazione*","<li><a href='./registrazione' >Registrati</a></li>",$header);
     //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-    $header = str_replace("*linklogin*","<li><a href='./login' tabindex=\"$tabIndex\">Login</a></li>",$header);
+    $header = str_replace("*linklogin*","<li><a href='./login'>Login</a></li>",$header);
     //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
     echo "Sono dentro else";
 }
