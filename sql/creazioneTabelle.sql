@@ -19,7 +19,7 @@ CREATE TABLE Utente (
   dataDiNascita date,
   CF varchar(16) ,
   tel varchar(16),
-  UNIQUE (username)
+  UNIQUE (email)
 ) ENGINE=InnoDB;
 --
 -- Creazione tabella 'Abbonamento'
