@@ -3,17 +3,17 @@
 namespace Database;
 
 class Database {
-/*
+
     const HOST_DB = "localhost";
     const USERNAME = "tecweb";
     const PASSWORD = "TecWeb";
     const DB_NAME = "Palestra";
-    */
+    /*
     const HOST_DB = "localhost";
     const USERNAME = "root";
     const PASSWORD = "Chemer9.";
     const DB_NAME = "Palestra";
-
+*/
     private static $connection;
 
     public function __construct() {
@@ -41,7 +41,7 @@ class Database {
 
     public static function selectUser($email) {
         $email = self::$connection->real_escape_string($email);
-        $query = "SELECT username FROM Utente WHERE username = \"$email\";";
+        $query = "SELECT email FROM Utente WHERE email = \"$email\";";
         $users = self::selectRows($query);
         if (isset($users))
             return $users[0];
@@ -74,7 +74,7 @@ class Database {
         $datanascita = self::$connection->real_escape_string($datanascita);
         $cf = self::$connection->real_escape_string($cf);
         $telefono = self::$connection->real_escape_string($telefono);
-        $query = "INSERT INTO Utente (username, password, nome, cognome, dataDiNascita, CF, tel) VALUES (\"$email\", \"$password\", \"$nome\", \"$cognome\", \"$datanascita\", \"$cf\", \"$telefono\");";
+        $query = "INSERT INTO Utente (email, password, nome, cognome, dataDiNascita, CF, tel) VALUES (\"$email\", \"$password\", \"$nome\", \"$cognome\", \"$datanascita\", \"$cf\", \"$telefono\");";
 
         return self::insertUpdateDelete($query);
 
@@ -93,6 +93,12 @@ class Database {
          $email = self::$connection->real_escape_string($email);
         $password = self::$connection->real_escape_string($password);
     $query = "SELECT  email, password FROM Admin WHERE email=\"$email\" AND password=\"$password\"";
+    return self::selectRows($query);
+    }
+        public static function getUser($email, $password) {
+         $email = self::$connection->real_escape_string($email);
+        $password = self::$connection->real_escape_string($password);
+    $query = "SELECT  email, password FROM Utente WHERE email=\"$email\" AND password=\"$password\"";
     return self::selectRows($query);
     }
     //genera orario
