@@ -1373,4 +1373,36 @@ margin: 0 auto;
 
 
 /*++++++++++++++++++admin_panel+++++++++++++++++*/
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1%;
 
+  text-decoration: none;
+  font-size: 110%;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  text-decoration: underline;
+}
+
+.topnav a.active {
+  background-color: #b30000;
+  color: white;
+}
+
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right {
+  float: right;
+  padding: 1%;
+}
