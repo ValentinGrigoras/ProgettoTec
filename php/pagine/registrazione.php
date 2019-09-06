@@ -1,6 +1,5 @@
 
 <?php 
-
 require_once "./../../php/database/database.php";
 require_once "./../../php/tools/validator.php";
 
