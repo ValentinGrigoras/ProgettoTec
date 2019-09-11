@@ -11,7 +11,7 @@ $page = file_get_contents(dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "htm
 	$lista=Database::listaCorsi();
 	$i=0;
 	while ($i<count($lista)){
-		$options.="<option onclick=\"filterSelection(".$lista[$i]['idCorso'].")\"> ".$lista[$i]['nome']." </option>";
+		$options.="<option> ".$lista[$i]['nome']." </option>";
 		$i+=1;
 	}
 

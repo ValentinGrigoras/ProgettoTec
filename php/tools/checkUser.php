@@ -2,21 +2,21 @@
 require_once "./../database/database.php";
 
 use Database\Database;
-session_start(); //inizio la sessione
-//includo i file necessari a collegarmi al db con relativo script di accesso
+ if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
+
 
 
 //mi collego
-$db = new Database();
-$checkAdmin = $_POST['admin'];
-if(isset($checkAdmin) && $db && $_SERVER["REQUEST_METHOD"] == "POST"){
-
-echo "sono dentro";
-		$ris = Database::getAdmin($_POST['email'],$_POST['password']);
-		$riga=mysqli_fetch_array($ris);  
-
+$database = new Database();
+echo $_POST['signin'];
+if($database && isset($_POST['signin'])) {
+		$ris = Database::getUser($_POST['email'],$_POST['password']);
+		var_dump($ris);
 		/*Prelevo l'identificativo dell'utente */
-		$cod=$riga['email'];
+		$cod=$ris[0]['email'];
 
 		/* Effettuo il controllo */
 		if ($cod == NULL) $trovato = 0 ;
@@ -25,22 +25,23 @@ echo "sono dentro";
 		/* Username e password corrette */
 		if($trovato === 1) {
 
-		 /*Registro la sessione*/
-		  session_register('autorizzato');
-
 		  $_SESSION["autorizzato"] = 1;
 
 		  /*Registro il codice dell'utente*/
 		  $_SESSION['cod'] = $cod;
 
 		 /*Redirect alla pagina riservata*/
-		   echo '<script language=javascript>document.location.href="panel_user.php"</script>'; 
+		   //echo '<script language=javascript>document.location.href="panel_user.php"</script>';
+		   header("Location: http://".$_SERVER['HTTP_HOST']."/"."ProgettoTec/user_panel");
 		   //return true
 		} else {
-
+			
+		$_SESSION['error'] = 1;
 		/*Username e password errati, redirect alla pagina di login*/
-		 echo '<script language=javascript>document.location.href="ProgettoTec"</script>';
+		 //echo '<script language=javascript>document.location.href="ProgettoTec"</script>';
+		header("Location: http://".$_SERVER['HTTP_HOST']."/"."ProgettoTec/login");
 		 //return false
 		}
 	}
+
 ?>

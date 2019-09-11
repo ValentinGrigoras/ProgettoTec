@@ -84,6 +84,10 @@ class Database {
         $query = "SELECT nome, descrizione, durata, livello, costo, nomeImg FROM Corsi";
         return self::selectRows($query);
     }
+    public static function selectTrainers() {
+        $query = "SELECT idAllenatore, nome, cognome, email,img FROM Allenatore";
+        return self::selectRows($query);
+    }
     public static function selectPrices() {
     $query = "SELECT  tipoAbbonamento, prezzo, descrizione, nomeImg FROM Abbonamento";
     return self::selectRows($query);

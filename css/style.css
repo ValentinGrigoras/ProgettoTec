@@ -152,11 +152,18 @@ text-decoration: none;
    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.threeColumnsCard dd img{
+.threeColumnsCard dd .corsiImg{
     max-width: 100%;
     height: auto;
     min-height: 19em;
-    width: auto\9; *//* ie8 */
+    width: auto\9; /* ie8 */
+}
+.threeColumnsCard dd .allenatoreImg{
+    max-width: 30%;
+    height: auto;
+    display: block;
+  margin: 0 auto;
+  padding-bottom: 10%;
 }
 .threeColumnsCard dd{
   background: none no-repeat left top;
@@ -572,7 +579,10 @@ dt{
     font-size: 80%;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
+.threeColumnsCard dd .contactTrainer{
+  display: block;
+text-align: center;
+}
 #allenatori_section .twoColumnsCardInner .socials_links{
     width: 100%;
     float: right;

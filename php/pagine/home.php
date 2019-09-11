@@ -1,5 +1,9 @@
 
 <?php 
+ if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
 
 require_once "./../../php/tools/validator.php";
 use Validator\Validator;
@@ -8,9 +12,8 @@ use Validator\Validator;
 $page = file_get_contents(dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "pagine" . DIRECTORY_SEPARATOR . "home.html");
 $page = str_replace("*linkabbonamenti*","<a class='btn' href='./prezzi'>Scopri</a>",$page);
 
-////
-////
-//// Contact form
+
+// Contact form
 if (!isset($_POST['contact_us'])) {//non è stato fatto submit
 	$page=str_replace('*email*', "" , $page);
 	$page=str_replace('*nome*', "" , $page);
