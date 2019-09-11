@@ -20,4 +20,4 @@ function displayAll(){
   }
 }
 var sel = document.getElementById("seleziona_corso");
-sel.onClick= alert(sel.options[sel.selectedIndex].value);
+sel.addEventListener('change', function() {filterSelection(sel.options[sel.selectedIndex].value)} ,false);
