@@ -1,0 +1,166 @@
+<head>
+        <link rel="stylesheet" href="../../css/cssbackend/styleBackend.css" media="handheld, screen, only screen"  type="text/css"/>
+        <link rel="stylesheet" href="../../css/cssbackend/smallPhone.css" media="handheld, screen and (max-width:480px), only screen and (max-device-width:480px)"  type="text/css"/>
+        <link rel="stylesheet" media="screen and (min-device-width: 800px)" href="800.css" />
+    
+    </head>
+    
+    
+    
+    <body>
+    
+    <!-- Top navigation -->
+    <div class="topnav">
+    
+      <!-- Centered link -->
+      <div class="topnav-centered">
+        <a href="#adminpanel" >Admin panel</a>
+      </div>
+      
+      <!-- Left-aligned links (default) -->
+      <a href="../../php/pagine/admin_panel.php">Corsi</a>
+      <a href="viewcorsi.php" class="active">Lista dei corsi</a>
+      <a href="#contact">Allenatori</a>
+      
+      <!-- Right-aligned links -->
+      <div class="topnav-right">
+        <a href="#logout">Esci</a>
+      </div>
+      
+    </div>
+    
+    <div id="titolo">
+      <h3>Modifica corsi:</h3>
+    </div>
+    
+    <!--
+    <div class="content-menu">
+    <ul class="vertical-menu">
+        <li><a href="../../php/pagine/admin_panel.php" class="active">Gestione attività</a></li>
+        <li><a href="viewcorsi.php">Lista dei corsi</a></li>
+        <li><a>Lista abbonamenti</a></li>
+    </ul>
+    </div>
+    -->
+    <div class="container">
+            <form action="/action_page.php">
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">Nome:</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="fname" name="firstname" placeholder="nome del corso">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="orarioCorsi">Orario inizio:</label>
+              </div>
+              <div class="col-75">
+                <input type="time" id="orarioCorsi" name="orario" placeholder="livello del corso" value="00:00">
+              </div>
+            </div>
+            <div class="row">
+                    <div class="col-25">
+                      <label for="orarioCorsi">Orario fine:</label>
+                      
+                    </div>
+                    <div class="col-75">
+                      <input type="time" id="orarioCorsi" name="orario" placeholder="livello del corso" value="00:00">
+                    </div>
+                  </div>
+            <div class="row">
+                    <div class="col-25">
+                            <label for="country">Giorno:</label>
+                          </div>
+                <div class="col-75">
+                    <select id="country" name="country">
+                        <option>Lunedì</option>
+                        <option>Martedì</option>
+                        <option>Mercoledì</option>
+                        <option>Giovedì</option>
+                        <option>Venerdì</option>
+                        <option>Sabato</option>
+                        <option>Domenica</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-25">
+                      <label for="country">Livello del corso:</label>
+                    </div>
+                    <div class="col-75">
+                      <select id="country" name="country">
+                        <option value="australia">Allenamento posturale</option>
+                        <option value="canada">Balla brucia</option>
+                        <option value="usa">Body stability</option>
+                        <option value="canada">Cardio boxe</option>
+                        <option value="usa">Cardio class</option>
+      
+                        <option value="australia">GAG</option>
+                        <option value="canada">Sppining</option>
+                        <option value="usa">Corpo libero</option>
+                        <option value="canada">Pilates</option>
+                        <option value="usa">Power pump</option>
+      
+                        <option value="australia">Interval training</option>
+                        <option value="canada">Power tone</option>
+                        <option value="usa">Corpo libero</option>
+                        <option value="canada">Step tone</option>
+                        <option value="usa">Total body</option>
+                        <option value="usa">Strong</option>
+                      </select>
+                    </div>
+                  </div>
+            <div class="row">
+                    <div class="col-25">
+                      <label for="lname">Prezzo:</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" id="lname" name="lastname" placeholder="prezzo">
+                    </div>
+                  </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="country">Tipologia del corso:</label>
+              </div>
+              <div class="col-75">
+                <select id="country" name="country">
+                  <option value="australia">Allenamento posturale</option>
+                  <option value="canada">Balla brucia</option>
+                  <option value="usa">Body stability</option>
+                  <option value="canada">Cardio boxe</option>
+                  <option value="usa">Cardio class</option>
+
+                  <option value="australia">GAG</option>
+                  <option value="canada">Sppining</option>
+                  <option value="usa">Corpo libero</option>
+                  <option value="canada">Pilates</option>
+                  <option value="usa">Power pump</option>
+
+                  <option value="australia">Interval training</option>
+                  <option value="canada">Power tone</option>
+                  <option value="usa">Corpo libero</option>
+                  <option value="canada">Step tone</option>
+                  <option value="usa">Total body</option>
+                  <option value="usa">Strong</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="subject">Descrizione:</label>
+              </div>
+              <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Scrivi qualcosa" style="height:200px"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <input id="salva" type="submit" value="Salva">
+            </div>
+            </form>
+          </div>
+    
+    
+    </body>
+    

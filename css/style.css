@@ -156,7 +156,7 @@ text-decoration: none;
     max-width: 100%;
     height: auto;
     min-height: 19em;
-    width: auto\9; *//* ie8 */
+    width: auto\9; /* ie8 */
 }
 .threeColumnsCard dd{
   background: none no-repeat left top;
@@ -1311,7 +1311,6 @@ input, textarea {
   font-family: RobotoSlab,Arial,sans-serif;
 }
 
-*/
 
 /*not_found page*/
 

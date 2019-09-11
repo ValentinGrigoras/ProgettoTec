@@ -1,58 +1,62 @@
+<head>
+        <link rel="stylesheet" href="../../css/cssbackend/styleBackend.css" media="handheld, screen, only screen"  type="text/css"/>
+        <link rel="stylesheet" href="../../css/cssbackend/smallPhone.css" media="handheld, screen and (max-width:480px), only screen and (max-device-width:480px)"  type="text/css"/>
+        <link rel="stylesheet" media="screen and (min-device-width: 800px)" href="800.css" />
+    
+</head>
+
 
 
 <!-- ------------------------------------------------------ -->
 <div>
-    <div >
-        <div id="intestazione">
-            <h1> Unisciti a AIMFit </h1>
-            <p> Offre soluzioni d’allenamento in grado di rispondere ad ogni esigenza! </p>
-        </div>
-        <div id="contenuto">
-            <div id="dati">
-                <form id="signup_form" action="./admin" method="POST">
-                    <h2> Amministratore </h2>
-                    <p>I campi con (*) sono obbligatori.</p>
-
-                    <fieldset>
-                        <legend>Account</legend>
-                        <div>
-                            <div class="required">
-                                <label for="email" class="input_label ">Email</label>
-                                <input tabindex="*tabindexemail*" type="text" name="email" id="email" *disabled* />
-                            </div>
-                            <p class="form_note">Inserire l'<span xml:lang="en">email</span> nel formato casella@dominio.</p>
-                            <p >*erroremail*</p>
-                        </div>
-                        <div>
-                            <div class="required">
-                                <label for="password" class="input_label ">Password</label>
-                                <input tabindex="*tabindexpassword*" type="password" name="password" id="password"  *disabled*/>
-                            </div>
-                            <p class="form_note">Inserire la password scelta.</p>
-                            <p >*errorpassword*</p>
-                        </div>
-                 
-                        
-                    </fieldset>
-                    <p class="form_note">Facendo clic su "Crea account" di seguito, accetti i nostri Termini di servizio e l'Informativa sulla privacy. Occasionalmente ti invieremo e-mail relative all'account.</p>
-                    <button id="signup" type="submit" name="signup" value="signup">Login</button>
-                    *confirmmessage*
-                </form>
+        <div >
+            <div id="intestazione" >
             </div>
-            <div id="descrizione">
-                <h2> Benefici </h2>
-                <span class="hr"> </span>
-                <ul>
-                    <li> Ottieni un abbonamento </li>
-                    <li> Aggiungi corsi </li>
-                    <li> Gestisci i costi </li>
-                </ul>
+            <div id="contenuto">
+                <div id="dati">
+                    <form id="signin_form" action="./login" method="POST">
+                        <div id="intestazione" >
+                        <h2> Entra nel tuo account </h2>
+                        <p>I campi con (*) sono obbligatori.</p>
+                        </div>
+    
+                        <fieldset>
+                            <legend></legend>
+
+                        <div class="form_entry">
+                            <div class="required">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input_feedb">
+                                <input tabindex="*tabindexemail*" type="text" name="email" id="email" *disabled* />
+                                <p class="form_note">Inserire l'<span xml:lang="en">email</span> nel formato casella@dominio.</p>
+                                <p class="hidden">*erroremail*</p>
+                            </div>
+                        </div>
+                        <div class="form_entry">
+                            <div class="required">
+                                <label for="password" >Password</label>
+                            </div>
+                            <div class="input_feedb">
+                                <input tabindex="*tabindexpassword*" type="password" name="password" id="password"  *disabled*/>
+                                <p class="form_note">Inserire la password scelta.</p>
+                                <p class="hidden">*errorpassword*</p>
+
+                            </div>
+                            
+                        </div>
+                        </fieldset>
+                        <button id="signin" type="submit" name="signin" value="signup">Login</button>
+                        <span id="confirmmessage">*confirmmessage*</span>
+                        
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-<!-- ------------------------------------------------------ -->
-<script src="../js/jquery-1.11.0.min.js" type="text/javascript"></script>
-<script src="../js/slideshow.js" type="text/javascript"></script>
-
+    
+    <!-- ------------------------------------------------------ -->
+    <script src="../js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="../js/slideshow.js" type="text/javascript"></script>
+    
+    

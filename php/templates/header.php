@@ -1,4 +1,5 @@
 <?php
+ob_start();
  if(!isset($_SESSION)) 
     { 
         session_start(); 
@@ -74,6 +75,11 @@ switch ($uri_case[2]){
         $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Programma",$header);
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."programma.php";
         break;
+        case "admin":
+        $header = str_replace("*linkprogramma*","<li id='active_link'>Admin Login</li>",$header);
+        $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Admin Login",$header);
+        $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."admin_login.php";
+        break;
     default:
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."not_found.php";
         break;
@@ -103,6 +109,8 @@ if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
     $header = str_replace("*linkregistrazione*","<li><a href='./area_personale' tabindex=\"$tabIndex\">Area Personale</a></li>",$header);
     $header = str_replace("*linklogin*","<li><a href='./logout' tabindex=\"$tabIndex\">Logout</a></li>",$header);
 }
+
+//$header = str_replace("*linkprezzi*","<li><a href='./admin' tabindex=\"$tabIndex\">Adminlogin</a></li>",$header);
 
 echo "sono 3";
 require_once 'head.php';
