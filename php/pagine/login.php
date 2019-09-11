@@ -33,8 +33,10 @@ if ($database) {
 			  		$_SESSION["autorizzato"] = 1;
 			  		/*Registro il codice dell'utente*/
 			  		$_SESSION['cod'] = $cod;
+			  		/*
 			  		$page = str_replace("*ciao*", "class=\"hidden\"", $page);
-			  		$page.= "<h1> sei stato loggato </h1>";
+			  		$page.= "<h1> sei stato loggato </h1>";*/
+			  		header("location: ./");
 				}        
 		}
 	}

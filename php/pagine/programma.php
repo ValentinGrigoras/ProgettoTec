@@ -7,11 +7,11 @@ $page = file_get_contents(dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "htm
 //
 //
 // genera lista corsi
-	$options="<option onclick=\"filterSelection(0)\"> Tutti </option>";
+	$options="<option value=\"0\"> Tutti </option>";
 	$lista=Database::listaCorsi();
 	$i=0;
 	while ($i<count($lista)){
-		$options.="<option onclick=\"filterSelection(".$lista[$i]['idCorso'].")\"> ".$lista[$i]['nome']." </option>";
+		$options.="<option value=\"".$lista[$i]['idCorso']."\"> ".$lista[$i]['nome']." </option>";
 		$i+=1;
 	}
 
