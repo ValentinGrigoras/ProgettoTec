@@ -18,7 +18,7 @@ $price = "";
     $price .= '<dl class="threeColumnsCard">';
     $price .= '<dt>'.$prices[$indice]['tipoAbbonamento'].'</dt>';
     $price .= '<dd>';
-    $price .= '<img src="css/img/abbonamenti/'.$prices[$indice]['nomeImg']. '"' . ' alt="immagine ' . $prices[$indice]['tipoAbbonamento'] . '"/>';
+    $price .= '<img class= "allenatoreImg" src="css/img/abbonamenti/'.$prices[$indice]['nomeImg']. '"' . ' alt="immagine ' . $prices[$indice]['tipoAbbonamento'] . '"/>';
     $price .= '<p class="prezzoAbbonamento">&euro;' . $prices[$indice]['prezzo'].'</p>';
     $price .= '<p>' .$prices[$indice]['descrizione'] .'</p>';
     $price .=  '</dd>';
