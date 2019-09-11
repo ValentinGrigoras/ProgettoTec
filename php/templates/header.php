@@ -4,13 +4,13 @@ ob_start();
     { 
         session_start(); 
     }
+    $uri_case = explode('/', $_SERVER['REQUEST_URI'], 3);
+ 
 $header = file_get_contents(dirname(dirname(__DIR__)).'/'."html".'/'."templates".'/'."header.html");
 
 //print_r(dirname(dirname(__DIR__))); ///var/www/html/ProgettoTec
 $page="";
 
-
-$uri_case = explode('/', $_SERVER['REQUEST_URI'], 3);
 $trovato=false;
 
 if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
@@ -31,10 +31,10 @@ if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
     }
 }else{ //utente autenticato
     switch ($uri_case[2]){
-        case "area_personale":
+        case "user_panel":
             $header = str_replace("*linkregistrazione*","<li id='active_link'>Area Personale</li>",$header);
             $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Area Personale",$header);
-            $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."area_personale.php";
+            $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."user_panel.php";
             $trovato=true;
             break;
         case "logout":
@@ -42,7 +42,7 @@ if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
             $header =str_replace("*linkregistrazione*","<li><a href='./registrazione' tabindex=\"$tabIndex\">Registrazione</a></li>",$header);
             $header = str_replace("*linklogin*","<li id='active_link'>Login</li>",$header);
             $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Login",$header);
-            $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."login.php";
+           header("location: ./");
 
             $trovato=true;
             break;
@@ -75,12 +75,19 @@ switch ($uri_case[2]){
         $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Programma",$header);
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."programma.php";
         break;
-        case "admin":
-        $header = str_replace("*linkprogramma*","<li id='active_link'>Admin Login</li>",$header);
-        $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Admin Login",$header);
-        $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."admin_login.php";
+
+    case "allenatori":
+        $header = str_replace("*linkallenatori*","<li id='active_link'>Allenatori</li>",$header);
+        $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Allenatori",$header);
+        $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."allenatori.php";
+
         break;
     default:
+    case "su_di_noi":
+        $header = str_replace("*linkchisiamo*","<li id='active_link'>Chi siamo</li>",$header);
+        $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Su di noi",$header);
+        $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."su_di_noi.php";
+        break;
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."not_found.php";
         break;
 }}
@@ -92,7 +99,7 @@ $header = str_replace("*linkchisiamo*","<li><a href='./su_di_noi' tabindex=\"$ta
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $header = str_replace("*linkallenatori*","<li><a href='./allenatori' tabindex=\"$tabIndex\">Allenatori</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-$header = str_replace("*linkcontattaci*","<li><a href='./contattaci' tabindex=\"$tabIndex\">Contattaci</a></li>",$header);
+$header = str_replace("*linkcontattaci*","<li><a href='./#cont-form-map' tabindex=\"$tabIndex\">Contattaci</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $header = str_replace("*linkcorsi*","<li><a href='./corsi' tabindex=\"$tabIndex\">Corsi</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
@@ -106,14 +113,13 @@ if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
     $header = str_replace("*linklogin*","<li><a href='./login' tabindex=\"$tabIndex\">Login</a></li>",$header);
 }else{
     //utente autenticato
+    echo "sono autenticato";
     $header = str_replace("*linkregistrazione*","<li><a href='./area_personale' tabindex=\"$tabIndex\">Area Personale</a></li>",$header);
     $header = str_replace("*linklogin*","<li><a href='./logout' tabindex=\"$tabIndex\">Logout</a></li>",$header);
 }
-
-//$header = str_replace("*linkprezzi*","<li><a href='./admin' tabindex=\"$tabIndex\">Adminlogin</a></li>",$header);
-
-echo "sono 3";
 require_once 'head.php';
+
 echo $header;
+
 require_once $page;
 require_once 'footer.php';

@@ -19,7 +19,7 @@ CREATE TABLE Utente (
   dataDiNascita date,
   CF varchar(16) ,
   tel varchar(16),
-  UNIQUE (username)
+  UNIQUE (email)
 ) ENGINE=InnoDB;
 --
 -- Creazione tabella 'Abbonamento'
@@ -84,7 +84,8 @@ CREATE TABLE Allenatore (
   email varchar(255),
   tel varchar(16),
   dataDiNascita date,
-  salaPesi boolean NOT NULL
+  salaPesi boolean NOT NULL,
+  img varchar(255) NOT NULL
 ) ENGINE=InnoDb;
 --
 -- Creazione tabella 'Orario'

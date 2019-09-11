@@ -1,2 +1,3 @@
 DirectoryIndex /ProgettoTec/php/templates/header.php
 FallbackResource /ProgettoTec/php/templates/header.php
+RewriteRule ^php/pagine/home.php#cont-form-map /home.php#six [R,NE,QSA,L]

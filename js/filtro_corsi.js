@@ -13,10 +13,11 @@ function filterSelection(c) {
     }
   }
 }
-
 function displayAll(){
   x = document.getElementsByClassName("filterDiv"); 
   for (i = 0; i < x.length; i++) {
     x[i].style.display="block";
   }
 }
+var sel = document.getElementById("seleziona_corso");
+sel.addEventListener('change', function() {filterSelection(sel.options[sel.selectedIndex].value)} ,false);

@@ -1,6 +1,6 @@
 
 function hasClass(element, className) {
-    return (" " + element.className + " ").indexOf(" " + className + " ") > -1;
+    return (element.className).indexOf(className) > -1;
 }
 
 function removeClass(element, nomeClasse) {
@@ -50,24 +50,20 @@ function mostraErrore(container, testo) {
     var paragraph = document.createElement("p");
     paragraph.className = "error";
     paragraph.innerHTML = testo;
-    container.parentNode.appendChild(paragraph);
+    container.parentElement.appendChild(paragraph);
 }
 
 function validazione(input, check) {
-    var i = document.getElementById(input.id);
-    check[input.id] = input.regexp.test(i.value);
-    if (check[input.id]) {
+    console.log("sono in validazione()");
+    console.log(input);
+    var i = document.getElementById(input.name);
+    check[input.name] = input.regexp.test(i.value);
+    alert("prima del if");
+    if (check[input.name]) {
         togliErrore(i);
     } else {
-        mostraErrore(i, input.output);
+        mostraErrore(i, input.error);
     }
-}
-
-function validazioneOnBlur(input, check) {
-    var i = document.getElementById(input.id);
-    i.onblur = function () {
-        validazione(input, check);
-    };
 }
 
 function validazioneData(giorno, mese, anno, errore, check) {

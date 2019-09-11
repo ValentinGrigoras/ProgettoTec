@@ -1,16 +1,22 @@
 
 <?php 
-
+ if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }
+require_once "./../../php/database/database.php";
 require_once "./../../php/tools/validator.php";
+
+use Database\Database;
 use Validator\Validator;
 
-
+$database = new Database();
+if ($database) {
 $page = file_get_contents(dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "pagine" . DIRECTORY_SEPARATOR . "home.html");
 $page = str_replace("*linkabbonamenti*","<a class='btn' href='./prezzi'>Scopri</a>",$page);
 
-////
-////
-//// Contact form
+
+// Contact form
 if (!isset($_POST['contact_us'])) {//non è stato fatto submit
 	$page=str_replace('*email*', "" , $page);
 	$page=str_replace('*nome*', "" , $page);
@@ -76,7 +82,47 @@ if (!isset($_POST['contact_us'])) {//non è stato fatto submit
 	}
 } 
 //// End contact form
-////
-//// 
+$trainers = Database::selectTrainers();
+if(isset($trainers))
+{
+$trainer = "";
+  for($indice = 0;$indice<4; $indice++){
+
+    $trainer .= '<dl class="threeColumnsCard">';
+    $trainer .= '<dt>'.$trainers[$indice]['cognome']. " ".$trainers[$indice]['nome']. '</dt>';
+    $trainer .= '<dd class="cont_corso">';
+     $trainer .= '<img class= "allenatoreImg" src="img/allenatori/'.$trainers[$indice]['img']. '"' . ' alt="immagine allenatore ' . $trainers[$indice]['nome'] . '"/>';
+    $trainer .= '<a class="contactTrainer" href="mailto:' . $trainers[$indice]['email'] .'">'. $trainers[$indice]['email'] .'</a>';
+    $trainer .=  '</dd>';
+    $trainer .= '</dl>';
+
+
+  }
+
+  $courses = Database::selectCourses();
+if(isset($courses))
+
+$course = "";
+  for($indice = 0;$indice<3; $indice++){
+
+    $course .= '<dl class="threeColumnsCard">';
+    $course .= '<dt>'.$courses[$indice]['nome'].'</dt>';
+    $course .= '<dd class="cont_corso">';
+    $course .= '<img class = "corsiImg" src="img/corsi/'.$courses[$indice]['nomeImg']. '"' . ' alt="immagine ' . $courses[$indice]['nome'] . '"/>';
+    $course .= '<p class="livello_corso">Livello: ' . $courses[$indice]['livello'] .'</p>';
+    $course .= '<p class="livello_corso">Durata sessione: ' . $courses[$indice]['durata'] . ' min'.'</p>';
+    $course .= '<p class="livello_corso">Costo al mese : ' . $courses[$indice]['costo'] . ' &euro;' . '</p>';
+    $course .= '<p class="desc_corso">' . $courses[$indice]['descrizione'] . '</p>';
+    $course .=  '</dd>';
+    $course .= '</dl>';
+
+
+  }
+  //var_dump(allCourses);
+  $page = str_replace("*allenatoriHome*", $trainer, $page);
+    $page = str_replace("*corsiHome*", $course, $page);
+}
+
+}
 echo $page;
 ?>
