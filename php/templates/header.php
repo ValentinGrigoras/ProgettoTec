@@ -109,7 +109,6 @@ if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
     $header = str_replace("*linkregistrazione*","<li><a href='./area_personale' tabindex=\"$tabIndex\">Area Personale</a></li>",$header);
     $header = str_replace("*linklogin*","<li><a href='./logout' tabindex=\"$tabIndex\">Logout</a></li>",$header);
 }
-
 require_once 'head.php';
 
 echo $header;
