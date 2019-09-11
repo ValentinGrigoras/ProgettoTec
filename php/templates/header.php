@@ -78,8 +78,13 @@ switch ($uri_case[2]){
         $header = str_replace("*linkallenatori*","<li id='active_link'>Allenatori</li>",$header);
         $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Allenatori",$header);
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."allenatori.php";
-break;
+        break;
     default:
+    case "su_di_noi":
+        $header = str_replace("*linkchisiamo*","<li id='active_link'>Chi siamo</li>",$header);
+        $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Su di noi",$header);
+        $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."su_di_noi.php";
+        break;
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."not_found.php";
         break;
 }}
@@ -91,7 +96,7 @@ $header = str_replace("*linkchisiamo*","<li><a href='./su_di_noi' tabindex=\"$ta
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $header = str_replace("*linkallenatori*","<li><a href='./allenatori' tabindex=\"$tabIndex\">Allenatori</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-$header = str_replace("*linkcontattaci*","<li><a href='./contattaci' tabindex=\"$tabIndex\">Contattaci</a></li>",$header);
+$header = str_replace("*linkcontattaci*","<li><a href='./#cont-form-map' tabindex=\"$tabIndex\">Contattaci</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $header = str_replace("*linkcorsi*","<li><a href='./corsi' tabindex=\"$tabIndex\">Corsi</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
