@@ -6,6 +6,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color:#ebebeb;
   }
   
   .topnav {
@@ -288,27 +289,29 @@ input[type=submit]:hover {
 }
 #content{
   overflow: hidden;
+
 }
 .form_entry{
   width: 80%;
   margin-left: 12%;
   margin-bottom: 3%;
   overflow: auto;
+
 }
 .form_entry textarea{
   height: 1em;
   resize: none;
+
 }
 #intestazione{
   text-align: center;
+
 }
 #intestazione h1{
   margin-top: 7%;
   margin-bottom: 0.25%;
 }
-#entraNelAccount{
-  margin-left: 2%;
-}
+
 #dati{
   width: 65%;
   float: left;
@@ -333,6 +336,7 @@ input[type=submit]:hover {
   margin: 15% 3% 0 3%;
   text-align: center;
   padding: 3% 0;
+  background-color:#b30000;
 }
 
 

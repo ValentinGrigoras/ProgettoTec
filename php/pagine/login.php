@@ -21,8 +21,7 @@ if ($database) {
 			$page=str_replace('<p class="hidden">*erroremail*</p>', '<p class="error">Il campo <span xml:lang=\"en\">Email</span> inserito non è corretto. Rispettare il formato indicato.</p>', $page);
 			$_SESSION['error'] = 0;
 		}
-<<<<<<< HEAD
-		
+
         if(!$error){
 				$ris = Database::getUser($_POST['email'],$_POST['password']);
 				
@@ -39,16 +38,18 @@ if ($database) {
 					  $page.= "<h1> sei stato loggato </h1>";
 					
 				}        
-=======
+
 		else if (isset($_SESSION["autorizzato"]) &&  $_SESSION["autorizzato"]==1){
 			$page = str_replace("*ciao*", "class=\"hidden\"", $page);
 			$page.= "<h1> sei già loggato </h1>";
->>>>>>> e8936f6d850d775d803c3017f78e56e6cd9a3041
+
 		}
 			  		
 
 	}        
 		
+
 	
-	echo $page;
+}
+echo $page;
 ?>
