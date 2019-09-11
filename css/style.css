@@ -152,11 +152,18 @@ text-decoration: none;
    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.threeColumnsCard dd img{
+.threeColumnsCard dd .corsiImg{
     max-width: 100%;
     height: auto;
     min-height: 19em;
-    width: auto\9; *//* ie8 */
+    width: auto\9; /* ie8 */
+}
+.threeColumnsCard dd .allenatoreImg{
+    max-width: 30%;
+    height: auto;
+    display: block;
+  margin: 0 auto;
+  padding-bottom: 10%;
 }
 .threeColumnsCard dd{
   background: none no-repeat left top;
@@ -572,7 +579,10 @@ dt{
     font-size: 80%;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
+.threeColumnsCard dd .contactTrainer{
+  display: block;
+text-align: center;
+}
 #allenatori_section .twoColumnsCardInner .socials_links{
     width: 100%;
     float: right;
@@ -1373,32 +1383,36 @@ margin: 0 auto;
 
 
 /*++++++++++++++++++admin_panel+++++++++++++++++*/
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
 .topnav a {
   float: left;
-  display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 1%;
+
   text-decoration: none;
-  font-size: 17px;
+  font-size: 110%;
 }
 
 .topnav a:hover {
   background-color: #ddd;
   color: black;
+  text-decoration: underline;
 }
 
 .topnav a.active {
-  background-color: #4CAF50;
+  background-color: #b30000;
   color: white;
 }
 
-.topnav .icon {
-  display: none;
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right {
+  float: right;
+  padding: 1%;
 }
