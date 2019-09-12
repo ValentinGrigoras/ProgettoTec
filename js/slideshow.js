@@ -21,3 +21,8 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block"; 
 }
+
+var prev=document.getElementById("prev");
+var next=document.getElementById("next");
+prev.addEventListener('click', function(){plusSlides(-1);},false);
+next.addEventListener('click', function(){plusSlides(1);}, false);

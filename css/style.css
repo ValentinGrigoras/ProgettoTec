@@ -936,8 +936,10 @@ text-align: center;
   text-align: justify;
   padding: 5% 3% 5% 3%;
 }
-
-.slideshow-container {
+#content_about_us #paragrafo p{
+  padding-bottom: 2%;
+}
+#slideshow-container {
   width: 50%;
   float:right;
   padding: 3%;
@@ -947,11 +949,11 @@ text-align: center;
 .mySlides {
   display: none;
 }
-.slideshow-container img{
+#slideshow-container img{
   width: 100%;
 }
 /* Next & previous buttons */
-.prev,.next {
+#prev,#next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -964,14 +966,14 @@ text-align: center;
 }
 
 /* Position the "next button" to the right */
-.next {
+#next {
   right: 0;
 }
-.prev {
+#prev {
   left: 0;
 }
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+#prev:hover, #next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
@@ -983,9 +985,6 @@ text-align: center;
   text-align: center;
 }
 
-.active, {
-  background-color: #717171;
-}
 
 /* Fading animation */
 .fade {
