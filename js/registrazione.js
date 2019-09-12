@@ -11,7 +11,7 @@ var checks = {};
 for (i = 0; i < inputs.length; i+=1){
   var x=document.getElementById(inputs[i].name);
   console.log(inputs[i]);
-  x.addEventListener('blur',function() {console.log(inputs[i]); validazione(inputs[i],checks); },false);
+  x.addEventListener('blur',validazione(inputs[i],checks),false);
   
 }
 };
