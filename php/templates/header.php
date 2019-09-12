@@ -8,12 +8,7 @@
 $header = file_get_contents(dirname(dirname(__DIR__)).'/'."html".'/'."templates".'/'."header.html");
 
 //print_r(dirname(dirname(__DIR__))); ///var/www/html/ProgettoTec
-$page="";
-echo "explode";
-$last_uri_parts = explode('?', $_SERVER['REQUEST_URI'], 2);
-echo "substr";
-$last_uri_parts[0] = substr($last_uri_parts[0], strrpos($last_uri_parts[0], '/')+1);
-var_dump($last_uri_parts);
+
 //var_dump($last_uri_parts[0]);
 $trovato=false;
 
@@ -103,7 +98,7 @@ $header = str_replace("*linkchisiamo*","<li><a href='./chi_siamo' tabindex=\"$ta
 $header = str_replace("*linkallenatori*","<li><a href='./allenatori' tabindex=\"$tabIndex\">Allenatori</a></li>",$header);
 
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-$header = str_replace("*linkcontattaci*","<li><a href='./contattaci' tabindex=\"$tabIndex\">Contattaci</a></li>",$header);
+$header = str_replace("*linkcontattaci*","<li><a href='./#cont-form-map' tabindex=\"$tabIndex\">Contattaci</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $header = str_replace("*linkcorsi*","<li><a href='./corsi' tabindex=\"$tabIndex\">Corsi</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
