@@ -157,6 +157,7 @@ text-decoration: none;
     height: auto;
     min-height: 19em;
     width: auto\9; /* ie8 */
+
 }
 .threeColumnsCard dd .allenatoreImg{
     max-width: 30%;
@@ -210,6 +211,7 @@ text-decoration: none;
 /*--------------------------------
 -------SEZIONE BREADCRUMBS(Valentin)------
 ----------------------------------*/
+
 #breadcrumb{
   width: 40%;
   display: inline-block;
@@ -476,6 +478,16 @@ LANDING PAGE
   background-color: #8a0620;
     text-decoration: none;
 }
+#descrizioneHome{
+  width: 25%;
+  float: left;
+  background-color: #fff2e6;
+  border-radius: 0.2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 15% 3% 0 3%;
+  text-align: center;
+  padding: 1% 0;
+}
 /*---------------------------------------*/
 
 /*galleria*/
@@ -696,17 +708,17 @@ text-align: center;
 
 
 #contact_form {
-  width: 50%;
+  width: 65%;
 }
 #contact_form label{margin-bottom: 2%;}
 
-#contact_form form{
-  margin: 5%;
-}
+
 #googleMap{
   display: table-cell;
 }
-
+#contact_us_form{
+  float: left;
+}
 
 /*--------------------------------
 --- END FORM + MAP -----
@@ -1321,7 +1333,6 @@ input, textarea {
   font-family: RobotoSlab,Arial,sans-serif;
 }
 
-*/
 
 /*not_found page*/
 
