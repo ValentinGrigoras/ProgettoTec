@@ -1,13 +1,6 @@
 
-function hasClass(element, className) {
-    return (element.className).indexOf(className) > -1;
-}
-
-function removeClass(element, nomeClasse) {
-    element.className = element.className.replace(new RegExp("\\b" + nomeClasse + "\\b"),"");
-    if(element.className == "  "){
-        element.className = "";
-    }
+function hasClass(element, nomeClasse) {
+    return ("" + element.className+  "").indexOf("" + nomeClasse + "") > -1;
 }
 
 
@@ -19,22 +12,7 @@ function checkData(gg, mm, aaaa) {
 
     return false;
   }
-  return true;/*
-    var data = anno + "-" + mese + "-" + giorno;
-    var regexp = new RegExp("^[1|2][0-9]{3,3}-([1-9]|1[0|1|2])-([1-9]|[1|2][0-9]|3[0|1])$");
-    if (regexp.test(data)) {
-        if (giorno == 31 && (mese == 4 || mese == 6 || mese == 9 || mese == 11)){
-            return false;
-        }
-        if (giorno > 29 && mese == 2){
-            return false;
-        }
-        if (giorno == 29 && mese == 2 && !(anno % 4 == 0 && (anno % 100 != 0 || anno % 400 == 0))){
-            return false;
-        }
-        return true;
-    }
-    return false;*/
+  return true;
 }
 
 
@@ -46,11 +24,11 @@ function togliErrore(container) {
 }
 
 function mostraErrore(container, testo) {
-    togliErrore(container);
+    togliErrore(container.parentElement);
     var paragraph = document.createElement("p");
     paragraph.className = "error";
     paragraph.innerHTML = testo;
-    container.parentElement.appendChild(paragraph);
+    container.parentNode.appendChild(paragraph);
 }
 
 function validazione(input, check) {
@@ -60,7 +38,7 @@ function validazione(input, check) {
     check[input.name] = input.regexp.test(i.value);
     alert("prima del if");
     if (check[input.name]) {
-        togliErrore(i);
+        togliErrore(i.parentNode);
     } else {
         mostraErrore(i, input.error);
     }
