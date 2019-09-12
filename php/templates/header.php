@@ -80,7 +80,7 @@ switch ($uri_case[2]){
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."allenatori.php";
         break;
     case "chi_siamo":
-        $header = str_replace("*linkchisiamo*","<li id='active_link'>Chi siamo</li>",$header);
+        $header = str_replace("*linkchisiamo*","<li class='active_link'>Chi siamo</li>",$header);
         $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Su di noi >> Chi siamo",$header);
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."chi_siamo.php";
         break;

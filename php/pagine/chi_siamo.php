@@ -1,7 +1,6 @@
 <?php 
 $page = file_get_contents(dirname(dirname(__DIR__)) . '/' . "html" . '/' . "pagine" . '/' . "chi_siamo.html");
 
-
 // Directory
 $directory = "../../img/about_us";
 
@@ -17,20 +16,14 @@ $num_files = count($files);
 		while($i<=$num_files+1){
 			$generaimg.="
 				<div class=\"mySlides fade\">";
-			$i-=1;
-			$generaimg.= "
-    				<div class=\"numbertext\">$i / $num_files</div>" ;
-    		$i+=1;
     		$generaimg.= "
-    				<img src=\"../../img/about_us/$files[$i]\" >
-    				<div class=\"text\">Caption Text</div>
+    				<img src=\"./img/about_us/$files[$i]\"/>
+    				<div class=\"numbertext\">".($i-1)." / $num_files</div>
   				</div>";
 
   			$i++;
 		}
-
 $page = str_replace("*generaimg*",$generaimg,$page);
-
 
 echo $page;
 ?>
