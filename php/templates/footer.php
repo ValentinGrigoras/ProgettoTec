@@ -12,7 +12,6 @@ $uri_case = explode('/', $_SERVER['REQUEST_URI'], 3);
 switch ($uri_case[2]){
 	case "":
 		$script.="
-			<script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyD0rh7lb9IlH8E4nMs1nffxwW8SL05LaHo&callback=myMap\"></script>
       		<script src=\"./js/show_menu.js\" type=\"text/javascript\"></script>
       		<script src=\"./js/map_show.js\" type=\"text/javascript\"></script>";
 		break;

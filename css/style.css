@@ -225,7 +225,7 @@ text-decoration: none;
   padding: 1%;
 
 }
-#first-section-header li#active_link{
+#first-section-header li.active_link{
   background-color: #b30000;
   color: white;
   font-weight: bold;
@@ -382,7 +382,7 @@ ul#breadcrumb li a:hover {
   transition-duration: 0.5s;
 }
 
-#nav_desktop li#active_link{
+#nav_desktop li.active_link{
   color: #fff;
   font-weight: 1000;
   background-color: #b30000;
