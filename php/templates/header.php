@@ -9,7 +9,12 @@ $header = file_get_contents(dirname(dirname(__DIR__)).'/'."html".'/'."templates"
 
 //print_r(dirname(dirname(__DIR__))); ///var/www/html/ProgettoTec
 $page="";
-
+echo "explode";
+$last_uri_parts = explode('?', $_SERVER['REQUEST_URI'], 2);
+echo "substr";
+$last_uri_parts[0] = substr($last_uri_parts[0], strrpos($last_uri_parts[0], '/')+1);
+var_dump($last_uri_parts);
+//var_dump($last_uri_parts[0]);
 $trovato=false;
 
 if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
