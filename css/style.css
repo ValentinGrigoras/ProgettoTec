@@ -157,6 +157,7 @@ text-decoration: none;
     height: auto;
     min-height: 19em;
     width: auto\9; /* ie8 */
+
 }
 .threeColumnsCard dd .allenatoreImg{
     max-width: 30%;
@@ -1332,7 +1333,6 @@ input, textarea {
   font-family: RobotoSlab,Arial,sans-serif;
 }
 
-*/
 
 /*not_found page*/
 

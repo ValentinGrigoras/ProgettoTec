@@ -1,4 +1,5 @@
 <?php
+ob_start();
  if(!isset($_SESSION)) 
     { 
         session_start(); 
@@ -74,10 +75,12 @@ switch ($uri_case[2]){
         $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Programma",$header);
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."programma.php";
         break;
+
     case "allenatori":
         $header = str_replace("*linkallenatori*","<li class='active_link'>Allenatori</li>",$header);
         $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Allenatori",$header);
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."allenatori.php";
+
         break;
     default:
     case "su_di_noi":
