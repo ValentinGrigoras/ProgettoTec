@@ -46,10 +46,7 @@ if ($database) {
 		}
 			  		
 
-	}        
-		
-
-	
+	}        	
 }
 echo $page;
 ?>

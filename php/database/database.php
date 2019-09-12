@@ -8,6 +8,12 @@ class Database {
     const USERNAME = "tecweb";
     const PASSWORD = "TecWeb";
     const DB_NAME = "Palestra";
+    /*
+    const HOST_DB = "localhost";
+    const USERNAME = "root";
+    const PASSWORD = "Chemer9.";
+    const DB_NAME = "Palestra";
+   */
     private static $connection;
 
     public function __construct() {

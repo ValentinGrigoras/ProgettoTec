@@ -48,7 +48,7 @@ $page=str_replace('*generalistacorsi*', $options , $page);
 						$tabella.= "<div class=\"TimeTableFitnessEntry filterDiv ".Database::getIdCorso($dati[$i]['Corso'])[0]['idCorso']."\">
 						<div class=\"TimeTableEntryColor\"></div>
 						<a href=\"http://solarisfitness.it/classes-item/pilates/\" class=\"TimeTableEntryName\">
-						<div>".$dati[$i]['Corso']."</div>
+						<span>".$dati[$i]['Corso']."</span>
 						</a>
 						<div class=\"TimeTableEntryTimePeriod\">
 							<div class=\"TimeTableFrom\"><span>".$dati[$i]["oraI"]."</span></div>
@@ -75,7 +75,7 @@ $page=str_replace('*generalistacorsi*', $options , $page);
 //genera orario mobile
 	$orario="";
 	$li_giorno=1;
-	$giorno_stringaIntera=array("1"=>"Luned&igrave", "2"=>"Marted&igrave", "3"=>"Mercoled&igrave", "4"=>"Gioved&igrave", "5"=>"Venerd&igrave", "6"=>"Sabato");
+	$giorno_stringaIntera=array("1"=>"Luned&igrave;", "2"=>"Marted&igrave;", "3"=>"Mercoled&igrave;", "4"=>"Gioved&igrave;", "5"=>"Venerd&igrave;", "6"=>"Sabato");
 	while ($li_giorno<=6){
 		if (Database::corsiGiornata($giorno[$li_giorno])){
 			$orario.= "<li class=\"MobileTimeTableItem\">"; //corsi del giorno

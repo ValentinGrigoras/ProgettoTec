@@ -3,8 +3,9 @@
   box-sizing: border-box;
 }
 
-body {
+html,body {
     margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color:#ebebeb;
   }
@@ -208,7 +209,7 @@ body {
 
 
 /***Form modifica corsi**/
-/*
+
 input[type=text], select, textarea {
   width: 100%;
   padding: 1.1%;
@@ -262,7 +263,7 @@ input[type=submit]:hover {
   border-radius: 0.5em;
 
 }
-*/
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -279,12 +280,12 @@ input[type=submit]:hover {
   color: #24292e;
   height: 2.7em;
   background-color: white;
-  width: 60%;
+  width: 100%;
 }
 #contenuto{
   width: 60%;
-  margin: 28%;
-  margin-top: 0;
+  margin-left: 27%;
+ 
   overflow: auto;
 }
 #content{
@@ -313,7 +314,7 @@ input[type=submit]:hover {
 }
 
 #dati{
-  width: 65%;
+  width: 60%;
   float: left;
 }
 #dati button{
@@ -359,12 +360,13 @@ fieldset legend{
   content: "*";
   padding: 0 1% 0 1%;
 }
-
+/*
 .confirm {
   padding: 3%;
   background-color: #4CAF50;
   color: white;
 }
+*/
 .closebtn {
   margin-left: 3%;
   color: white;
@@ -391,12 +393,13 @@ fieldset legend{
   background-color: #0c1f34;
   color: white;
   text-decoration: underline;
-  margin: 3% 0% 3% 42%;
+  margin: 3% 0% 3% 36%;
   padding: 3%;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  width: 16%;
+  width: 28%;
+  font-size: 100%;
 }
 
 #confirmmessage{
