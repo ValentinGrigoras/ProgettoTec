@@ -29,7 +29,7 @@ if($database && isset($_POST['signin'])) {
 
 		  /*Registro il codice dell'utente*/
 		  $_SESSION['cod'] = $cod;
-
+$_SESSION['error'] = 0;
 		 /*Redirect alla pagina riservata*/
 		   //echo '<script language=javascript>document.location.href="panel_user.php"</script>';
 		   header("Location: http://".$_SERVER['HTTP_HOST']."/"."ProgettoTec/user_panel");

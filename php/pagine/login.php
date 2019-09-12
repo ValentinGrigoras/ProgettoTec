@@ -22,7 +22,7 @@ if ($database) {
 			$_SESSION['error'] = 0;
 		}
 
-        if(!$error){
+        else if(isset($_SESSION['error']) && $_SESSION['error'] == 0){
 				$ris = Database::getUser($_POST['email'],$_POST['password']);
 				
 				/*Prelevo l'identificativo dell'utente */
