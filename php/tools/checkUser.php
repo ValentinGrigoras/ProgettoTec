@@ -29,17 +29,17 @@ if($database && isset($_POST['signin'])) {
 
 		  /*Registro il codice dell'utente*/
 		  $_SESSION['cod'] = $cod;
-
+$_SESSION['error'] = 0;
 		 /*Redirect alla pagina riservata*/
 		   //echo '<script language=javascript>document.location.href="panel_user.php"</script>';
-		   header("Location: http://".$_SERVER['HTTP_HOST']."/"."ProgettoTec/user_panel");
+		   header("Location: ../../");
 		   //return true
 		} else {
 			
 		$_SESSION['error'] = 1;
 		/*Username e password errati, redirect alla pagina di login*/
 		 //echo '<script language=javascript>document.location.href="ProgettoTec"</script>';
-		header("Location: http://".$_SERVER['HTTP_HOST']."/"."ProgettoTec/login");
+		header("Location: ../../login");
 		 //return false
 		}
 	}
