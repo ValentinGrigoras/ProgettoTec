@@ -15,3 +15,18 @@
       transform: none;
     }
   
+    #dati{
+      width: 100%;
+      float: left;
+  
+    }
+  
+    #contenuto{
+      width: 100%;
+      margin: 0;
+    }
+
+    #dati button{
+      font-size: 200%;
+    
+    }
