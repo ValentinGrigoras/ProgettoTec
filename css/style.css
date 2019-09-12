@@ -931,11 +931,9 @@ text-align: center;
   padding-top: 5%;
   overflow: auto;
 }
-#content_about_us #paragrafi{
+#content_about_us #paragrafo{
   width: 50%;
   float: left;
-}
-#content_about_us #paragrafi .desc_about_us{
   margin-bottom: 3%;
   text-align: justify;
 }
