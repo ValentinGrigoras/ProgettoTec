@@ -1,0 +1,19 @@
+* {
+    font-family: Georgia, 'Times New Roman', serif;
+	color:black;
+	text-align: justify;
+}
+body{ 
+	margin: 2em;
+	 color: #000;
+    background-color: #fff;
+}
+
+
+#first-section-header ul, #nav_desktop, #header, #landing, .cont_corso .allenatoreImg, img, .cont_corso .corsiImg, #contact_form, #links, .btn, #footer_icons, #closure, #cont-form-map h2, button, #custom_select, .numbertext, #prev, #next{
+	display: none;
+}
+
+td{
+	border: 1px solid #000;
+}
