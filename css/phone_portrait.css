@@ -284,3 +284,28 @@ select #seleziona_corso{
   float: none;
  
 }
+
+.threeColumnsCard {
+  width: 80%;
+  display: block;
+  margin: 5% auto;
+
+}
+#contact_us_form {
+    width: 80%;
+    display: block;
+    margin: 5% auto;
+    float: none;
+}
+#contact_form {
+    width: 100%;
+}
+
+#allenatori_content{
+  width: 100%;
+}
+#allenatori_section #allenatori_content dl {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}

@@ -3,10 +3,10 @@
 	window.onscroll = function() {scrollFunction()};
 	
 	function scrollFunction() {
-			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-					document.getElementById("tornasu").style.display = "block";
+			if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+					document.getElementById("up").style.display = "block";
 			} else {
-					document.getElementById("tornasu").style.display = "none";
+					document.getElementById("up").style.display = "none";
 			}
 	}
 	

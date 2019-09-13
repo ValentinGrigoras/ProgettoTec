@@ -116,3 +116,7 @@ background-color: #35383d;
     display: block;
     text-align: left;
   }
+
+#nav_desktop ul {
+width: 80%;
+}

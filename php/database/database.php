@@ -10,12 +10,7 @@ class Database {
     const PASSWORD = "TecWeb";
     const DB_NAME = "Palestra";
 
-  /*
-    const HOST_DB = "localhost";
-    const USERNAME = "root";
-    const PASSWORD = "Chemer9.";
-    const DB_NAME = "Palestra";
-   */
+  
 
     private static $connection;
 
@@ -82,12 +77,7 @@ class Database {
         return self::insertUpdateDelete($query);
 
     }
-/*
-    public static function updateCorsi(){
-        $query = "UPDATE nome,descrizione,durata,livello,costo,nomeImg FROM Corsi";
-        return self::selectRows($query);
-    }
-    */
+
     public static function selectCourses() {
         $query = "SELECT nome, descrizione, durata, livello, costo, nomeImg FROM Corsi";
         return self::selectRows($query);

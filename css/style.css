@@ -122,7 +122,7 @@ noscript{
   margin:0 auto 0 auto;
   
    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /*overflow: auto;*/
+  overflow: hidden;
 }
 
 /*colori generali link (Valentin)*/
@@ -207,6 +207,7 @@ text-decoration: none;
    /* background-color: #f7f7f7;*/
     font-size: 85%;
     font-weight: bold;
+
     }
 /*--------------------------------
 -------SEZIONE BREADCRUMBS(Valentin)------
@@ -518,18 +519,17 @@ height: 80%;
   width: 13%;
 }
 #prezzi_section #content_prezzi{
-  overflow: auto;
   margin: 0 auto;
   background-color: #f4f4f4;
 
 }
+
 #prezzi_section #content_prezzi dl{
   width: 31%;
   float: left;
   margin: 2% 1.166% 4.166% 1.166%;
 }
 #prezzi_section #content_prezzi dd{
-  overflow: auto;
   background:none no-repeat left top;
   background-size: contain;
   border-top: hidden;
@@ -567,12 +567,7 @@ height: 80%;
     margin: 0 auto;
     background-color: #f4f4f4;
 }
-#allenatori_section #allenatori_content dl{
-    float:left;
-    width: 40%;
-    margin:2% 5% 5% 5%;
-  
-}
+
 dt{
   text-align: center;
     background-color: #fff;
@@ -610,8 +605,8 @@ text-align: center;
 }
 
 #allenatori_section{
-    background-color: #fcfcfc;
     overflow: auto;
+    padding: 2%;
 }
 #allenatori_section dd p{
     display: block;
@@ -640,12 +635,9 @@ text-align: center;
 #corsi_section{
   background-color: #f4f4f4;
 }
-#corsi_section h2{
-  margin-top: 5%;
-}
 #content_corsi{
   overflow: auto;
-  margin: 0 auto;
+padding: 2%;
 
 }
 #content_corsi .twoColumnsCardDetails{
@@ -1366,4 +1358,21 @@ margin: 0 auto;
 .topnav-right {
   float: right;
   padding: 1%;
+}
+
+#up{
+  
+  right: 0.5%;
+  bottom: 2%;
+  position: fixed;
+  background-color: #0c1f34;
+  color: #fff;
+  padding: 0.8%;
+  border-radius: 2%;
+  display: none;
+  font-size: 80%;
+}
+#up:hover{
+    background-color: #122f50;
+    text-decoration: none;
 }
