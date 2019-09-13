@@ -86,7 +86,7 @@ $trainers = Database::selectTrainers();
 if(isset($trainers))
 {
 $trainer = "";
-  for($indice = 0;$indice<4; $indice++){
+  for($indice = 0;$indice<3; $indice++){
 
     $trainer .= '<dl class="threeColumnsCard">';
     $trainer .= '<dt>'.$trainers[$indice]['cognome']. " ".$trainers[$indice]['nome']. '</dt>';

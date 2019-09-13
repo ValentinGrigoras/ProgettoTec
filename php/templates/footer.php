@@ -2,7 +2,7 @@
 <?php
 $footer = file_get_contents(dirname(dirname(__DIR__)) . '/' . "html" . '/' . "templates" . '/' . "footer.html");
 
-$footer = str_replace("*gotop*","<button onclick=\"topFunction()\" id=\"tornasu\" title=\"Torna su\"><i class=\"fas fa-angle-double-up\"></i></button>",$footer);
+$footer = str_replace("*gotop*","<a id=\"up\" href=\"#first-section-header\">Torna su</a>",$footer);
 $script="
 		<script src=\"./js/gototop.js\" type=\"text/javascript\"></script>
 		<script src=\"./js/common.js\" type=\"text/javascript\"></script>

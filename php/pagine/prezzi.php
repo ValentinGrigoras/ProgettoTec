@@ -1,7 +1,7 @@
 <?php 
 require_once "./../../php/database/database.php";
 require_once "./../../php/tools/validator.php";
-echo "Ciao";
+
 use Database\Database;
 use Validator\Validator;
 
@@ -26,9 +26,9 @@ $price = "";
 
 
   }
-
+$page = str_replace("*abbonamenti*", $price, $page);
   $page = str_replace("*linkregistrati*","<a class='btn' href='./registrazione'>Registrati</a>",$page);
-  $page = str_replace("*abbonamenti*", $price, $page);
+  
 }
 
 echo $page;
