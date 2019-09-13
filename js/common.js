@@ -4,20 +4,40 @@ function hasClass(element, nomeClasse) {
 }
 
 
-function checkData(gg, mm, aaaa) {
-
-  let isValidDate = Date.parse(gg+'/'+mm+'/'+aaaa);
-
-  if (isNaN(isValidDate)) {
-
-    return false;
-  }
-  return true;
+function isValidDate(dateString)
+{ 
+    // First check for the pattern
+    var regex_date = /^\d{4}\-\d{1,2}\-\d{1,2}$/;
+    console.log(dateString);
+    if(!regex_date.test(dateString))
+    {
+        console.log("regexp false");
+        return false;
+    }
+    console.log("regexo superata");
+    // Parse the date parts to integers
+    var parts   = dateString.split("-");
+    var day     = parseInt(parts[2], 10);
+    var month   = parseInt(parts[1], 10);
+    var year    = parseInt(parts[0], 10);
+    // Check the ranges of month and year
+    if(year < 1000 || year > 3000 || month == 0 || month > 12)
+    {
+        return false;
+    }
+    var monthLength = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
+    // Adjust for leap years
+    if(year % 400 == 0 || (year % 100 != 0 && year % 4 == 0))
+    {
+        monthLength[1] = 29;
+    }
+    // Check the range of the day
+    return day > 0 && day <= monthLength[month - 1];
 }
 
 
 function togliErrore(container) {
-    var figli = container.childNodes;
+    var figli = container.childNodes
     if (hasClass(figli[figli.length - 1], "error")) {
         container.removeChild(figli[figli.length - 1]);
     }
@@ -46,9 +66,9 @@ function onBlurValidation(input, check){
         validazione(input, check);
     };
 }
-function validazioneData(giorno, mese, anno, errore, check) {
+function dateValidation(giorno, mese, anno, errore, check) {
     var container = document.getElementById("input_date");
-    check[giorno.id] = checkData(giorno, mese, anno);
+    check[giorno.id] = isValidDate(anno.value+'-'+mese.value+'-'+giorno.value);
     if(check[giorno.id]){
         togliErrore(container);
     } else {
@@ -56,15 +76,15 @@ function validazioneData(giorno, mese, anno, errore, check) {
     }
 }
 
-function validazioneDataOnChange(giorno, mese, anno, errore, check) {
+function onChangeDateValidation(giorno, mese, anno, errore, check) {
     giorno.onchange = function () {
-        validazioneData(giorno, mese, anno, errore, check);
+        dateValidation(giorno, mese, anno, errore, check);
     };
     mese.onchange = function () {
-        validazioneData(giorno, mese, anno, errore, check);
+        dateValidation(giorno, mese, anno, errore, check);
     };
     anno.onchange = function () {
-        validazioneData(giorno, mese, anno, errore, check);
+        dateValidation(giorno, mese, anno, errore, check);
     };
 }
 
