@@ -16,7 +16,8 @@ switch ($uri_case[2]){
       		<script src=\"./js/map_show.js\" type=\"text/javascript\"></script>";
 		break;
 	case "registrazione":
-		$script.="<script src=\"./js/registrazione.js\" type=\"text/javascript\"></script>";
+		$script.="<script src=\"./js/registrazione.js\" type=\"text/javascript\"></script>
+					<script src=\"./js/moment.js\" type=\"text/javascript\"></script>";
 		break;
 	case "programma":
 		$script.="<script src=\"./js/filtro_corsi.js\" type=\"text/javascript\"></script>";
