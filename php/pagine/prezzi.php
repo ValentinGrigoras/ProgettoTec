@@ -16,12 +16,12 @@ $price = "";
   for($indice = 0;$indice<count($prices); $indice++){
 
     $price .= '<dl class="threeColumnsCard">';
-    $price .= '<dt>'.$prices[$indice]['tipoAbbonamento'].'</dt>';
-    $price .= '<dd>';
-    $price .= '<img class= "allenatoreImg" src="css/img/abbonamenti/'.$prices[$indice]['nomeImg']. '"' . ' alt="immagine ' . $prices[$indice]['tipoAbbonamento'] . '"/>';
-    $price .= '<p class="prezzoAbbonamento">&euro;' . $prices[$indice]['prezzo'].'</p>';
-    $price .= '<p>' .$prices[$indice]['descrizione'] .'</p>';
-    $price .=  '</dd>';
+    $price .= '   <dt>'.$prices[$indice]['tipoAbbonamento'].'</dt>';
+    $price .= '   <dd>';
+    $price .= '       <img class= "allenatoreImg" src="css/img/abbonamenti/'.$prices[$indice]['nomeImg']. '"' . ' alt="immagine ' . $prices[$indice]['tipoAbbonamento'] . '"/>';
+    $price .= '       <p class="prezzoAbbonamento">&euro;' . $prices[$indice]['prezzo'].'</p>';
+    $price .= '       <p>' .$prices[$indice]['descrizione'] .'</p>';
+    $price .=     '</dd>';
     $price .= '</dl>';
 
 

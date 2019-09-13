@@ -515,31 +515,18 @@ height: 80%;
 ------------- ABBONAMENTI -------------
 ----------------------------------*/
 
+#prezzi_section{
+  width: 100%;
+}
+
+#prezzi_section {
+  margin: 0 auto;
+  background-color: #f4f4f4;
+}
+
 #abbonamenti_section a.btn{
   width: 13%;
 }
-#prezzi_section #content_prezzi{
-  margin: 0 auto;
-  background-color: #f4f4f4;
-
-}
-
-#prezzi_section #content_prezzi dl{
-  width: 31%;
-  float: left;
-  margin: 2% 1.166% 4.166% 1.166%;
-}
-#prezzi_section #content_prezzi dd{
-  background:none no-repeat left top;
-  background-size: contain;
-  border-top: hidden;
-  background-color: #fff;
-  font-size: 80%;
-  border: 1px solid #b3b3b3;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
-
 
 .threeColumnsCard  .prezzoAbbonamento{
 	font-size: 2em;
@@ -549,7 +536,7 @@ height: 80%;
 .threeColumnsCard .nrMese{
 	font-size: 0.5em;
 }
-#content_prezzi .buttonPrezzi {
+#prezzi_section .buttonPrezzi {
   border-top: 1px solid #ccc;
 	padding: 7% 0;
 	border-bottom: none;
