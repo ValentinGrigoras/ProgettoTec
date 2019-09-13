@@ -24,26 +24,28 @@ function togliErrore(container) {
 }
 
 function mostraErrore(container, testo) {
-    togliErrore(container.parentElement);
+    togliErrore(container);
     var paragraph = document.createElement("p");
     paragraph.className = "error";
     paragraph.innerHTML = testo;
-    container.parentNode.appendChild(paragraph);
+    container.appendChild(paragraph);
 }
 
 function validazione(input, check) {
-    console.log("sono in validazione()");
-    console.log(input);
     var i = document.getElementById(input.name);
     check[input.name] = input.regexp.test(i.value);
-    alert("prima del if");
     if (check[input.name]) {
         togliErrore(i.parentNode);
     } else {
-        mostraErrore(i, input.error);
+        mostraErrore(i.parentNode, input.error);
     }
 }
-
+function onBlurValidation(input, check){
+    var i = document.getElementById(input.name);
+    i.onblur = function () {
+        validazione(input, check);
+    };
+}
 function validazioneData(giorno, mese, anno, errore, check) {
     var container = document.getElementById("input_date");
     check[giorno.id] = checkData(giorno, mese, anno);
