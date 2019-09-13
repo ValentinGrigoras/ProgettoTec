@@ -44,7 +44,16 @@ h3{
 h4{
     font-size: 110%;
 }
-
+dd p:nth-child(n){
+border-bottom: 4px solid #f7f7f7;
+  padding: 1% 0;
+  font-weight: bold;
+}/*
+dd p:nth-child(3){
+  background-color: #fff;
+  color: #0c1f34;
+  padding: 0;
+}*/
 button {
     background-color: #0c1f34;
     color: white;
@@ -153,10 +162,13 @@ text-decoration: none;
 }
 
 .threeColumnsCard dd .corsiImg{
-    max-width: 100%;
+max-width: 30%;
     height: auto;
-    min-height: 19em;
-    width: auto\9; /* ie8 */
+    /* min-height: 19em; */
+    width: auto\9;
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 5%;
 
 }
 .threeColumnsCard dd .allenatoreImg{
@@ -171,13 +183,13 @@ text-decoration: none;
     background-size: contain;
     overflow: hidden;
     border-top: hidden;
-    padding: 2% 1% 2% 1%;
+    /*padding: 2% 1% 2% 1%;*/
     background-color: #fff;
     color: #000;
     font-size: 80%;
 }
 .threeColumnsCard dt{
-  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   background-color: #fff;
   color: #000;
@@ -197,7 +209,9 @@ text-decoration: none;
   padding: 1.5%;
   background-color: #fff;
 }
-  
+  .trainers{
+    padding: 5% 0;
+  }
 
 /*--------------------------------
 ------------HEADER(Valentin)------
@@ -561,7 +575,7 @@ dt{
     color:#000;
     padding: 2% 0 1% 2%;
     font-weight: bold;
-}
+}/*
 #allenatori_section #allenatori_content dl{
     background:none no-repeat left top;
     background-size: contain;;
@@ -572,7 +586,7 @@ dt{
     color: #000;
     font-size: 80%;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+}*/
 .threeColumnsCard dd .contactTrainer{
   display: block;
 text-align: center;
@@ -1222,7 +1236,7 @@ a.btn, button.btn {
   border: 3px solid #fff;
   color: #fff;
   border-radius: 6px;
-  font-size: 1.3em;
+  font-size: 1em;
   padding: .5em 1.2em;
   font-family: RobotoSlab,Arial,Sans-Serif;
   cursor: pointer;
@@ -1352,7 +1366,7 @@ margin: 0 auto;
   right: 0.5%;
   bottom: 2%;
   position: fixed;
-  background-color: #0c1f34;
+  background-color: #b30000;
   color: #fff;
   padding: 0.8%;
   border-radius: 2%;
@@ -1360,6 +1374,6 @@ margin: 0 auto;
   font-size: 80%;
 }
 #up:hover{
-    background-color: #122f50;
+    background-color: #ff0909;
     text-decoration: none;
 }

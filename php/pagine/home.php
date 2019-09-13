@@ -86,13 +86,13 @@ $trainers = Database::selectTrainers();
 if(isset($trainers))
 {
 $trainer = "";
-  for($indice = 0;$indice<3; $indice++){
+  for($indice = 0;$indice<6; $indice++){
 
     $trainer .= '<dl class="threeColumnsCard">';
     $trainer .= '<dt>'.$trainers[$indice]['cognome']. " ".$trainers[$indice]['nome']. '</dt>';
     $trainer .= '<dd class="cont_corso">';
      $trainer .= '<img class= "allenatoreImg" src="img/allenatori/'.$trainers[$indice]['img']. '"' . ' alt="immagine allenatore ' . $trainers[$indice]['nome'] . '"/>';
-    $trainer .= '<a class="contactTrainer" href="mailto:' . $trainers[$indice]['email'] .'">'. $trainers[$indice]['email'] .'</a>';
+    $trainer .= '<a class="contactTrainer trainers" href="mailto:' . $trainers[$indice]['email'] .'">'. $trainers[$indice]['email'] .'</a>';
     $trainer .=  '</dd>';
     $trainer .= '</dl>';
 
@@ -103,7 +103,7 @@ $trainer = "";
 if(isset($courses))
 
 $course = "";
-  for($indice = 0;$indice<3; $indice++){
+  for($indice = 0;$indice<6; $indice++){
 
     $course .= '<dl class="threeColumnsCard">';
     $course .= '<dt>'.$courses[$indice]['nome'].'</dt>';
