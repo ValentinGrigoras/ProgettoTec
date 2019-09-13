@@ -1,5 +1,5 @@
 <?php
-require_once "./../database/database.php";
+require_once "../database/database.php";
 
 use Database\Database;
  if(!isset($_SESSION)) 
@@ -13,7 +13,7 @@ use Database\Database;
 $database = new Database();
 echo $_POST['signin'];
 if($database && isset($_POST['signin'])) {
-		$ris = Database::getUser($_POST['email'],$_POST['password']);
+		$ris = Database::getAdmin($_POST['email'],$_POST['password']);
 		var_dump($ris);
 		/*Prelevo l'identificativo dell'utente */
 		$cod=$ris[0]['email'];
@@ -33,7 +33,7 @@ if($database && isset($_POST['signin'])) {
 
 		 /*Redirect alla pagina riservata*/
 		   //echo '<script language=javascript>document.location.href="panel_user.php"</script>';
-		   header("Location: ../../");
+		   header("Location: admin_panel.php");
 		   
 		   //return true
 		} else {
@@ -41,7 +41,7 @@ if($database && isset($_POST['signin'])) {
 		$_SESSION['error'] = 1;
 		/*Username e password errati, redirect alla pagina di login*/
 		 //echo '<script language=javascript>document.location.href="ProgettoTec"</script>';
-		header("Location: ../../login");
+		header("Location: admin_login.php");
 		 //return false
 		}
 	}

@@ -49,6 +49,13 @@ html,body {
     float: right;
     padding: 1%;
   }
+  .topnav-emailAdmin a{
+    float: none;
+    position: absolute;
+    left:60%;
+    top:50%;
+    transform: translate(-10%, -50%);
+  }
   
   
   /* Responsive navigation menu (for mobile devices) */
@@ -58,7 +65,7 @@ html,body {
       display: block;
     }
     
-    .topnav-centered a {
+    .topnav-emailAdmin a, .topnav-centered a {
       position: relative;
       top: 0;
       left: 0;
@@ -283,7 +290,7 @@ input[type=submit]:hover {
   width: 100%;
 }
 #contenuto{
-  width: 60%;
+  width: 70%;
   margin-left: 27%;
  
   overflow: auto;

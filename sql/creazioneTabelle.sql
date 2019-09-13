@@ -102,7 +102,7 @@ CREATE TABLE Orario (
   		ON DELETE NO ACTION ON UPDATE CASCADE,
   FOREIGN KEY (idAllenatore) REFERENCES Allenatore(idAllenatore)
   		ON DELETE NO ACTION ON UPDATE CASCADE
-) ENGINE=InnoDB;
+) ENGINE=InnoDB ;
 --
 -- Creazione tabella 'Admin'
 --

@@ -1,7 +1,8 @@
 <?php
 
-//$head = file_get_contents(dirname(dirname(__DIR__)).'/'."html".'/'."templates".'/'."head.html");
-
+if(!isset($_SESSION)){
+  session_start();
+}
 
 
 require_once "./../../php/database/database.php";
@@ -16,17 +17,17 @@ $page = file_get_contents(dirname(dirname(__DIR__)) . '/' . "html" . '/' . "pagi
 
 
 
+
+if (isset($_SESSION["autorizzato"]) &&  $_SESSION["autorizzato"]==1){
+  require_once ("../templates/backend_template/backend_head.php");
 if ($database) {
   $page = file_get_contents(dirname(dirname(__DIR__)) . '/' . "html" . '/' . "pagine" . '/' . "modificaCorsi.html");
-$courses = Database::selectCourses();
-
-
-
+  $courses = Database::selectCourses();
 
 }
-
-
 require_once ("../templates/backend_template/backend_head.php");
-
-
 echo $page;
+
+}else{
+  header('Location: admin_login.php');
+}

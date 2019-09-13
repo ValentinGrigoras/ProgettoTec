@@ -1,5 +1,8 @@
 <?php
-
+ if(!isset($_SESSION)) 
+ { 
+     session_start(); 
+ }
 //$head = file_get_contents(dirname(dirname(__DIR__)).'/'."html".'/'."templates".'/'."head.html");
 
 
@@ -15,6 +18,9 @@ $database = new Database();
 $page = file_get_contents(dirname(dirname(__DIR__)) . '/' . "html" . '/' . "pagine" . '/' . "viewcorsi.html");
 
 
+if (isset($_SESSION["autorizzato"]) &&  $_SESSION["autorizzato"]==1){
+  require_once ("../templates/backend_template/backend_head.php");
+  
 
 if ($database) {
   $page = file_get_contents(dirname(dirname(__DIR__)) . '/' . "html" . '/' . "pagine" . '/' . "viewcorsi.html");
@@ -23,15 +29,14 @@ if(isset($courses))
 
 $course = "";
   for($indice = 0;$indice<count($courses); $indice++){
-
-    $course.=  '<div class="columns">';
-    $course.= '<ul class="price">';
+    $course.='<div class="columns">';
+    $course.='<ul class="price">';
     $course.='<li class="header">'.$courses[$indice]['nome'].'</li>';
-    $course.= '<li class="grey">'.$courses[$indice]['livello'] .'</li>';
-    $course.=' <li>'.$courses[$indice]['costo'].' €</li>';
-    $course.=' <li class="desc">'.$courses[$indice]['descrizione'].'</li>';
-    $course.= '<li class="grey"><a href="#" class="button">Elimina</a></li>';
-    $course.= '<li class="grey"><a href="modificaCorsi.php" class="button">Modifica</a></li>';
+    $course.='<li class="grey">'.$courses[$indice]['livello'] .'</li>';
+    $course.='<li>'.$courses[$indice]['costo'].' €</li>';
+    $course.='<li class="desc">'.$courses[$indice]['descrizione'].'</li>';
+    $course.='<li class="grey"><a href="#" class="button">Elimina</a></li>';
+    $course.='<li class="grey"><a href="modificaCorsi.php" class="button">Modifica</a></li>';
  ' </ul>';
  $course.='</div>';
 
@@ -84,33 +89,9 @@ require_once ("../templates/backend_template/backend_head.php");
 
 
 echo $page;
-?>
-<style>
 
-  /*
-   ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      width: 200px;
-      background-color: #f1f1f1;
-    }
-    
-   li  {
-      display: block;
-      color: #000;
-      padding: 8px 16px;
-      text-decoration: none;
-    }
-    
-    li a.active {
-      background-color: #4CAF50;
-      color: white;
-    }
-    
-    li a:hover:not(.active) {
-      background-color: #555;
-      color: white;
-    }
-    */
-    </style>
+}else{
+  header('Location: admin_login.php');
+}
+?>
+
