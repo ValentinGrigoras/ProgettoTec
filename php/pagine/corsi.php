@@ -17,7 +17,7 @@ if(isset($courses))
 $course = "";
   for($indice = 0;$indice<count($courses); $indice++){
 
-    $course .= '<dl class="threeColumnsCard">';
+    $course .= '<dl id="'.$courses[$indice]['idCorso'].'" class="threeColumnsCard">';
     $course .= '<dt>'.$courses[$indice]['nome'].'</dt>';
     $course .= '<dd class="cont_corso">';
     $course .= '<img class = "corsiImg" src="img/corsi/'.$courses[$indice]['nomeImg']. '"' . ' alt="immagine corso' . $courses[$indice]['nome'] . '"/>';

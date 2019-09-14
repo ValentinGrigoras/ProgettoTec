@@ -603,7 +603,9 @@ text-align: center;
   width: 100%;
   background-color: #fcfcfc;
 }
-
+#contact_section h2{
+  padding-bottom: 0;
+}
 
 #contact_form {
   width: 65%;
@@ -645,7 +647,9 @@ text-align: center;
    padding: 0.5%;
    background-image: linear-gradient(to bottom right, #e6f2ff, white);
 }
-
+#programma h2{
+  padding-top: 10%;
+}
 #selezione_corso{
 	background-color: #f2f2f2;
 }
@@ -672,11 +676,10 @@ text-align: center;
 	border: 1px solid silver;
 	text-align: center;
 }
-#OrarioContent{
+#orario_content{
 	width: 88%;
 	margin: auto;
-	
-    padding-bottom: 3%;
+	padding-bottom: 3%;
 }
 
 .TimeTableEntryTime div{
@@ -1167,12 +1170,13 @@ font-size: 130%;
 }
 #error_divLeft{
   float: left;
-  width: 50%;
+  width: 48%;
+  padding-left: 7%;
 }
 #error_divRight{
   float: left;
   width: 40%;
-  padding: 5%;
+  padding: 9% 0 0 0;
 }
 #error_divRight .btn{
   width: 40%;

@@ -18,7 +18,7 @@ if ($database) {
 
 	if (isset($_SESSION['error']) && $_SESSION['error'] == 1) {
 		
-			$page=str_replace('<p class="hidden">*erroremail*</p>', '<p class="error">Il campo <span xml:lang=\"en\">Email</span> inserito non è corretto. Rispettare il formato indicato.</p>', $page);
+			$page=str_replace('*erroremail*', '<p class="error">Il campo <span xml:lang=\"en\">Email</span> inserito non è corretto. Rispettare il formato indicato.</p>', $page);
 			$_SESSION['error'] = 0;
 		}
 
@@ -34,18 +34,16 @@ if ($database) {
 			  		$_SESSION["autorizzato"] = 1;
 			  		/*Registro il codice dell'utente*/
 			  		$_SESSION['cod'] = $cod;
-			  		$page = str_replace("*ciao*", "class=\"hidden\"", $page);
-					  $page.= "<h1> sei stato loggato </h1>";
+			  		$page = str_replace("*class*", "class=\"hidden\"", $page);
+					  $page.= "<h1> Sei stato autenticato! </h1>";
 					
 				}        
 
 		else if (isset($_SESSION["autorizzato"]) &&  $_SESSION["autorizzato"]==1){
-			$page = str_replace("*ciao*", "class=\"hidden\"", $page);
-			$page.= "<h1> sei già loggato </h1>";
+			$page = str_replace("*class*", "class=\"hidden\"", $page);
+			$page.= "<h1> Sei già autenticato nel sistema! </h1>";
 
 		}
-			  		
-
 	}        	
 }
 echo $page;

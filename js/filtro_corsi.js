@@ -1,23 +1,29 @@
-function filterSelection(c) {
-  displayAll();
-  if (c!=0){
+function isMobile() {
+  var width = screen.width;
+  return width<=480;
+};
+function filterSelection(op,classn) {
+  displayAll(classn);
+  if (op!=0){
     var x, i;
-    x = document.getElementsByClassName("filterDiv"); 
+    x = document.getElementsByClassName(classn); 
     for (i = 0; i < x.length; i++) {
       var arr=x[i].className.split(" ");
-      if (c==0) 
-        x[i].style.display="block";
-      else
-        if (arr[2]!=String(c)) 
-            x[i].style.display = "none"; 
+      if (arr[2]!=String(op)) 
+        x[i].style.display = "none"; 
     }
   }
 }
-function displayAll(){
-  x = document.getElementsByClassName("filterDiv"); 
+function displayAll(classn){
+  x = document.getElementsByClassName(classn); 
   for (i = 0; i < x.length; i++) {
     x[i].style.display="block";
   }
 }
 var sel = document.getElementById("seleziona_corso");
-sel.addEventListener('change', function() {filterSelection(sel.options[sel.selectedIndex].value)} ,false);
+console.log(isMobile());
+if (!isMobile()){
+  sel.addEventListener('change', function() {filterSelection(sel.options[sel.selectedIndex].value, "deskFilterDiv")} ,false);
+}else{
+  sel.addEventListener('change', function() {filterSelection(sel.options[sel.selectedIndex].value, "mobileFilterDiv")} ,false);
+}

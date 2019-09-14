@@ -17,7 +17,7 @@ if(isset($trainers))
 $trainer = "";
   for($indice = 0;$indice<count($trainers); $indice++){
 
-    $trainer .= '<dl class="threeColumnsCard">';
+    $trainer .= '<dl id="'.$trainers[$indice]['idAllenatore'].'"class="threeColumnsCard">';
     $trainer .= '<dt>'.$trainers[$indice]['cognome']. " ".$trainers[$indice]['nome']. '</dt>';
     $trainer .= '<dd class="cont_corso">';
      $trainer .= '<img class= "allenatoreImg" src="img/allenatori/'.$trainers[$indice]['img']. '"' . ' alt="foto allenatore ' .$trainers[$indice]['cognome']. " ".$trainers[$indice]['nome']. '"/>';

@@ -22,7 +22,7 @@ switch ($uri_case[2]){
 		$script.="<script src=\"./js/filtro_corsi.js\" type=\"text/javascript\"></script>";
 		break;
 	case "login":
-		$script.="<script src=\"./js/login_replace.js\" type=\"text/javascript\"></script>";
+		$script.="<script src=\"./js/login.js\" type=\"text/javascript\"></script>";
 		break;
 	case "chi_siamo":
 		$script.="<script src=\"./js/slideshow.js\" type=\"text/javascript\"></script>";

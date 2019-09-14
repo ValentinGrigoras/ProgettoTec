@@ -79,7 +79,7 @@ class Database {
     }
 
     public static function selectCourses() {
-        $query = "SELECT nome, descrizione, durata, livello, costo, nomeImg FROM Corsi";
+        $query = "SELECT idCorso, nome, descrizione, durata, livello, costo, nomeImg FROM Corsi";
         return self::selectRows($query);
     }
     public static function selectTrainers() {
@@ -105,7 +105,7 @@ class Database {
     }
     //genera orario
     public static function CorsoGiornoOra($giorno, $oraInizio){
-        $query= "SELECT Corsi.nome AS Corso, TIME_FORMAT(oraI, '%H:%i') AS oraI, TIME_FORMAT(oraF, '%H:%i') AS oraF, Allenatore.nome AS Allenatore, stanza, giorno
+        $query= "SELECT Corsi.nome AS Corso, TIME_FORMAT(oraI, '%H:%i') AS oraI, TIME_FORMAT(oraF, '%H:%i') AS oraF, Allenatore.nome AS Allenatore, Orario.idAllenatore, Corsi.idCorso, stanza, giorno
                 FROM Orario, Corsi, Allenatore
                 WHERE Orario.idCorso=Corsi.idCorso AND Orario.idAllenatore=Allenatore.idAllenatore
                 AND oraI LIKE '".$oraInizio.":%%:%%' AND giorno='".$giorno."';";
