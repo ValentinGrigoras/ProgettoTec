@@ -1,45 +1,47 @@
 <body>
-<div id="main_container">
-  <div id="header">
-    <div id="logo_mobile">
-      <img src="./css/img/logot.png" alt="Logo AimFit"/>
-    </div>
-  
-    
-    <!-- The overlay -->
-    <div id="myNav" class="overlay">
-      <!-- Button to close the overlay navigation -->
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <!-- Overlay content -->
-      <div class="overlay-content">
-        <ul class="cd-accordion-menu animated">
-          *linkhome*
-          <li id="dropdown">
-            <a href="javascript:void(0)">Su di noi<i class="fas fa-sort-down dropbtn"></i> </a>
-              <ul id="dropdown-content">
-                  *linkchisiamo*
-                  *linkallenatori*
-                  *linkcontattaci*
-              </ul>
-          </li>
-          *linkcorsi*
-          *linkprogramma*
-          *linkprezzi*
-        </ul> <!-- cd-accordion-menu -->
-      </div>
-    </div>
 
-<!-- Use any element to open/show the overlay navigation menu -->
-  </div> <!-- END HEADER --> 
+
+<div id="main_container">
 
   <div id="first-section-header">
     <div id="breadcrumb">*breadcrumbs*</div>
-      <ul>
+    <ul id="desktop_user_signup">
       *linkregistrazione*
       *linklogin*
       *welcomeMessage*
     </ul>
   </div>
+
+
+  <div id="nav_mobile">
+    <div id="mobile_header">
+      <button id="show_menu">&#9776;</button>
+      <img id ="logo_mobile" src="./css/img/logo.png" alt="Logo AimFit"/>
+      <button id="close_menu">&#10006;</button>
+    </div>
+    <div>
+      <ul id="menu_mobile">
+        *linkhome*
+        *linkcorsi*
+        *linkprogramma*
+        *linkprezzi*
+        *linkchisiamo*
+        *linkallenatori*
+        *linkcontattaci*
+      </ul>
+      <ul id="mobile_authentication">
+        *linkregistrazione*
+        <span id="separator">&VerticalSeparator;</span>
+        *linklogin*
+      </ul>
+    </div>
+    
+
+<!-- Use any element to open/show the overlay navigation menu -->
+  </div> <!-- END HEADER --> 
+
+  
+
   <div id="nav_desktop">
     <div id="logo">
       <img src="./css/img/logo.png" alt="Logo AimFit"/>
@@ -48,6 +50,9 @@
     <div>
       <ul>
         *linkhome*
+        *linkcorsi*
+        *linkprogramma*
+        *linkprezzi*
         <li>
           <a>Su di noi &#8595; </a>
           <ul>
@@ -56,10 +61,6 @@
             *linkcontattaci*
           </ul>
         </li>
-        *linkcorsi*
-        *linkprogramma*
-        *linkprezzi*
-      
       </ul>
     </div>
   </div>

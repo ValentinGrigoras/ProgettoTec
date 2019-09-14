@@ -39,6 +39,11 @@ switch ($uri_case[2]){
         $head = str_replace("*description*","Programma settimanale della palestra AIMFit",$head);
         $head = str_replace("*keywords*","programma, orario, palestra, AIMFit, fitness",$head);
         break;
+    case "chi_siamo":
+        $head = str_replace("*title*","Chi siamo | AIMFit",$head);
+        $head = str_replace("*description*","Breve info sulla nostra palestra AIMFit",$head);
+        $head = str_replace("*keywords*","info, palestra, AIMFit, fitness",$head);
+        break;
     default:
         $head = str_replace("*title*","Pagina non trovata",$head);
         $head = str_replace("*breadcrumbs*","Pagina non trovata",$head);

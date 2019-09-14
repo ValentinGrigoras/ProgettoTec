@@ -1,51 +1,77 @@
 /*header*/
-#header #breadcrumbs_home {
-    width: 100%;
-}
-ul.breadcrumb{
-	float: none;
-width: 100%;
-	margin: 0 auto;
-}
-ul.breadcrumb li {
-	float: none;
-}
-.lingua {
-    width: 70%;
-    margin-top: 2%;
-    margin-left: 2%;
-
-}
-#botton_menu {
-    width: 25%;
-    font-size: 1.6em;
-    font-weight: 1000;
-
-}
-ul.breadcrumb{
-  float: none;
-}
-#header #breadcrumbs_home{
-  margin: 0 auto;
+#nav_desktop, #desktop_user_signup{
+  display: none;
 }
 
-
-/*mobile menu*/
-.cd-accordion-menu {
-
-  margin: 20% auto 0 auto;
-  text-align: left;
+#nav_mobile{
+  display: block;
 }
-#acordion_group ul{
-text-align: center;
 
-background-color: #35383d;
+#nav_mobile{
+  background-color: #0c1f34;
+  color: white;
+  font-weight: bold;
 }
-#acordion_group ul li{
-  padding-right: 30%;
+#nav_mobile a:visited{
+  color: white;
 }
-/*MIN WIDTH 481px - MAX WIDTH 600PX*/
+#nav_mobile a{
+  text-decoration: none;
+}
+#nav_mobile button{
+  margin: 0;
+  padding: 3% 0 0 0;
+}
+#nav_mobile button:hover{
+  background-color: #0c1f34;
+}
+#mobile_header{
+  width: 100%;
+}
+#show_menu,#close_menu{
+  width: 20%;
+  font-size: 1.8em;
+  text-decoration: none;
+}
+#show_menu{
+  float: left;
+  font-weight: bold;
+}
+#close_menu{
+  float: right;
+}
+#logo_mobile{
+  width: 40%;
+  margin: 1% 10%;
+}
 
+#menu_mobile li,#mobile_authentication li{
+  padding: 3% 0;
+}
+#menu_mobile li{
+  
+  text-align: center;
+  border: 1.5px solid #0f2742;
+  border-right: none;
+  border-left: none;
+}
+#menu_mobile li:first-child{
+  border-top: 3px solid #0f2742;
+}
+#menu_mobile li:last-child{
+  border-bottom: 3px solid #0f2742;
+}
+#mobile_authentication li{
+  width: 46.5%;
+  display: inline-block;
+  border: none;
+  text-align: center;
+}
+#separator{
+  color:#0f2742;
+  font-size: 1.5em;
+  font-weight: bold;
+}
 /*--------------------------------
 ------------- ALLENATORI -------------
 ----------------------------------*/
@@ -116,7 +142,3 @@ background-color: #35383d;
     display: block;
     text-align: left;
   }
-
-#nav_desktop ul {
-width: 80%;
-}

@@ -50,7 +50,6 @@ form.onsubmit = function () {
     for (i in checks) {
         if (!checks[i]) {
             send = false;
-            console.log(send);
         }
     }
     return send;
