@@ -15,26 +15,33 @@
 
   <div id="nav_mobile">
     <div id="mobile_header">
-      <button id="show_menu">&#9776;</button>
+      
+      <input type="checkbox" id="show_menu">
+      <label for="show_menu">
+        <img id ="hmenu" src="./css/img/h-menu.png" alt="Logo AimFit"/>
+        <img id ="xmenu" src="./css/img/x.png" alt="Logo AimFit"/>
+      </label>
+
       <img id ="logo_mobile" src="./css/img/logo.png" alt="Logo AimFit"/>
-      <button id="close_menu">&#10006;</button>
+      <div id="menu_m_content">
+      
+        <ul id="menu_mobile">
+          *linkhome*
+          *linkcorsi*
+          *linkprogramma*
+          *linkprezzi*
+          *linkchisiamo*
+          *linkallenatori*
+          *linkcontattaci*
+        </ul>
+        <ul id="mobile_authentication">
+          *linkregistrazione*
+          <span id="separator">&VerticalSeparator;</span>
+          *linklogin*
+        </ul>
+      </div>
     </div>
-    <div>
-      <ul id="menu_mobile">
-        *linkhome*
-        *linkcorsi*
-        *linkprogramma*
-        *linkprezzi*
-        *linkchisiamo*
-        *linkallenatori*
-        *linkcontattaci*
-      </ul>
-      <ul id="mobile_authentication">
-        *linkregistrazione*
-        <span id="separator">&VerticalSeparator;</span>
-        *linklogin*
-      </ul>
-    </div>
+    
     
 
 <!-- Use any element to open/show the overlay navigation menu -->
