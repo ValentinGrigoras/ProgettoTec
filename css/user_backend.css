@@ -1,0 +1,50 @@
+/*user panel (valentin)*/
+body{
+  margin:0;
+  padding: 0;
+}
+#topnav_user{
+  overflow: hidden;
+  background-color: #0f2742;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+#user_ul{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+#user_ul li{
+  float: left;
+  list-style:  none;
+  display: inline-block;
+  padding: 1% 2%;
+}
+#user_ul li{
+  color: #fff;
+}
+#user_ul #user_mail{
+  float: none;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-10%, -50%);
+}
+#user_ul li:last-child{
+  float: right;
+}
+
+#user_ul li a{
+  text-align:center;
+  color: #fff;
+}
+#user_ul li a:hover{
+text-decoration: none;
+}
+#user_ul li:hover{
+  background-color: #3A527B;
+}
+#content{
+  margin-top: 5%;
+}

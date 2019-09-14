@@ -14,9 +14,9 @@ $database = new Database();
 echo $_POST['signin'];
 if($database && isset($_POST['signin'])) {
 		$ris = Database::getUser($_POST['email'],$_POST['password']);
-		var_dump($ris);
 		/*Prelevo l'identificativo dell'utente */
 		$cod=$ris[0]['email'];
+		$id =$ris[0]['idUtente'];
 
 		/* Effettuo il controllo */
 		if ($cod == NULL) $trovato = 0 ;
@@ -29,11 +29,12 @@ if($database && isset($_POST['signin'])) {
 
 		  /*Registro il codice dell'utente*/
 		  $_SESSION['cod'] = $cod;
+		  $_SESSION['id'] = $id;
 
-$_SESSION['error'] = 0;
+		$_SESSION['error'] = 0;
 		 /*Redirect alla pagina riservata*/
 		   //echo '<script language=javascript>document.location.href="panel_user.php"</script>';
-		   header("Location: ../../");
+		   header("Location: ../../user_panel");
 
 		   //return true
 		} else {

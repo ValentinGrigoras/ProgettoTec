@@ -100,7 +100,7 @@ class Database {
         public static function getUser($email, $password) {
          $email = self::$connection->real_escape_string($email);
         $password = self::$connection->real_escape_string($password);
-    $query = "SELECT  email, password FROM Utente WHERE email=\"$email\" AND password=\"$password\"";
+    $query = "SELECT  * FROM Utente WHERE email=\"$email\" AND password=\"$password\"";
     return self::selectRows($query);
     }
     //genera orario
@@ -134,5 +134,28 @@ class Database {
                 FROM Corsi
                 WHERE nome='".$nomeCorso."';";
         return self::selectRows($query);
+
+    }public static function getSubscriptionDate($idUser){
+        $query = "SELECT dataScadenza from Contratto WHERE idUtente =\"$idUser\" ";
+        return self::selectRows($query);
+    }
+
+    public static function getUserContract($idUser){
+
+        $query= "SELECT *
+                FROM Contratto
+                WHERE idUtente='".$idUser."';";
+        return self::selectRows($query);
+    }
+    public static function isActive($idUser)
+    {
+        echo "Sono in IsActive";
+        $data=self::getUserContract($idUser);
+        var_dump($data);
+        echo "dopo la stampa";
+        if(self::getUserContract($idUser) && $data['dataScadenza'] >strtotime("now")){
+            return true;
+        }
+        return false;
     }
 }

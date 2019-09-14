@@ -4,12 +4,11 @@
         session_start(); 
     }
     $uri_case = explode('/', $_SERVER['REQUEST_URI'], 3);
- 
-$header = file_get_contents(dirname(dirname(__DIR__)).'/'."html".'/'."templates".'/'."header.html");
 
-//print_r(dirname(dirname(__DIR__))); ///var/www/html/ProgettoTec
+    if($uri_case == "user_panel" && $_SESSION["autorizzato"]==1)
+        $header = file_get_contents(dirname(dirname(__DIR__)).'/'."html".'/'."templates".'/'."user_panel_header.html");
+    else{$header = file_get_contents(dirname(dirname(__DIR__)).'/'."html".'/'."templates".'/'."header.html");}
 
-//var_dump($last_uri_parts[0]);
 $trovato=false;
 
 if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
@@ -30,12 +29,18 @@ if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
     }
 }else{ //utente autenticato
     switch ($uri_case[2]){
-        case "user_panel":
-            $header = str_replace("*linkregistrazione*","<li class='active_link'>Area Personale</li>",$header);
-            $header = str_replace("*breadcrumbs*","<span xml:lang='en'>Home</span> >> Area Personale",$header);
-            $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."user_panel.php";
-            $trovato=true;
-            break;
+
+        case "user_panel": 
+        $header = file_get_contents(dirname(dirname(__DIR__)).'/'."html".'/'."templates".'/'."user_panel_header.html"); 
+        $header = str_replace("*torna*","<li><a href=\"#\">Torna al sito</a></li>",$header);
+        $header = str_replace("*abbonamenti*","<li><a href=\"#abbonamento\">Gestione abbonamento</a></li>",$header);
+        $header = str_replace("*dati*","<li><a href=\"#dati\">Gestione dati personali</a></li>",$header);
+        $header = str_replace("*email*","<li id=\"user_mail\">".$_SESSION['cod']."</li>",$header);
+        $header = str_replace("*disconnetti*","<li><a href=\"#\">Disconnetti</a></li>",$header);
+        $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."user_panel.php";
+        $trovato=true;
+        echo "sono 2";
+        break;
         case "logout":
             session_destroy();
             $header =str_replace("*linkregistrazione*","<li><a href='./registrazione' tabindex=\"$tabIndex\">Registrazione</a></li>",$header);
@@ -88,8 +93,9 @@ switch ($uri_case[2]){
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."not_found.php";
         break;
 }}
+    $tabIndex = 2;
+if($uri_case[2]!= "user_panel"){
 
-$tabIndex = 2;
 $header = str_replace("*linkhome*","<li><a href='./' xml:lang='en' tabindex=\"$tabIndex\">Home</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $header = str_replace("*linkchisiamo*","<li><a href='./chi_siamo' tabindex=\"$tabIndex\">Chi siamo</a></li>",$header);
@@ -105,6 +111,8 @@ $header = str_replace("*linkcorsi*","<li><a href='./corsi' tabindex=\"$tabIndex\
 $header = str_replace("*linkprogramma*","<li><a href='./programma' tabindex=\"$tabIndex\">Programma</a></li>",$header);
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $header = str_replace("*linkprezzi*","<li><a href='./prezzi' tabindex=\"$tabIndex\">Prezzi</a></li>",$header);
+}
+echo "sono 3";
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
     //nessun utente autenticato
@@ -112,16 +120,19 @@ if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
     $header = str_replace("*linkregistrazione*","<li><a href='./registrazione' tabindex=\"$tabIndex\">Registrazione</a></li>",$header);
     $header = str_replace("*linklogin*","<li><a href='./login' tabindex=\"$tabIndex\">Login</a></li>",$header);
 }else{
-    //utente autenticato
-    echo "sono autenticato";
+
     $header = str_replace("*welcomeMessage*","<li>".$_SESSION["cod"]."</li>",$header);
-    $header = str_replace("*linkregistrazione*","<li><a href='./area_personale' tabindex=\"$tabIndex\">Area Personale</a></li>",$header);
+    $header = str_replace("*linkregistrazione*","<li><a href='./user_panel' tabindex=\"$tabIndex\">Area Personale</a></li>",$header);
     $header = str_replace("*linklogin*","<li><a href='./logout' tabindex=\"$tabIndex\">Logout</a></li>",$header);
 
 }
+if($uri_case[2]!= "user_panel"){
 require_once 'head.php';
-
+}
+echo "sono 4";
 echo $header;
 
 require_once $page;
+if($uri_case[2]!= "user_panel"){
 require_once 'footer.php';
+}
