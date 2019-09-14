@@ -55,7 +55,7 @@ h4{
   font-size: 1.1em;
 }
 #sections {
-  width: 90%;
+  width: 98%;
 }
 
 #links {
@@ -92,17 +92,7 @@ h4{
 #allenatori_section #allenatori_content {
   width: 100%;
 }
-#allenatori_section #allenatori_content dl {
-  width: 47%;
-  margin: 2% 1.5% 4% 1.5%;
-}
-#allenatori_section .allen1 .socials_links li {
-  font-size: 1.4em;
-}
 
-#allenatori_section dd p {
-  width: 90%;
-}
 
 /*--------------------------------
 ------------- END ALLENATORI -------------
@@ -135,7 +125,7 @@ h4{
 -------CORSI ------
 ----------------------------------*/
 #content_corsi {
-  width: 85%;
+  width: 100%;
 }
 .corso .buttonCorsi {
   margin: 5% 5%;
@@ -200,4 +190,8 @@ div.content {margin-left: 0;}
 
 #contact_us_form{
   width: 65%;
+}
+
+#validCode img {
+    width: 17%;
 }

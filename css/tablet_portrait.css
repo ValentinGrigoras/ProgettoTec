@@ -136,3 +136,16 @@ div.content {margin-left: 0;}
   padding: 0;
   background-color: aquamarine;
 }
+
+#allenatori_section {
+
+    padding: 0;
+}
+
+#content_corsi {
+    padding: 0;
+}
+
+#abbonamenti_section a.btn {
+    width: 30%;
+}
