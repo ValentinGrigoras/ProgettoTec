@@ -39,11 +39,11 @@ background-color: #35383d;
 #allenatori_section #allenatori_content{
     width: 100%;
 }
-#allenatori_section .allen1 .socials_links{
+#allenatori_section .allen1{
     width: 100%;
     margin: 0;
 }
-#allenatori_section .allen1 .socials_links li{
+#allenatori_section .allen1{
   width: 25%;
   margin: 0;
   text-align: center;
@@ -229,12 +229,6 @@ select #seleziona_corso{
 }
 #links p{
     padding-bottom: 5%;
-}
-#socials{
-
-}
-#socials li{
-    margin-right:6%;
 }
 #societa{
     width: 48%;
