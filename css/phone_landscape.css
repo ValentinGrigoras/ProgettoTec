@@ -45,6 +45,7 @@ input[type=checkbox] {
    }
 input[type=checkbox]:checked ~ #menu_m_content {
   display: block;
+  height: 100%;
 }
 input[type=checkbox]:checked ~ label>#xmenu {
   display: block;
@@ -69,7 +70,7 @@ input[type=checkbox]:checked ~ label>#hmenu {
   border-bottom: 3px solid #0f2742;
 }
 #mobile_authentication li{
-  width: 46%;
+  width: 45%;
   display: inline-block;
   border: none;
   text-align: center;
@@ -79,6 +80,15 @@ input[type=checkbox]:checked ~ label>#hmenu {
   font-size: 1.5em;
   font-weight: bold;
 }
+#fixed{
+  position: fixed;
+  width: 100%;
+}
+#landing{
+  padding-top: 22%;
+}
+
+
 /*--------------------------------
 ------------- ALLENATORI -------------
 ----------------------------------*/
