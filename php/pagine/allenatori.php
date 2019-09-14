@@ -20,8 +20,8 @@ $trainer = "";
     $trainer .= '<dl class="threeColumnsCard">';
     $trainer .= '<dt>'.$trainers[$indice]['cognome']. " ".$trainers[$indice]['nome']. '</dt>';
     $trainer .= '<dd class="cont_corso">';
-     $trainer .= '<img class= "allenatoreImg" src="img/allenatori/'.$trainers[$indice]['img']. '"' . ' alt="immagine allenatore ' . $trainers[$indice]['nome'] . '"/>';
-    $trainer .= '<a class="contactTrainer" href="mailto:' . $trainers[$indice]['email'] .'">'. $trainers[$indice]['email'] .'</a>';
+     $trainer .= '<img class= "allenatoreImg" src="img/allenatori/'.$trainers[$indice]['img']. '"' . ' alt="foto allenatore ' .$trainers[$indice]['cognome']. " ".$trainers[$indice]['nome']. '"/>';
+    $trainer .= '<p xml:lang="en">Email:</p><a class="contactTrainer" href="mailto:' . $trainers[$indice]['email'] .'">'. $trainers[$indice]['email'] .'</a>';
     $trainer .=  '</dd>';
     $trainer .= '</dl>';
 
