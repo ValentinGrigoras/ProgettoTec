@@ -111,24 +111,6 @@ $tabIndex = 2; $counter=0;
 $header = str_replace("*tabindexbreadcrumb*",$tabIndex,$header,$counter);
 if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 
-if($uri_case[2]!= "user_panel"){
-
-$header = str_replace("*linkhome*","<li><a href='./' xml:lang='en' tabindex=\"$tabIndex\">Home</a></li>",$header);
-//if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-$header = str_replace("*linkchisiamo*","<li><a href='./chi_siamo' tabindex=\"$tabIndex\">Chi siamo</a></li>",$header);
-
-//if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-$header = str_replace("*linkallenatori*","<li><a href='./allenatori' tabindex=\"$tabIndex\">Allenatori</a></li>",$header);
-
-//if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-$header = str_replace("*linkcontattaci*","<li><a href='./#contact_section' tabindex=\"$tabIndex\">Contattaci</a></li>",$header);
-//if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-$header = str_replace("*linkcorsi*","<li><a href='./corsi' tabindex=\"$tabIndex\">Corsi</a></li>",$header);
-//if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-$header = str_replace("*linkprogramma*","<li><a href='./programma' tabindex=\"$tabIndex\">Programma</a></li>",$header);
-//if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-$header = str_replace("*linkprezzi*","<li><a href='./prezzi' tabindex=\"$tabIndex\">Prezzi</a></li>",$header);
-}
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
     //nessun utente autenticato

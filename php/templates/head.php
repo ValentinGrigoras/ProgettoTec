@@ -8,7 +8,7 @@ $uri_case = explode('/', $_SERVER['REQUEST_URI'], 3);
 //$uri_case[0] = substr($uri_case[0], strrpos($uri_case[0], '/')+1);
 switch ($uri_case[2]){
     case "":
-        $head = str_replace("*title*","Homepage | AIMFit",$head);
+        $head = str_replace("*title*","Pagina iniziale | AIMFit",$head);
         $head = str_replace("*description*","Homepage della palestra AIMFit di Padova.",$head);
         $head = str_replace("*keywords*","AIMFit, palestra, fitness, pesi, allenatori, corsi",$head);
         break;
