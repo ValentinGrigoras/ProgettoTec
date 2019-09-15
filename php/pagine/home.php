@@ -33,8 +33,8 @@ $trainer = "";
     $tabIndex++;
 	$trainer .= '<dd class="cont_corso">';
     $trainer .= '<img class= "allenatoreImg" src="img/allenatori/'.$trainers[$indice]['img']. '"' . ' alt="foto allenatore ' .$trainers[$indice]['cognome']. " ".$trainers[$indice]['nome']. '"/>';
-	$trainer .= '<a class="contactTrainer trainers" href="mailto:' . $trainers[$indice]['email'] .' tabindex="'.$tabIndex.'">'. $trainers[$indice]['email'] .'</a>';
-    $tabIndex++;
+	$trainer .= '<a class="contactTrainer trainers" href="mailto:' . $trainers[$indice]['email'] .'">'. $trainers[$indice]['email'] .'</a>';
+
 	$trainer .=  '</dd>';
     $trainer .= '</dl>';
 
@@ -84,6 +84,16 @@ if (!isset($_POST['contact_us'])) {//non è stato fatto submit
 	$page=str_replace('*nome*', "" , $page);
 	$page=str_replace('*cognome*', "" , $page);
 	$page=str_replace('*messaggio*', "" , $page);
+	$page = str_replace("*tabindexnome*", $tabIndex, $page, $counter);
+	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+	$page = str_replace("*tabindexcognome*", $tabIndex, $page, $counter);
+	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+	$page = str_replace("*tabindexfieldemail*", $tabIndex, $page, $counter);
+	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+	$page = str_replace("*tabindexsubject*", $tabIndex, $page, $counter);
+	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+	$page = str_replace("*tabindexsubject*", $tabIndex, $page, $counter);
+	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 }else{//è stato fatto submit
 	$error=false;
 	$nome=$_POST['nome']; 
@@ -184,7 +194,7 @@ $page=str_replace('*confirmmessage*', "", $page);
 	$page = str_replace("*tabindextitolounisciti*", $tabIndex, $page, $counter);
 	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 	
-	$page = str_replace("*tabindextitoloallenatori*", $tabIndex, $page, $counter);
+	$page = str_replace("*tabindexunisciti*", $tabIndex, $page, $counter);
 	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 	
 $page = str_replace("*linkabbonamenti*",'<a tabindex="'.$tabIndex.'" class="btn" href="./prezzi">Scopri i nostri abbonamenti</a>',$page);

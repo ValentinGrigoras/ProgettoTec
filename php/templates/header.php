@@ -144,8 +144,8 @@ if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $header = str_replace("*linkcontattaci*","<li><a href='./#contact_section' tabindex=\"$tabIndex\">Contattaci</a></li>",$header,$counter);
 if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 }
-$header = str_replace("*tabindexnoscript*",$tabIndex,$header,$counter);
-if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+/*$header = str_replace("*tabindexnoscript*",$tabIndex,$header,$counter);
+if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);*/
 
 if(strpos($uri_case[2], 'user') === false){
 require_once 'head.php';
