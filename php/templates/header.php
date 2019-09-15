@@ -5,12 +5,12 @@
     }
     $uri_case = explode('/', $_SERVER['REQUEST_URI'], 3);
 
-    if($uri_case == "user_panel" && $_SESSION["autorizzato"]==1)
+    if(strpos($uri_case[2], 'user') !== false  && $_SESSION["autorizzato"]==1)
         $header = file_get_contents(dirname(dirname(__DIR__)).'/'."html".'/'."templates".'/'."user_panel_header.html");
     else{$header = file_get_contents(dirname(dirname(__DIR__)).'/'."html".'/'."templates".'/'."header.html");}
 
 $trovato=false;
-
+$tabIndex=2;
 if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
     //nessun utente autenticato
     switch ($uri_case[2]){
@@ -26,21 +26,30 @@ if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
             $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."login.php";
             $trovato=true;
             break;
+        case "user_panel": 
+            header("Location: ./login");
+        case "user_info": 
+            header("Location: ./login");
     }
 }else{ //utente autenticato
+
+    if(strpos($uri_case[2], 'user') !== false){ // se il nome della pagina contiene la parola user, carico il header una sola volta
+            $header = str_replace("*torna*","<li><a href=\"./\">&#8592; Torna al sito</a></li>",$header);
+            $header = str_replace("*abbonamenti*","<li><a href=\"#abbonamento\">Gestione abbonamento</a></li>",$header);
+            $header = str_replace("*dati*","<li><a href=\"./user_info\">Gestione dati personali</a></li>",$header);
+            $header = str_replace("*email*","<li id=\"user_mail\"><a href=\"./user_panel\">".$_SESSION['cod']."</a></li>",$header);
+            $header = str_replace("*disconnetti*","<li><a href=\"#\">Disconnetti</a></li>",$header);
+    }
     switch ($uri_case[2]){
 
 
         case "user_panel": 
-        $header = file_get_contents(dirname(dirname(__DIR__)).'/'."html".'/'."templates".'/'."user_panel_header.html"); 
-        $header = str_replace("*torna*","<li><a href=\"#\">Torna al sito</a></li>",$header);
-        $header = str_replace("*abbonamenti*","<li><a href=\"#abbonamento\">Gestione abbonamento</a></li>",$header);
-        $header = str_replace("*dati*","<li><a href=\"#dati\">Gestione dati personali</a></li>",$header);
-        $header = str_replace("*email*","<li id=\"user_mail\">".$_SESSION['cod']."</li>",$header);
-        $header = str_replace("*disconnetti*","<li><a href=\"#\">Disconnetti</a></li>",$header);
-        $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."user_panel.php";
-        $trovato=true;
-        echo "sono 2";
+            $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."user_panel.php";
+            $trovato=true;
+        break;
+        case "user_info": 
+            $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."user_info.php";
+            $trovato=true;
         break;
         case "logout":
             session_destroy();
@@ -94,7 +103,6 @@ switch ($uri_case[2]){
         $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."not_found.php";
         break;
 }}
-    $tabIndex = 2;
 if($uri_case[2]!= "user_panel"){
 
 $header = str_replace("*linkhome*","<li><a href='./' xml:lang='en' tabindex=\"$tabIndex\">Home</a></li>",$header);
@@ -113,7 +121,6 @@ $header = str_replace("*linkprogramma*","<li><a href='./programma' tabindex=\"$t
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $header = str_replace("*linkprezzi*","<li><a href='./prezzi' tabindex=\"$tabIndex\">Prezzi</a></li>",$header);
 }
-echo "sono 3";
 //if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
     //nessun utente autenticato
@@ -128,13 +135,12 @@ if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
     $header = str_replace("*linklogin*","<li><a href='./logout' tabindex=\"$tabIndex\">Logout</a></li>",$header);
 
 }
-if($uri_case[2]!= "user_panel"){
+if(strpos($uri_case[2], 'user') === false){
 require_once 'head.php';
 }
-echo "sono 4";
 echo $header;
 
 require_once $page;
-if($uri_case[2]!= "user_panel"){
+if(strpos($uri_case[2], 'user') === false){
 require_once 'footer.php';
 }

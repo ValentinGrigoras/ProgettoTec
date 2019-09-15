@@ -1,0 +1,46 @@
+<div id="content">
+	*titoloinfo*
+<form id="modify_form" action="./user_info" method="POST">
+					<fieldset>
+                        <div class="form_entry">
+                            <div class="required">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input_feedb">
+                                <input tabindex="*tabindexemail*" type="text" name="email" id="email" value="*email*" />
+                                <p class="form_note">Inserire l'<span xml:lang="en">email</span> nel formato casella@dominio.</p>
+                                <p class="hidden">*erroremail*</p>
+                            </div>
+                        </div>
+                        <div class="form_entry">
+                            <div class="required">
+                                <label for="password" >Password</label>
+                            </div>
+                            <div class="input_feedb">
+                                <input tabindex="*tabindexpassword*" type="password" name="password" id="password" value="*password*"/>
+                                <p class="form_note">Inserire una password di almeno 8 caratteri che contenga almeno una cifra.</p>
+                                <p class="hidden">*errorpassword*</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form_entry">
+                            <div>
+                                <label for="telefono" >Telefono</label>
+                                
+                            </div>
+                            <div class="input_feedb">
+                                <input tabindex="*tabindextelefono*" type="text" name="telefono" id="telefono" value="*telefono*" />
+                                <p class="form_note">Inserire il numero di telefono con sole cifre, senza spazi.</p>
+                                <p class="hidden">*errortelefono*</p>
+                            </div>
+                        </div>
+                        
+                    </fieldset>
+                    <button id="signup" type="submit" name="signup" value="signup">Salva modifiche</button>
+                    <p class="hidden">*confirmmessage*</p>
+				</form>
+</div>
+  <noscript><p> Attenzione: per usufruire di tutte le funzionalità offerte dal sito ti preghiamo di attivare javascript!</p></noscript>
+</body>
+</html>

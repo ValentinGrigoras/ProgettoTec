@@ -23,7 +23,6 @@ if ($database) {
 		}
 
         else if(isset($_SESSION['error']) && $_SESSION['error'] == 0){
-				$ris = Database::getUser($_POST['email'],$_POST['password']);
 				
 				/*Prelevo l'identificativo dell'utente */
 				$cod=$ris[0]['email'];
@@ -37,7 +36,8 @@ if ($database) {
 			  		$page = str_replace("*ciao*", "class=\"hidden\"", $page);
 					  $page.= "<h1> sei stato loggato </h1>";
 					
-				}        
+				}
+
 
 		else if (isset($_SESSION["autorizzato"]) &&  $_SESSION["autorizzato"]==1){
 			$page = str_replace("*ciao*", "class=\"hidden\"", $page);
