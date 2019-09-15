@@ -114,7 +114,7 @@ if (!isset($_POST['signup'])) {//non è stato fatto submit
 		//
 		//Fine controlli input
 		//
-		if (!$errore){
+		if (!$error){
         	$date=$_POST['anno'].$_POST['mese'].$_POST['giorno'];
             $registeruser = Database::registerUser($_POST['email'], $_POST['password'], $_POST['nome'], $_POST['cognome'], Date($date), $_POST['cf'], $_POST['telefono']);
             if (isset($registeruser) && $registeruser){

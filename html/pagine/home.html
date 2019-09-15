@@ -5,29 +5,30 @@
 
 <div id="allenatori_section">
 	<div id="allenatori_content">
-  	<h2>I nostri ALLENATORI</h2>
+  	<h2 tabindex="*tabindextitoloallenatori*">I nostri ALLENATORI</h2>
 		*allenatoriHome*
 	</div> 
 </div> 
 
 <div id="corsi_section">
   <div id="content_corsi">
-    <h2>I nostri CORSI</h2>
+    <h2 tabindex="*tabindextitolocorsi*">I nostri CORSI</h2>
     *corsiHome*
   </div>
 </div>
 
 
 <div id="contact_section">
-    <h2>Contattaci</h2>
+    <h2 tabindex="*tabindextitolocontattaci*">Contattaci</h2>
 	  <div id="contact_form">
 
 		<form id="contact_us_form" action="./#contact_us_form" method="post">
       	<fieldset>
           *confirmmessage*
-        	<p>I campi con (*) sono obbligatori.</p>
+		  
+        	<p tabindex="*tabindextitoloobbligatori*">I campi con (*) sono obbligatori.</p>
         	<div class="required form_entry">
-				<label for="nome">Nome</label>
+				<label for="nome">Nome *</label>
         		<div class="input_feedb">
 					     <input tabindex="*tabindexnome*" type="text" id="nome" name="nome" value="*nome*"/>
                <p class="form_note">Inserire il nome, deve contenere solo lettere.</p>
@@ -35,7 +36,7 @@
         		</div>
        		</div>
        		<div class="required form_entry">
-				<label for="cognome">Cognome</label>
+				<label for="cognome">Cognome *</label>
          		<div class="input_feedb">
 					     <input tabindex="*tabindexcognome*" type="text" id="cognome" name="cognome" value="*cognome*"/>
                 <p class="form_note">Inserire il cognome, deve contenere solo lettere.</p>
@@ -43,7 +44,7 @@
          		</div>
         	</div>
         	<div class="required form_entry">
-			   	<label for="email">La tua <span xml:lang="en">e-mail</span>:</label>
+			   	<label for="email">La tua <span xml:lang="en">e-mail*</span>:</label>
          		<div class="input_feedb">
 			     	<input tabindex="*tabindexfieldemail*" type="text" id="email" name="email" value="*email*"/>
             <p class="form_note">Inserire l'<span xml:lang="en">email</span> nel formato casella@dominio.</p>
@@ -51,28 +52,28 @@
          		</div>
        		</div>
        		<div class="required form_entry">
-			   	<label for="messaggio">Messaggio</label>
+			   	<label for="messaggio">Messaggio *</label>
          		<div class="input_feedb">
 			     	<textarea tabindex="*tabindexsubject*" rows="6" cols="40" id="messaggio" name="messaggio">*messaggio*</textarea>
             <p class="form_note">Inserire il messaggio. Non deve contere caratteri speciali.</p>
 			     	*errormessaggio*
          		</div>
        		</div>
-			   	<button id="contact_us" name="contact_us" type="submit" value="contact_us">Invia</button>
+			   	<button tabindex="*tabindexinvia*" id="contact_us" name="contact_us" type="submit" value="contact_us">Invia</button>
       	</fieldset>
 		</form>
 	</div>
 
     <div id="dove_siamo">
-        <h3> Info </h3>
-        <p> Tel +39 049 661227</p>
-        <p> oppure </p>
-        <p> passa a trovarci </p> <p>in Via Galleria Degli Scrovegni, 1 a Padova!</p>
+        <h3 tabindex="*tabindextitoloinfo*"> Info </h3>
+        <p tabindex="*tabindextitolocomecon*">> Tel +39 049 661227 </br>
+         oppure </br>
+         passa a trovarci </br> in Via Galleria Degli Scrovegni, 1 a Padova!</p>
       </div>
 </div>
 <div id="abbonamenti_section">
-<p id="prezzi_main_message">UNISCI A NOI</p>
-<p id="prezzi_second_message">Iscriviti subito e partecipa ai nostri corsi!</p>
+<p id="prezzi_main_message" tabindex="*tabindextitolounisciti*">UNISCI A NOI</p>
+<p id="prezzi_second_message" tabindex="*tabindextitoloallenatori*">Iscriviti subito e partecipa ai nostri corsi!</p>
 *linkabbonamenti*
 
 </div>
