@@ -28,8 +28,9 @@ class Validator{
         return filter_var($email, FILTER_VALIDATE_EMAIL);//  Filters a variable with a specified filter (FILTER_VALIDATE_EMAIL)
     }
     public static function passwordValidator($password){
-        $number    = preg_match('@[0-9]@', $password); // must contain at least one number
-        return ($number  && strlen($password) >= 8 ); // password lenght must be: 8 <= password.lenght <= 16
+        $number    = preg_match('@[0-9]@', $password);
+        $space = preg_match('@[^ ]@', $password); // must contain at least one number
+        return ($number && !$space && strlen($password) >= 8 && strlen($password) <= 16); // password lenght must be: 8 <= password.lenght <= 16
     }
     public static function nameValidator($name){
         return preg_match("/^([a-zA-Z' ]+)$/",$name);
