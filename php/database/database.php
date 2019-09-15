@@ -135,7 +135,8 @@ class Database {
                 WHERE nome='".$nomeCorso."';";
         return self::selectRows($query);
 
-    }public static function getSubscriptionDate($idUser){
+    }
+    public static function getSubscriptionDate($idUser){
         $query = "SELECT dataScadenza from Contratto WHERE idUtente =\"$idUser\" ";
         return self::selectRows($query);
     }
@@ -147,15 +148,34 @@ class Database {
                 WHERE idUtente='".$idUser."';";
         return self::selectRows($query);
     }
-    public static function isActive($idUser)
-    {
-        echo "Sono in IsActive";
-        $data=self::getUserContract($idUser);
-        var_dump($data);
-        echo "dopo la stampa";
-        if(self::getUserContract($idUser) && $data['dataScadenza'] >strtotime("now")){
-            return true;
-        }
-        return false;
+
+        public static function getCoursesByUserID($idUser){
+
+        $query= "SELECT *
+                FROM Corsi, Contratto, CorsiScelti
+                WHERE Contratto.idUtente='".$idUser."' AND Contratto.idContratto=CorsiScelti.idContratto AND CorsiScelti.idCorso=Corsi.idCorso;";
+        return self::selectRows($query);
+    }
+
+        public static function getPassword($email){
+
+        $query= "SELECT password, tel
+                FROM Utente
+                WHERE email='".$email."';";
+        return self::selectRows($query);
+    }
+
+    public static function modifyUser($email, $password,$telefono, $id) {
+        $email = self::$connection->real_escape_string($email);
+        $password = self::$connection->real_escape_string($password);
+        $telefono = self::$connection->real_escape_string($telefono);
+        $query = "UPDATE Utente 
+                    SET email='".$email."', password='".$password."', tel='".$telefono."'
+                    WHERE idUtente='".$id."';";
+
+        return self::insertUpdateDelete($query);
+
     }
 }
+
+

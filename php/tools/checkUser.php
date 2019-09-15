@@ -11,7 +11,7 @@ use Database\Database;
 
 //mi collego
 $database = new Database();
-echo $_POST['signin'];
+
 if($database && isset($_POST['signin'])) {
 		$ris = Database::getUser($_POST['email'],$_POST['password']);
 		/*Prelevo l'identificativo dell'utente */

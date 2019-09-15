@@ -1,7 +1,13 @@
 /*user panel (valentin)*/
 body{
-  margin:0;
-  padding: 0;
+    margin:0;
+    padding: 0;
+    font-size: 0.8em;
+    font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+            box-sizing: border-box;
+      
 }
 #topnav_user{
   overflow: hidden;
@@ -23,6 +29,7 @@ body{
 }
 #user_ul li{
   color: #fff;
+  font-weight: bold;
 }
 #user_ul #user_mail{
   float: none;
@@ -38,6 +45,7 @@ body{
 #user_ul li a{
   text-align:center;
   color: #fff;
+  font-weight: bold;
 }
 #user_ul li a:hover{
 text-decoration: none;
@@ -48,3 +56,91 @@ text-decoration: none;
 #content{
   margin-top: 5%;
 }
+
+.threeColumnsCard .desc_corso{
+min-height: 13em;
+text-align: left;
+font-weight: normal;
+}
+.threeColumnsCard dt{
+  background-color: #0f2742;
+  color: #fff;
+  padding: 2%;
+  text-align: center;
+}
+.threeColumnsCard dd{
+  padding: 2% 1% 9% 20%; ;
+  margin:0;
+
+}
+.threeColumnsCard a{
+background-color:#0f2742;
+  color: #fff;
+  padding: 2%;
+font-weight: bold;
+font-size: 80%;
+}
+.threeColumnsCard{
+  width: 25%;
+  margin: 1%;
+  display: inline-block;
+   box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  .twoColumnsCardDetails .livello_corso{
+
+    text-align: center;
+    padding: 3.5%;
+    border-bottom: 1px solid #ccc;
+  }
+.corsoScelto{
+  color: #0f2742;
+  font-weight: bold;
+}
+
+form {
+    width: 35%;
+    margin: 0 auto;
+    float: none;
+}
+.form_entry{
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+  overflow: auto;
+}
+.form_entry textarea{
+  height: 10em;
+  resize: none;
+}
+.form_note{
+  color: #586069;
+  font-size: 0.8em;
+}
+input[type="text"], input[type="password"], textarea{
+  border: 0.1em solid #999999;
+  border-radius: 0.2em;
+  color: #24292e;
+  height: 1.7em;
+  background-color: white;
+  width: 85%;
+}
+fieldset {
+    padding: 2.5%;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ebf0fa;
+    border-radius: 0.2em;
+    margin: 2.5% 0 3% 0;
+}
+button {
+    background-color: #0c1f34;
+    color: white;
+    text-decoration: underline;
+    margin: 3% 0% 3% 42%;
+    padding: 3%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 16%;
+}
+#content h1 {text-align: center;}

@@ -17,7 +17,6 @@ if ($database) {
 	if (isset($_SESSION['error']) && $_SESSION['error'] == 1) 
 		$page = str_replace("*errorlogin*", "<h2 class=\"error\"> Autenticazione fallita!</h2> <p class=\"error\"> <span xml:lang=\"en\">Email</span> e/o <span xml:lang=\"en\">password</span> sono sbagliate!</p>", $page);
         else if(isset($_SESSION['error']) && $_SESSION['error'] == 0){
-				$ris = Database::getUser($_POST['email'],$_POST['password']);
 				
 				/*Prelevo l'identificativo dell'utente */
 				$cod=$ris[0]['email'];
@@ -31,7 +30,8 @@ if ($database) {
 			  		$page = str_replace("*class*", "class=\"hidden\"", $page);
 					  $page.= "<h1> Sei stato autenticato! </h1>";
 					
-				}        
+				}
+
 
 		else if (isset($_SESSION["autorizzato"]) &&  $_SESSION["autorizzato"]==1){
 			$page = str_replace("*class*", "class=\"hidden\"", $page);
