@@ -4,21 +4,21 @@
 <div *class*>
         <div >
             <div id="intestazione" >
-                <h1> Collegati ad AIMFit </h1>
+                <h1> Collegati ad <span xml:lang="en">AIMFit</span> </h1>
                 <p> Offre soluzioni d’allenamento in grado di rispondere ad ogni esigenza! </p>
             </div>
             <div id="contenuto">
                 <div id="dati">
                     <form id="signin_form" action="./php/tools/checkUser.php" method="post">
-                        <h2> Entra nel tuo account </h2>
-                        
+                        <h2> Entra nel tuo <span xml:lang="en">account</span> </h2>
+                        *errorlogin*
     
                         <fieldset>
-                            <legend>Account</legend>
+                            <legend xml:lang="en">Account</legend>
                         <p>I campi con (*) sono obbligatori.</p>
                         <div class="form_entry">
                             <div class="required">
-                                <label for="email">Email</label>
+                                <label xml:lang="en" for="email">Email</label>
                             </div>
                             <div class="input_feedb">
                                 <input tabindex="*tabindexemail*" type="text" name="email" id="email" *disabled* />
@@ -33,7 +33,6 @@
                             <div class="input_feedb">
                                 <input tabindex="*tabindexpassword*" type="password" name="password" id="password"  *disabled*/>
                                 <p class="form_note">Inserire la <span xml:lang="en">password <span>.</p>
-                                *errorpassword*
 
                             </div>
                             

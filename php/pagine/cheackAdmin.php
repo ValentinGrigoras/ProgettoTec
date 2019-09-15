@@ -39,6 +39,7 @@ if($database && isset($_POST['signin'])) {
 		} else {
 			
 		$_SESSION['error'] = 1;
+		$_SESSION["autorizzato"] = 0;
 		/*Username e password errati, redirect alla pagina di login*/
 		 //echo '<script language=javascript>document.location.href="ProgettoTec"</script>';
 		header("Location: admin_login.php");

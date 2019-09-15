@@ -44,7 +44,11 @@ if ($database) {
 			$page.= "<h1> Sei già autenticato nel sistema! </h1>";
 
 		}
+		else if (isset($_SESSION["autorizzato"]) &&  $_SESSION["autorizzato"]!=1)
+			$page = str_replace("*errorlogin*", "<h2 class=\"error\"> Autenticazione fallita!</h2> <p class=\"error\"> <span xml:lang=\"en\">Email</span> o <span xml:lang=\"en\">password</span> sono sbagliate!</p>", $page);
 	}        	
 }
+$page = str_replace("*erroremail*", "", $page);
+$page = str_replace("*errorlogin*", "", $page);
 echo $page;
 ?>
