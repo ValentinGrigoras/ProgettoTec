@@ -6,7 +6,9 @@
     }
 require_once "./../../php/database/database.php";
 require_once "./../../php/tools/validator.php";
+require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . "templates" . DIRECTORY_SEPARATOR . "utilities.php";
 
+use Utilities\Utilities;
 use Database\Database;
 use Validator\Validator;
 

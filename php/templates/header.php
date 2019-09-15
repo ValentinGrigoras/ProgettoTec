@@ -1,7 +1,7 @@
 <?php
 require_once "./utilities.php";
-
 use Utilities\Utilities;
+
  if(!isset($_SESSION)) 
     { 
         session_start(); 
