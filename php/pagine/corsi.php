@@ -17,12 +17,12 @@ if(isset($courses))
 $course = "";
   for($indice = 0;$indice<count($courses); $indice++){
 
-    $course .= '<dl class="threeColumnsCard">';
+    $course .= '<dl id="'.$courses[$indice]['idCorso'].'" class="threeColumnsCard">';
     $course .= '<dt>'.$courses[$indice]['nome'].'</dt>';
     $course .= '<dd class="cont_corso">';
-    $course .= '<img class = "corsiImg" src="img/corsi/'.$courses[$indice]['nomeImg']. '"' . ' alt="immagine ' . $courses[$indice]['nome'] . '"/>';
+    $course .= '<img class = "corsiImg" src="img/corsi/'.$courses[$indice]['nomeImg']. '"' . ' alt="immagine corso' . $courses[$indice]['nome'] . '"/>';
     $course .= '<p class="livello_corso">Livello: ' . $courses[$indice]['livello'] .'</p>';
-    $course .= '<p class="livello_corso">Durata sessione: ' . $courses[$indice]['durata'] . ' min'.'</p>';
+    $course .= '<p class="livello_corso">Durata sessione: ' . $courses[$indice]['durata'] . ' minuti'.'</p>';
     $course .= '<p class="livello_corso">Costo al mese : ' . $courses[$indice]['costo'] . ' &euro;' . '</p>';
     $course .= '<p class="desc_corso">' . $courses[$indice]['descrizione'] . '</p>';
     $course .=  '</dd>';

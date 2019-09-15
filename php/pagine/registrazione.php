@@ -31,11 +31,11 @@ if (!isset($_POST['signup'])) {//non è stato fatto submit
 		//controllo  mail
 		if ($_POST['email']==""){
 			$error=true;
-			$page=str_replace('<p class="hidden">*erroremail*</p>', '<p class="error">Inserire l\' <span xml:lang=\"en\">email</span>.</p>', $page);
+			$page=str_replace('*erroremail*', '<p class="error">Inserire l\' <span xml:lang=\"en\">email</span>.</p>', $page);
 		}else{
 			if (!Validator::emailValidator($_POST['email'])){
 				$error=true;
-				$page=str_replace('<p class="hidden">*erroremail*</p>', '<p class="error">Il campo <span xml:lang=\"en\">Email</span> inserito non è corretto. Rispettare il formato indicato.</p>', $page);
+				$page=str_replace('*erroremail*', '<p class="error">Il campo <span xml:lang=\"en\">Email</span> inserito non è corretto. Rispettare il formato indicato.</p>', $page);
 			}
 		}
 		//controllo se mail è già registrata
@@ -43,48 +43,48 @@ if (!isset($_POST['signup'])) {//non è stato fatto submit
 			$user = Database::selectUser($_POST['email']);
 			if (!empty($user)) {
 				$error=true;
-				$page=str_replace('<p class="hidden">*erroremail*</p>', '<p class=\'error\'>L\'<span xml:lang=\'en\'>email</span> inserita &egrave; gi&agrave; stata registrata.</p>', $page);
+				$page=str_replace('*erroremail*', '<p class=\'error\'>L\'<span xml:lang=\'en\'>email</span> inserita &egrave; gi&agrave; stata registrata.</p>', $page);
 			}
 		} 
 		//controllo password
 		if ($_POST['password']==""){
 			$error=true;
-			$page=str_replace('<p class="hidden">*errorpassword*</p>', '<p class="error">Inserire una <span xml:lang=\"en\">password</span>.</p>', $page);
+			$page=str_replace('*errorpassword*', '<p class="error">Inserire una <span xml:lang=\"en\">password</span>.</p>', $page);
 		}else{
 			if (!Validator::passwordValidator($_POST['password'])){
 				$error=true;
-				$page=str_replace('<p class="hidden">*errorpassword*</p>', '<p class="error">La <span xml:lang=\"en\">password</span> non &egrave; valida. Rispettare il formato indicato.</p>', $page);
+				$page=str_replace('*errorpassword*', '<p class="error">La <span xml:lang=\"en\">password</span> non &egrave; valida. Rispettare il formato indicato.</p>', $page);
 			}
 		}
 		//controllo conferma password
 		if ($_POST['password']!=$_POST['confermapassword']){
 			$error=true;
-			$page=str_replace('<p class="hidden">*errorconfermapassword*</p>', '<p class="error">La <span xml:lang=\"en\">password</span> non coincide.</p>', $page);
+			$page=str_replace('*errorconfermapassword*', '<p class="error">La <span xml:lang=\"en\">password</span> non coincide.</p>', $page);
 		}
 		//controllo nome
 		if ($_POST['nome']==""){
 			$error=true;
-			$page=str_replace('<p class="hidden">*errornome*</p>', '<p class="error">Inserisci il nome.</p>', $page);
+			$page=str_replace('*errornome*', '<p class="error">Inserisci il nome.</p>', $page);
 		}else{
 			if (!Validator::nameValidator($_POST['nome'])){
 				$error=true;
-				$page=str_replace('<p class="hidden">*errornome*</p>', '<p class="error">Nome non valido. Sono accettate solo lettere.</p>', $page);
+				$page=str_replace('*errornome*', '<p class="error">Nome non valido. Sono accettate solo lettere.</p>', $page);
 			}
 		}
 		//controllo cognome
 		if ($_POST['cognome']==""){
 			$error=true;
-			$page=str_replace('<p class="hidden">*errorcognome*</p>', '<p class="error">Inserisci il cognome.</p>', $page);
+			$page=str_replace('*errorcognome*', '<p class="error">Inserisci il cognome.</p>', $page);
 		}else{
 			if (!Validator::nameValidator($_POST['cognome'])){
 				$error=true;
-				$page=str_replace('<p class="hidden">*errorcognome*</p>', '<p class="error">Cognome non valido. Sono accettate solo lettere.</p>', $page);
+				$page=str_replace('*errorcognome*', '<p class="error">Cognome non valido. Sono accettate solo lettere.</p>', $page);
 			}
 		}
 		//controllo cf
 		if ($_POST['cf']==""){
 			$error=true;
-			$page=str_replace('<p class="hidden">*errorcf*</p>', '<p class="error">Inserisci il codice fiscale.</p>', $page);
+			$page=str_replace('*errorcf*', '<p class="error">Inserisci il codice fiscale.</p>', $page);
 		}else{
 			if (!Validator::cfValidator($_POST['cf'])){
 				$error=true;
@@ -94,12 +94,12 @@ if (!isset($_POST['signup'])) {//non è stato fatto submit
 		//controllo nr. telefono
 		if (($_POST['telefono'])!="" && !Validator::mobileValidator($_POST['telefono'])){
 			$error=true;
-			$page=str_replace('<p class="hidden">*errortelefono*</p>', '<p class="error">Il numero di telefono inserito non &egrave; valido. Rispettare il formato indicato.</p>', $page);
+			$page=str_replace('*errortelefono*', '<p class="error">Il numero di telefono inserito non &egrave; valido. Rispettare il formato indicato.</p>', $page);
 		}
 		//controllo data di nascita
 		if ($_POST['anno']=="" || $_POST['mese']=="" || $_POST['giorno']==""){
 			$error=true;
-			$page=str_replace('<p class="hidden">*errordatanascita*</p>', '<p class="error">Inserisci la data di nascita.</p>', $page);
+			$page=str_replace('*errordatanascita*', '<p class="error">Inserisci la data di nascita.</p>', $page);
 		}else{
 			if (strlen($_POST['mese']) + strlen($_POST['giorno'])+strlen($_POST['anno']) != 8 || !checkdate((int)$_POST['mese'], (int)$_POST['giorno'], (int)$_POST['anno'])  ){
 				$error=true;
@@ -108,7 +108,7 @@ if (!isset($_POST['signup'])) {//non è stato fatto submit
 				if (strlen($_POST['mese']) != 2) $errore.=" Indicare il mese con 2 cifre.";
 				if (strlen($_POST['anno']) != 4) $errore.=" Indicare l'anno con 4 cifre.";
 				if ($errrore=="") $errrore="Rispettare il formato indicato.";
-				$page=str_replace('<p class="hidden">*errordatanascita*</p>', '<p class="error">La data di nascita inserita non &egrave; valida. '.$errore.'</p>', $page);
+				$page=str_replace('*errordatanascita*', '<p class="error">La data di nascita inserita non &egrave; valida. '.$errore.'</p>', $page);
 			}
 		}
 		//
@@ -120,7 +120,7 @@ if (!isset($_POST['signup'])) {//non è stato fatto submit
             if (isset($registeruser) && $registeruser){
                 $user = Database::selectUser($_POST['email']);
             	if (isset($user)) { //l'utente è stato registrato in db
-                    $page="<h1> Fantastico! </h1> <h2>Il tuo acount &egrave; stato creato! </h2> <a href='./user_panel' tabindex='2'>Vai alla tua area personale.</a>";
+                    $page="<h1> Fantastico! </h1> <h2>Il tuo <span xml:lang=\"en\">account</span> &egrave; stato creato! </h2> <a href='./user_panel' tabindex='2'>Vai alla tua area personale.</a>";
     			}else{
     				$error=true;
     			}
@@ -128,8 +128,7 @@ if (!isset($_POST['signup'])) {//non è stato fatto submit
         }
 	} //end if connessione
 	if ($error) {
-		$page=str_replace('<h1> Unisciti a AIMFit </h1>
-			<p> Offre soluzioni d’allenamento in grado di rispondere ad ogni esigenza! </p>', '<h1 class="red_error"> C\'&egrave; stato un errore!', $page);
+		$page=str_replace('*errormessage*', '<h2 class="red_error"> C\'&egrave; stato un errore!</h2>', $page);
 		$page=str_replace('*email*', $_POST['email'] , $page);
 		$page=str_replace('*password*', $_POST['password'] , $page);
 		$page=str_replace('*confermapassword*', $_POST['confermapassword'] , $page);
@@ -142,6 +141,17 @@ if (!isset($_POST['signup'])) {//non è stato fatto submit
 		$page=str_replace('*telefono*', $_POST['telefono'] , $page);
 	}
 }//end submit   
+$page=str_replace('*errormessage*',"" , $page);
+$page=str_replace('*erroremail*',"" , $page);
+$page=str_replace('*errorpassword*',"" , $page);
+$page=str_replace('*errorconfermapassword*',"" , $page);
+$page=str_replace('*errornome*',"" , $page);
+$page=str_replace('*errorcognome*',"" , $page);
+$page=str_replace('*errordatanascita*',"" , $page);
+$page=str_replace('*errorcf*',"" , $page);
+$page=str_replace('*errortelefono*',"" , $page);
+
+
 
 echo $page;
 ?>

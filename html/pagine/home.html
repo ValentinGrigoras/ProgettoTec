@@ -1,71 +1,61 @@
 
-	<div id="landing">
-	
+<div id="landing">
   <p id="main_message"></p>
 </div>
 
 <div id="allenatori_section">
 	<div id="allenatori_content">
-  		<h2>I nostri allenatori</h2>
+  	<h2>I nostri ALLENATORI</h2>
 		*allenatoriHome*
-	</div> <!--end allenatori content-->
-</div> <!--end allenatori section-->
+	</div> 
+</div> 
 
-<!--
-  CORSI
--->
 <div id="corsi_section">
   <div id="content_corsi">
     <h2>I nostri CORSI</h2>
-
-   *corsiHome*
+    *corsiHome*
   </div>
 </div>
 
 
-
-<!--
-  END Corsi
--->
-
-<!--
-  FORM + MAP
--->
-<div id="cont-form-map">
-      <h2>Contattaci</h2>
-	<div id="contact_form">
+<div id="contact_section">
+    <h2>Contattaci</h2>
+	  <div id="contact_form">
 
 		<form id="contact_us_form" action="./#contact_us_form" method="post">
       	<fieldset>
-      		<p class="hidden">*confirm_messagge*</p>
+          *confirmmessage*
         	<p>I campi con (*) sono obbligatori.</p>
         	<div class="required form_entry">
 				<label for="nome">Nome</label>
         		<div class="input_feedb">
-					<input tabindex="*tabindexnome*" type="text" id="nome" name="nome" value="*nome*"/>
-					<p class="hidden">*errornome*</p>
+					     <input tabindex="*tabindexnome*" type="text" id="nome" name="nome" value="*nome*"/>
+               <p class="form_note">Inserire il nome, deve contenere solo lettere.</p>
+					     *errornome*
         		</div>
        		</div>
        		<div class="required form_entry">
 				<label for="cognome">Cognome</label>
          		<div class="input_feedb">
-					<input tabindex="*tabindexcognome*" type="text" id="cognome" name="cognome" value="*cognome*"/>
-					<p class="hidden">*errorcognome*</p>
+					     <input tabindex="*tabindexcognome*" type="text" id="cognome" name="cognome" value="*cognome*"/>
+                <p class="form_note">Inserire il cognome, deve contenere solo lettere.</p>
+					     *errorcognome*
          		</div>
         	</div>
         	<div class="required form_entry">
-			   	<label for="email">La tua e-mail:</label>
+			   	<label for="email">La tua <span xml:lang="en">e-mail</span>:</label>
          		<div class="input_feedb">
 			     	<input tabindex="*tabindexfieldemail*" type="text" id="email" name="email" value="*email*"/>
-			     	<p class="hidden">*erroremail*</p>
+            <p class="form_note">Inserire l'<span xml:lang="en">email</span> nel formato casella@dominio.</p>
+			     	*erroremail*
          		</div>
        		</div>
        		<div class="required form_entry">
 			   	<label for="messaggio">Messaggio</label>
          		<div class="input_feedb">
 			     	<textarea tabindex="*tabindexsubject*" rows="6" cols="40" id="messaggio" name="messaggio">*messaggio*</textarea>
-
-			     	<p class="hidden">*errormessaggio*</p>
+            <p class="form_note">Inserire il messaggio. Non deve contere caratteri speciali.</p>
+			     	*errormessaggio*
          		</div>
        		</div>
 			   	<button id="contact_us" name="contact_us" type="submit" value="contact_us">Invia</button>
@@ -73,15 +63,16 @@
 		</form>
 	</div>
 
-<div id="descrizioneHome">
-        <h3> Posizione </h3>
-        
-        <p>Ci trovi in via Paolotti, Padova</p>
+    <div id="dove_siamo">
+        <h3> Info </h3>
+        <p> Tel +39 049 661227</p>
+        <p> oppure </p>
+        <p> passa a trovarci </p> <p>in Via Galleria Degli Scrovegni, 1 a Padova!</p>
       </div>
-    </div>
+</div>
 <div id="abbonamenti_section">
 <p id="prezzi_main_message">UNISCI A NOI</p>
-<p id="prezzi_second_message">Iscriviti subito e partecipa a tutti i nostri corsi</p>
+<p id="prezzi_second_message">Iscriviti subito e partecipa ai nostri corsi!</p>
 *linkabbonamenti*
 
 </div>

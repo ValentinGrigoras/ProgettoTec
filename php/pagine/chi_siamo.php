@@ -17,8 +17,8 @@ $num_files = count($files);
 			$generaimg.="
 				<div class=\"mySlides fade\">";
     		$generaimg.= "
-    				<img src=\"./img/about_us/$files[$i]\"/>
-    				<div class=\"numbertext\">".($i-1)." / $num_files</div>
+    				<img src=\"./img/about_us/$files[$i]\" alt=\"foto sala AimFit\"/>
+    				<div class=\"numbertext\">Galleria foto: ".($i-1)." di $num_files</div>
   				</div>";
 
   			$i++;

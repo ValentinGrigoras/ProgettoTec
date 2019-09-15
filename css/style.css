@@ -90,9 +90,8 @@ label{
   float: right;
 }
 .form_entry{
-  width: 100%;
-  margin-top: 1%;
-  margin-bottom: 3%;
+  width: 90%;
+  margin: 2% auto;
   overflow: auto;
 }
 .form_entry textarea{
@@ -109,7 +108,7 @@ input[type="text"], input[type="password"], textarea{
   color: #24292e;
   height: 1.7em;
   background-color: white;
-  width: 85%;
+  width: 95%;
 }
 .fab{
   color: #0c1f34;
@@ -399,7 +398,7 @@ LANDING PAGE
   background-color: #8a0620;
     text-decoration: none;
 }
-#descrizioneHome{
+#dove_siamo{
   width: 25%;
   float: left;
   background-color: #fff2e6;
@@ -445,7 +444,7 @@ height: 80%;
 }
 
 #abbonamenti_section a.btn{
-  width: 13%;
+  width: 25%;
 }
 
 .threeColumnsCard  .prezzoAbbonamento{
@@ -495,7 +494,8 @@ dt{
 }*/
 .threeColumnsCard dd .contactTrainer{
   display: block;
-text-align: center;
+  text-align: center;
+  padding: 2% 0;
 }
 #allenatori_section .twoColumnsCardInner {
     width: 100%;
@@ -517,7 +517,7 @@ text-align: center;
 }
 #allenatori_section dd p{
     display: block;
-    text-align: justify;
+    text-align: center;
     width: 95%;
     margin: 2% auto;
     font-size: 1em;
@@ -544,8 +544,7 @@ text-align: center;
 }
 #content_corsi{
   overflow: auto;
-padding: 2%;
-
+  padding: 2%;
 }
 #content_corsi .twoColumnsCardDetails{
   overflow: auto;
@@ -598,18 +597,22 @@ text-align: center;
 /*--------------------------------
 ------------- FORM + MAP ---------
 ----------------------------------*/
-#cont-form-map {
+#contact_section {
   padding: 2%;
   overflow: auto;
   width: 100%;
   background-color: #fcfcfc;
 }
-
+#contact_section h2{
+  padding-bottom: 0;
+}
 
 #contact_form {
   width: 65%;
 }
-#contact_form label{margin-bottom: 2%;}
+#contact_form label{
+  margin-bottom: 2%;
+}
 
 
 #googleMap{
@@ -644,7 +647,9 @@ text-align: center;
    padding: 0.5%;
    background-image: linear-gradient(to bottom right, #e6f2ff, white);
 }
-
+#programma h2{
+  padding-top: 10%;
+}
 #selezione_corso{
 	background-color: #f2f2f2;
 }
@@ -671,11 +676,10 @@ text-align: center;
 	border: 1px solid silver;
 	text-align: center;
 }
-#OrarioContent{
+#orario_content{
 	width: 88%;
 	margin: auto;
-	
-    padding-bottom: 3%;
+	padding-bottom: 3%;
 }
 
 .TimeTableEntryTime div{
@@ -1044,30 +1048,15 @@ fieldset legend{
   margin-left: 3%;
   padding-bottom: 2%;
 }
-
+fieldset p:first-child{
+  margin: 2% 0 5% 0;
+}
 .required label::after {
   color: #cb2431;
   content: "*";
   padding: 0 1% 0 1%;
 }
 
-.confirm {
-  padding: 3%;
-  background-color: #4CAF50;
-  color: white;
-}
-.closebtn {
-  margin-left: 3%;
-  color: white;
-  font-weight: bold;
-  line-height: 2;
-  cursor: pointer;
-  transition: 0.3s;
-  border: 3px solid #0c1f34;
-}
-.confirmclosebtn:hover {
-  color: black;
-}
 #input_date input, #input_date p{
   display: inline-block;
 }
@@ -1181,12 +1170,13 @@ font-size: 130%;
 }
 #error_divLeft{
   float: left;
-  width: 50%;
+  width: 48%;
+  padding-left: 7%;
 }
 #error_divRight{
   float: left;
   width: 40%;
-  padding: 5%;
+  padding: 9% 0 0 0;
 }
 #error_divRight .btn{
   width: 40%;
