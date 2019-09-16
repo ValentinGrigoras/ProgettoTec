@@ -69,7 +69,7 @@ font-weight: normal;
   text-align: center;
 }
 .threeColumnsCard dd{
-  padding: 2% 1% 9% 20%; ;
+  padding: 1%;
   margin:0;
 
 }
@@ -79,6 +79,10 @@ background-color:#0f2742;
   padding: 2%;
 font-weight: bold;
 font-size: 80%;
+    display: block;
+    width: 20%;
+    margin: 0 auto;
+
 }
 .threeColumnsCard{
   width: 25%;
@@ -149,5 +153,22 @@ button {
 pointer-events: none;
 }
 .error{
+  color: #b30000;
+
+}
+#content p{
+  color: #0c1f34;
+  font-weight: bold;
+  text-align: center;
+}
+#content #attenzione{
   color: red;
+  font-size: 1.1em;
+}
+ li.active_link{
+  background-color: #b30000;
+  color: white;
+}
+#content .simplePar{
+  font-weight:normal;
 }

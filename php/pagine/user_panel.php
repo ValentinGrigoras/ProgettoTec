@@ -34,8 +34,8 @@ $info="";
     $info .= '<dd class="cont_corso">';
     for ($i=0; $i <count($courses); $i++) { 
     	$info .= '<p class="livello_corso corsoScelto">'.$courses[$i]['nome'].'</p>';
-    	$info .= '<p class="livello_corso">Obiettivo: '  .$courses[$i]['obiettivo'].'</p>';
-    	$info .= '<p class="livello_corso">Durata: '.$courses[$i]['durata']. 'min</p>';
+    	$info .= '<p class="livello_corso simplePar">Obiettivo: '  .$courses[$i]['obiettivo'].'</p>';
+    	$info .= '<p class="livello_corso simplePar">Durata: '.$courses[$i]['durata']. 'min</p>';
     }
    
     $info .= '<a href>Modifica dati</a>';

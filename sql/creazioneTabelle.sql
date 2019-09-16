@@ -35,7 +35,7 @@ CREATE TABLE Abbonamento (
 -- Creazione tabella 'Contratto'
 --
 CREATE TABLE Contratto (
-  idContratto int(11) AUTO_INCREMENT PRIMARY KEY,, 
+  idContratto int(11) AUTO_INCREMENT PRIMARY KEY,
   idUtente int(11) NOT NULL UNIQUE,
   idAbbonamento int(11) NOT NULL,
   dataInizio date NOT NULL,

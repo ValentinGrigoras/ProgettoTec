@@ -13,12 +13,6 @@
 
 $errore = false;
 
-	if (!isset($_SESSION["autorizzato"])) {
-	   echo "<h1>Area riservata, accesso negato.</h1>";
-	   echo "Per effettuare il login clicca <a href='login'><font color='blue'>qui</font></a>";
-	   die;
-	}
-	else{
 		$page = file_get_contents(dirname(dirname(__DIR__)).'/'."html".'/'."pagine".'/'."user_info.html");
 		$isActive = Database::getUserContract($_SESSION['id']);
         $page = str_replace("*email*", $_SESSION['cod'], $page);
@@ -51,12 +45,12 @@ $errore = false;
             echo "2";
             if (!Validator::passwordValidator($_POST['password'])){
                 $error=true;
-                $page=str_replace('<p class="hidden">*errorpassword*</p>', '<p class="error">La <span xml:lang=\"en\">password</span> non &egrave; valida. Rispettare il formato indicato.</p>', $page);
+                $page=str_replace("*errorpassword*", '<p class="error">La <span xml:lang=\"en\">password</span> non &egrave; valida. Rispettare il formato indicato.</p>', $page);
             }
         }
         if (($_POST['telefono'])!="" && !Validator::mobileValidator($_POST['telefono'])){
             $error=true;
-            $page=str_replace('<p class="hidden">*errortelefono*</p>', '<p class="error">Il numero di telefono inserito non &egrave; valido. Rispettare il formato indicato.</p>', $page);
+            $page=str_replace('*errortelefono*', '<p class="error">Il numero di telefono inserito non &egrave; valido. Rispettare il formato indicato.</p>', $page);
         }
 
         if (!$errore){
@@ -71,9 +65,11 @@ $errore = false;
                     $error=true;
                 }
             }
+            $page = str_replace("*errorpassword*", "", $page);
+            $page = str_replace("*confirmmessage*", "", $page);
         }
     }
-}
+
 
 $page=str_replace('*erroremail*', '', $page);
 $page=str_replace('*errorpasword*', '', $page);

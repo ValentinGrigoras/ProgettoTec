@@ -29,7 +29,7 @@ if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
             $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."login.php";
             $trovato=true;
             break;
-        case "user_panel": 
+        case "user_panel":
             header("Location: ./login");
         case "user_info": 
             header("Location: ./login");
@@ -44,26 +44,30 @@ if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
     }
 }else{ //utente autenticato
 
-    if(strpos($uri_case[2], 'user') !== false){ // se il nome della pagina contiene la parola user, carico il header una sola volta
+ /*   if(strpos($uri_case[2], 'user') !== false){ // se il nome della pagina contiene la parola user, carico il header una sola volta
             $header = str_replace("*torna*","<li><a href=\"./\">&#8592; Torna al sito</a></li>",$header);
             $header = str_replace("*abbonamenti*","<li><a href=\"./user_abb\">Gestione abbonamento</a></li>",$header);
             $header = str_replace("*dati*","<li><a href=\"./user_info\">Gestione dati personali</a></li>",$header);
-            $header = str_replace("*email*","<li id=\"user_mail\"><a href=\"./user_panel\">".$_SESSION['cod']."</a></li>",$header);
+            $header = str_replace("*userHome*","<li><a href=\"./user_info\">Gestione dati personali</a></li>",$header);
+            $header = str_replace("*email*","<li id=\"user_mail\">".$_SESSION['cod']."</li>",$header);
             $header = str_replace("*disconnetti*","<li><a href=\"./logout_user\">Disconnetti</a></li>",$header);
-    }
+    }*/
     switch ($uri_case[2]){
 
 
         case "user_panel": 
             $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."user_panel.php";
+            $header = str_replace("*userHome*","<li class='active_link'><a href=\"./user_panel\">Riepilogo</a></li>",$header);
             $trovato=true;
         break;
         case "user_info": 
             $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."user_info.php";
+            $header = str_replace("*dati*","<li class='active_link'><a href=\"./user_info\" tabindex=\"$tabIndex\">Gestione dati personali</a></li>",$header);
             $trovato=true;
         break;
         case "user_abb": 
             $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."user_abb.php";
+            $header = str_replace("*abbonamenti*","<li class='active_link'><a href=\"./user_abb\" tabindex=\"$tabIndex\">Gestione abbonamento</a></li>",$header);
             $trovato=true;
         break;
         case "logout":
@@ -155,6 +159,21 @@ $header = str_replace("*linkallenatori*","<li><a href='./allenatori' tabindex=\"
 if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $header = str_replace("*linkcontattaci*","<li><a href='./#contact_section' tabindex=\"$tabIndex\">Contattaci</a></li>",$header,$counter);
 if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+}
+else{
+            $header = str_replace("*torna*","<li><a href=\"./\" tabindex=\"$tabIndex\">&#8592; Torna al sito</a></li>",$header);
+            if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+            $header = str_replace("*abbonamenti*","<li><a href=\"./user_abb\" tabindex=\"$tabIndex\">Gestione abbonamento</a></li>",$header);
+            if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+            $header = str_replace("*dati*","<li><a href=\"./user_info\" tabindex=\"$tabIndex\">Gestione dati personali</a></li>",$header);
+            if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+            $header = str_replace("*userHome*","<li><a href=\"./user_panel\">Riepilogo</a></li>",$header);
+            if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+            $header = str_replace("*email*","<li id=\"user_mail\">".$_SESSION['cod']."</li>",$header);
+
+            $header = str_replace("*disconnetti*","<li><a href=\"./logout\" tabindex=\"$tabIndex\">Disconnetti</a></li>",$header);
+            if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+
 }
 /*$header = str_replace("*tabindexnoscript*",$tabIndex,$header,$counter);
 if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);*/
