@@ -79,11 +79,22 @@ $errore = false;
             }
             $page = str_replace("abbSelect", $abbon, $page);
 
-            $sub = Database::getSubscriptionsTypes($_POST['abbSelezionato']);
+            
               if (isset($_POST['salvaAbb'])){ //non è stato fatto submit
-                    $esito = Database::InsertUserSubscription($_SESSION['id'], $sub[0]['idAbbonamento'],date('Y-m-d'), strtotime(date('Y-m-d'). Validator::validateSubscriptionDate($sub[0]['tipoAbbonamento'])));
+                $sub = Database::getSubscriptionsTypes($_POST['abbSelezionato']);
+                //
+            var_dump($_SESSION['id']);
+            echo Date("Y-m-d",strtotime("now + 1 month"));
+            var_dump($sub[0]['idAbbonamento']);
+            $today = date("Y-m-d");
+$tomorrow = Validator::validateSubscriptionDate($sub[0]['tipoAbbonamento']);
+                echo $today;
+                echo Validator::validateSubscriptionDate($sub[0]['tipoAbbonamento']);
+
+                    $esito = Database::InsertUserSubscription($_SESSION['id'], $sub[0]['idAbbonamento'],date("Y-m-d"),Validator::validateSubscriptionDate($sub[0]['tipoAbbonamento']));
+                    var_dump($esito);
                }
-               var_dump($esito);
+               
         }   
        
         if (!isset($_POST['salvaCorso'])) //non è stato fatto submit

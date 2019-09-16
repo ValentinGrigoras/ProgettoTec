@@ -91,13 +91,13 @@ class Validator{
     public static function validateSubscriptionDate($subscriptionType){
         switch ($subscriptionType) {
             case 'Mensile':
-                return "+ 30 days";
+                return Date("Y-m-d",strtotime("now + 1 month"));
                 break;
             case 'Trimestrale':
-                return "+ 90 days";
+                return Date("Y-m-d",strtotime("now + 3 month"));
                 break;
             case 'Annuale':
-                return "+ 365 days";
+                return Date("Y-m-d",strtotime("now + 12 month"));
                 break;
         }
     }    

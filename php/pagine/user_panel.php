@@ -12,7 +12,7 @@
 
 		$page = file_get_contents(dirname(dirname(__DIR__)).'/'."html".'/'."pagine".'/'."user_panel.html");
 		$isActive = Database::getUserContract($_SESSION['id']);
-
+$info="";
 	$info .= '<dl class="threeColumnsCard">';
     $info .= '<dt> Informazioni personali</dt>';
     $info .= '<dd class="cont_corso">';
@@ -22,7 +22,7 @@
     $info .= '<a href>Modifica dati</a>';
     $info .=  '</dd>';
     $info .= '</dl>';
-$info="";
+
 	if(isset($isActive))
 	{
 		$page = str_replace("*abbonamento*","<h1> Il tuo abbonamento è attivo fino al ".$isActive[0]['dataScadenza'] ."</h1>",$page);
