@@ -1,8 +1,13 @@
 
 <?php
+require_once "./utilities.php";
+use Utilities\Utilities;
+
 $footer = file_get_contents(dirname(dirname(__DIR__)) . '/' . "html" . '/' . "templates" . '/' . "footer.html");
 
-$footer = str_replace("*gotop*","<a id=\"up\" href=\"#first-section-header\">Torna su</a>",$footer);
+$footer = str_replace("*gotop*","<a tabindex=\"$tabIndex\" id=\"up\" href=\"#first-section-header\">Torna su</a>",$footer);
+$tabIndex++;
+
 $script="
 		<script src=\"./js/gototop.js\" type=\"text/javascript\"></script>
 		<script src=\"./js/common.js\" type=\"text/javascript\"></script>

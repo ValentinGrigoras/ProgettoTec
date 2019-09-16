@@ -6,7 +6,9 @@
         session_start(); 
     }
 require_once "./../../php/database/database.php";
+require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . "templates" . DIRECTORY_SEPARATOR . "utilities.php";
 
+use Utilities\Utilities;
 use Database\Database;
 
 $database = new Database();
@@ -41,6 +43,11 @@ if ($database) {
 	}        	
 }
 $page = str_replace("*errorlogin*", "", $page);
-
+	$page = str_replace("*tabindexemail*", $tabIndex, $page, $counter);
+	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+	$page = str_replace("*tabindexpassword*", $tabIndex, $page, $counter);
+	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+	$page = str_replace("*tabindexlogin*", $tabIndex, $page, $counter);
+	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 echo $page;
 ?>

@@ -28,20 +28,20 @@ $page=str_replace('*generalistacorsi*', $options , $page);
 	while( $tr<=21){
 	 	if (Database::corsiFasciaOraria($tr<10 ? "0".$tr : $tr)){ 
 			$tabella.= "<tr>";
-			$tabella.= "<td class=\"TimeTableEntryTimeHolder\">
+			$tabella.= "<th id=\"o$tr\" axis=\"ora\" class=\"TimeTableEntryTimeHolder\">
 				<div class=\"TimeTableEntryTime\">
 					<div class=\"TimeTableFrom\"><span>".$tr.":00</span></div>
 					<div class=\"TimeTableSeparator\"><span> - </span></div>
 					<div class=\"TimeTableTo\"><span>".($tr+1).":00</span></div>
 				</div>
-			  </td>";
+			  </th>";
 
 			$td_giorni=1;
 			while($td_giorni<=6){
 
 				$dati=Database::CorsoGiornoOra($giorno[$td_giorni],$tr<10 ? "0".$tr : $tr );
 
-    			$tabella.= "<td>";
+    			$tabella.= "<td headers=\"g$td_giorni o$tr \">";
     			if (isset($dati[0])){
     				$i=0;
     				while ($i<count($dati)){
