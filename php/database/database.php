@@ -9,7 +9,7 @@ class Database {
     const USERNAME = "tecweb";
     const PASSWORD = "TecWeb";
     const DB_NAME = "Palestra";
-<<<<<<< HEAD
+
  
 /*
     const HOST_DB = "localhost";
@@ -17,11 +17,10 @@ class Database {
     const PASSWORD = "Chemer9.";
     const DB_NAME = "Palestra";
   */
-=======
+
 
   
 
->>>>>>> c6349488c7411e29136baf9e10feae65db5d1989
     private static $connection;
 
     public function __construct() {
@@ -89,7 +88,6 @@ class Database {
 
     }
 
-<<<<<<< HEAD
     
     public static function viewUtenti() {
         $query = "SELECT nome, cognome,dataDiNascita,email, tel FROM Utente";
@@ -100,11 +98,7 @@ class Database {
         return self::selectRows($query);
     }
     public static function selectCourses() {
-        $query = "SELECT * FROM Corsi";
-=======
-    public static function selectCourses() {
         $query = "SELECT idCorso, nome, descrizione, durata, livello, nomeImg FROM Corsi";
->>>>>>> c6349488c7411e29136baf9e10feae65db5d1989
         return self::selectRows($query);
     }
     public static function selectTrainers() {
@@ -161,8 +155,7 @@ class Database {
                 FROM Corsi
                 WHERE nome='".$nomeCorso."';";
         return self::selectRows($query);
-<<<<<<< HEAD
-      
+
     
     }
 
@@ -200,12 +193,6 @@ class Database {
     }
 
 
-    
-
-
-  
-
-
     //da vedere 
     public static function getIdOrario(){
         $query="SELECT *
@@ -213,7 +200,7 @@ class Database {
         WHERE 
         o.idCorso =c.idCorso";
         return self::selectRows($query);
-=======
+
 
     }
     public static function getSubscriptionDate($idUser){
@@ -254,12 +241,10 @@ class Database {
                     WHERE idUtente='".$id."';";
 
         return self::insertUpdateDelete($query);
-
     }
     public static function InsertCoursesByUser($idContratto,$idCorso){
         $query = "INSERT INTO CorsiScelti (idContratto, idCorso) VALUES (\"$idContratto\", \"$idCorso\");";
         return self::insertUpdateDelete($query);
->>>>>>> c6349488c7411e29136baf9e10feae65db5d1989
     }
   
 }
