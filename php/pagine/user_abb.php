@@ -79,8 +79,8 @@ $errore = false;
             
             if (isset($_POST['salvaAbb'])){ // è stato fatto submit
                 $sub = Database::getSubscriptionsId($_POST['abbSelezionato']);
-            
-                $esito = Database::InsertUserSubscription($_SESSION['id'], 1 ,date("Y-m-d"),Validator::validateSubscriptionDate($sub[0]['tipoAbbonamento']););
+            var_dump($_POST['abbSelezionato']);
+                $esito = Database::InsertUserSubscription($_SESSION['id'], 1 ,date("Y-m-d"),Validator::validateSubscriptionDate($sub[0]['tipoAbbonamento']));
                     var_dump($esito);
             }
                
