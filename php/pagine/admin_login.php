@@ -23,10 +23,10 @@ if ($database) {
 		}
 
         else if(isset($_SESSION['error']) && $_SESSION['error'] == 0){
-				$ris = Database::getUser($_POST['email'],$_POST['password']);
+			//	$ris = Database::getAdmin($_POST['email'],$_POST['password']); //$_POST['email'],$_POST['password']
 				
 				/*Prelevo l'identificativo dell'utente */
-				$cod=$ris[0]['email'];
+				//$cod=$ris[0]['email'];
 				if ($cod == NULL) $trovato = 0 ;
 					else $trovato = 1;  
 					/* Username e password corrette */
