@@ -19,6 +19,21 @@ $errore = false;
             $corsi="";
             $allcourses = Database::selectCourses();
             $UserCourses = Database::getCoursesByUserID( $_SESSION['id']);
+            $page = str_replace('*formCorsi', '<form id="modifyCourses_form" action="./user_abb" method="POST" >
+                    <fieldset *stato*>
+                        <div class="form_entry">
+                            <div class="required">
+                                <label for="email">Seleziona corso</label>
+                            </div>
+                            <div class="input_feedb">
+                                <select name="corsoSelezionato">
+                                   *corsi*
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <button id="salvaCorso" type="submit" name="salvaCorso" value="salvaCorso">Aggiungi corso</button>
+                    <p class="hidden">*confirmmessage*</p></form>', $page);
         if(count($UserCourses) >1){
             $page = str_replace('*stato*', 'disabled id="disabledField"', $page);
             $page = str_replace('*titoloinfo2*', "<h2>Attenzione: Hai già scelto il massimo dei corsi offerti dalla palestra! Aspetta la fine dell'abbonamento</h2>", $page);
@@ -39,7 +54,8 @@ $errore = false;
             }
         }
         else{
-            $page = str_replace('*titoloinfo2*', "<h2>Non hai nessun abbonamento attivo! Scegliene uno:</h2>", $page);
+            $page = str_replace('*titoloinfo2*', "<p>Non hai nessun abbonamento attivo! Scegliene uno:<p>", $page);
+             $page = str_replace('*formCorsi*', '', $page);
         }   
        
         if (!isset($_POST['salvaCorso'])) //non è stato fatto submit

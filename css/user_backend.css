@@ -148,3 +148,6 @@ button {
 #disabledField[disabled]{
 pointer-events: none;
 }
+.error{
+  color: red;
+}
