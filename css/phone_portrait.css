@@ -37,13 +37,13 @@ background-color: #35383d;
 ----------------------------------*/
 
 #allenatori_section #allenatori_content{
-    width: 95%;
+    width: 100%;
 }
-#allenatori_section .allen1 .socials_links{
+#allenatori_section .allen1{
     width: 100%;
     margin: 0;
 }
-#allenatori_section .allen1 .socials_links li{
+#allenatori_section .allen1{
   width: 25%;
   margin: 0;
   text-align: center;
@@ -117,7 +117,7 @@ margin: 0 auto;
 -------CORSI ------
 ----------------------------------*/
 #content_corsi{
-  width: 95%
+  width: 100%
 }
 
 
@@ -214,6 +214,9 @@ select #seleziona_corso{
 /*--------------------------------
 ------------- FOOTER -------------
 ----------------------------------*/
+#sections{
+
+}
 #footer{
   font-size: 0.8em;
 }
@@ -221,27 +224,24 @@ select #seleziona_corso{
   font-size: 2em;
 }
 #links{
-    width: 45%;
+    width: 48%;
+    float: left;
 }
 #links p{
     padding-bottom: 5%;
 }
-#socials{
+#societa{
+    width: 48%;
+    float: right;
 
 }
-#socials li{
-    margin-right:6%;
-}
-#societa{
-    width: 55%;
-    float: left;
-}
 #orario{
-    width: 55%;
+    width: 48%;
     float: left;
 }
 #contattiFooter{
-    width: 55%;
+    width: 48%;
+    float: right;
 }
 #validCode img{
     width: 40%;
@@ -283,4 +283,35 @@ select #seleziona_corso{
   text-align: center;
   float: none;
  
+}
+
+.threeColumnsCard {
+  width: 94%;
+  display: block;
+  margin: 5% auto;
+
+}
+#contact_us_form {
+    width: 80%;
+    display: block;
+    margin: 5% auto;
+    float: none;
+}
+#contact_form {
+    width: 100%;
+}
+
+#allenatori_content{
+  width: 100%;
+}
+#contact_us_form {
+    width: 94%;
+}
+#descrizioneHome {
+    width: 94%;
+    margin: 15% 3% 13%;
+}
+
+.threeColumnsCard dd .corsiImg {
+    display: none;
 }

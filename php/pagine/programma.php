@@ -28,36 +28,35 @@ $page=str_replace('*generalistacorsi*', $options , $page);
 	while( $tr<=21){
 	 	if (Database::corsiFasciaOraria($tr<10 ? "0".$tr : $tr)){ 
 			$tabella.= "<tr>";
-			$tabella.= "<td class=\"TimeTableEntryTimeHolder\">
+			$tabella.= "<th id=\"o$tr\" axis=\"ora\" class=\"TimeTableEntryTimeHolder\">
 				<div class=\"TimeTableEntryTime\">
 					<div class=\"TimeTableFrom\"><span>".$tr.":00</span></div>
 					<div class=\"TimeTableSeparator\"><span> - </span></div>
 					<div class=\"TimeTableTo\"><span>".($tr+1).":00</span></div>
 				</div>
-			  </td>";
+			  </th>";
 
 			$td_giorni=1;
 			while($td_giorni<=6){
 
 				$dati=Database::CorsoGiornoOra($giorno[$td_giorni],$tr<10 ? "0".$tr : $tr );
 
-    			$tabella.= "<td>";
+    			$tabella.= "<td headers=\"g$td_giorni o$tr \">";
     			if (isset($dati[0])){
     				$i=0;
     				while ($i<count($dati)){
-						$tabella.= "<div class=\"TimeTableFitnessEntry filterDiv ".Database::getIdCorso($dati[$i]['Corso'])[0]['idCorso']."\">
-						<div class=\"TimeTableEntryColor\"></div>
-						<a href=\"http://solarisfitness.it/classes-item/pilates/\" class=\"TimeTableEntryName\">
-						<span>".$dati[$i]['Corso']."</span>
-						</a>
-						<div class=\"TimeTableEntryTimePeriod\">
-							<div class=\"TimeTableFrom\"><span>".$dati[$i]["oraI"]."</span></div>
-							<div class=\"TimeTableSeparator\"><span> - </span></div>
-							<div class=\"TimeTableTo\"><span>".$dati[$i]["oraF"]."</span></div>
-						</div>
-						<a href=\"http://solarisfitness.it/trainer-item/sabrina/\" class=\"TimeTableEntryTrainer\">".$dati[$i]["Allenatore"]."</a>
-						<p class=\"TimeTableEntryRoom\">".$dati[$i]["stanza"]."</p>
-					  </div>";
+						$tabella.= "
+							<div class=\"TimeTableFitnessEntry deskFilterDiv ".$dati[$i]['idCorso']."\">
+								<div class=\"TimeTableEntryColor\"></div>
+								<a href=\"./corsi#".$dati[$i]['idCorso']."\" class=\"TimeTableEntryName\"><span>".$dati[$i]['Corso']."</span></a>
+								<div class=\"TimeTableEntryTimePeriod\">
+									<div class=\"TimeTableFrom\"><span>".$dati[$i]["oraI"]."</span></div>
+									<div class=\"TimeTableSeparator\"><span> - </span></div>
+									<div class=\"TimeTableTo\"><span>".$dati[$i]["oraF"]."</span></div>
+								</div>
+								<a href=\"./allenatori#".$dati[$i]["idAllenatore"]."\" class=\"TimeTableEntryTrainer\">".$dati[$i]["Allenatore"]."</a>
+								<p class=\"TimeTableEntryRoom\">".$dati[$i]["stanza"]."</p>
+					  		</div>";
 						$i++;
 					}
 				}
@@ -90,9 +89,9 @@ $page=str_replace('*generalistacorsi*', $options , $page);
 				if (isset($dati[0])){
     				$i=0;
     				while ($i<count($dati)){
-						$orario.= "<li class=\"MobileTimeTableDaylyPlanTime\">
+						$orario.= "<li class=\"MobileTimeTableDaylyPlanTime mobileFilterDiv ".$dati[$i]['idCorso']."\">
 							<div class=\"MobileTimeTableClassName\">
-								<a href=\"http://solarisfitness.it/classes-item/pilates/\">".$dati[$i]["Corso"]."</a>
+								<a href=\"./corsi#".$dati[$i]["idCorso"]."\">".$dati[$i]["Corso"]."</a>
 							</div>
 							<div class=\"MobileTimeTableClassTime\">".$dati[$i]["oraI"]." - ".$dati[$i]["oraF"]."</div>
 				  		  </li>";

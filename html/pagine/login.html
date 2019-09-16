@@ -1,39 +1,37 @@
 
 
 <!-- ------------------------------------------------------ -->
-<div *ciao*>
+<div *class*>
         <div >
             <div id="intestazione" >
-                <h1> Unisciti a AIMFit </h1>
+                <h1> Collegati ad <span xml:lang="en">AIMFit</span> </h1>
                 <p> Offre soluzioni d’allenamento in grado di rispondere ad ogni esigenza! </p>
             </div>
             <div id="contenuto">
                 <div id="dati">
                     <form id="signin_form" action="./php/tools/checkUser.php" method="post">
-                        <h2> Entra nel tuo account </h2>
-                        <p>I campi con (*) sono obbligatori.</p>
+                        <h2> Entra nel tuo <span xml:lang="en">account</span> </h2>
+                        *errorlogin*
     
                         <fieldset>
-                            <legend>Account</legend>
-
+                            <legend xml:lang="en">Account</legend>
+                        <p>I campi con (*) sono obbligatori.</p>
                         <div class="form_entry">
                             <div class="required">
-                                <label for="email">Email</label>
+                                <label xml:lang="en" for="email">Email</label>
                             </div>
                             <div class="input_feedb">
                                 <input tabindex="*tabindexemail*" type="text" name="email" id="email" *disabled* />
                                 <p class="form_note">Inserire l'<span xml:lang="en">email</span> nel formato casella@dominio.</p>
-                                <p class="hidden">*erroremail*</p>
                             </div>
                         </div>
                         <div class="form_entry">
                             <div class="required">
-                                <label for="password" >Password</label>
+                                <label xml:lang="en" for="password" >Password</label>
                             </div>
                             <div class="input_feedb">
                                 <input tabindex="*tabindexpassword*" type="password" name="password" id="password"  *disabled*/>
-                                <p class="form_note">Inserire la password scelta.</p>
-                                <p class="hidden">*errorpassword*</p>
+                                <p class="form_note">Inserire la <span xml:lang="en">password <span>.</p>
 
                             </div>
                             
@@ -42,14 +40,12 @@
                         
                         
 
-                        <button id="signin" type="submit" name="signin" value="login">Login</button>
-                        *confirmmessage*
+                        <button  tabindex="*tabindexlogin*" id="signin" type="submit" name="signin" value="login" xml_lang="en">Login</button>
                         
                     </form>
                 </div>
                 <div id="descrizione">
                     <h2> Benefici </h2>
-                    <span class="hr"> </span>
                     <ul>
                         <li> Ottieni un abbonamento </li>
                         <li> Aggiungi corsi </li>

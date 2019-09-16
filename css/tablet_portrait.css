@@ -1,11 +1,28 @@
+body{
+  font-size: 85%;
+}
+h1{
+    font-size: 150%;
+    color: #0c1f34;
+}
+h2{
+    font-size: 110%;
+}
+h3{
+    font-size: 90%;
+}
+h4{
+    font-size: 80%;
+}
+#footer{
+  font-size: 90%;
+}
 #header{
 	font-size: 1em;
 
 }
-.maxWidth{
-	background-color: #f7f7f7;
-  overflow-x: hidden;
-  font-size: 0.9em;
+#content_corsi{
+  width: 100%;
 }
 .logo #desktop{
 	display: none;
@@ -79,7 +96,9 @@ ul.breadcrumb {
 
 
 
-
+#nav_desktop ul {
+width: 80%;
+}
 
 /*MIN WIDTH 601PX - MAX WIDTH 768PX*/
 
@@ -104,10 +123,29 @@ div.content {margin-left: 0;}
 
 
 /*Hossain*/
-
+#cont-form-map{
+  width: 100%;
+  padding: 0;
+}
+#contact_form{
+  width: 80%;
+}
 .form-content{
   width: 100%;
   margin: 0;
   padding: 0;
   background-color: aquamarine;
+}
+
+#allenatori_section {
+
+    padding: 0;
+}
+
+#content_corsi {
+    padding: 0;
+}
+
+#abbonamenti_section a.btn {
+    width: 30%;
 }

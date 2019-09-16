@@ -44,7 +44,16 @@ h3{
 h4{
     font-size: 110%;
 }
-
+dd p:nth-child(n){
+border-bottom: 4px solid #f7f7f7;
+  padding: 1% 0;
+  font-weight: bold;
+}/*
+dd p:nth-child(3){
+  background-color: #fff;
+  color: #0c1f34;
+  padding: 0;
+}*/
 button {
     background-color: #0c1f34;
     color: white;
@@ -81,9 +90,8 @@ label{
   float: right;
 }
 .form_entry{
-  width: 100%;
-  margin-top: 1%;
-  margin-bottom: 3%;
+  width: 90%;
+  margin: 2% auto;
   overflow: auto;
 }
 .form_entry textarea{
@@ -100,14 +108,7 @@ input[type="text"], input[type="password"], textarea{
   color: #24292e;
   height: 1.7em;
   background-color: white;
-  width: 85%;
-}
-.fab{
-  color: #0c1f34;
-  font-size: 1.2em;
-}
-.fab:hover{
-  color:#3A527B;
+  width: 95%;
 }
 .red_error{
   color: red;
@@ -122,7 +123,7 @@ noscript{
   margin:0 auto 0 auto;
   
    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /*overflow: auto;*/
+  overflow: hidden;
 }
 
 /*colori generali link (Valentin)*/
@@ -153,10 +154,13 @@ text-decoration: none;
 }
 
 .threeColumnsCard dd .corsiImg{
-    max-width: 100%;
+max-width: 30%;
     height: auto;
-    min-height: 19em;
-    width: auto\9; /* ie8 */
+    /* min-height: 19em; */
+    width: auto\9;
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 5%;
 
 }
 .threeColumnsCard dd .allenatoreImg{
@@ -171,13 +175,13 @@ text-decoration: none;
     background-size: contain;
     overflow: hidden;
     border-top: hidden;
-    padding: 2% 1% 2% 1%;
+    /*padding: 2% 1% 2% 1%;*/
     background-color: #fff;
     color: #000;
     font-size: 80%;
 }
 .threeColumnsCard dt{
-  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   background-color: #fff;
   color: #000;
@@ -197,19 +201,22 @@ text-decoration: none;
   padding: 1.5%;
   background-color: #fff;
 }
-  
+  .trainers{
+    padding: 5% 0;
+  }
 
 /*--------------------------------
-------------HEADER(Valentin)------
+------------HEADER------
 ----------------------------------*/
 #header{
     width: 100%;
    /* background-color: #f7f7f7;*/
     font-size: 85%;
     font-weight: bold;
+
     }
 /*--------------------------------
--------SEZIONE BREADCRUMBS(Valentin)------
+-------SEZIONE BREADCRUMBS------
 ----------------------------------*/
 
 #breadcrumb{
@@ -244,116 +251,22 @@ text-decoration: none;
 
   }
 #first-section-header{
-    overflow: auto;
-background-color: #0f2742;
-
-
-}
-#header #breadcrumbs_home{
-    display: inline-block;
-    width: 100%;
-    float: left;
+  overflow: auto;
+  background-color: #0f2742;
 }
 /*siccome uso i float negli elementi child di breadcrumbs_home,
 il contenitore padre ignora i floats. Aggiungo quindi del contenuto
 vuoto tramite la pseudo classe obbligando il contenitore padre ad assumere
 la dimensione totale dei div child.*/
-#header #breadcrumbs_home:after{
-    content: " ";
-    display: block;
-    clear: both;
-}
-ul#breadcrumb {
-    width: 40%;
-    float: left;
-    margin-top: 3.5%;
-}
-ul#breadcrumb .first:before{
-    content: "";
-}
-ul#breadcrumb li {
-    display: inline-block;
-}
-ul#breadcrumb li a:hover {
-    text-decoration: none;
-}
+
 
 /*---------------------------------
--------NAVIGAZIONE PRINCIPALE (Valentin)------
+-------NAVIGAZIONE PRINCIPALE------
 ----------------------------------*/
 
-/*--------LOGO----------*/
-
-
-#logo_mobile{
-    display: none;
+#logo{
+  width: 28%;
 }
-.overlay {
-    height: 0%;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #dc0933;
-    overflow-y: hidden;
-    transition: 1s;
-}
-.overlay .closebtn {
-    position: absolute;
-    top: 1%;
-    right: 4%;
-    font-size: 3em;
-    color: #fff;
-    text-decoration: none;
-}
-.cd-accordion-menu {
-  width: 100%;
-  background: #4d5158;
-  margin: 12% auto 0 auto;
-}
-.cd-accordion-menu ul {
-  /* by default hide all sub menus */
-  display: none;
-}
-.cd-accordion-menu li {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.cd-accordion-menu input[type=checkbox] {
-  /* hide native checkbox */
-  position: absolute;
-  opacity: 0;
-}
-.cd-accordion-menu label, .cd-accordion-menu a {
-  position: relative;
-  display: block;
-  padding: 2% 2% 2% 4%;
-  background: #0c1f34;
-  color: #ffffff;
-  font-size: 1.6em;
-}
-
-.cd-accordion-menu input[type=checkbox]:checked + label + ul,
-.cd-accordion-menu input[type=checkbox]:checked + label:nth-of-type(n) + ul {
-  /* use label:nth-of-type(n) to fix a bug on safari (<= 8.0.8) with multiple adjacent-sibling selectors*/
-  /* show children when item is checked */
-  display: block;
-}
-.cd-accordion-menu ul label,
-.cd-accordion-menu ul a {
-  background: #35383d;
-}
-
-
-#botton_menu{
-    display: none;
-}
-/*-----------------------*/
-/*LINK DI NAVIGAZIONE (Valentin)*/
-#logo{width: 28%}
 #logo img{
     max-width: 65%;
     float: left;
@@ -419,6 +332,12 @@ ul#breadcrumb li a:hover {
   opacity: 1;
   display: block;
 }
+#nav_desktop ul li:focus-within > ul,
+#nav_desktop ul li ul:focus-within {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
 
 #nav_desktop ul li ul li {
   width: 100%;
@@ -431,7 +350,7 @@ ul#breadcrumb li a:hover {
   text-decoration: none;
 }
 
-#mynav{
+#nav_mobile{
     display: none;
 }
 #breadcrumb li.first{
@@ -478,7 +397,7 @@ LANDING PAGE
   background-color: #8a0620;
     text-decoration: none;
 }
-#descrizioneHome{
+#dove_siamo{
   width: 25%;
   float: left;
   background-color: #fff2e6;
@@ -514,32 +433,18 @@ height: 80%;
 ------------- ABBONAMENTI -------------
 ----------------------------------*/
 
-#abbonamenti_section a.btn{
-  width: 13%;
+#prezzi_section{
+  width: 100%;
 }
-#prezzi_section #content_prezzi{
-  overflow: auto;
+
+#prezzi_section {
   margin: 0 auto;
   background-color: #f4f4f4;
-
-}
-#prezzi_section #content_prezzi dl{
-  width: 31%;
-  float: left;
-  margin: 2% 1.166% 4.166% 1.166%;
-}
-#prezzi_section #content_prezzi dd{
-  overflow: auto;
-  background:none no-repeat left top;
-  background-size: contain;
-  border-top: hidden;
-  background-color: #fff;
-  font-size: 80%;
-  border: 1px solid #b3b3b3;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
+#abbonamenti_section a.btn{
+  width: 25%;
+}
 
 .threeColumnsCard  .prezzoAbbonamento{
 	font-size: 2em;
@@ -549,7 +454,7 @@ height: 80%;
 .threeColumnsCard .nrMese{
 	font-size: 0.5em;
 }
-#content_prezzi .buttonPrezzi {
+#prezzi_section .buttonPrezzi {
   border-top: 1px solid #ccc;
 	padding: 7% 0;
 	border-bottom: none;
@@ -567,19 +472,14 @@ height: 80%;
     margin: 0 auto;
     background-color: #f4f4f4;
 }
-#allenatori_section #allenatori_content dl{
-    float:left;
-    width: 40%;
-    margin:2% 5% 5% 5%;
-  
-}
+
 dt{
   text-align: center;
     background-color: #fff;
     color:#000;
     padding: 2% 0 1% 2%;
     font-weight: bold;
-}
+}/*
 #allenatori_section #allenatori_content dl{
     background:none no-repeat left top;
     background-size: contain;;
@@ -590,19 +490,20 @@ dt{
     color: #000;
     font-size: 80%;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+}*/
 .threeColumnsCard dd .contactTrainer{
   display: block;
-text-align: center;
+  text-align: center;
+  padding: 2% 0;
 }
-#allenatori_section .twoColumnsCardInner .socials_links{
+#allenatori_section .twoColumnsCardInner {
     width: 100%;
     float: right;
     border-top: 1px solid #ccc;
     padding-top: 2%;
 
 }
-#allenatori_section .twoColumnsCardInner .socials_links li{
+#allenatori_section .twoColumnsCardInner {
     display: inline-block;
     width: 25%;
     float: left;
@@ -610,12 +511,12 @@ text-align: center;
 }
 
 #allenatori_section{
-    background-color: #fcfcfc;
     overflow: auto;
+    padding: 2%;
 }
 #allenatori_section dd p{
     display: block;
-    text-align: justify;
+    text-align: center;
     width: 95%;
     margin: 2% auto;
     font-size: 1em;
@@ -640,13 +541,10 @@ text-align: center;
 #corsi_section{
   background-color: #f4f4f4;
 }
-#corsi_section h2{
-  margin-top: 5%;
-}
+
 #content_corsi{
   overflow: auto;
-  margin: 0 auto;
-
+  padding: 2%;
 }
 #content_corsi .twoColumnsCardDetails{
   overflow: auto;
@@ -699,18 +597,22 @@ text-align: center;
 /*--------------------------------
 ------------- FORM + MAP ---------
 ----------------------------------*/
-#cont-form-map {
+#contact_section {
   padding: 2%;
   overflow: auto;
   width: 100%;
   background-color: #fcfcfc;
 }
-
+#contact_section h2{
+  padding-bottom: 0;
+}
 
 #contact_form {
   width: 65%;
 }
-#contact_form label{margin-bottom: 2%;}
+#contact_form label{
+  margin-bottom: 2%;
+}
 
 
 #googleMap{
@@ -745,7 +647,9 @@ text-align: center;
    padding: 0.5%;
    background-image: linear-gradient(to bottom right, #e6f2ff, white);
 }
-
+#programma h1, #corsi_section h1, #prezzi_section h1{
+  padding-top: 8%;
+}
 #selezione_corso{
 	background-color: #f2f2f2;
 }
@@ -772,11 +676,10 @@ text-align: center;
 	border: 1px solid silver;
 	text-align: center;
 }
-#OrarioContent{
+#orario_content{
 	width: 88%;
 	margin: auto;
-	
-    padding-bottom: 3%;
+	padding-bottom: 3%;
 }
 
 .TimeTableEntryTime div{
@@ -862,16 +765,6 @@ text-align: center;
     float: left;
     padding: 0 1.5%;
     width: 29%;
-}
-#socials{
-    list-style: none;
-    float: left;
-    width: 45%;
-    font-size: 2.5em;
-}
-#socials li{
-    display: inline;
-    margin-right:5%;
 }
 #closure{
     width:100%;
@@ -1125,7 +1018,7 @@ font-weight: normal;
 }
 .error{
   color: red;
-  font-size: 0.8em;
+  font-size: 1.2em;
 }
 .hidden{
   display: none;
@@ -1155,35 +1048,20 @@ fieldset legend{
   margin-left: 3%;
   padding-bottom: 2%;
 }
-
+fieldset p:first-child{
+  margin: 2% 0 5% 0;
+}
 .required label::after {
   color: #cb2431;
   content: "*";
   padding: 0 1% 0 1%;
 }
 
-.confirm {
-  padding: 3%;
-  background-color: #4CAF50;
-  color: white;
-}
-.closebtn {
-  margin-left: 3%;
-  color: white;
-  font-weight: bold;
-  line-height: 2;
-  cursor: pointer;
-  transition: 0.3s;
-  border: 3px solid #0c1f34;
-}
-.confirmclosebtn:hover {
-  color: black;
-}
 #input_date input, #input_date p{
   display: inline-block;
 }
 #input_date input{
-  width: 15%;
+  width: 16.5%;
 }
 #input_date #anno{
   width: 27%;
@@ -1243,7 +1121,7 @@ a.btn, button.btn {
   border: 3px solid #fff;
   color: #fff;
   border-radius: 6px;
-  font-size: 1.3em;
+  font-size: 1em;
   padding: .5em 1.2em;
   font-family: RobotoSlab,Arial,Sans-Serif;
   cursor: pointer;
@@ -1259,7 +1137,6 @@ span.register a{
 }
   .form-row input {
     width: 100%;
-   
     font-size: 110%;
     border-radius: 5px;
   }
@@ -1293,12 +1170,13 @@ font-size: 130%;
 }
 #error_divLeft{
   float: left;
-  width: 50%;
+  width: 48%;
+  padding-left: 7%;
 }
 #error_divRight{
   float: left;
   width: 40%;
-  padding: 5%;
+  padding: 9% 0 0 0;
 }
 #error_divRight .btn{
   width: 40%;
@@ -1366,4 +1244,21 @@ margin: 0 auto;
 .topnav-right {
   float: right;
   padding: 1%;
+}
+
+#up{
+  
+  right: 0.5%;
+  bottom: 2%;
+  position: fixed;
+  background-color: #b30000;
+  color: #fff;
+  padding: 0.8%;
+  border-radius: 2%;
+  display: none;
+  font-size: 80%;
+}
+#up:hover{
+    background-color: #ff0909;
+    text-decoration: none;
 }

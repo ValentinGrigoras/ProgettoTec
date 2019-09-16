@@ -8,7 +8,7 @@ $uri_case = explode('/', $_SERVER['REQUEST_URI'], 3);
 //$uri_case[0] = substr($uri_case[0], strrpos($uri_case[0], '/')+1);
 switch ($uri_case[2]){
     case "":
-        $head = str_replace("*title*","Homepage | AIMFit",$head);
+        $head = str_replace("*title*","Pagina iniziale | AIMFit",$head);
         $head = str_replace("*description*","Homepage della palestra AIMFit di Padova.",$head);
         $head = str_replace("*keywords*","AIMFit, palestra, fitness, pesi, allenatori, corsi",$head);
         break;
@@ -38,6 +38,21 @@ switch ($uri_case[2]){
         $head = str_replace("*title*","Programma | AIMFit",$head);
         $head = str_replace("*description*","Programma settimanale della palestra AIMFit",$head);
         $head = str_replace("*keywords*","programma, orario, palestra, AIMFit, fitness",$head);
+        break;
+    case "chi_siamo":
+        $head = str_replace("*title*","Chi siamo | AIMFit",$head);
+        $head = str_replace("*description*","Breve info sulla nostra palestra AIMFit",$head);
+        $head = str_replace("*keywords*","info, palestra, AIMFit, fitness",$head);
+        break;
+    case "allenatori":
+        $head = str_replace("*title*","I nostri allenatori | AIMFit",$head);
+        $head = str_replace("*description*","Info sui nostri allenatori AIMFIT",$head);
+        $head = str_replace("*keywords*","info,allenatori, palestra, AIMFit, fitness",$head);
+        break;
+    case "prezzi":
+        $head = str_replace("*title*","Prezzi abbonamenti | AIMFit",$head);
+        $head = str_replace("*description*","Info sui nostri abbonamenti AIMFIT",$head);
+        $head = str_replace("*keywords*","info,prezzi, abbonamenti, palestra, AIMFit, fitness",$head);
         break;
     default:
         $head = str_replace("*title*","Pagina non trovata",$head);

@@ -35,12 +35,12 @@ CREATE TABLE Abbonamento (
 -- Creazione tabella 'Contratto'
 --
 CREATE TABLE Contratto (
-  idContratto int(11) AUTO_INCREMENT PRIMARY KEY,
-  idUtente int(11) NOT NULL,
+idContratto int(11) NOT NULL, 
+  idUtente int(11) NOT NULL UNIQUE,
   idAbbonamento int(11) NOT NULL,
-  data date NOT NULL,
+  dataInizio date NOT NULL,
   dataScadenza date NOT NULL,
-  prezzoTotale int(4) NOT NULL,
+  PRIMARY KEY (idContratto),
   FOREIGN KEY (idUtente) REFERENCES Utente(idUtente)
                 ON DELETE NO ACTION ON UPDATE CASCADE,
   FOREIGN KEY (idAbbonamento) REFERENCES Abbonamento(idAbbonamento)
@@ -57,7 +57,6 @@ CREATE TABLE Corsi (
   categoria varchar(100),
   durata int(3),
   livello enum('facile','normale','difficile'),
-  costo decimal(5,2) NOT NULL,
   nomeImg varchar(255) NOT NULL   
 ) ENGINE=InnoDB;
 --
