@@ -27,8 +27,6 @@ $course = "";
 
     $course .= '<p  class="livello_corso">Durata sessione: ' . $courses[$indice]['durata'] . ' minuti'.'</p>';
   
-    $course .= '<p  class="livello_corso">Costo al mese : ' . $courses[$indice]['costo'] . ' &euro;' . '</p>';
-  
     $course .= '<p  class="desc_corso">' . $courses[$indice]['descrizione'] . '</p>';
   
     $course .=  '</dd>';

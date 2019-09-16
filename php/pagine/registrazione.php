@@ -121,7 +121,7 @@ if (!isset($_POST['signup'])) {//non è stato fatto submit
             if (isset($registeruser) && $registeruser){
                 $user = Database::selectUser($_POST['email']);
             	if (isset($user)) { //l'utente è stato registrato in db
-                    $page="<h1> Fantastico! </h1> <h2>Il tuo <span xml:lang=\"en\">account</span> &egrave; stato creato! </h2> <a href='./user_panel' tabindex='2'>Vai alla tua area personale.</a>";
+                    $page="<h1> Fantastico! </h1> <h2>Il tuo <span xml:lang=\"en\">account</span> &egrave; stato creato! </h2> <a href='./login' tabindex='2'>Effettua il <span xml:lang=\"en\"> login</span>!.</a>";
     			}else{
     				$error=true;
     			}

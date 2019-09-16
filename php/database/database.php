@@ -252,7 +252,18 @@ class Database {
         $query = "INSERT INTO CorsiScelti (idContratto, idCorso) VALUES (\"$idContratto\", \"$idCorso\");";
         return self::insertUpdateDelete($query);
     }
-  
+  public static function getSubscriptionsTypes(){
+    $query = "SELECT * FROM Abbonamento";
+    return self::selectRows($query);
+  }
+  public static function InsertUserSubscription($idUtente,$idAbbonamento, $dataInizio, $dataScadenza){
+    $query = "INSERT INTO Contratto (idUtente,idAbbonamento,dataInizio,dataScadenza) VALUES (\"$idUtente\", \"$idAbbonamento\", \"$dataInizio\", \"$dataScadenza\");";
+    return self::insertUpdateDelete($query);
+  }
+  public static function getSubscriptionId($type){
+    $query= "SELECT * FROM Abbonamento WHERE tipoAbbonamento='".$type."';";
+    return self::selectRows($query);
+  }
 }
 
 
