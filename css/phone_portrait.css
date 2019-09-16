@@ -57,7 +57,7 @@ display: block;
 margin: 0 auto;
   }
   #allenatori_section dd p{
-    width: 80%;
+    width: 100%;
     font-size: 1.3em;
   }
 
@@ -109,6 +109,18 @@ margin: 0 auto;
 -------ABBONAMENTI END ------
 ----------------------------------*/
 
+/*--------------------------------
+-------REGISTRAZIONE ------
+----------------------------------*/
+#contenuto{
+  width: 100%;
+}
+#input_date input{
+  width: 22%;
+}
+#input_date #anno{
+  width: 32%;
+}
 /*--------------------------------
 -------CORSI ------
 ----------------------------------*/
