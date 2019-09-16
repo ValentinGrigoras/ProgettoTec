@@ -3,34 +3,14 @@
 namespace Validator;
 
 class Validator{
-        /**
-         * @var array $patterns
-         */
-        public $patterns = array(
-            'uri'           => '[A-Za-z0-9-\/_?&=]+',
-            'url'           => '[A-Za-z0-9-:.\/_?&=#]+',
-            'alpha'         => '[\p{L}]+',
-            'words'         => '[\p{L}\s]+',
-            'alphanum'      => '[\p{L}0-9]+',
-            'int'           => '[0-9]+',
-            'float'         => '[0-9\.,]+',
-            'tel'           => '[0-9+\s()-]+',
-            'text'          => '[\p{L}0-9\s-.,;:!"%&()?+\'°#\/@]+',
-            'file'          => '[\p{L}\s0-9-_!%&()=\[\]#@,.;+]+\.[A-Za-z0-9]{2,4}',
-            'folder'        => '[\p{L}\s0-9-_!%&()=\[\]#@,.;+]+',
-            'address'       => '[\p{L}0-9\s.,()°-]+',
-            'date_dmy'      => '[0-9]{1,2}\-[0-9]{1,2}\-[0-9]{4}',
-            'date_ymd'      => '[0-9]{4}\-[0-9]{1,2}\-[0-9]{1,2}',
-            'email'         => '[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+[.]+[a-z-A-Z]'
-        );
-
+       
     public static function emailValidator($email){
         return filter_var($email, FILTER_VALIDATE_EMAIL);//  Filters a variable with a specified filter (FILTER_VALIDATE_EMAIL)
     }
     public static function passwordValidator($password){
         $number    = preg_match('@[0-9]@', $password);
         $space = preg_match('@[^ ]@', $password); // must contain at least one number
-        return ($number && !$space && strlen($password) >= 8 && strlen($password) <= 16); // password lenght must be: 8 <= password.lenght <= 16
+        return ($number && $space && strlen($password) >= 8 && strlen($password) <= 16); // password lenght must be: 8 <= password.lenght <= 16
     }
     public static function nameValidator($name){
         return preg_match("/^([a-zA-Z' ]+)$/",$name);
