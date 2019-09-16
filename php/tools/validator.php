@@ -88,5 +88,19 @@ class Validator{
         return preg_match('/^[0-9]{10}+$/', $mobile);
     }
 
+    public static function validateSubscriptionDate($subscriptionType){
+        switch ($subscriptionType) {
+            case 'Mensile':
+                return "+ 30 days";
+                break;
+            case 'Trimestrale':
+                return "+ 90 days";
+                break;
+            case 'Annuale':
+                return "+ 365 days";
+                break;
+        }
+    }    
+
 }
 ?>

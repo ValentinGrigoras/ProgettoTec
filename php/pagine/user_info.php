@@ -37,16 +37,16 @@ $errore = false;
         echo "1";
         if ($_POST['email']==""){
             $error=true;
-            $page=str_replace('<p class="hidden">*erroremail*</p>', '<p class="error">Inserire l\' <span xml:lang=\"en\">email</span>.</p>', $page);
+            $page=str_replace('*erroremail*', '<p class="error">Inserire l\' <span xml:lang=\"en\">email</span>.</p>', $page);
         }else if (!Validator::emailValidator($_POST['email'])){
                 $error=true;
-                $page=str_replace('<p class="hidden">*erroremail*</p>', '<p class="error">Il campo <span xml:lang=\"en\">Email</span> inserito non è corretto. Rispettare il formato indicato.</p>', $page);
+                $page=str_replace('*erroremail*', '<p class="error">Il campo <span xml:lang=\"en\">Email</span> inserito non è corretto. Rispettare il formato indicato.</p>', $page);
             }
         
     //controllo password
         if ($_POST['password']==""){
             $error=true;
-            $page=str_replace('<p class="hidden">*errorpassword*</p>', '<p class="error">Inserire una <span xml:lang=\"en\">password</span>.</p>', $page);
+            $page=str_replace('errorpassword*', '<p class="error">Inserire una <span xml:lang=\"en\">password</span>.</p>', $page);
         }else{
             echo "2";
             if (!Validator::passwordValidator($_POST['password'])){
@@ -75,7 +75,9 @@ $errore = false;
     }
 }
 
-
+$page=str_replace('*erroremail*', '', $page);
+$page=str_replace('*errorpasword*', '', $page);
+$page=str_replace('*errortelefono*', '', $page);
 //echo $header;
 echo $page;
 

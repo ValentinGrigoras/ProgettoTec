@@ -30,7 +30,7 @@
     </div>
     
     <div id="titolo">
-      <h3>Modifica corsi:</h3>
+      <h3>Modifica corsi: *idCorso*</h3>
     </div>
     
     <!--
@@ -43,45 +43,51 @@
     </div>
     -->
     <div class="container">
-            <form action="/action_page.php">
+            <form action="../../php/pagine/edit.php" method="POST">
+             
             <div class="row">
               <div class="col-25">
+                 
                 <label for="fname">Nome:</label>
               </div>
               <div class="col-75">
-                <input type="text" id="fname" name="firstname" placeholder="nome del corso">
+                <input type="text" id="fname" name="nome" value="*nome*" placeholder="nome del corso">
               </div>
             </div>
             <div class="row">
               <div class="col-25">
+          
                 <label for="orarioCorsi">Orario inizio:</label>
               </div>
               <div class="col-75">
-                <input type="time" id="orarioCorsi" name="orario" placeholder="livello del corso" value="00:00">
+                <input type="time" id="orarioCorsi" name="orario" placeholder="livello del corso " value="*inizio*">
               </div>
             </div>
             <div class="row">
                     <div class="col-25">
+           
                       <label for="orarioCorsi">Orario fine:</label>
                       
                     </div>
                     <div class="col-75">
-                      <input type="time" id="orarioCorsi" name="orario" placeholder="livello del corso" value="00:00">
+                      <input type="time" id="orarioCorsi" name="orario" placeholder="livello del corso" value="*fine*">
                     </div>
                   </div>
             <div class="row">
                     <div class="col-25">
                             <label for="country">Giorno:</label>
+                            *giorno*
                           </div>
                 <div class="col-75">
-                    <select id="country" name="country">
-                        <option>Lunedì</option>
-                        <option>Martedì</option>
-                        <option>Mercoledì</option>
-                        <option>Giovedì</option>
-                        <option>Venerdì</option>
-                        <option>Sabato</option>
-                        <option>Domenica</option>
+                    <select id="country" name="giorno[]"  >
+                        
+                        <option value="*giorno*">Lunedì</option>
+                        <option value="Martedì">Martedì</option>
+                        <option value="Mercoledì">Mercoledì</option>
+                        <option value="*giorno*">Giovedì</option>
+                        <option value="*giorno*">Venerdì</option>
+                        <option value="Sabato">Sabato</option>
+                        <option value="Domenica">Domenica</option>
                     </select>
                 </div>
             </div>
@@ -90,9 +96,10 @@
                       <label for="country">Livello del corso:</label>
                     </div>
                     <div class="col-75">
-                      <select id="country" name="country">
-                        <option value="australia">Allenamento posturale</option>
-                        <option value="canada">Balla brucia</option>
+                      <select id="country" name="livello" >
+                          <option value="*livello*">*livello*</option>
+                        <option value="*livello*">Facile</option>
+                        <option value="*livello*">Normale</option>
                         <option value="usa">Body stability</option>
                         <option value="canada">Cardio boxe</option>
                         <option value="usa">Cardio class</option>
@@ -117,7 +124,7 @@
                       <label for="lname">Prezzo:</label>
                     </div>
                     <div class="col-75">
-                      <input type="text" id="lname" name="lastname" placeholder="prezzo">
+                      <input type="text" id="lname" name="costo" placeholder="prezzo" value="*prezzo*">
                     </div>
                   </div>
             <div class="row">
@@ -125,9 +132,10 @@
                 <label for="country">Tipologia del corso:</label>
               </div>
               <div class="col-75">
-                <select id="country" name="country">
+                <select id="country" name="categoria">
+                  <option name="rosa" value="rosa">*tipo*</option>
                   <option value="australia">Allenamento posturale</option>
-                  <option value="canada">Balla brucia</option>
+                  <option nome="Balla brucia" value="Balla brucia"></option>
                   <option value="usa">Body stability</option>
                   <option value="canada">Cardio boxe</option>
                   <option value="usa">Cardio class</option>
@@ -152,11 +160,12 @@
                 <label for="subject">Descrizione:</label>
               </div>
               <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Scrivi qualcosa" style="height:200px"></textarea>
+                <textarea id="subject"  name="descrizione" placeholder="Scrivi qualcosa" style="height:200px">*desc*</textarea>
               </div>
             </div>
             <div class="row">
-              <input id="salva" type="submit" value="Salva">
+              
+              <input id="salva" type="submit" nome="submit" value="salva">
             </div>
             </form>
           </div>

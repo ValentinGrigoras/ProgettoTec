@@ -13,8 +13,8 @@ use Database\Database;
 $database = new Database();
 echo $_POST['signin'];
 if($database && isset($_POST['signin'])) {
-		$ris = Database::getAdmin($_POST['email'],$_POST['password']);
-		var_dump($ris);
+		$ris = Database::getAdmin($_POST['email'],$_POST['password']);  //$_POST['email'],$_POST['password']
+		//var_dump($ris);
 		/*Prelevo l'identificativo dell'utente */
 		$cod=$ris[0]['email'];
 
