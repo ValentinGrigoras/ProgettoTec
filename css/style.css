@@ -110,13 +110,6 @@ input[type="text"], input[type="password"], textarea{
   background-color: white;
   width: 95%;
 }
-.fab{
-  color: #0c1f34;
-  font-size: 1.2em;
-}
-.fab:hover{
-  color:#3A527B;
-}
 .red_error{
   color: red;
 }
@@ -335,6 +328,12 @@ la dimensione totale dei div child.*/
 
 #nav_desktop ul li:hover > ul,
 #nav_desktop ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+#nav_desktop ul li:focus-within > ul,
+#nav_desktop ul li ul:focus-within {
   visibility: visible;
   opacity: 1;
   display: block;
