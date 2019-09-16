@@ -35,49 +35,16 @@ echo"id ora: ";
 $course = "";
 //$orario = "";
   for($indice = 0;$indice<count($courses); $indice++){
-    $nome=$courses[$indice]['nome'];
-    $livello=$courses[$indice]['livello'];
-    $costo=$courses[$indice]['costo']; 
-    $tipo=$courses[$indice]['categoria'];
-    $desc=$courses[$indice]['descrizione'];
-    $oraInizio=$orari[$indice]['oraI'];
-    $oraFine=$orari[$indice]['oraF'];
-    $giorno=$orari[$indice]['giorno'];
-    $idCorso=$courses[$indice]['idCorso'];
-    //echo"idNome:".$nome;
     $course.='<div class="columns">';
     $course.='<ul class="price">';
+    $course.='<li class="header">'.$courses[$indice]['idCorso'].'</li>';
     $course.='<li class="header">'.$courses[$indice]['nome'].'</li>';
     $course.='<li class="grey">'.$courses[$indice]['livello'] .'</li>';
-    $course.='<li>'.$courses[$indice]['costo'].' €</li>';
     $course.='<li class="desc">'.$courses[$indice]['descrizione'].'</li>';
     $course.='<li class="grey"><a href="#" class="button">Elimina</a></li>';
-    $course.='<li class="grey"><a href="modificaCorsi.php?idCorso='.$idCorso.'&&nomeCorso='.$nome.'&&livello='.$livello.'
-    &&oraInizio='.$oraInizio.'&&prezzo='.$costo.'&&desc='.$desc.'&&tipo='.$tipo.'&&
-    giorno='.$giorno.'&&
-    oraFine='.$oraFine.'"class="button" value="modifica" name="modifica">Modifica</a></li>';
+    $course.='<form id="modifyCourses_form" action="modificaCorsi.php" method="POST" ><button id="salva" type="submit" name="id" value="'.$courses[$indice]['idCorso'].'">Modifica</button></form>';
     $course.=' </ul>';
     $course.='</div>';
-
-
-   
-/*
-    $course .= '<dl class="threeColumnsCard">';
-    $course .= '<dt>'.$courses[$indice]['nome'].'</dt>';
-    $course .= '<dd class="cont_corso">';
-    $course .= '<img src="img/corsi/'.$courses[$indice]['nomeImg']. '"' . ' alt="immagine ' . $courses[$indice]['nome'] . '"/>';
-    $course .= '<p class="livello_corso">Livello: ' . $courses[$indice]['livello'] .'</p>';
-    $course .= '<p class="livello_corso">Durata sessione: ' . $courses[$indice]['durata'] . ' min'.'</p>';
-    $course .= '<p class="livello_corso">Costo al mese : ' . $courses[$indice]['costo'] . ' &euro;' . '</p>';
-    $course .= '<p class="desc_corso">' . $courses[$indice]['descrizione'] . '</p>';
-    $course .=  '</dd>';
-    $course .= '</dl>';
-
-    */
-
-
-
-
   }
   //var_dump(allCourses);
   $page = str_replace("*corsi*", $course, $page);
