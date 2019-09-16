@@ -1,15 +1,5 @@
-/*Header (Valentin)*/
-/*
-label#label_search{
-    display: block;
-    padding-bottom: 2%;
-}
-#header .search input[type="text"], #header .search input[type=text]:focus
-{
-    width: 80%;
-}*/
-body{
-  font-size: 85%;
+* {
+  font-size: 1em;
 }
 h1{
     font-size: 170%;
@@ -51,9 +41,7 @@ h4{
 /*--------------------------------
 ------------- FOOTER -------------
 ----------------------------------*/
-#footer {
-  font-size: 1.1em;
-}
+
 #sections {
   width: 98%;
 }
