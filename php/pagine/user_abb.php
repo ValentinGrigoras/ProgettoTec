@@ -12,7 +12,8 @@
 	$database = new Database();
 
 $errore = false;
-
+ $corsi = "";
+ $abbon = "";
 		$page = file_get_contents(dirname(dirname(__DIR__)).'/'."html".'/'."pagine".'/'."user_abb.html");
 		$isActive = Database::getUserContract($_SESSION['id']);
         if($isActive){
@@ -53,9 +54,36 @@ $errore = false;
             $corsi .= '<option value="'.$allcourses[$i]['nome'].'">'.$allcourses[$i]['nome'].'</option>';
             }
         }
-        else{
+        else{ // se l'utente non ha ancora un abbonamento
             $page = str_replace('*titoloinfo2*', "<p>Non hai nessun abbonamento attivo! Scegliene uno:<p>", $page);
              $page = str_replace('*formCorsi*', '', $page);
+             $page = str_replace('*formAbb*', '<form id="AddAbb_form" action="./user_abb" method="POST" >
+                    <fieldset *stato*>
+                        <div class="form_entry">
+                            <div class="required">
+                                <label for="abbonamento">Seleziona abbonamento</label>
+                            </div>
+                            <div class="input_feedb">
+                                <select name="abbSelezionato">
+                                   *abbSelect*
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <button id="salvaAbb" type="submit" name="salvaAbb" value="salvaAbb">Conferma abbonamento</button>
+                    <p class="hidden">*confirmmessage*</p></form>', $page);
+
+             $abbonamenti = Database::getSubscriptionsTypes();
+             for ($i=0; $i < count($abbonamenti) ; $i++) {
+                $abbon .= '<option value="'.$abbonamenti[$i]['tipoAbbonamento'].'">'.$abbonamenti[$i]['tipoAbbonamento'].' ('.$abbonamenti[$i]['prezzo'].'&euro;)'.'</option>';
+            }
+            $page = str_replace("abbSelect", $abbon, $page);
+
+            $sub = Database::getSubscriptionsTypes($_POST['abbSelezionato']);
+              if (isset($_POST['salvaAbb'])){ //non è stato fatto submit
+                    $esito = Database::InsertUserSubscription($_SESSION['id'], $sub[0]['idAbbonamento'],date('Y-m-d'), strtotime(date('Y-m-d'). Validator::validateSubscriptionDate($sub[0]['tipoAbbonamento'])));
+               }
+               var_dump($esito);
         }   
        
         if (!isset($_POST['salvaCorso'])) //non è stato fatto submit
@@ -77,6 +105,7 @@ $errore = false;
             }
             unset($_POST['salvaCorso']);
     }
+   
 
 $page=str_replace('*corsi*', $corsi, $page);
 $page=str_replace('*erroremail*', '', $page);
