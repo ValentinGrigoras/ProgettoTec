@@ -2,9 +2,10 @@
 <?php 
 require_once "./../../php/database/database.php";
 require_once "./../../php/tools/validator.php";
-
+require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . "templates" . DIRECTORY_SEPARATOR . "utilities.php";
 use Database\Database;
 use Validator\Validator;
+use Utilities\Utilities;
 
 
 $page = file_get_contents(dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . "html" . DIRECTORY_SEPARATOR . "pagine" . DIRECTORY_SEPARATOR . "registrazione.html");
@@ -151,6 +152,28 @@ $page=str_replace('*errordatanascita*',"" , $page);
 $page=str_replace('*errorcf*',"" , $page);
 $page=str_replace('*errortelefono*',"" , $page);
 
+	$page = str_replace("*tabindexemail*", $tabIndex, $page, $counter);
+	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+	$page = str_replace("*tabindexpassword*", $tabIndex, $page, $counter);
+	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+	$page = str_replace("*tabindexconfermapassword*", $tabIndex, $page, $counter);
+	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+	$page = str_replace("*tabindexnome*", $tabIndex, $page, $counter);
+	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+	$page = str_replace("*tabindexcognome*", $tabIndex, $page, $counter);
+	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+	$page = str_replace("*tabindexgiorno*", $tabIndex, $page, $counter);
+	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+	$page = str_replace("*tabindexmese*", $tabIndex, $page, $counter);
+	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+	$page = str_replace("*tabindexanno*", $tabIndex, $page, $counter);
+	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+	$page = str_replace("*tabindexcodicf*", $tabIndex, $page, $counter);
+	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+	$page = str_replace("*tabindextelefono*", $tabIndex, $page, $counter);
+	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+	$page = str_replace("*tabindexinvia*", $tabIndex, $page, $counter);
+	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 
 
 echo $page;

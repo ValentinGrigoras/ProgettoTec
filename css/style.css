@@ -542,6 +542,7 @@ dt{
 #corsi_section{
   background-color: #f4f4f4;
 }
+
 #content_corsi{
   overflow: auto;
   padding: 2%;
@@ -647,8 +648,8 @@ text-align: center;
    padding: 0.5%;
    background-image: linear-gradient(to bottom right, #e6f2ff, white);
 }
-#programma h2{
-  padding-top: 10%;
+#programma h1, #corsi_section h1, #prezzi_section h1{
+  padding-top: 8%;
 }
 #selezione_corso{
 	background-color: #f2f2f2;
@@ -1061,7 +1062,7 @@ fieldset p:first-child{
   display: inline-block;
 }
 #input_date input{
-  width: 15%;
+  width: 16.5%;
 }
 #input_date #anno{
   width: 27%;
