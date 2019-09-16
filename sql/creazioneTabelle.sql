@@ -57,7 +57,6 @@ CREATE TABLE Corsi (
   categoria varchar(100),
   durata int(3),
   livello enum('facile','normale','difficile'),
-  costo decimal(5,2) NOT NULL,
   nomeImg varchar(255) NOT NULL   
 ) ENGINE=InnoDB;
 --

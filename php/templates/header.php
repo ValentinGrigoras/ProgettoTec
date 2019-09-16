@@ -33,15 +33,23 @@ if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
             header("Location: ./login");
         case "user_info": 
             header("Location: ./login");
+        case "user_abb": 
+            header("Location: ./login");
+        case "logout_user":
+            session_destroy();
+           header("location: ./login");
+
+            $trovato=true;
+            break;
     }
 }else{ //utente autenticato
 
     if(strpos($uri_case[2], 'user') !== false){ // se il nome della pagina contiene la parola user, carico il header una sola volta
             $header = str_replace("*torna*","<li><a href=\"./\">&#8592; Torna al sito</a></li>",$header);
-            $header = str_replace("*abbonamenti*","<li><a href=\"#abbonamento\">Gestione abbonamento</a></li>",$header);
+            $header = str_replace("*abbonamenti*","<li><a href=\"./user_abb\">Gestione abbonamento</a></li>",$header);
             $header = str_replace("*dati*","<li><a href=\"./user_info\">Gestione dati personali</a></li>",$header);
             $header = str_replace("*email*","<li id=\"user_mail\"><a href=\"./user_panel\">".$_SESSION['cod']."</a></li>",$header);
-            $header = str_replace("*disconnetti*","<li><a href=\"#\">Disconnetti</a></li>",$header);
+            $header = str_replace("*disconnetti*","<li><a href=\"./logout_user\">Disconnetti</a></li>",$header);
     }
     switch ($uri_case[2]){
 
@@ -52,6 +60,10 @@ if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
         break;
         case "user_info": 
             $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."user_info.php";
+            $trovato=true;
+        break;
+        case "user_abb": 
+            $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."user_abb.php";
             $trovato=true;
         break;
         case "logout":
@@ -143,7 +155,7 @@ if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
 	if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 }
 
-if($uri_case[2]!= "user_panel"){
+if(strpos($uri_case[2], 'user') === false){
 
 $header = str_replace("*linkhome*","<li><a href='./' xml:lang='en' tabindex=\"$tabIndex\">Home</a></li>",$header,$counter);
 if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);

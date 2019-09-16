@@ -19,7 +19,7 @@ if ($database) {
         else if(isset($_SESSION['error']) && $_SESSION['error'] == 0){
 				
 				/*Prelevo l'identificativo dell'utente */
-				$cod=$ris[0]['email'];
+				
 				if ($cod == NULL) $trovato = 0 ;
 					else $trovato = 1;  
 					/* Username e password corrette */

@@ -144,3 +144,7 @@ button {
     width: 16%;
 }
 #content h1 {text-align: center;}
+
+#disabledField[disabled]{
+pointer-events: none;
+}

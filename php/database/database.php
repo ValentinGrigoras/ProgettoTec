@@ -79,7 +79,7 @@ class Database {
     }
 
     public static function selectCourses() {
-        $query = "SELECT idCorso, nome, descrizione, durata, livello, costo, nomeImg FROM Corsi";
+        $query = "SELECT idCorso, nome, descrizione, durata, livello, nomeImg FROM Corsi";
         return self::selectRows($query);
     }
     public static function selectTrainers() {
@@ -175,6 +175,10 @@ class Database {
 
         return self::insertUpdateDelete($query);
 
+    }
+    public static function InsertCoursesByUser($idContratto,$idCorso){
+        $query = "INSERT INTO CorsiScelti (idContratto, idCorso) VALUES (\"$idContratto\", \"$idCorso\");";
+        return self::insertUpdateDelete($query);
     }
 }
 
