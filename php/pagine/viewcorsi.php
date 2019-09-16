@@ -25,10 +25,26 @@ if (isset($_SESSION["autorizzato"]) &&  $_SESSION["autorizzato"]==1){
 if ($database) {
   $page = file_get_contents(dirname(dirname(__DIR__)) . '/' . "html" . '/' . "pagine" . '/' . "viewcorsi.html");
 $courses = Database::selectCourses();
-if(isset($courses))
+
+$orari=Database::getIdOrario();
+echo"id ora: ";
+
+
+//var_dump($orari);
 
 $course = "";
+//$orario = "";
   for($indice = 0;$indice<count($courses); $indice++){
+    $nome=$courses[$indice]['nome'];
+    $livello=$courses[$indice]['livello'];
+    $costo=$courses[$indice]['costo']; 
+    $tipo=$courses[$indice]['categoria'];
+    $desc=$courses[$indice]['descrizione'];
+    $oraInizio=$orari[$indice]['oraI'];
+    $oraFine=$orari[$indice]['oraF'];
+    $giorno=$orari[$indice]['giorno'];
+    $idCorso=$courses[$indice]['idCorso'];
+    //echo"idNome:".$nome;
     $course.='<div class="columns">';
     $course.='<ul class="price">';
     $course.='<li class="header">'.$courses[$indice]['nome'].'</li>';
@@ -36,32 +52,14 @@ $course = "";
     $course.='<li>'.$courses[$indice]['costo'].' €</li>';
     $course.='<li class="desc">'.$courses[$indice]['descrizione'].'</li>';
     $course.='<li class="grey"><a href="#" class="button">Elimina</a></li>';
-    $course.='<li class="grey"><a href="modificaCorsi.php" class="button">Modifica</a></li>';
- ' </ul>';
- $course.='</div>';
+    $course.='<li class="grey"><a href="modificaCorsi.php?idCorso='.$idCorso.'&&nomeCorso='.$nome.'&&livello='.$livello.'
+    &&oraInizio='.$oraInizio.'&&prezzo='.$costo.'&&desc='.$desc.'&&tipo='.$tipo.'&&
+    giorno='.$giorno.'&&
+    oraFine='.$oraFine.'"class="button" value="modifica" name="modifica">Modifica</a></li>';
+    $course.=' </ul>';
+    $course.='</div>';
 
-/*
-   $course.='<div class="row">';
-   $course.='<div class="column">';
-   $course.='<div class="card">';
-   $course.='<h3>Nome: '.$courses[$indice]['nome'].'</h3>';
-   $course.='<p>Livello: '.$courses[$indice]['livello'] .'</p>';
-   $course.='<p>Livello: '.$courses[$indice]['descrizione'] .'</p>';
-   $course.='<p><button>Aggiungi corso'.'</button></p>';
-   $course.='<p><button>Elimina'.'</button></p>';
-   $course.='</div>';
-   $course.='</div>';
-   $course.='</div>';
 
-   */
-   /*
-   '<ul >' ;
-   $course.='<li><h3>Nome:</h3> '.$courses[$indice]['nome'].'</li> ';
-   $course.='<li>Livello: '. $courses[$indice]['livello'] .'</li>' ;
-   $course.='<li>Descrizione: '. $courses[$indice]['descrizione']."</li> ";
-   $course.='<li>Prezzo: '. $courses[$indice]['costo'].'</li>' ;
-   '</ul>';
-   */
    
 /*
     $course .= '<dl class="threeColumnsCard">';
@@ -76,6 +74,8 @@ $course = "";
     $course .= '</dl>';
 
     */
+
+
 
 
   }

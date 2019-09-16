@@ -9,9 +9,19 @@ class Database {
     const USERNAME = "tecweb";
     const PASSWORD = "TecWeb";
     const DB_NAME = "Palestra";
+<<<<<<< HEAD
+ 
+/*
+    const HOST_DB = "localhost";
+    const USERNAME = "root";
+    const PASSWORD = "Chemer9.";
+    const DB_NAME = "Palestra";
+  */
+=======
 
   
 
+>>>>>>> c6349488c7411e29136baf9e10feae65db5d1989
     private static $connection;
 
     public function __construct() {
@@ -49,9 +59,10 @@ class Database {
         if (self::isConnected()) {
             self::$connection->query($query);
             if (self::$connection->affected_rows > 0){
-                return true;
+                return true; 
             }
         }
+       
         return false;
     }
     private static function selectRows($query) {
@@ -78,8 +89,22 @@ class Database {
 
     }
 
+<<<<<<< HEAD
+    
+    public static function viewUtenti() {
+        $query = "SELECT nome, cognome,dataDiNascita,email, tel FROM Utente";
+        return self::selectRows($query);
+    }
+    public static function viewAdmin() {
+        $query = "SELECT email FROM Admin";
+        return self::selectRows($query);
+    }
+    public static function selectCourses() {
+        $query = "SELECT * FROM Corsi";
+=======
     public static function selectCourses() {
         $query = "SELECT idCorso, nome, descrizione, durata, livello, nomeImg FROM Corsi";
+>>>>>>> c6349488c7411e29136baf9e10feae65db5d1989
         return self::selectRows($query);
     }
     public static function selectTrainers() {
@@ -130,10 +155,65 @@ class Database {
         return self::selectRows($query);
     }
     public static function getIdCorso($nomeCorso){
+
+        var_dump($nomeCorso);
         $query= "SELECT idCorso
                 FROM Corsi
                 WHERE nome='".$nomeCorso."';";
         return self::selectRows($query);
+<<<<<<< HEAD
+      
+    
+    }
+
+    // select orario
+    /*
+    public static function selectOrario() {
+        $query = "SELECT nome, descrizione, durata, livello, costo,categoria, nomeImg FROM Corsi";
+        return self::selectRows($query);
+    }
+    */
+        // update corso  , $desc,$durata, $livello,$costo
+    public static function updateCorsi($nomeCorso,$livello,$costo,$desc,$idCorso){
+        $nomeCorso = self::$connection->real_escape_string($nomeCorso);
+        $livello = self::$connection->real_escape_string($livello);
+        $costo = self::$connection->real_escape_string($costo);
+        $desc = self::$connection->real_escape_string($desc);
+        $idCorso = self::$connection->real_escape_string($idCorso);
+
+        //$getIdCorso=self::getIdCorso($nomeCorso);//, descrizione=\"$desc\"
+       // echo"in DB: ";
+       // echo $nomeCorso;
+       // var_dump($nomeCorso);
+       // echo" fine modifica!! ";
+       echo"id corso: ";
+        var_dump($idCorso);
+        echo"Fine id corso: ";
+        $query="UPDATE  Corsi 
+        SET nome=\"$nomeCorso\",
+            livello=\"$livello\" , 
+            costo=\"$costo\",
+            descrizione=\"$desc\"
+            
+        WHERE idCorso=\"$idCorso\"";
+        return self::insertUpdateDelete($query);
+    }
+
+
+    
+
+
+  
+
+
+    //da vedere 
+    public static function getIdOrario(){
+        $query="SELECT *
+        FROM Orario  o, Corsi c
+        WHERE 
+        o.idCorso =c.idCorso";
+        return self::selectRows($query);
+=======
 
     }
     public static function getSubscriptionDate($idUser){
@@ -179,7 +259,9 @@ class Database {
     public static function InsertCoursesByUser($idContratto,$idCorso){
         $query = "INSERT INTO CorsiScelti (idContratto, idCorso) VALUES (\"$idContratto\", \"$idCorso\");";
         return self::insertUpdateDelete($query);
+>>>>>>> c6349488c7411e29136baf9e10feae65db5d1989
     }
+  
 }
 
 

@@ -412,6 +412,45 @@ fieldset legend{
   visibility: hidden;
 }
 
+
+
+
+/*++++++++++++++lista utenti registrati in admin panel*/
+.viewUser,.viewAdmin,h3{
+  margin: 1%;
+}
+.lista-user,.lista-admin{
+  margin-top: 13%;
+  padding: 2%;
+}
+.viewAdmin{
+
+}
+.user ,.admin{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user li,.admin li{
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+}
+
+.User-content{
+  float: left;
+  width: 36%;
+  margin-left: 10%;
+}
+.Admin-content{
+  float: right;
+  margin-right: 10%;
+  width: 36%;
+}
+
+=======
   #topnav_user {
     overflow: hidden;
     background-color: #0f2742;
