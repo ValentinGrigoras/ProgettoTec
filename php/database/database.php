@@ -10,14 +10,14 @@ class Database {
     const PASSWORD = "TecWeb";
     const DB_NAME = "Palestra";
 
- /*
+  /* 
 
     const HOST_DB = "localhost";
     const USERNAME = "root";
     const PASSWORD = "Chemer9.";
     const DB_NAME = "Palestra";
+*/
 
-  */
 
   
 
@@ -98,7 +98,7 @@ class Database {
         return self::selectRows($query);
     }
     public static function selectCourses() {
-        $query = "SELECT idCorso, nome, descrizione, durata, livello, nomeImg FROM Corsi";
+        $query = "SELECT idCorso, nome, descrizione, durata,categoria, livello, nomeImg FROM Corsi";
         return self::selectRows($query);
     }
     public static function selectTrainers() {
@@ -167,31 +167,37 @@ class Database {
     }
     */
         // update corso  , $desc,$durata, $livello,$costo
-    public static function updateCorsi($nomeCorso,$livello,$costo,$desc,$idCorso){
+    public static function updateCorsi($idCorso,$nomeCorso,$livello,$durata,$desc,$cate){
         $nomeCorso = self::$connection->real_escape_string($nomeCorso);
         $livello = self::$connection->real_escape_string($livello);
-        $costo = self::$connection->real_escape_string($costo);
+        $durata = self::$connection->real_escape_string($durata);
         $desc = self::$connection->real_escape_string($desc);
+        $cate = self::$connection->real_escape_string($cate);
         $idCorso = self::$connection->real_escape_string($idCorso);
 
-        //$getIdCorso=self::getIdCorso($nomeCorso);//, descrizione=\"$desc\"
+       // $getIdCorso=self::getIdCorso($nomeCorso);//, descrizione=\"$desc\"
        // echo"in DB: ";
        // echo $nomeCorso;
        // var_dump($nomeCorso);
-       // echo" fine modifica!! ";
+       //echo" fine modifica!! ";
        echo"id corso: ";
         var_dump($idCorso);
         echo"Fine id corso: ";
         $query="UPDATE  Corsi 
-        SET nome=\"$nomeCorso\",
+        SET nome='".$nomeCorso."',
             livello=\"$livello\" , 
-            costo=\"$costo\",
-            descrizione=\"$desc\"
+            durata=\"$durata\",
+            descrizione=\"$desc\",
+            categoria=\"$cate\"
             
         WHERE idCorso=\"$idCorso\"";
         return self::insertUpdateDelete($query);
     }
 
+    public static function getCorsiById($idCorso){ //, $nome,$categoria,$livello,$nomeImg
+        $query = "SELECT c.idCorso, c.nome,c.durata, c.descrizione,c.categoria, c.livello, c.nomeImg,o.giorno,o.idCorso,o.oraI,o.oraF FROM Corsi c,Orario o WHERE c.idCorso='".$idCorso."' AND o.idCorso='".$idCorso."'";
+        return self::selectRows($query);
+    }
 
     //da vedere 
     public static function getIdOrario(){

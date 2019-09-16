@@ -30,7 +30,7 @@
     </div>
     
     <div id="titolo">
-      <h3>Modifica corsi: *idCorso*</h3>
+      <h3>Modifica corsi:</h3>
     </div>
     
     <!--
@@ -43,7 +43,7 @@
     </div>
     -->
     <div class="container">
-            <form action="../../php/pagine/edit.php" method="POST">
+            <form action="../../php/pagine/modificaCorsi.php" method="POST">
              
             <div class="row">
               <div class="col-25">
@@ -79,9 +79,9 @@
                             *giorno*
                           </div>
                 <div class="col-75">
-                    <select id="country" name="giorno[]"  >
+                    <select id="country" name="giorno"  >
                         
-                        <option value="*giorno*">Lunedì</option>
+                        <option value="Lunedi">Lunedì</option>
                         <option value="Martedì">Martedì</option>
                         <option value="Mercoledì">Mercoledì</option>
                         <option value="*giorno*">Giovedì</option>
@@ -97,7 +97,7 @@
                     </div>
                     <div class="col-75">
                       <select id="country" name="livello" >
-                          <option value="*livello*">*livello*</option>
+                        <option value="*livello*">*livello*</option>
                         <option value="*livello*">Facile</option>
                         <option value="*livello*">Normale</option>
                         <option value="usa">Body stability</option>
@@ -121,10 +121,10 @@
                   </div>
             <div class="row">
                     <div class="col-25">
-                      <label for="lname">Prezzo:</label>
+                      <label for="lname">Durata:</label>
                     </div>
                     <div class="col-75">
-                      <input type="text" id="lname" name="costo" placeholder="prezzo" value="*prezzo*">
+                      <input type="text" id="lname" name="durata" placeholder="durata del corso" value="*durata*">
                     </div>
                   </div>
             <div class="row">
