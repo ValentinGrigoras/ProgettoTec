@@ -1,15 +1,5 @@
-/*Header (Valentin)*/
-/*
-label#label_search{
-    display: block;
-    padding-bottom: 2%;
-}
-#header .search input[type="text"], #header .search input[type=text]:focus
-{
-    width: 80%;
-}*/
-body{
-  font-size: 85%;
+* {
+  font-size: 1em;
 }
 h1{
     font-size: 170%;
@@ -51,9 +41,7 @@ h4{
 /*--------------------------------
 ------------- FOOTER -------------
 ----------------------------------*/
-#footer {
-  font-size: 1.1em;
-}
+
 #sections {
   width: 98%;
 }
@@ -85,6 +73,26 @@ h4{
 /*--------------------------------
 ----------END FOOTER -------------
 ----------------------------------*/
+/*--------------------------------
+------------- CHI SIAMO -------------
+----------------------------------*/
+#content_about_us{
+  width: 100%;
+}
+#content_about_us #paragrafo{
+  width: 100%;
+  padding: 4% 10%;
+  margin: 0 auto;
+}
+#slideshow-container{
+  width: 100%;
+  margin: 0 auto;
+}
+.mySlides{
+  width: 85%;
+  margin: 0 auto;
+}
+
 
 /*--------------------------------
 ------------- ALLENATORI -------------
@@ -97,7 +105,20 @@ h4{
 /*--------------------------------
 ------------- END ALLENATORI -------------
 ----------------------------------*/
-
+/*--------------------------------
+------------- REGISTRAZIONE -------------
+----------------------------------*/
+#dati{
+  width: 70%;
+}
+form{
+  width: 90%;
+}
+#descrizione{
+  margin-top: 20%;
+  margin-left: 0;
+  margin-right: 0;
+}
 /*--------------------------------
 ------------- ABBONAMENTI -------------
 ----------------------------------*/

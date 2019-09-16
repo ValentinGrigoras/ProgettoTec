@@ -5,7 +5,7 @@ use Utilities\Utilities;
 
 $footer = file_get_contents(dirname(dirname(__DIR__)) . '/' . "html" . '/' . "templates" . '/' . "footer.html");
 
-$footer = str_replace("*gotop*","<a tabindex=\"$tabIndex\" id=\"up\" href=\"#first-section-header\">Torna su</a>",$footer);
+$footer = str_replace("*gotop*","<a tabindex=\"$tabIndex\" id=\"up\" href=\"#main_container\">Torna su</a>",$footer);
 $tabIndex++;
 
 $script="

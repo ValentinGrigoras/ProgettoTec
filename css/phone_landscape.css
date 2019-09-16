@@ -1,4 +1,5 @@
 /*header*/
+
 #nav_desktop, #desktop_user_signup{
   display: none;
 }
@@ -20,6 +21,13 @@
 }
 #mobile_header{
   width: 100%;
+
+}
+.pad{
+  padding-top: 15%;
+}
+#allenatori_section, #content_about_us{
+  padding-top: 25%;
 }
 #logo_mobile{
   width: 40%;
@@ -83,30 +91,111 @@ input[type=checkbox]:checked ~ label>#hmenu {
 #fixed{
   position: fixed;
   width: 100%;
+  z-index: 3;
+  padding-bottom: 10%;
 }
 #landing{
   padding-top: 22%;
 }
-
-
+/*--------------------------------
+------------- HOME -------------
+----------------------------------*/
+#contact_form{
+  width: 100%;
+}
+#contact_us_form{
+  width: 90%;
+  margin-bottom: 0;
+}
+#dove_siamo{
+  width: 80%;
+  margin: 0 10%;
+  padding: 3% 3% 6% 3%;
+}
+.threeColumnsCard{
+  width: 40%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
 /*--------------------------------
 ------------- ALLENATORI -------------
 ----------------------------------*/
 
-#allenatori_section dd p{
-  font-size: 80%;
-}
-
 /*--------------------------------
 ------------- END ALLENATORI -------------
 ----------------------------------*/
+#descrizione{
+  display: none;
+}
+#dati{
+  width: 100%;
+}
 
+/*--------------------------------
+------------- REGISTRAZIONE -------------
+----------------------------------*/
+
+
+/*--------------------------------
+------------- PROGRAMMA -------------
+----------------------------------*/
+#custom_select label{
+  width: 40%;
+}
+#TimeTable{
+  display: none;
+}
+#MobileTimeTable{
+  display: block;
+  font-size: 1.3em;
+  padding: 0 5%;
+}
+#MobileTimeTable ul{
+  border: 1px solid silver;
+}
+.MobileTimeTableItem{
+  width: 80%;
+  float: left;
+  margin: 1% 10%;
+  text-align: center;
+}
+#MobileTimeTable ul{
+  list-style: none;
+}
+.MobileTimeTableHeadline{
+  padding-top: 4%;
+}
+.MobileTimeTableDaylyPlanTime{
+  border-top: 1px solid silver;
+  padding: 3% 0;
+  color: #262626;
+}
+.MobileTimeTableDaylyPlanTime div{
+  display: inline-block;
+
+}
+.MobileTimeTableDaylyPlanTime:last-child{
+  border-bottom: 1px solid silver;
+}
+.MobileTimeTableDaylyPlanTime a:visited{
+  color: black;
+}
+.MobileTimeTableClassName{
+  width: 70%;
+}
+.MobileTimeTableClassTime{
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
 
 /*--------------------------------
 ------------- ABBONAMENTI -------------
 ----------------------------------*/
 .Abbonamento p{
   font-size: 70%;
+}
+#prezzi_section dl:last-child{
+  margin-left: 30%;
 }
 
 /*--------------------------------
@@ -123,7 +212,9 @@ input[type=checkbox]:checked ~ label>#hmenu {
 /*--------------------------------
 ------------- END CORSI -------------
 ----------------------------------*/
-
+#abbonamenti_section a.btn{
+  width: 46%;
+}
 /*--------------------------------
 ------------- FOOTER -------------
 ----------------------------------*/

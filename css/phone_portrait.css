@@ -50,10 +50,6 @@ background-color: #35383d;
   font-size: 2em;
 }
 
-#allenatori_section #allenatori_content dl{
-    width: 94%;
-    margin: 3% 3% 6% 3%;
-  }
 
   .allenatore dd img{
     max-width: 30%;
@@ -61,7 +57,7 @@ display: block;
 margin: 0 auto;
   }
   #allenatori_section dd p{
-    width: 80%;
+    width: 100%;
     font-size: 1.3em;
   }
 
@@ -113,6 +109,18 @@ margin: 0 auto;
 -------ABBONAMENTI END ------
 ----------------------------------*/
 
+/*--------------------------------
+-------REGISTRAZIONE ------
+----------------------------------*/
+#contenuto{
+  width: 100%;
+}
+#input_date input{
+  width: 22%;
+}
+#input_date #anno{
+  width: 32%;
+}
 /*--------------------------------
 -------CORSI ------
 ----------------------------------*/
@@ -169,42 +177,8 @@ select #seleziona_corso{
 #OrarioContent{
   width: 85%;
 }
-#MobileTimeTable{
-  display: block;
-  border: 1px solid silver;
-  padding: 0 5%;
-  font-size: 2em;
-}
 #MobileTimeTable h3{
   text-align: left;
-}
-#MobileTimeTable ul{
-  list-style: none;
-}
-.MobileTimeTableHeadline{
-  padding-top: 4%;
-}
-.MobileTimeTableDaylyPlanTime{
-  border-top: 1px solid silver;
-  padding: 3% 0;
-  color: #262626;
-}
-.MobileTimeTableDaylyPlanTime div{
-	display: inline-block;
-
-}
-.MobileTimeTableDaylyPlanTime:last-child{
-	border-bottom: 1px solid silver;
-}
-.MobileTimeTableDaylyPlanTime a:visited{
-  color: black;
-}
-.MobileTimeTableClassName{
-  width: 60%;
-  padding-left: 7%;
-}
-.MobileTimeTableClassTime{
-  padding-top: 3%;
 }
 /*--------------------------------
 --- END PROGRAMMAZIONE CORSI -----
@@ -214,41 +188,37 @@ select #seleziona_corso{
 /*--------------------------------
 ------------- FOOTER -------------
 ----------------------------------*/
-#sections{
-
-}
-#footer{
-  font-size: 0.8em;
+#columns{
+  padding-top: 1%;
 }
 #footer h2{
   font-size: 2em;
 }
-#links{
-    width: 48%;
-    float: left;
+#breadcrumb{
+  width: 50%;
 }
 #links p{
     padding-bottom: 5%;
 }
-#societa{
-    width: 48%;
-    float: right;
-
-}
-#orario{
+#links, #contattiFooter{
     width: 48%;
     float: left;
 }
-#contattiFooter{
+#societa, #orario{
     width: 48%;
     float: right;
+}
+#links, #orario, #societa, #contattiFooter{
+  padding: 0;
 }
 #validCode img{
     width: 40%;
 }
-#closure{
-  font-size: 1.5em;
+#custom_select label{
+  width: 60%;
+  padding-left: 1%;
 }
+
 /*--------------------------------
 ----------END FOOTER -------------
 ----------------------------------*/
@@ -286,10 +256,12 @@ select #seleziona_corso{
 }
 
 .threeColumnsCard {
-  width: 94%;
+  width: 65%;
   display: block;
   margin: 5% auto;
-
+}
+#prezzi_section dl:last-child{
+  margin: 5% auto;
 }
 #contact_us_form {
     width: 80%;
