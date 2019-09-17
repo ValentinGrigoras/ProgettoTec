@@ -79,6 +79,7 @@ label{
   margin-top: 1%;
   margin-bottom:1%;
 }
+
 .input_feedb{
   width: 67%;
   overflow: auto;
@@ -1218,4 +1219,12 @@ margin: 0 auto;
 #up:hover{
     background-color: #ff0909;
     text-decoration: none;
+}
+/*gestione colori link visitati e non*/
+a{
+    color:blue;
+}
+
+a:visited{
+    color:yellow;
 }
