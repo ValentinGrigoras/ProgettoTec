@@ -10,7 +10,8 @@ body{
 }
 
 
-#first-section-header ul, #nav_desktop, #header, #landing, .cont_corso .allenatoreImg, img, .cont_corso .corsiImg, #contact_form, #links, .btn, #footer_icons, #closure, #cont-form-map h2, button, #custom_select, .numbertext, #prev, #next{
+#first-section-header ul, .MobileTimeTableItem, #mobile_header, #nav_desktop, #header, #landing, .cont_corso .allenatoreImg, img, .cont_corso .corsiImg, #contact_form, #links, .btn, #footer_icons, #closure, #cont-form-map h2, button, #custom_select, .numbertext, #prev, #next, #nav_desktop ul, 
+#up{
 	display: none;
 }
 
