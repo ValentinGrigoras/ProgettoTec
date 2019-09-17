@@ -38,5 +38,17 @@ switch ($uri_case[2]){
 }
 
 $footer = str_replace("*script*",$script,$footer);
+
+$footer = str_replace("*linksudinoi*","./chi_siamo",$footer);
+$footer = str_replace("*linkcorsi*","./corsi",$footer);
+$footer = str_replace("*linkallenatori*","./allenatori",$footer);
+$footer = str_replace("*linkprogramma*","./programma",$footer);
+$footer = str_replace("*linkprezzi*","./prezzi",$footer);
+$footer = str_replace("*linkcontattaci*","./#contact_us_form",$footer);
+
+
+
+
+
 echo $footer;
 ?>

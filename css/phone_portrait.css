@@ -283,7 +283,3 @@ select #seleziona_corso{
     width: 94%;
     margin: 15% 3% 13%;
 }
-
-.threeColumnsCard dd .corsiImg {
-    display: none;
-}
