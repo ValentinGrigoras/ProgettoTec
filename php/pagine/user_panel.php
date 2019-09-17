@@ -5,7 +5,9 @@
     }
 
     require_once "./../database/database.php";
+    require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . "templates" . DIRECTORY_SEPARATOR . "utilities.php";
 
+    use Utilities\Utilities;
 	use Database\Database;
 	$database = new Database();
 	//$header = file_get_contents(dirname(dirname(__DIR__)).'/'."html".'/'."templates".'/'."user_panel_header.html");
@@ -46,7 +48,7 @@ $info="";
 	}
 	else{
 		$page = str_replace("*abbonamento*","<p> Non hai un abbonamento attivo</p>",$page);
-		$page = str_replace("*informazioni*","<p> Vai nell'area Gestione Abbonamento è sceglierne uno</p>",$page);
+		$page = str_replace("*informazioni*","<p> Vai nell'area <a href=\"./user_abb\">Gestione Abbonamento</a> è sceglierne uno</p>",$page);
 
 	}
 

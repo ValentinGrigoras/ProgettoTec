@@ -6,7 +6,9 @@
 
     require_once "../database/database.php";
     require_once "../tools/validator.php";
+    require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . "templates" . DIRECTORY_SEPARATOR . "utilities.php";
 
+    use Utilities\Utilities;
 	use Database\Database;
     use Validator\Validator;
 	$database = new Database();
@@ -26,18 +28,20 @@ $errore = false;
             $page = str_replace("*remain*", "<p>Puoi aggiungere ".$remain." corsi!</p>", $page);
             $page = str_replace("*formAbb*", "", $page);
 
-            $page = str_replace('*formCorsi*', '<form id="modifyCourses_form" action="./user_abb" method="POST" >
+            $temp = '<form id="modifyCourses_form" action="./user_abb" method="POST" >
                     <fieldset *stato*>
                         <div class="form_entry">
                             <label for="corsoSelezionato">Seleziona corso</label>
-                            <select name="corsoSelezionato">
+                            <select tabindex="'.$tabIndex.'"name="corsoSelezionato">
                                    *corsi*
-                            </select>
-                            
-                        </div>
+                            </select>';
+                    $tabIndex++;        
+            $temp.='          </div>
                     </fieldset>
-                    <button id="salvaCorso" type="submit" name="salvaCorso" value="salvaCorso" *statoBtnCorsi*>Aggiungi corso</button>
-                    *confirmmessage2*', $page);
+                    <button id="salvaCorso" type="submit" name="salvaCorso" value="salvaCorso" *statoBtnCorsi* tabindex="'.$tabIndex.'">Aggiungi corso</button>
+                    *confirmmessage2*';
+                    $tabIndex++;
+            $page = str_replace('*formCorsi*',$temp,$page);
             if($remain == 0) $page = str_replace("*statoBtnCorsi*", "disabled", $page);
             if( isset($UserCourses) && count($UserCourses) >1){
                 $page = str_replace('*stato*', 'disabled id="disabledField"', $page);
@@ -67,21 +71,21 @@ $errore = false;
         }else{ // se l'utente non ha ancora un abbonamento
             $page = str_replace('*titoloinfo2*', "<p>Non hai nessun abbonamento attivo! Scegliene uno:<p>", $page);
             $page = str_replace('*formCorsi*', '', $page);
-            $page = str_replace('*formAbb*', '<form id="AddAbb_form" action="./user_abb" method="POST" >
+            $temp ='<form id="AddAbb_form" action="./user_abb" method="POST" >
                     <fieldset *stato*>
                         <div class="form_entry">
-                            <label for="abbonamento">Seleziona abbonamento</label>
+                            <label for="abbSelezionato">Seleziona abbonamento</label>
                             
-                            
-                                <select name="abbSelezionato">
+                                <select tabindex="'.$tabIndex.'"name="abbSelezionato">
                                    *abbSelect*
-                                </select>
-                            
+                                </select>';
+                                $tabIndex++;
+                     $temp.='       
                         </div>
                     </fieldset>
-                    <button id="salvaAbb" type="submit" name="salvaAbb" value="salvaAbb">Conferma abbonamento</button>
-                    *confirmmessage*', $page);
-
+                    <button tabindex="'.$tabIndex.'" id="salvaAbb" type="submit" name="salvaAbb" value="salvaAbb">Conferma abbonamento</button>
+                    *confirmmessage*'; $tabIndex++;
+        $page = str_replace('*formAbb*',$temp,$page);
              $abbonamenti = Database::getSubscriptionsTypes();
              for ($i=0; $i < count($abbonamenti) ; $i++) {
                 $abbon .= '<option value="'.$abbonamenti[$i]['tipoAbbonamento'].'">'.$abbonamenti[$i]['tipoAbbonamento'].' ('.$abbonamenti[$i]['prezzo'].'&euro;)'.'</option>';
@@ -126,6 +130,8 @@ $page=str_replace('*corsi*', $corsi, $page);
 $page=str_replace('*erroremail*', '', $page);
 $page=str_replace('*errorpasword*', '', $page);
 $page=str_replace('*errortelefono*', '', $page);
+$page=str_replace('*confirmmessage*', '', $page);
+$page=str_replace('*remain*', '', $page);
 //echo $header;
 echo $page;
 

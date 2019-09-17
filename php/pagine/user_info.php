@@ -6,7 +6,9 @@
 
     require_once "../database/database.php";
     require_once "../tools/validator.php";
+    require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . "templates" . DIRECTORY_SEPARATOR . "utilities.php";
 
+    use Utilities\Utilities;
 	use Database\Database;
     use Validator\Validator;
 	$database = new Database();
@@ -70,10 +72,19 @@ $errore = false;
         }
     }
 
-
+    $page = str_replace("*tabindexemail*", $tabIndex, $page, $counter);
+    if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+    $page = str_replace("*tabindexpassword*", $tabIndex, $page, $counter);
+    if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+    $page = str_replace("*tabindextelefono*", $tabIndex, $page, $counter);
+    if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
+    $page = str_replace("*tabindexsignup*", $tabIndex, $page, $counter);
+    if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 $page=str_replace('*erroremail*', '', $page);
 $page=str_replace('*errorpasword*', '', $page);
 $page=str_replace('*errortelefono*', '', $page);
+$page=str_replace('*confirmmessage*', '', $page);
+$page=str_replace('*errorpassword*', '', $page);
 //echo $header;
 echo $page;
 
