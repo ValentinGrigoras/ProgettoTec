@@ -19,8 +19,7 @@ $info="";
     $info .= '<dt> Informazioni personali</dt>';
     $info .= '<dd class="cont_corso">';
     $info .= '<p class="livello_corso">Email: ' . $_SESSION['cod'] .'</p>';
-    $info .= '<p class="livello_corso">Costo al mese :xxx &euro;' . '</p>';
-    $info .= '<a href>Modifica dati</a>';
+
     $info .=  '</dd>';
     $info .= '</dl>';
 
@@ -40,7 +39,6 @@ $info="";
     	$info .= '<p class="livello_corso simplePar">Durata: '.$courses[$i]['durata']. 'min</p>';
     }
    
-    $info .= '<a href>Modifica dati</a>';
     $info .=  '</dd>';
     $info .= '</dl>';
 
