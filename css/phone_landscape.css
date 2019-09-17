@@ -23,6 +23,11 @@
   width: 100%;
 
 }
+.center{
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
 .pad{
   padding-top: 15%;
 }

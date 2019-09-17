@@ -57,22 +57,22 @@ if (!isset($_SESSION["autorizzato"]) || $_SESSION["autorizzato"]==0){
 
         case "user_panel": 
             $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."user_panel.php";
-            $header = str_replace("*userHome*","<li class='active_link'><a href=\"./user_panel\">Riepilogo</a></li>",$header);
+            $header = str_replace("*userHome*","<li class='active_link'>Riepilogo</li>",$header);
             $trovato=true;
         break;
         case "user_info": 
             $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."user_info.php";
-            $header = str_replace("*dati*","<li class='active_link'><a href=\"./user_info\" tabindex=\"$tabIndex\">Gestione dati personali</a></li>",$header);
+            $header = str_replace("*dati*","<li class='active_link'>Gestione dati personali</li>",$header);
             $trovato=true;
         break;
         case "user_abb": 
             $page = dirname(dirname(__DIR__)).'/'."php".'/'."pagine".'/'."user_abb.php";
-            $header = str_replace("*abbonamenti*","<li class='active_link'><a href=\"./user_abb\" tabindex=\"$tabIndex\">Gestione abbonamento</a></li>",$header);
+            $header = str_replace("*abbonamenti*","<li class='active_link'>Gestione abbonamento</li>",$header);
             $trovato=true;
         break;
         case "logout":
             session_destroy();
-            $header =str_replace("*linkregistrazione*","<li><a href='./registrazione' tabindex=\"$tabIndex\">Registrazione</a></li>",$header);
+            $header =str_replace("*linkregistrazione*","<li><a href='./registrazione'>Registrazione</a></li>",$header);
             $header = str_replace("*linklogin*","<li class='active_link'><span xml:lang='en'>Login</span></li>",$header);
             $header = str_replace("*breadcrumbs*","Ti trovi in:<span xml:lang='en'>Login</span>",$header);
            header("location: ./");
@@ -161,17 +161,17 @@ $header = str_replace("*linkcontattaci*","<li><a href='./#contact_section' tabin
 if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 }
 else{
-            $header = str_replace("*torna*","<li><a href=\"./\" tabindex=\"$tabIndex\">&#8592; Torna al sito</a></li>",$header);
+            $header = str_replace("*torna*","<li><a href=\"./\" tabindex=\"$tabIndex\">&#8592; Torna al sito</a></li>",$header,$counter);
             if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-            $header = str_replace("*abbonamenti*","<li><a href=\"./user_abb\" tabindex=\"$tabIndex\">Gestione abbonamento</a></li>",$header);
+            $header = str_replace("*abbonamenti*","<li><a href=\"./user_abb\" tabindex=\"$tabIndex\">Gestione abbonamento</a></li>",$header,$counter);
             if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-            $header = str_replace("*dati*","<li><a href=\"./user_info\" tabindex=\"$tabIndex\">Gestione dati personali</a></li>",$header);
+            $header = str_replace("*dati*","<li><a href=\"./user_info\" tabindex=\"$tabIndex\">Gestione dati personali</a></li>",$header,$counter);
             if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-            $header = str_replace("*userHome*","<li><a href=\"./user_panel\">Riepilogo</a></li>",$header);
+            $header = str_replace("*userHome*","<li><a href=\"./user_panel\">Riepilogo</a></li>",$header,$counter);
             if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
-            $header = str_replace("*email*","<li id=\"user_mail\">".$_SESSION['cod']."</li>",$header);
+            $header = str_replace("*email*","<li id=\"user_mail\">".$_SESSION['cod']."</li>",$header,$counter);
 
-            $header = str_replace("*disconnetti*","<li><a href=\"./logout\" tabindex=\"$tabIndex\">Disconnetti</a></li>",$header);
+            $header = str_replace("*disconnetti*","<li><a href=\"./logout\" tabindex=\"$tabIndex\">Disconnetti</a></li>",$header,$counter);
             if ($counter > 0) Utilities::checkCounter($counter,$tabIndex);
 
 }
