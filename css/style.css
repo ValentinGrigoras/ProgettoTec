@@ -3,8 +3,7 @@
     margin:0;
     padding: 0;
     font-size: 1em;
-    font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
-    -webkit-font-smoothing: antialiased;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
     text-rendering: optimizeLegibility;
             box-sizing: border-box;
       
@@ -294,7 +293,7 @@ la dimensione totale dei div child.*/
 
 #nav_desktop li.active_link{
   color: #fff;
-  font-weight: 1000;
+  font-weight: bold;
   background-color: #b30000;
   padding: 3.3% 0 3.3% 0;
 }
@@ -447,7 +446,7 @@ height: 80%;
   border-bottom: 1px solid #ccc;
   text-align: center;
 }
-*/
+
 .threeColumnsCard .nrMese{
 	font-size: 0.5em;
 }
@@ -456,7 +455,7 @@ height: 80%;
 	padding: 7% 0;
 	border-bottom: none;
 }
-*/
+
 /*--------------------------------
 ------------- END ABBONAMENTI -------------
 ----------------------------------*/

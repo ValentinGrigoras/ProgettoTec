@@ -72,13 +72,6 @@ ul.breadcrumb {
     text-align: center;
     margin-top:3%;
 }
-.lingua{
-	width: 30%;
-	margin-top: 2.4s;
-}
-.lingua>div{
-	float: left;
-}
 
 #botton_menu {
     display: inline-block;
