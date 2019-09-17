@@ -132,6 +132,7 @@ $page=str_replace('*errorpasword*', '', $page);
 $page=str_replace('*errortelefono*', '', $page);
 $page=str_replace('*confirmmessage*', '', $page);
 $page=str_replace('*remain*', '', $page);
+$page=str_replace('*titoloinfo*', '', $page);
 //echo $header;
 echo $page;
 
